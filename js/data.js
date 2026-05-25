@@ -402,7 +402,7 @@ var PLATFORMS_DATA = [
     "certificate": true,
     "duration": "",
     "level": "",
-    "language": "إنجليزي",
+    "language": "متعدد اللغات",
     "link": "https://www.skills.google/",
     "thumbnail": "https://www.google.com/s2/favicons?domain=cloud.google.com&sz=128",
     "startDate": ""
