@@ -164,7 +164,7 @@ var PLATFORMS_DATA = [
     "certificate": true,
     "duration": "",
     "level": "",
-    "language": "عربي/إنجليزي",
+    "language": "متعدد اللغات",
     "link": "https://e.huawei.com/en/talent/learning/#/home",
     "thumbnail": "https://www.google.com/s2/favicons?domain=huawei.com&sz=128",
     "startDate": ""
