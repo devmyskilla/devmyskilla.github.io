@@ -1,4 +1,4 @@
-const CACHE = 'dunya-al-dawrat-v4';
+const CACHE = 'dunya-al-dawrat-v5';
 const CORE = ['./','./index.html','./course.html','./offline.html','./css/style.css','./js/i18n.js','./js/data.js','./js/app.js','./js/detail.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 
 self.addEventListener('install', event => {
