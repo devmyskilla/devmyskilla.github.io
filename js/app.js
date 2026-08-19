@@ -169,7 +169,7 @@ function closeModal(id) { const m = $(id); if (!m) return; m.classList.remove('o
 function buildCompareTable() {
   const items = [...getCompare()].map(platformById).filter(Boolean); if (!items.length) return;
   const row = (label, values) => `<tr><th>${escapeHtml(label)}</th>${values.map(v => `<td>${v}</td>`).join('')}</tr>`;
-  $('compareTable').innerHTML = `<table class="compare-table"><thead><tr><th>${escapeHtml(getText('platform'))}</th>${items.map(p => `<th><div class="compare-head">${p.thumbnail ? `<img src="${escapeHtml(p.thumbnail)}" alt="">` : ''}<strong>${escapeHtml(pf(p,'name'))}</strong></div></th>`).join('')}</tr></thead><tbody>
+  $('compareTable').innerHTML = `<table class="compare-table"><thead><tr><th>${escapeHtml(getText('platform'))}</th>${items.map(p => `<th><div class="compare-head">${p.thumbnail ? `<img src="${escapeHtml(p.thumbnail)}" alt="" onerror="this.remove()">` : ''}<strong>${escapeHtml(pf(p,'name'))}</strong></div></th>`).join('')}</tr></thead><tbody>
     ${row(getText('category'), items.map(p=>escapeHtml(translateCat(p.category))))}
     ${row(getText('language'), items.map(p=>escapeHtml(translateLang(p.language))))}
     ${row(getText('price'), items.map(p=>`<span class="${p.free?'good':'neutral'}">${escapeHtml(p.free?getText('free'):getText('paid'))}</span>`))}
@@ -199,7 +199,7 @@ function runQuiz() {
     if (cert === 'yes') { max += 10; if (p.certificate) points += 10; }
     return { p, pct: Math.round(points / max * 100) };
   }).sort((a,b)=>b.pct-a.pct || Number(b.p.free)-Number(a.p.free) || Number(b.p.certificate)-Number(a.p.certificate)).slice(0,3);
-  $('quizResults').innerHTML = `<div class="quiz-results"><h3>${getText('quizResults')}</h3>${ranked.map((r,i)=>`<a class="match-card" href="${detailUrl(r.p)}"><span class="match-rank">${i+1}</span>${r.p.thumbnail?`<img src="${escapeHtml(r.p.thumbnail)}" alt="">`:''}<div><strong>${escapeHtml(pf(r.p,'name'))}</strong><small>${escapeHtml(translateCat(r.p.category))} · ${escapeHtml(translateLang(r.p.language))}</small></div><b>${r.pct}% <small>${getText('match')}</small></b></a>`).join('')}</div>`;
+  $('quizResults').innerHTML = `<div class="quiz-results"><h3>${getText('quizResults')}</h3>${ranked.map((r,i)=>`<a class="match-card" href="${detailUrl(r.p)}"><span class="match-rank">${i+1}</span>${r.p.thumbnail?`<img src="${escapeHtml(r.p.thumbnail)}" alt="" onerror="this.remove()">`:''}<div><strong>${escapeHtml(pf(r.p,'name'))}</strong><small>${escapeHtml(translateCat(r.p.category))} · ${escapeHtml(translateLang(r.p.language))}</small></div><b>${r.pct}% <small>${getText('match')}</small></b></a>`).join('')}</div>`;
 }
 
 const PATHS = {
@@ -242,7 +242,7 @@ function generatePath() {
   $('pathResults').innerHTML = `<div class="learning-path">${path.stages.map((stage,index)=>{
     const title = stage[currentLang] || stage.en;
     const platforms = stage.names.map(findByName).filter(Boolean).slice(0,4);
-    return `<div class="path-stage"><div class="stage-number">${index+1}</div><div class="stage-content"><small>${getText('stage')} ${index+1}</small><h3>${escapeHtml(title)}</h3><div class="stage-platforms">${platforms.map(p=>`<a href="${detailUrl(p)}">${p.thumbnail?`<img src="${escapeHtml(p.thumbnail)}" alt="">`:''}<span>${escapeHtml(pf(p,'name'))}</span></a>`).join('')}</div></div></div>`;
+    return `<div class="path-stage"><div class="stage-number">${index+1}</div><div class="stage-content"><small>${getText('stage')} ${index+1}</small><h3>${escapeHtml(title)}</h3><div class="stage-platforms">${platforms.map(p=>`<a href="${detailUrl(p)}">${p.thumbnail?`<img src="${escapeHtml(p.thumbnail)}" alt="" onerror="this.remove()">`:''}<span>${escapeHtml(pf(p,'name'))}</span></a>`).join('')}</div></div></div>`;
   }).join('')}</div>`;
 }
 
@@ -257,7 +257,7 @@ function initTheme() {
   setTheme(saved || preferred);
 }
 function changeLang(lang) {
-  setLang(lang); applyTranslations(); populateSelect(els.filterLang, filtersData.languages, translateLang); populateSelect(els.filterCategory, filtersData.categories, translateCat);
+  setLang(lang); applyTranslations(); document.title = getText('siteName'); populateSelect(els.filterLang, filtersData.languages, translateLang); populateSelect(els.filterCategory, filtersData.categories, translateCat);
   renderStats(); renderFeatured(); renderPlatforms(); updateCompareDock(); buildQuiz(); buildPathBuilder();
 }
 function initReveal() {
@@ -294,7 +294,7 @@ function bindEvents() {
 document.addEventListener('DOMContentLoaded', () => {
   try {
     const params = new URLSearchParams(window.location.search); const lp = params.get('lang'); if (lp) setLang(lp); else setLang(currentLang);
-    initTheme(); applyTranslations(); if (els.langSwitcher) els.langSwitcher.value = currentLang;
+    initTheme(); applyTranslations(); document.title = getText('siteName'); if (els.langSwitcher) els.langSwitcher.value = currentLang;
     fetchFilters(); renderStats(); renderFeatured(); renderPlatforms(); updateCompareDock(); bindEvents(); initReveal(); registerPWA();
   } catch (err) { console.error(err); if (els.coursesGrid) els.coursesGrid.innerHTML = `<div class="no-results">${escapeHtml(getText('errorLoading'))}</div>`; }
 });
