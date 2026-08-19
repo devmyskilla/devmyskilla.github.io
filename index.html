@@ -1,69 +1,148 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="siteName"></title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231B1464'/%3E%3Cstop offset='100%25' stop-color='%236C5CE7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='white' stroke-width='4'/%3E%3Cellipse cx='50' cy='50' rx='15' ry='30' fill='none' stroke='white' stroke-width='3'/%3E%3Cline x1='20' y1='50' x2='80' y2='50' stroke='white' stroke-width='3'/%3E%3Cpath d='M30 35 Q50 30 70 35' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M30 65 Q50 70 70 65' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="دنيا الدورات - دليل ذكي لاكتشاف ومقارنة أفضل منصات التعلم، تطوير اتحاد شباب الأمة.">
+  <title>دنيا الدورات</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container header-inner">
-      <div class="header-left">
-        <a href="index.html" class="logo-link"><h1 class="logo" data-i18n="siteName"></h1></a>
-        <p class="tagline" data-i18n="tagline"></p>
-      </div>
-      <div class="header-right lang-wrap">
-        <select id="langSwitcher" class="lang-select">
-          <option value="ar">العربية</option>
-          <option value="en">English</option>
-          <option value="tr">Türkçe</option>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Dunya Al-Dawrat">
+        <span class="brand-mark">د</span>
+        <span><strong data-i18n="siteName">دنيا الدورات</strong><small data-i18n="developedBy">تطوير اتحاد شباب الأمة</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about" data-i18n="navAbout"></a>
+        <a href="#features" data-i18n="navFeatures"></a>
+        <a href="#explore" data-i18n="navExplore"></a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Theme">◐</button>
+        <select id="langSwitcher" class="lang-select" aria-label="Language">
+          <option value="ar">العربية</option><option value="en">English</option><option value="tr">Türkçe</option>
         </select>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="controls">
-      <div class="filters">
-        <div class="filter-group">
-          <label for="filterLang" data-i18n="filterLanguage"></label>
-          <select id="filterLang"><option value="">الكل</option></select>
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse-dot"></span><span data-i18n="unionBadge"></span></span>
+        <h1 data-i18n="heroTitle">كل فرص التعلم في مكان واحد</h1>
+        <p data-i18n="heroSubtitle"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#explore"><span data-i18n="exploreNow"></span><span>↙</span></a>
+          <button class="btn btn-soft" id="heroQuizBtn" type="button">✨ <span data-i18n="takeQuiz"></span></button>
         </div>
-        <div class="filter-group">
-          <label for="filterCategory" data-i18n="filterCategory"></label>
-          <select id="filterCategory"><option value="">الكل</option></select>
-        </div>
-        <div class="filter-group check-group">
-          <label class="check-label">
-            <input type="checkbox" id="filterFree"> <span data-i18n="freeOnly"></span>
-          </label>
-          <label class="check-label">
-            <input type="checkbox" id="filterCert"> <span data-i18n="withCertificate"></span>
-          </label>
-        </div>
-        <button id="resetFilters" class="btn-reset" data-i18n="reset"></button>
+        <div class="privacy-line">🔒 <span data-i18n="privacyNote"></span></div>
       </div>
-      <div class="results-bar">
-        <span id="resultsCount">0</span> <span data-i18n="platformsAvailable"></span>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit-card card-a"><span>🎓</span><strong>Coursera</strong></div>
+        <div class="orbit-card card-b"><span>💻</span><strong>freeCodeCamp</strong></div>
+        <div class="orbit-card card-c"><span>🤖</span><strong>IBM SkillsBuild</strong></div>
+        <div class="hero-core"><span class="brand-mark big">د</span><strong data-i18n="siteName"></strong><small data-i18n="tagline"></small></div>
       </div>
     </section>
 
-    <section class="courses-grid" id="coursesGrid">
-      <div class="loading" data-i18n="loading"></div>
+    <section class="stats-strip reveal" id="statsStrip">
+      <div class="container stats-grid">
+        <div><strong id="statPlatforms">0</strong><span data-i18n="platformCount"></span></div>
+        <div><strong id="statFree">0</strong><span data-i18n="freeCount"></span></div>
+        <div><strong id="statCert">0</strong><span data-i18n="certCount"></span></div>
+        <div><strong id="statLang">0</strong><span data-i18n="languageCount"></span></div>
+      </div>
+    </section>
+
+    <section class="section container about-grid reveal" id="about">
+      <div>
+        <span class="section-kicker" data-i18n="aboutEyebrow"></span>
+        <h2 data-i18n="aboutTitle"></h2>
+      </div>
+      <div class="about-copy">
+        <p data-i18n="aboutText"></p>
+        <div class="developer-card"><span class="developer-icon">✦</span><div><small data-i18n="developedBy"></small><strong>اتحاد شباب الأمة</strong></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="features">
+      <div class="features-grid">
+        <article class="feature-card reveal"><span>⌕</span><h3 data-i18n="featureSearch"></h3><p data-i18n="featureSearchText"></p></article>
+        <article class="feature-card reveal"><span>⚖</span><h3 data-i18n="featureCompare"></h3><p data-i18n="featureCompareText"></p></article>
+        <article class="feature-card reveal"><span>♥</span><h3 data-i18n="featureSave"></h3><p data-i18n="featureSaveText"></p></article>
+        <article class="feature-card reveal"><span>◎</span><h3 data-i18n="featureQuiz"></h3><p data-i18n="featureQuizText"></p></article>
+        <article class="feature-card reveal"><span>↗</span><h3 data-i18n="featurePath"></h3><p data-i18n="featurePathText"></p></article>
+        <article class="feature-card reveal"><span>▣</span><h3 data-i18n="featureOffline"></h3><p data-i18n="featureOfflineText"></p></article>
+      </div>
+    </section>
+
+    <section class="section container featured-section reveal" id="featuredSection">
+      <div class="section-heading"><div><h2 data-i18n="featuredTitle"></h2><p data-i18n="featuredSubtitle"></p></div></div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="section explore-section" id="explore">
+      <div class="container">
+        <div class="section-heading explore-heading reveal">
+          <div><span class="section-kicker" data-i18n="explorerEyebrow"></span><h2 data-i18n="explorerTitle"></h2><p data-i18n="explorerSubtitle"></p></div>
+          <div class="quick-actions">
+            <button class="mini-btn" id="randomBtn" type="button">🎲 <span data-i18n="randomPlatform"></span></button>
+            <button class="mini-btn" id="pathBtn" type="button">🧭 <span data-i18n="buildPath"></span></button>
+            <button class="mini-btn install-btn" id="installBtn" type="button" hidden>⬇ <span data-i18n="installApp"></span></button>
+          </div>
+        </div>
+
+        <div class="search-shell reveal">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" autocomplete="off" data-i18n="searchPlaceholder" aria-label="Search">
+          <kbd>/</kbd>
+        </div>
+
+        <div class="tabs-row reveal" role="tablist">
+          <button class="tab-btn active" data-tab="all" type="button"><span data-i18n="allTab"></span><b id="allBadge">0</b></button>
+          <button class="tab-btn" data-tab="favorites" type="button">♥ <span data-i18n="favoritesTab"></span><b id="favBadge">0</b></button>
+          <button class="tab-btn" data-tab="recent" type="button">↻ <span data-i18n="recentTab"></span><b id="recentBadge">0</b></button>
+        </div>
+
+        <div class="controls-panel reveal">
+          <div class="filter-group"><label for="filterLang" data-i18n="filterLanguage"></label><select id="filterLang"><option value=""></option></select></div>
+          <div class="filter-group"><label for="filterCategory" data-i18n="filterCategory"></label><select id="filterCategory"><option value=""></option></select></div>
+          <div class="filter-group"><label for="sortSelect" data-i18n="sortBy"></label><select id="sortSelect">
+            <option value="recommended" data-i18n="sortRecommended"></option><option value="name" data-i18n="sortName"></option><option value="viewed" data-i18n="sortViewed"></option><option value="recent" data-i18n="sortRecent"></option><option value="free" data-i18n="sortFree"></option>
+          </select></div>
+          <div class="checks-wrap">
+            <label class="switch-check"><input type="checkbox" id="filterFree"><span></span><em data-i18n="freeOnly"></em></label>
+            <label class="switch-check"><input type="checkbox" id="filterCert"><span></span><em data-i18n="withCertificate"></em></label>
+          </div>
+          <button id="resetFilters" class="btn-reset" type="button">↺ <span data-i18n="reset"></span></button>
+        </div>
+
+        <div class="results-bar reveal"><div><strong id="resultsCount">0</strong> <span data-i18n="platformsAvailable"></span></div><div id="trendHint" class="trend-hint"></div></div>
+        <section class="courses-grid" id="coursesGrid"><div class="loading" data-i18n="loading"></div></section>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p data-i18n="footer"></p>
-    </div>
-  </footer>
+  <aside class="compare-dock" id="compareDock" aria-live="polite">
+    <div><strong data-i18n="compareBar"></strong><span id="compareNames"></span></div>
+    <div class="compare-dock-actions"><button class="link-btn" id="clearCompare" type="button" data-i18n="clear"></button><button class="btn btn-primary small" id="compareNow" type="button"><span data-i18n="compareNow"></span> <span id="compareCount">0/3</span></button></div>
+  </aside>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+  <div class="modal" id="quizModal" aria-hidden="true"><div class="modal-card modal-medium"><button class="modal-close" data-close="quizModal" type="button">×</button><h2 data-i18n="quizTitle"></h2><p class="modal-sub" data-i18n="quizSubtitle"></p><div class="quiz-form" id="quizForm"></div><div id="quizResults"></div></div></div>
+  <div class="modal" id="compareModal" aria-hidden="true"><div class="modal-card modal-large"><button class="modal-close" data-close="compareModal" type="button">×</button><h2 data-i18n="compareTitle"></h2><div class="table-scroll" id="compareTable"></div></div></div>
+  <div class="modal" id="pathModal" aria-hidden="true"><div class="modal-card modal-large"><button class="modal-close" data-close="pathModal" type="button">×</button><h2 data-i18n="pathTitle"></h2><p class="modal-sub" data-i18n="pathSubtitle"></p><div id="pathBuilder"></div><div id="pathResults"></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><strong data-i18n="siteName"></strong><p data-i18n="tagline"></p></div><div class="footer-developer"><span>✦</span><div><small data-i18n="footerDeveloper"></small><strong>اتحاد شباب الأمة</strong></div></div><p data-i18n="footer"></p></div></footer>
+
+  <script src="js/i18n.js"></script><script src="js/data.js"></script><script src="js/app.js"></script>
 </body>
 </html>

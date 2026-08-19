@@ -1,44 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="siteName">دنيا الدورات</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231B1464'/%3E%3Cstop offset='100%25' stop-color='%236C5CE7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='white' stroke-width='4'/%3E%3Cellipse cx='50' cy='50' rx='15' ry='30' fill='none' stroke='white' stroke-width='3'/%3E%3Cline x1='20' y1='50' x2='80' y2='50' stroke='white' stroke-width='3'/%3E%3Cpath d='M30 35 Q50 30 70 35' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M30 65 Q50 70 70 65' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#4f46e5">
+  <title>دنيا الدورات</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div class="container header-inner">
-      <div class="header-left">
-        <a href="index.html" class="logo-link"><h1 class="logo" data-i18n="siteName"></h1></a>
-      </div>
-      <div class="header-right lang-wrap">
-        <select id="langSwitcher" class="lang-select">
-          <option value="ar">العربية</option>
-          <option value="en">English</option>
-          <option value="tr">Türkçe</option>
-        </select>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="detail-wrapper" id="detailWrapper">
-      <a href="index.html" class="back-link" data-i18n="backToHome"></a>
-      <div class="detail-loading" id="detailLoading" data-i18n="loadingData"></div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p data-i18n="footer"></p>
-    </div>
-  </footer>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/detail.js"></script>
+<body class="detail-page">
+  <header class="site-header"><div class="container nav-inner"><a href="index.html" class="brand logo-link"><span class="brand-mark">د</span><span><strong data-i18n="siteName"></strong><small data-i18n="developedBy"></small></span></a><div class="nav-actions"><button class="icon-btn" id="themeToggle" type="button">◐</button><select id="langSwitcher" class="lang-select"><option value="ar">العربية</option><option value="en">English</option><option value="tr">Türkçe</option></select></div></div></header>
+  <main class="container detail-main"><div class="detail-wrapper" id="detailWrapper"><a href="index.html" class="back-link" data-i18n="backToHome"></a><div class="detail-loading" id="detailLoading" data-i18n="loadingData"></div></div><section class="similar-section" id="similarSection" hidden><div class="section-heading"><h2 data-i18n="similarPlatforms"></h2></div><div class="courses-grid compact" id="similarGrid"></div></section></main>
+  <div class="toast" id="toast" role="status"></div>
+  <footer class="site-footer"><div class="container footer-grid"><div><strong data-i18n="siteName"></strong><p data-i18n="tagline"></p></div><div class="footer-developer"><span>✦</span><div><small data-i18n="footerDeveloper"></small><strong>اتحاد شباب الأمة</strong></div></div><p data-i18n="footer"></p></div></footer>
+  <script src="js/i18n.js"></script><script src="js/data.js"></script><script src="js/detail.js"></script>
 </body>
 </html>
