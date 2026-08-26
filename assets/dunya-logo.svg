@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dunya Al-Dawrat logo">
+  <defs>
+    <linearGradient id="bg" x1="48" y1="468" x2="470" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06143f"/><stop offset=".48" stop-color="#0c1b61"/><stop offset="1" stop-color="#5b19d5"/>
+    </linearGradient>
+    <linearGradient id="aqua" x1="126" y1="381" x2="391" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1589ff"/><stop offset=".48" stop-color="#21ddff"/><stop offset="1" stop-color="#8afcff"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="95" y1="383" x2="430" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#168cff"/><stop offset=".55" stop-color="#31e7ff"/><stop offset="1" stop-color="#63fff0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#aqua)" stroke-width="16" stroke-linecap="round" filter="url(#glow)">
+    <circle cx="255" cy="244" r="142"/>
+    <path d="M113 224c45 28 94 42 143 42 55 0 103-14 142-42"/>
+    <path d="M119 307c43-20 88-30 136-30 49 0 95 10 137 30" opacity=".66"/>
+    <path d="M255 102c-48 42-72 89-72 142s24 101 72 142"/>
+    <path d="M255 102c48 42 72 89 72 142s-24 101-72 142"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M151 260c44-10 78-1 103 27v87c-30-29-64-40-103-31z" fill="url(#aqua)"/>
+    <path d="M359 260c-44-10-78-1-103 27v87c30-29 64-40 103-31z" fill="url(#aqua)"/>
+    <path d="M254 288v86" stroke="#b7ffff" stroke-width="6" stroke-linecap="round" opacity=".72"/>
+  </g>
+  <path d="M75 355c58 54 184 48 291-14 72-42 117-94 101-126-8-17-30-26-62-27" fill="none" stroke="url(#orbit)" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="422" cy="196" r="21" fill="#4ffbea" stroke="#c5ffff" stroke-width="7" filter="url(#glow)"/>
+</svg>
