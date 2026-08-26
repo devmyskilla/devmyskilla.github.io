@@ -20,10 +20,11 @@ test('explore owns the complete discovery application', () => {
   }
 });
 
-test('platform profile back navigation points to explore', () => {
-  const js = read('js/platform-detail.js');
-  assert.match(js, /explore\.html\?lang=/);
-  assert.doesNotMatch(js, /index\.html\?lang=.*#explore/);
+test('cross-page navigation preserves language', () => {
+  const exploreNav=read('js/explore-nav.js');
+  const backNav=read('js/platform-back-nav.js');
+  assert.match(exploreNav,/index\.html\?lang=/);
+  assert.match(backNav,/explore\.html\?lang=/);
 });
 
 test('landing translation keys exist in Arabic English and Turkish', () => {
