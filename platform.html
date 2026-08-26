@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="ملف منصة تعليمية في دليل دنيا الدورات."><title>دنيا الدورات</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="profile-page">
+  <header class="site-header"><div class="container nav-inner"><a href="index.html" class="brand"><span class="brand-mark">د</span><span><strong data-i18n="siteName"></strong><small data-i18n="developedBy"></small></span></a><div class="nav-actions"><button class="icon-btn" id="themeToggle" type="button" aria-label="Theme">◐</button><select id="langSwitcher" class="lang-select" aria-label="Language"><option value="ar">العربية</option><option value="en">English</option><option value="tr">Türkçe</option></select></div></div></header>
+  <main class="container profile-main"><div id="profileLoading" class="profile-loading" data-i18n="loading"></div><div id="platformProfile"></div><section id="similarPlatforms" class="profile-similar" hidden><div class="section-heading"><div><h2 data-i18n="similarPlatforms"></h2></div></div><div class="similar-grid"></div></section></main>
+  <div class="toast" id="toast" role="status"></div>
+  <footer class="site-footer"><div class="container footer-grid"><div><strong data-i18n="siteName"></strong><p data-i18n="tagline"></p></div><div class="footer-developer"><span>✦</span><div><small data-i18n="developedBy"></small><strong>اتحاد شباب الأمة</strong></div></div><p data-i18n="footer"></p></div></footer>
+  <script src="js/i18n.js"></script><script src="js/data.js"></script><script src="js/platform-core.js"></script><script src="js/supabase-config.js"></script><script src="js/platform-data.js"></script><script src="js/platform-detail.js"></script>
+</body>
+</html>
