@@ -36,5 +36,16 @@
   function comparisonRows(platforms,lang='en',now=new Date()){
     return (Array.isArray(platforms)?platforms:[]).map(p=>({id:p.id,name:p.name,logoUrl:p.logoUrl||'',category:p.category||'',pricingModel:p.pricingModel||'unknown',hasFreeContent:p.hasFreeContent===true,certificateAvailable:p.certificateAvailable===true,languages:Array.isArray(p.languages)?p.languages:[],countLabel:PlatformCore.contentCountLabel(p,lang),verification:PlatformCore.verificationState(p.lastVerified,now),lastVerified:p.lastVerified||null,bestFor:firstLocalized(p,'best_for',lang),officialUrl:p.officialUrl||''}));
   }
-  return {getFilterOptions,getStats,getCategoryGroups,getFeatured,getVisiblePlatforms,cardFacts,comparisonRows};
+  function migrateComparisonIds(currentIds,legacyIds,validIds,max=3){
+    const source=Array.isArray(currentIds)?currentIds:(Array.isArray(legacyIds)?legacyIds:[]);
+    const valid=new Set(Array.isArray(validIds)?validIds:[]);
+    const result=[];
+    for(const id of source){
+      if(!valid.has(id)||result.includes(id))continue;
+      result.push(id);
+      if(result.length>=max)break;
+    }
+    return result;
+  }
+  return {getFilterOptions,getStats,getCategoryGroups,getFeatured,getVisiblePlatforms,cardFacts,comparisonRows,migrateComparisonIds};
 });
