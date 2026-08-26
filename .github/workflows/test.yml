@@ -15,4 +15,8 @@ jobs:
       - run: node --test tests/*.test.cjs
       - run: |
           for f in js/*.js; do node --check "$f"; done
+      - name: Verify generated platform seed
+        run: |
+          node scripts/build-platform-seed.mjs > /tmp/platform-directory-seed.sql
+          diff -u supabase/platform-directory-seed.sql /tmp/platform-directory-seed.sql
       - run: git diff --check
