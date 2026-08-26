@@ -19,4 +19,23 @@ jobs:
         run: |
           node scripts/build-platform-seed.mjs > /tmp/platform-directory-seed.sql
           diff -u supabase/platform-directory-seed.sql /tmp/platform-directory-seed.sql
+      - name: Verify public Supabase platform REST access
+        env:
+          SUPABASE_URL: https://pptjaflkltwavyktzphw.supabase.co
+          SUPABASE_PUBLISHABLE_KEY: sb_publishable_lUq2yPmkTijaqyYDifTYFA_Es-Xi7Nb
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -H "apikey: $SUPABASE_PUBLISHABLE_KEY" \
+            -H "Accept: application/json" \
+            "$SUPABASE_URL/rest/v1/platforms?select=external_id,status,category,languages,featured,display_order&status=eq.active&order=id.asc" \
+            -o /tmp/platforms.json
+          node - <<'NODE'
+          const fs = require('node:fs');
+          const rows = JSON.parse(fs.readFileSync('/tmp/platforms.json','utf8'));
+          if (!Array.isArray(rows)) throw new Error('Supabase response is not an array');
+          if (rows.length !== 40) throw new Error(`Expected 40 active platforms, received ${rows.length}`);
+          if (rows.some(row => row.status !== 'active')) throw new Error('Public response exposed a non-active platform');
+          if (rows.some(row => !/^plat-\d+$/.test(row.external_id || ''))) throw new Error('Public response contains an invalid external_id');
+          console.log(`Verified ${rows.length} active public platforms from Supabase REST`);
+          NODE
       - run: git diff --check
