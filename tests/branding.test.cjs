@@ -9,6 +9,7 @@ for (const page of ['index.html','explore.html','platform.html']) {
     const html = read(page);
     assert.match(html, /class="brand-logo"[^>]*src="assets\/dunya-logo-192\.png"/);
     assert.match(html, /rel="icon"[^>]*href="assets\/dunya-logo-192\.png"/);
+    assert.match(html, /href="css\/branding\.css"/);
     assert.doesNotMatch(html, /<span class="brand-mark">د<\/span>/);
   });
 }
@@ -32,11 +33,12 @@ test('manifest and service worker reference the new generated icon assets', () =
     assert.ok(manifest.includes(asset), `manifest missing ${asset}`);
     assert.ok(sw.includes(`./${asset}`), `service worker missing ${asset}`);
   }
+  assert.ok(sw.includes('./css/branding.css'));
   assert.match(sw, /dunya-al-dawrat-v8/);
 });
 
-test('shared CSS defines image logo sizing', () => {
-  const css = read('css/style.css');
+test('shared branding CSS defines image logo sizing', () => {
+  const css = read('css/branding.css');
   assert.match(css, /\.brand-logo\{/);
   assert.match(css, /\.hero-brand-logo\{/);
 });
