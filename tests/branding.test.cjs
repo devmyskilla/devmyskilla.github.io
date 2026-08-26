@@ -14,22 +14,22 @@ for (const page of ['index.html','explore.html','platform.html']) {
   });
 }
 
-test('landing visual uses the image emblem instead of a letter mark', () => {
+test('landing visual uses the new emblem instead of a letter mark', () => {
   const html = read('index.html');
-  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-512\.png"/);
+  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-192\.png"/);
   assert.doesNotMatch(html, /<span class="brand-mark big">د<\/span>/);
 });
 
-test('explore hero uses the image emblem instead of a letter mark', () => {
+test('explore hero uses the new emblem instead of a letter mark', () => {
   const html = read('explore.html');
-  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-512\.png"/);
+  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-192\.png"/);
   assert.doesNotMatch(html, /<span class="brand-mark big">د<\/span>/);
 });
 
 test('manifest and service worker reference the new generated icon assets', () => {
   const manifest = read('manifest.webmanifest');
   const sw = read('sw.js');
-  for (const asset of ['assets/dunya-logo-192.png','assets/dunya-logo-512.png']) {
+  for (const asset of ['assets/dunya-logo-192.png','assets/dunya-logo.svg']) {
     assert.ok(manifest.includes(asset), `manifest missing ${asset}`);
     assert.ok(sw.includes(`./${asset}`), `service worker missing ${asset}`);
   }
