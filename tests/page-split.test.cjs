@@ -25,3 +25,12 @@ test('platform profile back navigation points to explore', () => {
   assert.match(js, /explore\.html\?lang=/);
   assert.doesNotMatch(js, /index\.html\?lang=.*#explore/);
 });
+
+test('landing translation keys exist in Arabic English and Turkish', () => {
+  const src=read('js/i18n.js');
+  const keys=['navHome','landingHeroTitle','landingHeroSubtitle','landingExploreCta','landingLearnMore','landingProblemTitle','landingWhatTitle','landingWhyTitle','landingHowTitle','landingDeveloperTitle','landingFinalCta'];
+  for(const key of keys){
+    const count=(src.match(new RegExp(`${key}:`,'g'))||[]).length;
+    assert.equal(count,3,`${key} must exist in ar/en/tr`);
+  }
+});
