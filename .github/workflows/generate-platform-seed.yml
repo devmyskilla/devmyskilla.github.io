@@ -1,0 +1,41 @@
+name: Generate platform seed
+on:
+  push:
+    branches: [feat/platform-directory-pro-v2]
+    paths:
+      - scripts/build-platform-seed.mjs
+      - .github/workflows/generate-platform-seed.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/platform-directory-pro-v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate seed
+        run: node scripts/build-platform-seed.mjs > supabase/platform-directory-seed.sql
+      - name: Guard verified fields
+        run: |
+          if grep -E '^\s*(expected_count|expected_count_type|last_verified)\s*=' supabase/platform-directory-seed.sql; then
+            echo 'Seed must not write verified fields' >&2
+            exit 1
+          fi
+      - name: Commit generated seed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add supabase/platform-directory-seed.sql
+          if git diff --cached --quiet; then
+            echo "Seed already up to date"
+            exit 0
+          fi
+          git commit -m "data: generate platform presentation seed"
+          git push origin HEAD:feat/platform-directory-pro-v2
