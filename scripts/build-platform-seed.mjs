@@ -40,6 +40,9 @@ function normalizedLanguages(value) {
     ['إنجليزي',['English']], ['الإنجليزية',['English']], ['English',['English']],
     ['عربي',['Arabic']], ['العربية',['Arabic']], ['Arabic',['Arabic']],
     ['تركي',['Turkish']], ['التركية',['Turkish']], ['Turkish',['Turkish']],
+    ['فرنسي',['French']], ['الفرنسية',['French']], ['French',['French']],
+    ['عربي/إنجليزي',['Arabic','English']], ['عربي / إنجليزي',['Arabic','English']],
+    ['إنجليزي/فرنسي',['English','French']], ['إنجليزي / فرنسي',['English','French']],
     ['متعدد اللغات',['Multilingual']], ['متعددة اللغات',['Multilingual']], ['Multilingual',['Multilingual']]
   ]);
   return map.get(raw) || [raw];
