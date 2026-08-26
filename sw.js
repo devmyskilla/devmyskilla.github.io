@@ -1,11 +1,11 @@
-const CACHE = 'dunya-al-dawrat-v7';
+const CACHE = 'dunya-al-dawrat-v8';
 const CORE = [
   './','./index.html','./explore.html','./platform.html','./course.html','./offline.html',
-  './css/style.css','./css/landing.css','./css/profile.css',
+  './css/style.css','./css/branding.css','./css/landing.css','./css/profile.css',
   './js/i18n.js','./js/landing-i18n.js','./js/data.js','./js/platform-core.js','./js/supabase-config.js',
   './js/platform-data.js','./js/platform-directory.js','./js/app.js','./js/accessibility.js','./js/explore-nav.js',
   './js/landing.js','./js/platform-detail.js','./js/platform-back-nav.js',
-  './manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'
+  './manifest.webmanifest','./assets/dunya-logo-192.png','./assets/dunya-logo.svg'
 ];
 
 self.addEventListener('install', event => {
