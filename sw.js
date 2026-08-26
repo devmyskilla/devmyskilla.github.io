@@ -1,5 +1,11 @@
-const CACHE = 'dunya-al-dawrat-v5';
-const CORE = ['./','./index.html','./course.html','./offline.html','./css/style.css','./js/i18n.js','./js/data.js','./js/app.js','./js/detail.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
+const CACHE = 'dunya-al-dawrat-v6';
+const CORE = [
+  './','./index.html','./platform.html','./course.html','./offline.html',
+  './css/style.css','./css/profile.css',
+  './js/i18n.js','./js/data.js','./js/platform-core.js','./js/supabase-config.js',
+  './js/platform-data.js','./js/platform-directory.js','./js/app.js','./js/accessibility.js','./js/platform-detail.js',
+  './manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'
+];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
