@@ -1,0 +1,42 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+
+const read = path => fs.readFileSync(path, 'utf8');
+
+for (const page of ['index.html','explore.html','platform.html']) {
+  test(`${page} uses the Dunya image logo instead of letter mark`, () => {
+    const html = read(page);
+    assert.match(html, /class="brand-logo"[^>]*src="assets\/dunya-logo-192\.png"/);
+    assert.match(html, /rel="icon"[^>]*href="assets\/dunya-logo-192\.png"/);
+    assert.doesNotMatch(html, /<span class="brand-mark">د<\/span>/);
+  });
+}
+
+test('landing visual uses the image emblem instead of a letter mark', () => {
+  const html = read('index.html');
+  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-512\.png"/);
+  assert.doesNotMatch(html, /<span class="brand-mark big">د<\/span>/);
+});
+
+test('explore hero uses the image emblem instead of a letter mark', () => {
+  const html = read('explore.html');
+  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-512\.png"/);
+  assert.doesNotMatch(html, /<span class="brand-mark big">د<\/span>/);
+});
+
+test('manifest and service worker reference the new generated icon assets', () => {
+  const manifest = read('manifest.webmanifest');
+  const sw = read('sw.js');
+  for (const asset of ['assets/dunya-logo-192.png','assets/dunya-logo-512.png']) {
+    assert.ok(manifest.includes(asset), `manifest missing ${asset}`);
+    assert.ok(sw.includes(`./${asset}`), `service worker missing ${asset}`);
+  }
+  assert.match(sw, /dunya-al-dawrat-v8/);
+});
+
+test('shared CSS defines image logo sizing', () => {
+  const css = read('css/style.css');
+  assert.match(css, /\.brand-logo\{/);
+  assert.match(css, /\.hero-brand-logo\{/);
+});
