@@ -22,12 +22,12 @@ test('directory tabs expose tab semantics and selected state on explore page', (
   assert.match(explore,/data-tab="all"[^>]*aria-selected="true"/);
 });
 
-test('service worker v8 caches landing discovery and brand production assets', () => {
-  assert.match(sw,/dunya-al-dawrat-v8/);
+test('service worker v9 caches landing discovery and brand production assets', () => {
+  assert.match(sw,/dunya-al-dawrat-v9/);
   for (const asset of [
     './index.html','./explore.html','./platform.html','./course.html','./css/branding.css','./css/landing.css','./css/profile.css',
     './js/landing.js','./js/platform-core.js','./js/platform-data.js','./js/platform-directory.js','./js/platform-detail.js','./js/supabase-config.js',
-    './assets/dunya-logo-192.png','./assets/dunya-logo.svg'
+    './assets/dunya-logo-192.png','./assets/dunya-logo.svg','./assets/dunya-logo-hero-v2.webp'
   ]) assert.ok(sw.includes(asset),`missing ${asset}`);
 });
 
