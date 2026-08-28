@@ -23,3 +23,7 @@ test('PWA v9 caches the new cache-busted hero logo', () => {
 test('hero logo is intentionally prominent', () => {
   assert.match(branding, /\.hero-brand-logo\{[^}]*width:128px[^}]*height:128px/);
 });
+
+test('hero logo preserves the full source image instead of cropping it', () => {
+  assert.match(branding, /\.hero-brand-logo\{[^}]*object-fit:contain/);
+});
