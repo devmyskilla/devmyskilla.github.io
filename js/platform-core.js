@@ -8,7 +8,6 @@
     ar: { courses:'دورة', job_simulations:'محاكاة وظيفية', modules:'وحدة', learning_paths:'مسار تعليمي', certifications:'شهادة', materials:'مادة', items:'عنصر' },
     tr: { courses:'kurs', job_simulations:'iş simülasyonu', modules:'modül', learning_paths:'öğrenme yolu', certifications:'sertifika', materials:'materyal', items:'öğe' }
   };
-  const UNKNOWN_COUNT = { en:'Not officially confirmed', ar:'غير مؤكد رسميًا', tr:'Resmi olarak doğrulanmadı' };
 
   function nullish(value){ return value === null || value === undefined; }
   function text(value, fallback=''){ return nullish(value) ? fallback : String(value); }
@@ -29,6 +28,12 @@
     if (Array.isArray(value)) return value.length > 0;
     return true;
   }
+  function normalizePricing(value, freeFlag){
+    if (value === 0 || value === '0') return 'free';
+    if (meaningful(value)) return text(value).trim();
+    if (freeFlag === true) return 'free';
+    return 'unknown';
+  }
 
   function normalizeText(value=''){
     return String(value).toLowerCase().normalize('NFKD')
@@ -41,26 +46,28 @@
     return {
       id:'', databaseId:null, name:'',
       description:'', description_ar:'', description_en:'', description_tr:'',
-      category:'', pricingModel:'unknown', hasFreeContent:false, certificateAvailable:false,
+      category:'', pricingModel:'unknown', hasFreeContent:false, certificateAvailable:false, freeCertificate:false,
       languages:[], platformType:'', officialUrl:'', catalogUrl:'', logoUrl:'',
       officialCount:null, officialCountType:'', lastVerified:null,
       best_for_ar:[], best_for_en:[], best_for_tr:[],
       strengths_ar:[], strengths_en:[], strengths_tr:[],
       limitations_ar:[], limitations_en:[], limitations_tr:[],
-      featured:false, displayOrder:null, dataSource:'unknown'
+      featured:false, displayOrder:null, dataSource:'json'
     };
   }
 
   function normalizeStaticPlatform(row={}){
     const out = baseShape();
+    const freeFlag = row.hasFreeContent !== undefined ? row.hasFreeContent === true : row.free === true;
     Object.assign(out, {
       id:text(row.id), databaseId:intOrNull(row.databaseId), name:text(row.name || row.platform),
       description:text(row.description), description_ar:text(row.description_ar || row.description),
       description_en:text(row.description_en), description_tr:text(row.description_tr),
       category:text(row.category),
-      pricingModel:meaningful(row.pricingModel || row.pricing_model) ? text(row.pricingModel || row.pricing_model) : 'unknown',
-      hasFreeContent:row.hasFreeContent !== undefined ? row.hasFreeContent === true : row.free === true,
+      pricingModel:normalizePricing(row.pricingModel ?? row.pricing_model, freeFlag),
+      hasFreeContent:freeFlag,
       certificateAvailable:row.certificateAvailable !== undefined ? row.certificateAvailable === true : row.certificate === true,
+      freeCertificate:row.freeCertificate !== undefined ? row.freeCertificate === true : row.free_certificate === true,
       languages:array(row.languages && row.languages.length ? row.languages : row.language),
       platformType:text(row.platformType || row.platform_type),
       officialUrl:text(row.officialUrl || row.official_url || row.link),
@@ -72,7 +79,7 @@
       best_for_ar:array(row.best_for_ar), best_for_en:array(row.best_for_en), best_for_tr:array(row.best_for_tr),
       strengths_ar:array(row.strengths_ar), strengths_en:array(row.strengths_en), strengths_tr:array(row.strengths_tr),
       limitations_ar:array(row.limitations_ar), limitations_en:array(row.limitations_en), limitations_tr:array(row.limitations_tr),
-      featured:row.featured === true, displayOrder:intOrNull(row.displayOrder ?? row.display_order), dataSource:'static'
+      featured:row.featured === true, displayOrder:intOrNull(row.displayOrder ?? row.display_order), dataSource:'json'
     });
     return out;
   }
@@ -83,9 +90,10 @@
       id:text(row.external_id || row.id), databaseId:intOrNull(row.id), name:text(row.name),
       description:text(row.description), description_ar:text(row.description_ar || row.description),
       description_en:text(row.description_en), description_tr:text(row.description_tr), category:text(row.category),
-      pricingModel:nullish(row.pricing_model) || text(row.pricing_model).trim() === '' ? null : text(row.pricing_model),
+      pricingModel:nullish(row.pricing_model) || text(row.pricing_model).trim() === '' ? null : normalizePricing(row.pricing_model, row.has_free_content),
       hasFreeContent:nullish(row.has_free_content) ? null : row.has_free_content === true,
       certificateAvailable:nullish(row.certificate_available) ? null : row.certificate_available === true,
+      freeCertificate:nullish(row.free_certificate) ? false : row.free_certificate === true,
       languages:array(row.languages), platformType:text(row.platform_type), officialUrl:text(row.official_url),
       catalogUrl:text(row.catalog_url), logoUrl:text(row.logo_url), officialCount:numberOrNull(row.expected_count),
       officialCountType:text(row.expected_count_type), lastVerified:row.last_verified || null,
@@ -122,11 +130,25 @@
 
   function contentCountLabel(platform={}, lang='en'){
     const count = numberOrNull(platform.officialCount);
+    if (count === null) return '';
     const locale = UNIT_LABELS[lang] ? lang : 'en';
-    if (count === null) return UNKNOWN_COUNT[locale];
     const type = text(platform.officialCountType || 'items');
     const unit = UNIT_LABELS[locale][type] || UNIT_LABELS[locale].items;
     return `${count} ${unit}`;
+  }
+
+  function pricingDisplayKey(platform={}){
+    return platform.pricingModel === 'free' ? 'pricing_free_display' : `pricing_${platform.pricingModel || 'unknown'}`;
+  }
+  function certificateDisplayKey(platform={}){
+    if (platform.freeCertificate === true) return 'certificate_free';
+    if (platform.certificateAvailable === true) return 'certificate_available';
+    return '';
+  }
+  function shouldShowOfficialCount(platform={}){ return numberOrNull(platform.officialCount) !== null; }
+  function shouldShowVerification(platform={}){
+    if (!platform.lastVerified) return false;
+    return verificationState(platform.lastVerified) !== 'unverified';
   }
 
   function searchHaystack(p={}){
@@ -206,5 +228,5 @@
     return {ids:next,blocked:false};
   }
 
-  return { normalizeText, normalizeStaticPlatform, normalizeSupabasePlatform, mergePlatform, verificationState, contentCountLabel, searchScore, filterPlatforms, sortPlatforms, toggleComparison };
+  return { normalizeText, normalizeStaticPlatform, normalizeSupabasePlatform, mergePlatform, verificationState, contentCountLabel, pricingDisplayKey, certificateDisplayKey, shouldShowOfficialCount, shouldShowVerification, searchScore, filterPlatforms, sortPlatforms, toggleComparison };
 });
