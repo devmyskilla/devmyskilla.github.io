@@ -22,16 +22,14 @@
     Object.entries(map).forEach(([id,value])=>{const el=document.getElementById(id);if(el)el.textContent=value});
   }
   async function initBrowser(){
-    const params=new URLSearchParams(location.search);setLang(params.get('lang')||currentLang);applyTranslations();
-    const lang=document.getElementById('langSwitcher');if(lang)lang.value=currentLang;initTheme();syncExploreLinks();
+    const params=new URLSearchParams(location.search);setLang(params.get('lang')||currentLang);initTheme();
+    const data=await DataLoader.loadSiteData();mergeSiteText(data.siteText);applyTranslations();
+    const lang=document.getElementById('langSwitcher');if(lang)lang.value=currentLang;syncExploreLinks();
     if(lang)lang.onchange=e=>{setLang(e.target.value);applyTranslations();lang.value=currentLang;syncExploreLinks();const url=new URL(location.href);url.searchParams.set('lang',currentLang);history.replaceState(null,'',url)};
     const theme=document.getElementById('themeToggle');if(theme)theme.onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
-    try{
-      const loaded=await PlatformData.loadPlatforms({...SUPABASE_CONFIG,staticPlatforms:Array.isArray(PLATFORMS_DATA)?PLATFORMS_DATA:[]});
-      renderStats(buildStats(loaded.platforms));
-    }catch(_){ renderStats(buildStats([])); }
+    const platforms=data.platforms.map(PlatformCore.normalizeStaticPlatform);renderStats(buildStats(platforms));
     if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
   }
-  if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>initBrowser().catch(console.error));
+  if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>initBrowser().catch(err=>{console.error(err);renderStats(buildStats([]))}));
   return {buildStats,withLang};
 });
