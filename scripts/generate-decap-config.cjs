@@ -16,11 +16,11 @@ function textFields(lang, indent){
   return keys.map(key => `${indent}- { label: ${q(key)}, name: ${q(key)}, widget: string }`).join('\n');
 }
 
-function listField(label, name, indent='            '){
+function listField(label, name, indent='              '){
   return `${indent}- label: ${q(label)}\n${indent}  name: ${q(name)}\n${indent}  widget: list\n${indent}  required: false\n${indent}  field: { label: ${q('Value')}, name: ${q('value')}, widget: string }`;
 }
 
-const languageObjects = langs.map(([name,label]) => `          - label: ${q(label)}\n            name: ${q(name)}\n            widget: object\n            collapsed: true\n            fields:\n${textFields(name, '              ')}`).join('\n');
+const languageObjects = langs.map(([name,label]) => `              - label: ${q(label)}\n                name: ${q(name)}\n                widget: object\n                collapsed: true\n                fields:\n${textFields(name, '                  ')}`).join('\n');
 
 const platformLists = [
   ['مناسب لـ — عربي','best_for_ar'],['Best for — English','best_for_en'],['Uygun — Türkçe','best_for_tr'],
@@ -82,7 +82,7 @@ ${languageObjects}
                 name: languages
                 widget: list
                 required: false
-                field: { label: ${q('اللغة')}, name: value, widget: string }
+                field: { label: ${q('اللغة')}, name: ${q('value')}, widget: string }
               - { label: ${q('نوع المنصة')}, name: platformType, widget: string, required: false }
               - { label: ${q('الموقع الرسمي')}, name: officialUrl, widget: string, required: false }
               - { label: ${q('رابط الكتالوج')}, name: catalogUrl, widget: string, required: false }
