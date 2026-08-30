@@ -22,9 +22,10 @@
     return{
       id:platform.id,name:platform.name||'',description:localizedDescription(platform,lang),logoUrl:platform.logoUrl||'',
       category:platform.category||'',pricingModel:platform.pricingModel||'unknown',languages:Array.isArray(platform.languages)?[...platform.languages]:[],
-      hasFreeContent:platform.hasFreeContent===true,certificateAvailable:platform.certificateAvailable===true,platformType:platform.platformType||'',
-      countLabel:PlatformCore.contentCountLabel(platform,lang),verification:PlatformCore.verificationState(platform.lastVerified,now),lastVerified:platform.lastVerified||null,
-      officialUrl:platform.officialUrl||'',catalogUrl:platform.catalogUrl||'',bestFor:localizedList(platform,'best_for',lang),strengths:localizedList(platform,'strengths',lang),limitations:localizedList(platform,'limitations',lang),dataSource:platform.dataSource||'unknown'
+      hasFreeContent:platform.hasFreeContent===true,certificateAvailable:platform.certificateAvailable===true,freeCertificate:platform.freeCertificate===true,platformType:platform.platformType||'',
+      countLabel:PlatformCore.contentCountLabel(platform,lang),showOfficialCount:PlatformCore.shouldShowOfficialCount(platform),
+      verification:PlatformCore.verificationState(platform.lastVerified,now),showVerification:PlatformCore.shouldShowVerification(platform),lastVerified:platform.lastVerified||null,
+      officialUrl:platform.officialUrl||'',catalogUrl:platform.catalogUrl||'',bestFor:localizedList(platform,'best_for',lang),strengths:localizedList(platform,'strengths',lang),limitations:localizedList(platform,'limitations',lang)
     };
   }
   function similarPlatforms(platforms,current,limit=3){
@@ -49,24 +50,37 @@
     if(!platforms.length){container.hidden=true;return}container.hidden=false;
     container.querySelector('.similar-grid').innerHTML=platforms.map(p=>{const m=buildDetailModel(p,lang);return`<a class="similar-card" href="platform.html?id=${encodeURIComponent(p.id)}&lang=${encodeURIComponent(lang)}"><img src="${esc(m.logoUrl||'icon.svg')}" alt="${esc(m.name)}" onerror="this.onerror=null;this.src='icon.svg'"><div><strong>${esc(m.name)}</strong><small>${esc(typeof translateCat==='function'?translateCat(m.category):m.category)}</small></div></a>`}).join('');
   }
-  function renderProfile(platform,platforms,source){
+  function renderProfile(platform,platforms){
     const rootEl=document.getElementById('platformProfile'),model=buildDetailModel(platform,currentLang),fav=isFavorite(platform.id);
     const official=validHttpUrl(model.officialUrl),catalog=validHttpUrl(model.catalogUrl)&&model.catalogUrl!==model.officialUrl;
-    rootEl.innerHTML=`<a class="back-link" href="index.html?lang=${encodeURIComponent(currentLang)}#explore">← ${esc(getText('backToHome'))}</a><article class="profile-hero"><div class="profile-logo-shell">${logo(model)}</div><div class="profile-hero-copy"><div class="badge-row"><span class="tag">${esc(translateCat(model.category))}</span><span class="verification-badge ${model.verification}">${esc(translateVerification(model.verification))}</span></div><h1>${esc(model.name)}</h1><p>${esc(model.description)}</p><div class="profile-actions"><button id="profileFavorite" class="btn btn-soft" type="button" aria-pressed="${fav}">${fav?'♥ '+getText('removeSaved'):'♡ '+getText('savePlatform')}</button><button id="profileShare" class="btn btn-soft" type="button">↗ ${esc(getText('sharePlatform'))}</button>${official?`<a class="btn btn-primary" href="${esc(model.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(getText('officialSite'))} ↗</a>`:''}${catalog?`<a class="btn btn-soft" href="${esc(model.catalogUrl)}" target="_blank" rel="noopener noreferrer">${esc(getText('officialCatalog'))} ↗</a>`:''}</div></div></article><div class="profile-source ${source}">${source==='supabase'?'✓ '+esc(getText('dataSupabase')):'⚠ '+esc(getText('dataFallback'))}</div><section class="profile-facts"><h2>${esc(getText('facts'))}</h2><div class="profile-facts-grid">${fact(getText('category'),translateCat(model.category))}${fact(getText('price'),translatePricing(model.pricingModel))}${fact(getText('language'),model.languages.map(translateLang).join(' · ')||getText('unknown'))}${fact(getText('freeContent'),model.hasFreeContent?getText('yes'):getText('no'))}${fact(getText('certificate'),model.certificateAvailable?getText('yes'):getText('no'))}${fact(getText('officialContent'),model.countLabel)}${fact(getText('verification'),translateVerification(model.verification))}${fact(getText('lastVerified'),model.lastVerified||getText('unknown'))}</div></section><div class="profile-editorial">${listSection(getText('bestFor'),model.bestFor,'best-for')}${listSection(getText('strengths'),model.strengths,'strengths')}${listSection(getText('limitations'),model.limitations,'limitations')}</div>`;
+    const verificationBadge=model.showVerification?`<span class="verification-badge ${model.verification}">${esc(translateVerification(model.verification))}</span>`:'';
+    const certificateKey=PlatformCore.certificateDisplayKey(model);
+    const facts=[
+      fact(getText('category'),translateCat(model.category)),
+      fact(getText('price'),getText(PlatformCore.pricingDisplayKey(model))),
+      fact(getText('language'),model.languages.map(translateLang).join(' · ')||getText('unknown')),
+      fact(getText('freeContent'),model.hasFreeContent?getText('yes'):getText('no')),
+      certificateKey?fact(getText('certificate'),getText(certificateKey)):'',
+      model.showOfficialCount?fact(getText('officialContent'),model.countLabel):'',
+      model.showVerification?fact(getText('verification'),translateVerification(model.verification)):'',
+      model.showVerification&&model.lastVerified?fact(getText('lastVerified'),model.lastVerified):''
+    ].filter(Boolean).join('');
+    rootEl.innerHTML=`<a class="back-link" href="explore.html?lang=${encodeURIComponent(currentLang)}#explore">← ${esc(getText('backToHome'))}</a><article class="profile-hero"><div class="profile-logo-shell">${logo(model)}</div><div class="profile-hero-copy"><div class="badge-row"><span class="tag">${esc(translateCat(model.category))}</span>${verificationBadge}</div><h1>${esc(model.name)}</h1><p>${esc(model.description)}</p><div class="profile-actions"><button id="profileFavorite" class="btn btn-soft" type="button" aria-pressed="${fav}">${fav?'♥ '+getText('removeSaved'):'♡ '+getText('savePlatform')}</button><button id="profileShare" class="btn btn-soft" type="button">↗ ${esc(getText('sharePlatform'))}</button>${official?`<a class="btn btn-primary" href="${esc(model.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(getText('officialSite'))} ↗</a>`:''}${catalog?`<a class="btn btn-soft" href="${esc(model.catalogUrl)}" target="_blank" rel="noopener noreferrer">${esc(getText('officialCatalog'))} ↗</a>`:''}</div></div></article><section class="profile-facts"><h2>${esc(getText('facts'))}</h2><div class="profile-facts-grid">${facts}</div></section><div class="profile-editorial">${listSection(getText('bestFor'),model.bestFor,'best-for')}${listSection(getText('strengths'),model.strengths,'strengths')}${listSection(getText('limitations'),model.limitations,'limitations')}</div>`;
     const favorite=document.getElementById('profileFavorite');favorite.onclick=()=>{const selected=toggleFavorite(platform.id);favorite.setAttribute('aria-pressed',String(selected));favorite.textContent=selected?'♥ '+getText('removeSaved'):'♡ '+getText('savePlatform')};
     document.getElementById('profileShare').onclick=async()=>{try{if(navigator.share)await navigator.share({title:model.name,text:model.description,url:location.href});else{await navigator.clipboard.writeText(location.href);const toast=document.getElementById('toast');toast.textContent=getText('copied');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}}catch(_){}};
     renderSimilar(document.getElementById('similarPlatforms'),similarPlatforms(platforms,platform,3),currentLang);document.title=`${model.name} — ${getText('siteName')}`;
   }
   async function initBrowser(){
-    const params=new URLSearchParams(location.search),lang=params.get('lang');setLang(lang||currentLang);applyTranslations();document.getElementById('langSwitcher').value=currentLang;
+    const params=new URLSearchParams(location.search),lang=params.get('lang');setLang(lang||currentLang);
     let saved=null;try{saved=localStorage.getItem('dunya-theme-v2')}catch(_){};const theme=saved||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=theme;document.getElementById('themeToggle').textContent=theme==='dark'?'☀':'◐';
     document.getElementById('themeToggle').onclick=()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('dunya-theme-v2',next)}catch(_){};document.getElementById('themeToggle').textContent=next==='dark'?'☀':'◐'};
     document.getElementById('langSwitcher').onchange=e=>{const url=new URL(location.href);url.searchParams.set('lang',e.target.value);location.href=url.href};
-    const loaded=await PlatformData.loadPlatforms({...SUPABASE_CONFIG,staticPlatforms:Array.isArray(PLATFORMS_DATA)?PLATFORMS_DATA:[]});
-    const platform=findPlatform(loaded.platforms,params.get('id'));
+    const data=await DataLoader.loadSiteData();mergeSiteText(data.siteText);applyTranslations();document.getElementById('langSwitcher').value=currentLang;
+    const platforms=data.platforms.map(PlatformCore.normalizeStaticPlatform);
+    const platform=findPlatform(platforms,params.get('id'));
     const loading=document.getElementById('profileLoading');
     if(!platform){loading.textContent='⚠ '+getText('platformNotFound');loading.classList.add('error');document.title=getText('platformNotFound')+' — '+getText('siteName');return}
-    loading.remove();recordView(platform);renderProfile(platform,loaded.platforms,loaded.source);
+    loading.remove();recordView(platform);renderProfile(platform,platforms);
     if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
   }
   if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>initBrowser().catch(err=>{console.error(err);const el=document.getElementById('profileLoading');if(el)el.textContent='⚠ '+(typeof getText==='function'?getText('errorLoading'):'Unable to load platform')}));
