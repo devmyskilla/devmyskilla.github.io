@@ -44,7 +44,7 @@
 
   function baseShape(){
     return {
-      id:'', databaseId:null, name:'',
+      id:'', name:'',
       description:'', description_ar:'', description_en:'', description_tr:'',
       category:'', pricingModel:'unknown', hasFreeContent:false, certificateAvailable:false, freeCertificate:false,
       languages:[], platformType:'', officialUrl:'', catalogUrl:'', logoUrl:'',
@@ -52,7 +52,7 @@
       best_for_ar:[], best_for_en:[], best_for_tr:[],
       strengths_ar:[], strengths_en:[], strengths_tr:[],
       limitations_ar:[], limitations_en:[], limitations_tr:[],
-      featured:false, displayOrder:null, dataSource:'json'
+      featured:false, displayOrder:null
     };
   }
 
@@ -60,7 +60,7 @@
     const out = baseShape();
     const freeFlag = row.hasFreeContent !== undefined ? row.hasFreeContent === true : row.free === true;
     Object.assign(out, {
-      id:text(row.id), databaseId:intOrNull(row.databaseId), name:text(row.name || row.platform),
+      id:text(row.id), name:text(row.name || row.platform),
       description:text(row.description), description_ar:text(row.description_ar || row.description),
       description_en:text(row.description_en), description_tr:text(row.description_tr),
       category:text(row.category),
@@ -79,44 +79,9 @@
       best_for_ar:array(row.best_for_ar), best_for_en:array(row.best_for_en), best_for_tr:array(row.best_for_tr),
       strengths_ar:array(row.strengths_ar), strengths_en:array(row.strengths_en), strengths_tr:array(row.strengths_tr),
       limitations_ar:array(row.limitations_ar), limitations_en:array(row.limitations_en), limitations_tr:array(row.limitations_tr),
-      featured:row.featured === true, displayOrder:intOrNull(row.displayOrder ?? row.display_order), dataSource:'json'
+      featured:row.featured === true, displayOrder:intOrNull(row.displayOrder ?? row.display_order)
     });
     return out;
-  }
-
-  function normalizeSupabasePlatform(row={}){
-    const out = baseShape();
-    Object.assign(out, {
-      id:text(row.external_id || row.id), databaseId:intOrNull(row.id), name:text(row.name),
-      description:text(row.description), description_ar:text(row.description_ar || row.description),
-      description_en:text(row.description_en), description_tr:text(row.description_tr), category:text(row.category),
-      pricingModel:nullish(row.pricing_model) || text(row.pricing_model).trim() === '' ? null : normalizePricing(row.pricing_model, row.has_free_content),
-      hasFreeContent:nullish(row.has_free_content) ? null : row.has_free_content === true,
-      certificateAvailable:nullish(row.certificate_available) ? null : row.certificate_available === true,
-      freeCertificate:nullish(row.free_certificate) ? false : row.free_certificate === true,
-      languages:array(row.languages), platformType:text(row.platform_type), officialUrl:text(row.official_url),
-      catalogUrl:text(row.catalog_url), logoUrl:text(row.logo_url), officialCount:numberOrNull(row.expected_count),
-      officialCountType:text(row.expected_count_type), lastVerified:row.last_verified || null,
-      best_for_ar:array(row.best_for_ar), best_for_en:array(row.best_for_en), best_for_tr:array(row.best_for_tr),
-      strengths_ar:array(row.strengths_ar), strengths_en:array(row.strengths_en), strengths_tr:array(row.strengths_tr),
-      limitations_ar:array(row.limitations_ar), limitations_en:array(row.limitations_en), limitations_tr:array(row.limitations_tr),
-      featured:row.featured === true, displayOrder:intOrNull(row.display_order), dataSource:'supabase'
-    });
-    return out;
-  }
-
-  function mergePlatform(staticPlatform, supabasePlatform){
-    if (!staticPlatform && !supabasePlatform) return baseShape();
-    if (!supabasePlatform) return { ...staticPlatform };
-    if (!staticPlatform) return { ...supabasePlatform };
-    const merged = { ...staticPlatform };
-    Object.keys(supabasePlatform).forEach(key => {
-      const value = supabasePlatform[key];
-      if (key === 'dataSource') { merged[key] = 'supabase'; return; }
-      if (meaningful(value) || typeof value === 'boolean' || typeof value === 'number') merged[key] = value;
-    });
-    merged.dataSource = 'supabase';
-    return merged;
   }
 
   function verificationState(value, now=new Date()){
@@ -228,5 +193,5 @@
     return {ids:next,blocked:false};
   }
 
-  return { normalizeText, normalizeStaticPlatform, normalizeSupabasePlatform, mergePlatform, verificationState, contentCountLabel, pricingDisplayKey, certificateDisplayKey, shouldShowOfficialCount, shouldShowVerification, searchScore, filterPlatforms, sortPlatforms, toggleComparison };
+  return { normalizeText, normalizeStaticPlatform, verificationState, contentCountLabel, pricingDisplayKey, certificateDisplayKey, shouldShowOfficialCount, shouldShowVerification, searchScore, filterPlatforms, sortPlatforms, toggleComparison };
 });
