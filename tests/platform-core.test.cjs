@@ -4,52 +4,27 @@ const PlatformCore = require('../js/platform-core.js');
 
 const now = new Date('2026-08-26T12:00:00Z');
 
-test('normalizes legacy static platform data without inventing an official count', () => {
+test('normalizes static platform data without inventing an official count', () => {
   const p = PlatformCore.normalizeStaticPlatform({
-    id: 'plat-1', name: 'FutureLearn', description: 'AR', description_en: 'EN',
-    category: 'تعليم', language: 'إنجليزي', free: true, certificate: true,
-    link: 'https://www.futurelearn.com/courses', thumbnail: 'https://example.com/logo.png'
+    id: 'plat-1', name: 'FutureLearn', description_ar: 'AR', description_en: 'EN',
+    category: 'تعليم', languages: ['إنجليزي'], pricingModel: 'free', hasFreeContent: true,
+    certificateAvailable: true, freeCertificate: true,
+    officialUrl: 'https://www.futurelearn.com/courses', logoUrl: 'https://example.com/logo.png'
   });
   assert.equal(p.id, 'plat-1');
   assert.equal(p.hasFreeContent, true);
   assert.equal(p.certificateAvailable, true);
+  assert.equal(p.freeCertificate, true);
   assert.deepEqual(p.languages, ['إنجليزي']);
   assert.equal(p.officialCount, null);
-  assert.equal(p.pricingModel, 'unknown');
+  assert.equal(p.pricingModel, 'free');
   assert.equal(p.officialUrl, 'https://www.futurelearn.com/courses');
   assert.equal(p.logoUrl, 'https://example.com/logo.png');
 });
 
-test('normalizes Supabase fields without converting null count to zero', () => {
-  const p = PlatformCore.normalizeSupabasePlatform({
-    id: 7, external_id: 'plat-7', name: 'edX', expected_count: null,
-    expected_count_type: 'courses', has_free_content: true,
-    certificate_available: true, languages: ['English'], display_order: 5
-  });
-  assert.equal(p.id, 'plat-7');
-  assert.equal(p.databaseId, 7);
-  assert.equal(p.officialCount, null);
-  assert.equal(p.displayOrder, 5);
-});
-
-test('merge keeps authoritative Supabase values and fills missing presentation fields from static', () => {
-  const fallback = PlatformCore.normalizeStaticPlatform({
-    id: 'plat-1', name: 'FutureLearn', description_en: 'Static English',
-    category: 'تعليم', free: true, certificate: true, language: 'إنجليزي'
-  });
-  const db = PlatformCore.normalizeSupabasePlatform({
-    id: 1, external_id: 'plat-1', name: 'FutureLearn', description_en: null,
-    category: 'academic', pricing_model: 'freemium', has_free_content: false,
-    certificate_available: false, expected_count: 1673,
-    expected_count_type: 'courses', last_verified: '2026-08-26'
-  });
-  const merged = PlatformCore.mergePlatform(fallback, db);
-  assert.equal(merged.description_en, 'Static English');
-  assert.equal(merged.category, 'academic');
-  assert.equal(merged.pricingModel, 'freemium');
-  assert.equal(merged.hasFreeContent, false);
-  assert.equal(merged.certificateAvailable, false);
-  assert.equal(merged.officialCount, 1673);
+test('normalizes zero pricing to free', () => {
+  assert.equal(PlatformCore.normalizeStaticPlatform({ pricingModel: 0 }).pricingModel, 'free');
+  assert.equal(PlatformCore.normalizeStaticPlatform({ pricing_model: '0' }).pricingModel, 'free');
 });
 
 test('preserves non-course content units', () => {
@@ -58,23 +33,35 @@ test('preserves non-course content units', () => {
   assert.equal(PlatformCore.contentCountLabel({ officialCount: 20, officialCountType: 'learning_paths' }, 'en'), '20 learning paths');
 });
 
-test('unknown official count is never rendered as zero', () => {
-  assert.equal(PlatformCore.contentCountLabel({ officialCount: null }, 'en'), 'Not officially confirmed');
-  assert.equal(PlatformCore.contentCountLabel({ officialCount: null }, 'ar'), 'غير مؤكد رسميًا');
+test('unknown official count is omitted', () => {
+  assert.equal(PlatformCore.contentCountLabel({ officialCount: null }, 'en'), '');
+  assert.equal(PlatformCore.contentCountLabel({ officialCount: null }, 'ar'), '');
+  assert.equal(PlatformCore.shouldShowOfficialCount({ officialCount: null }), false);
+  assert.equal(PlatformCore.shouldShowOfficialCount({ officialCount: 0 }), true);
 });
 
-test('classifies verification date into recent, outdated, and unverified', () => {
+test('classifies verification date and hides missing verification', () => {
   assert.equal(PlatformCore.verificationState('2026-08-20', now), 'recent');
   assert.equal(PlatformCore.verificationState('2026-07-01', now), 'outdated');
   assert.equal(PlatformCore.verificationState(null, now), 'unverified');
-  assert.equal(PlatformCore.verificationState('invalid-date', now), 'unverified');
+  assert.equal(PlatformCore.shouldShowVerification({ lastVerified: null }), false);
+  assert.equal(PlatformCore.shouldShowVerification({ lastVerified: 'invalid-date' }), false);
+  assert.equal(PlatformCore.shouldShowVerification({ lastVerified: '2026-08-20' }), true);
+});
+
+test('selects localized pricing and certificate display keys', () => {
+  assert.equal(PlatformCore.pricingDisplayKey({ pricingModel: 'free' }), 'pricing_free_display');
+  assert.equal(PlatformCore.pricingDisplayKey({ pricingModel: 'paid' }), 'pricing_paid');
+  assert.equal(PlatformCore.certificateDisplayKey({ freeCertificate: true }), 'certificate_free');
+  assert.equal(PlatformCore.certificateDisplayKey({ certificateAvailable: true, freeCertificate: false }), 'certificate_available');
+  assert.equal(PlatformCore.certificateDisplayKey({ certificateAvailable: false }), '');
 });
 
 test('search matches multilingual text and misses unrelated terms', () => {
   const p = PlatformCore.normalizeStaticPlatform({
-    id: 'plat-3', name: 'IBM Skills Build', description: 'ذكاء اصطناعي',
+    id: 'plat-3', name: 'IBM Skills Build', description_ar: 'ذكاء اصطناعي',
     description_en: 'Artificial intelligence', description_tr: 'Yapay zeka',
-    category: 'تكنولوجيا', language: 'متعدد اللغات'
+    category: 'تكنولوجيا', languages: ['متعدد اللغات']
   });
   assert.equal(PlatformCore.searchScore(p, 'artificial intelligence') >= 0, true);
   assert.equal(PlatformCore.searchScore(p, 'ذكاء اصطناعي') >= 0, true);
