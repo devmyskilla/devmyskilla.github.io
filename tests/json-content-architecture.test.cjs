@@ -6,10 +6,15 @@ const read = path => fs.readFileSync(path, 'utf8');
 
 const pages = ['index.html', 'explore.html', 'platform.html'].map(read);
 
-test('data.json is the single runtime content source', () => {
+test('data.json preserves the current platform catalog', () => {
   const data = JSON.parse(read('data.json'));
   assert.equal(typeof data.siteText, 'object');
   assert.ok(Array.isArray(data.platforms));
+  assert.equal(data.platforms.length, 40);
+  assert.equal(new Set(data.platforms.map(p => p.id)).size, data.platforms.length);
+});
+
+test('data.json is the single runtime content source', () => {
   for (const html of pages) {
     assert.match(html, /js\/data-loader\.js/);
     assert.doesNotMatch(html, /supabase-config|platform-data\.js|js\/data\.js/);
