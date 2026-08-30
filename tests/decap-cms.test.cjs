@@ -21,6 +21,12 @@ test('Decap uses GitHub main and edits data.json', () => {
   assert.match(config, /name: freeCertificate/);
 });
 
+test('language groups are nested under the siteText object', () => {
+  const config = read('admin/config.yml');
+  assert.match(config, /name: siteText\n            widget: object\n            collapsed: true\n            fields:\n              - label: "العربية"/);
+  assert.match(config, /name: "ar"\n                widget: object\n                collapsed: true\n                fields:\n                  - /);
+});
+
 test('Decap configuration contains no OAuth client secret', () => {
   const config = read('admin/config.yml');
   assert.doesNotMatch(config, /client_secret|CLIENT_SECRET|github_client_secret/i);
