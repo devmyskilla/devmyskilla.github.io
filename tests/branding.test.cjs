@@ -35,7 +35,7 @@ test('manifest and service worker reference brand icon assets', () => {
   }
   assert.ok(sw.includes('./assets/dunya-logo-hero-v3.webp'));
   assert.ok(sw.includes('./css/branding.css'));
-  assert.match(sw, /dunya-al-dawrat-v9/);
+  assert.match(sw, /dunya-al-dawrat-v10/);
 });
 
 test('shared branding CSS defines image logo sizing', () => {
