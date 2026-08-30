@@ -1,0 +1,33 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+
+const read = path => fs.readFileSync(path, 'utf8');
+
+const pages = ['index.html', 'explore.html', 'platform.html'].map(read);
+
+test('data.json is the single runtime content source', () => {
+  const data = JSON.parse(read('data.json'));
+  assert.equal(typeof data.siteText, 'object');
+  assert.ok(Array.isArray(data.platforms));
+  for (const html of pages) {
+    assert.match(html, /js\/data-loader\.js/);
+    assert.doesNotMatch(html, /supabase-config|platform-data\.js|js\/data\.js/);
+  }
+});
+
+test('runtime source does not contain banned Arabic placeholder copy', () => {
+  const source = ['js/app.js', 'js/platform-detail.js', 'js/platform-core.js', 'js/i18n.js']
+    .filter(fs.existsSync).map(read).join('\n');
+  for (const phrase of [
+    'المحتوى الرسمي غير مؤكد رسميًا',
+    'التحقق لم يتم التحقق بعد',
+    'آخر تحقق غير معروف'
+  ]) assert.ok(!source.includes(phrase), phrase);
+});
+
+test('obsolete Supabase runtime files are absent', () => {
+  for (const path of ['js/supabase-config.js', 'js/platform-data.js', 'js/data.js']) {
+    assert.equal(fs.existsSync(path), false, `${path} must be removed`);
+  }
+});
