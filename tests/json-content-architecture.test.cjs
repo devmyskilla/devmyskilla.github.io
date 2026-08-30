@@ -10,7 +10,7 @@ test('data.json preserves the current platform catalog and editable landing copy
   const data = JSON.parse(read('data.json'));
   assert.equal(typeof data.siteText, 'object');
   assert.ok(Array.isArray(data.platforms));
-  assert.equal(data.platforms.length, 40);
+  assert.equal(data.platforms.length, 110);
   assert.equal(new Set(data.platforms.map(p => p.id)).size, data.platforms.length);
   assert.ok(data.siteText.ar.landingHeroTitle);
   assert.ok(data.siteText.en.landingHeroTitle);
