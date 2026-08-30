@@ -14,15 +14,15 @@ for (const page of ['index.html','explore.html','platform.html']) {
   });
 }
 
-test('landing visual uses the high-resolution generated emblem', () => {
+test('landing visual uses the verified high-resolution emblem', () => {
   const html = read('index.html');
-  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-hero-v2\.webp"/);
+  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-hero-v3\.webp"/);
   assert.doesNotMatch(html, /<span class="brand-mark big">د<\/span>/);
 });
 
-test('explore hero uses the high-resolution generated emblem', () => {
+test('explore hero uses the verified high-resolution emblem', () => {
   const html = read('explore.html');
-  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-hero-v2\.webp"/);
+  assert.match(html, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-hero-v3\.webp"/);
   assert.doesNotMatch(html, /<span class="brand-mark big">د<\/span>/);
 });
 
@@ -33,7 +33,7 @@ test('manifest and service worker reference brand icon assets', () => {
     assert.ok(manifest.includes(asset), `manifest missing ${asset}`);
     assert.ok(sw.includes(`./${asset}`), `service worker missing ${asset}`);
   }
-  assert.ok(sw.includes('./assets/dunya-logo-hero-v2.webp'));
+  assert.ok(sw.includes('./assets/dunya-logo-hero-v3.webp'));
   assert.ok(sw.includes('./css/branding.css'));
   assert.match(sw, /dunya-al-dawrat-v9/);
 });
