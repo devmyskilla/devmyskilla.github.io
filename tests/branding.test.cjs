@@ -5,9 +5,9 @@ const fs = require('node:fs');
 const read = path => fs.readFileSync(path, 'utf8');
 
 for (const page of ['index.html','explore.html','platform.html']) {
-  test(`${page} uses the Dunya image logo instead of letter mark`, () => {
+  test(`${page} uses the verified Dunya logo in the header`, () => {
     const html = read(page);
-    assert.match(html, /class="brand-logo"[^>]*src="assets\/dunya-logo-192\.png"/);
+    assert.match(html, /class="brand-logo"[^>]*src="assets\/dunya-logo-hero-v3\.webp"/);
     assert.match(html, /rel="icon"[^>]*href="assets\/dunya-logo-192\.png"/);
     assert.match(html, /href="css\/branding\.css"/);
     assert.doesNotMatch(html, /<span class="brand-mark">د<\/span>/);
