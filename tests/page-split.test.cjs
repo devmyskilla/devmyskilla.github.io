@@ -27,11 +27,13 @@ test('cross-page navigation preserves language', () => {
   assert.match(backNav,/explore\.html\?lang=/);
 });
 
-test('landing translation keys exist in Arabic English and Turkish', () => {
-  const src=read('js/i18n.js')+'\n'+read('js/landing-i18n.js');
+test('landing translation keys exist in Arabic English and Turkish in data.json', () => {
+  const data=JSON.parse(read('data.json'));
   const keys=['navHome','landingHeroTitle','landingHeroSubtitle','landingExploreCta','landingLearnMore','landingProblemTitle','landingWhatTitle','landingWhyTitle','landingHowTitle','landingDeveloperTitle','landingFinalCta'];
-  for(const key of keys){
-    const count=(src.match(new RegExp(`${key}:`,'g'))||[]).length;
-    assert.equal(count,3,`${key} must exist in ar/en/tr`);
+  for(const lang of ['ar','en','tr']){
+    for(const key of keys){
+      assert.equal(typeof data.siteText?.[lang]?.[key], 'string', `${key} must exist in ${lang}`);
+      assert.ok(data.siteText[lang][key].trim().length > 0, `${key} must not be empty in ${lang}`);
+    }
   }
 });
