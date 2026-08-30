@@ -16,9 +16,10 @@ function readLegacyI18n(){
   const index = source.indexOf(marker);
   if (index < 0) throw new Error('i18n object boundary was not found');
   const objectSource = source.slice(0, index);
+  const landingSource = fs.readFileSync('js/landing-i18n.js', 'utf8');
   const sandbox = {};
   vm.createContext(sandbox);
-  vm.runInContext(`${objectSource}\n;globalThis.__I18N__ = i18n;`, sandbox);
+  vm.runInContext(`${objectSource}\n${landingSource}\n;globalThis.__I18N__ = i18n;`, sandbox);
   if (!sandbox.__I18N__ || typeof sandbox.__I18N__ !== 'object') throw new Error('i18n object was not found');
   return JSON.parse(JSON.stringify(sandbox.__I18N__));
 }
@@ -92,4 +93,4 @@ for (const lang of ['ar','en','tr']) {
 const platforms = readLegacyPlatforms().map(migratePlatform);
 const output = { siteText, platforms };
 fs.writeFileSync('data.json', JSON.stringify(output, null, 2) + '\n');
-console.log(`Migrated ${platforms.length} platforms to data.json`);
+console.log(`Migrated ${platforms.length} platforms and landing copy to data.json`);
