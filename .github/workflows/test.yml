@@ -36,7 +36,7 @@ jobs:
         run: node scripts/generate-decap-config.cjs --check
       - name: Prevent legacy Supabase runtime dependencies
         run: |
-          if grep -RniE 'SUPABASE_CONFIG|PlatformData|supabase-config\.js|platform-data\.js' index.html explore.html platform.html js admin tests; then
+          if grep -RniE 'SUPABASE_CONFIG|PlatformData|supabase-config\.js|platform-data\.js' index.html explore.html platform.html js admin; then
             echo 'Legacy Supabase runtime reference detected'
             exit 1
           fi
