@@ -22,13 +22,21 @@ test('directory tabs expose tab semantics and selected state on explore page', (
   assert.match(explore,/data-tab="all"[^>]*aria-selected="true"/);
 });
 
-test('service worker v9 caches landing discovery and brand production assets', () => {
-  assert.match(sw,/dunya-al-dawrat-v9/);
+test('service worker v10 caches JSON runtime and production assets', () => {
+  assert.match(sw,/dunya-al-dawrat-v10/);
   for (const asset of [
     './index.html','./explore.html','./platform.html','./course.html','./css/branding.css','./css/landing.css','./css/profile.css',
-    './js/landing.js','./js/platform-core.js','./js/platform-data.js','./js/platform-directory.js','./js/platform-detail.js','./js/supabase-config.js',
+    './data.json','./js/data-loader.js','./js/landing.js','./js/platform-core.js','./js/platform-directory.js','./js/platform-detail.js',
     './assets/dunya-logo-192.png','./assets/dunya-logo.svg','./assets/dunya-logo-hero-v3.webp'
   ]) assert.ok(sw.includes(asset),`missing ${asset}`);
+  for (const obsolete of ['./js/platform-data.js','./js/supabase-config.js','./js/data.js','./js/landing-i18n.js']) {
+    assert.ok(!sw.includes(obsolete),`obsolete cache entry ${obsolete}`);
+  }
+});
+
+test('data.json is treated as freshness-sensitive content', () => {
+  assert.match(sw,/data\.json/);
+  assert.match(sw,/isDataRequest/);
 });
 
 test('landing page is separate from discovery application', () => {
