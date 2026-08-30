@@ -20,7 +20,7 @@ test('data.json preserves the current platform catalog and editable landing copy
 test('data.json is the single runtime content source', () => {
   for (const html of pages) {
     assert.match(html, /js\/data-loader\.js/);
-    assert.doesNotMatch(html, /supabase-config|platform-data\.js|js\/data\.js/);
+    assert.doesNotMatch(html, /supabase-config|platform-data\.js|js\/data\.js|landing-i18n\.js/);
   }
 });
 
@@ -34,8 +34,8 @@ test('runtime source does not contain banned Arabic placeholder copy', () => {
   ]) assert.ok(!source.includes(phrase), phrase);
 });
 
-test('obsolete Supabase runtime files are absent', () => {
-  for (const path of ['js/supabase-config.js', 'js/platform-data.js', 'js/data.js']) {
+test('obsolete runtime data files are absent', () => {
+  for (const path of ['js/supabase-config.js', 'js/platform-data.js', 'js/data.js', 'js/landing-i18n.js']) {
     assert.equal(fs.existsSync(path), false, `${path} must be removed`);
   }
 });
