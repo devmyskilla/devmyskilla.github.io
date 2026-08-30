@@ -31,10 +31,29 @@
     return fallbackFeaturedIds.map(id=>byId.get(id)).filter(Boolean);
   }
   function getVisiblePlatforms(platforms,state={}){return PlatformCore.sortPlatforms(PlatformCore.filterPlatforms(platforms,state),state.sort||'recommended')}
-  function cardFacts(platform,lang='en',now=new Date()){return{countLabel:PlatformCore.contentCountLabel(platform,lang),verification:PlatformCore.verificationState(platform&&platform.lastVerified,now),languages:Array.isArray(platform&&platform.languages)?platform.languages:[],pricingModel:platform&&platform.pricingModel?platform.pricingModel:'unknown',hasFreeContent:platform&&platform.hasFreeContent===true,certificateAvailable:platform&&platform.certificateAvailable===true}}
+  function cardFacts(platform,lang='en',now=new Date()){
+    return {
+      countLabel:PlatformCore.contentCountLabel(platform,lang),
+      verification:PlatformCore.verificationState(platform&&platform.lastVerified,now),
+      showOfficialCount:PlatformCore.shouldShowOfficialCount(platform),
+      showVerification:PlatformCore.shouldShowVerification(platform),
+      languages:Array.isArray(platform&&platform.languages)?platform.languages:[],
+      pricingModel:platform&&platform.pricingModel?platform.pricingModel:'unknown',
+      hasFreeContent:platform&&platform.hasFreeContent===true,
+      certificateAvailable:platform&&platform.certificateAvailable===true,
+      freeCertificate:platform&&platform.freeCertificate===true
+    };
+  }
   function firstLocalized(owner,prefix,lang){const key=`${prefix}_${lang}`,fallback=`${prefix}_en`;const values=Array.isArray(owner&&owner[key])&&owner[key].length?owner[key]:(Array.isArray(owner&&owner[fallback])?owner[fallback]:[]);return values[0]||''}
   function comparisonRows(platforms,lang='en',now=new Date()){
-    return (Array.isArray(platforms)?platforms:[]).map(p=>({id:p.id,name:p.name,logoUrl:p.logoUrl||'',category:p.category||'',pricingModel:p.pricingModel||'unknown',hasFreeContent:p.hasFreeContent===true,certificateAvailable:p.certificateAvailable===true,languages:Array.isArray(p.languages)?p.languages:[],countLabel:PlatformCore.contentCountLabel(p,lang),verification:PlatformCore.verificationState(p.lastVerified,now),lastVerified:p.lastVerified||null,bestFor:firstLocalized(p,'best_for',lang),officialUrl:p.officialUrl||''}));
+    return (Array.isArray(platforms)?platforms:[]).map(p=>({
+      id:p.id,name:p.name,logoUrl:p.logoUrl||'',category:p.category||'',pricingModel:p.pricingModel||'unknown',
+      hasFreeContent:p.hasFreeContent===true,certificateAvailable:p.certificateAvailable===true,freeCertificate:p.freeCertificate===true,
+      languages:Array.isArray(p.languages)?p.languages:[],countLabel:PlatformCore.contentCountLabel(p,lang),
+      showOfficialCount:PlatformCore.shouldShowOfficialCount(p),verification:PlatformCore.verificationState(p.lastVerified,now),
+      showVerification:PlatformCore.shouldShowVerification(p),lastVerified:p.lastVerified||null,
+      bestFor:firstLocalized(p,'best_for',lang),officialUrl:p.officialUrl||''
+    }));
   }
   function migrateComparisonIds(currentIds,legacyIds,validIds,max=3){
     const source=Array.isArray(currentIds)?currentIds:(Array.isArray(legacyIds)?legacyIds:[]);
