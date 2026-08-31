@@ -1,6 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const ContentAPI = require('../js/content-api.js');
 
 const read = path => fs.readFileSync(path, 'utf8');
 
@@ -31,9 +32,11 @@ test('landing translation keys exist in Arabic English and Turkish in data.json'
   const data=JSON.parse(read('data.json'));
   const keys=['navHome','landingHeroTitle','landingHeroSubtitle','landingExploreCta','landingLearnMore','landingProblemTitle','landingWhatTitle','landingWhyTitle','landingHowTitle','landingDeveloperTitle','landingFinalCta'];
   for(const lang of ['ar','en','tr']){
+    const api=ContentAPI.create(data,lang);
     for(const key of keys){
-      assert.equal(typeof data.siteText?.[lang]?.[key], 'string', `${key} must exist in ${lang}`);
-      assert.ok(data.siteText[lang][key].trim().length > 0, `${key} must not be empty in ${lang}`);
+      const value=api.text(key);
+      assert.equal(typeof value,'string',`${key} must exist in ${lang}`);
+      assert.ok(value.trim().length>0,`${key} must not be empty in ${lang}`);
     }
   }
 });
