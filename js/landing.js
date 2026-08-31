@@ -1,35 +1,35 @@
 (function(root,factory){
-  const directory = typeof module === 'object' && module.exports ? require('./platform-directory.js') : root.PlatformDirectory;
-  const api = factory(directory);
-  if (typeof module === 'object' && module.exports) module.exports = api;
-  if (root) root.Landing = api;
-})(typeof globalThis !== 'undefined' ? globalThis : this,function(PlatformDirectory){
-  if(!PlatformDirectory) throw new Error('PlatformDirectory is required');
-  function buildStats(platforms){ return PlatformDirectory.getStats(Array.isArray(platforms)?platforms:[]); }
-  function withLang(path,lang){ return `${path}?lang=${encodeURIComponent(lang || 'ar')}`; }
+  const directory=typeof module==='object'&&module.exports?require('./platform-directory.js'):root.PlatformDirectory;
+  const api=factory(directory);
+  if(typeof module==='object'&&module.exports)module.exports=api;
+  if(root)root.Landing=api;
+})(typeof globalThis!=='undefined'?globalThis:this,function(PlatformDirectory){
+  if(!PlatformDirectory)throw new Error('PlatformDirectory is required');
+  function buildStats(platforms){return PlatformDirectory.getStats(Array.isArray(platforms)?platforms:[])}
+  function withLang(path,lang){const separator=String(path).includes('?')?'&':'?';return `${path}${separator}lang=${encodeURIComponent(lang||'ar')}`}
   function setTheme(theme){
     document.documentElement.dataset.theme=theme;
     try{localStorage.setItem('dunya-theme-v2',theme)}catch(_){}
-    const button=document.getElementById('themeToggle');if(button)button.textContent=theme==='dark'?'☀':'◐';
+    const button=document.getElementById('themeToggle');if(button)button.textContent=content?content.icon(theme==='dark'?'themeLight':'themeDark'):'';
   }
-  function initTheme(){
-    let saved=null;try{saved=localStorage.getItem('dunya-theme-v2')}catch(_){}
-    const theme=saved||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');setTheme(theme);
-  }
-  function syncExploreLinks(){ document.querySelectorAll('[data-explore-link]').forEach(link=>link.href=withLang('explore.html',currentLang)); }
-  function renderStats(stats){
-    const map={landingStatPlatforms:stats.platforms,landingStatFree:stats.free,landingStatCert:stats.certificates,landingStatLang:stats.languages};
-    Object.entries(map).forEach(([id,value])=>{const el=document.getElementById(id);if(el)el.textContent=value});
+  function initTheme(){let saved=null;try{saved=localStorage.getItem('dunya-theme-v2')}catch(_){}const theme=saved||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');setTheme(theme)}
+  function syncExploreLinks(){const path=content&&content.link('explore')||'explore.html';document.querySelectorAll('[data-explore-link]').forEach(link=>link.href=withLang(path,currentLang))}
+  function renderStats(stats){const map={landingStatPlatforms:stats.platforms,landingStatFree:stats.free,landingStatCert:stats.certificates,landingStatLang:stats.languages};Object.entries(map).forEach(([id,value])=>{const el=document.getElementById(id);if(el)el.textContent=value})}
+  function renderPlatformCloud(platforms){
+    const orbit=document.getElementById('homePlatformCloud');if(!orbit||!content)return;
+    const core=orbit.querySelector('.landing-core');orbit.querySelectorAll('.orbit-chip').forEach(node=>node.remove());
+    const byId=new Map((platforms||[]).map(p=>[p.id,p])),ids=Array.isArray(content.rawSetting('homePlatformCloud'))?content.rawSetting('homePlatformCloud'):[];
+    ids.map(id=>byId.get(id)).filter(Boolean).forEach(p=>{const chip=document.createElement('span');chip.className='orbit-chip';chip.textContent=content.platformName(p);orbit.insertBefore(chip,core)});
   }
   async function initBrowser(){
-    const params=new URLSearchParams(location.search);setLang(params.get('lang')||currentLang);initTheme();
-    const data=await DataLoader.loadSiteData();mergeSiteText(data.siteText);applyTranslations();
-    const lang=document.getElementById('langSwitcher');if(lang)lang.value=currentLang;syncExploreLinks();
-    if(lang)lang.onchange=e=>{setLang(e.target.value);applyTranslations();lang.value=currentLang;syncExploreLinks();const url=new URL(location.href);url.searchParams.set('lang',currentLang);history.replaceState(null,'',url)};
+    const params=new URLSearchParams(location.search),data=await DataLoader.loadSiteData();
+    initContent(data);setLang(params.get('lang')||content.rawSetting('defaultLanguage')||'ar');SiteRuntime.applyDocument(document,content,'home');initTheme();syncExploreLinks();
+    const platforms=data.platforms.map(PlatformCore.normalizeStaticPlatform);renderPlatformCloud(platforms);renderStats(buildStats(platforms));
+    const lang=document.getElementById('langSwitcher');if(lang)lang.value=currentLang;
+    if(lang)lang.onchange=e=>{setLang(e.target.value);SiteRuntime.applyDocument(document,content,'home');lang.value=currentLang;syncExploreLinks();renderPlatformCloud(platforms);const url=new URL(location.href);url.searchParams.set('lang',currentLang);history.replaceState(null,'',url)};
     const theme=document.getElementById('themeToggle');if(theme)theme.onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
-    const platforms=data.platforms.map(PlatformCore.normalizeStaticPlatform);renderStats(buildStats(platforms));
     if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
   }
   if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>initBrowser().catch(err=>{console.error(err);renderStats(buildStats([]))}));
-  return {buildStats,withLang};
+  return{buildStats,withLang};
 });
