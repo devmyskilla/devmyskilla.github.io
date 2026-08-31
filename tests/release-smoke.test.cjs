@@ -22,8 +22,8 @@ test('directory tabs expose tab semantics and selected state on explore page', (
   assert.match(explore,/data-tab="all"[^>]*aria-selected="true"/);
 });
 
-test('service worker v10 caches JSON runtime and production assets', () => {
-  assert.match(sw,/dunya-al-dawrat-v10/);
+test('service worker v11 caches JSON runtime and production assets', () => {
+  assert.match(sw,/dunya-al-dawrat-v11/);
   for (const asset of [
     './index.html','./explore.html','./platform.html','./course.html','./css/branding.css','./css/landing.css','./css/profile.css',
     './data.json','./js/data-loader.js','./js/landing.js','./js/platform-core.js','./js/platform-directory.js','./js/platform-detail.js',
@@ -37,6 +37,12 @@ test('service worker v10 caches JSON runtime and production assets', () => {
 test('data.json is treated as freshness-sensitive content', () => {
   assert.match(sw,/data\.json/);
   assert.match(sw,/isDataRequest/);
+});
+
+test('Decap admin config is always fetched network-first', () => {
+  assert.match(sw,/admin\/config\.yml/);
+  assert.match(sw,/isAdminConfigRequest/);
+  assert.match(sw,/needsFreshCopy\s*=\s*isDataRequest\s*\|\|\s*isAdminConfigRequest/);
 });
 
 test('landing page is separate from discovery application', () => {
