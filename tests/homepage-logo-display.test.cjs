@@ -6,14 +6,16 @@ const index = fs.readFileSync('index.html','utf8');
 const explore = fs.readFileSync('explore.html','utf8');
 const sw = fs.readFileSync('sw.js','utf8');
 const branding = fs.readFileSync('css/branding.css','utf8');
-const heroAssetPath = 'assets/dunya-logo-hero-v3.webp';
+const data = JSON.parse(fs.readFileSync('data.json','utf8'));
+const heroAssetPath = data.assets.heroLogo.src;
 
-test('homepage hero uses the verified high-resolution logo asset', () => {
-  assert.match(index, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-hero-v3\.webp"/);
+test('homepage hero is bound to the CMS-managed hero logo', () => {
+  assert.match(index, /class="hero-brand-logo"[^>]*data-asset="heroLogo"/);
+  assert.equal(heroAssetPath,'assets/dunya-logo-hero-v3.webp');
 });
 
-test('explore hero uses the same verified high-resolution logo asset', () => {
-  assert.match(explore, /class="hero-brand-logo"[^>]*src="assets\/dunya-logo-hero-v3\.webp"/);
+test('explore hero uses the same CMS-managed hero logo binding', () => {
+  assert.match(explore, /class="hero-brand-logo"[^>]*data-asset="heroLogo"/);
 });
 
 test('hero logo file is a real WebP image', () => {
@@ -23,8 +25,8 @@ test('hero logo file is a real WebP image', () => {
   assert.equal(heroAsset.subarray(8, 12).toString('ascii'), 'WEBP');
 });
 
-test('PWA caches the verified hero logo', () => {
-  assert.ok(sw.includes('./assets/dunya-logo-hero-v3.webp'));
+test('PWA caches the current verified hero logo fallback', () => {
+  assert.ok(sw.includes(`./${heroAssetPath}`));
 });
 
 test('hero logo is intentionally prominent', () => {
