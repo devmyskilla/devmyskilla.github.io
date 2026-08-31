@@ -1,8 +1,8 @@
-const CACHE = 'dunya-al-dawrat-v11';
+const CACHE = 'dunya-al-dawrat-v12';
 const CORE = [
   './','./index.html','./explore.html','./platform.html','./course.html','./offline.html','./data.json',
   './css/style.css','./css/branding.css','./css/landing.css','./css/profile.css',
-  './js/i18n.js','./js/data-loader.js','./js/platform-core.js','./js/platform-directory.js','./js/app.js','./js/accessibility.js','./js/explore-nav.js',
+  './js/content-api.js','./js/i18n.js','./js/site-runtime.js','./js/data-loader.js','./js/platform-core.js','./js/platform-directory.js','./js/app.js','./js/accessibility.js','./js/explore-nav.js',
   './js/landing.js','./js/platform-detail.js','./js/platform-back-nav.js',
   './manifest.webmanifest','./assets/dunya-logo-192.png','./assets/dunya-logo.svg','./assets/dunya-logo-hero-v3.webp'
 ];
