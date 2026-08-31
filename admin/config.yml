@@ -4,9 +4,6 @@ backend:
   branch: main
   base_url: https://dunya-decap-oauth.atomy8774.workers.dev
   auth_endpoint: auth
-  # After deploying your OAuth proxy, uncomment and replace the next line.
-  # base_url: https://YOUR-OAUTH-PROXY.example.com
-  # auth_endpoint: auth
 
 site_url: https://devmyskilla.github.io
 logo_url: https://devmyskilla.github.io/assets/dunya-logo-192.png
@@ -15,125 +12,3772 @@ media_folder: assets/uploads
 public_folder: /assets/uploads
 
 collections:
-  - label: "بيانات دنيا الدورات"
+  - label: "إدارة دنيا الدورات"
     name: site_data
     files:
-      - label: "النصوص والمنصات"
+      - label: "محتوى وإعدادات الموقع"
         name: site_data
         file: data.json
         fields:
+          - label: "إعدادات الموقع"
+            name: settings
+            widget: object
+            collapsed: false
+            fields:
+              - label: "اسم الموقع"
+                name: siteName
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "اسم الجهة المطورة"
+                name: developerName
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "حقوق النشر"
+                name: copyright
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "اللغة الافتراضية"
+                name: defaultLanguage
+                widget: select
+                options:
+                  - { label: "العربية", value: ar }
+                  - { label: "English", value: en }
+                  - { label: "Türkçe", value: tr }
+              - label: "أسماء اللغات في المحول"
+                name: localeNames
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "لون الواجهة الرئيسي"
+                name: themeColor
+                widget: string
+                hint: "Hex color such as #4f46e5"
+              - label: "الروابط العامة"
+                name: links
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "about"
+                    name: about
+                    widget: string
+                    required: false
+                  - label: "developer"
+                    name: developer
+                    widget: string
+                    required: false
+                  - label: "developerExternal"
+                    name: developerExternal
+                    widget: string
+                    required: false
+                  - label: "explore"
+                    name: explore
+                    widget: string
+                    required: false
+                  - label: "home"
+                    name: home
+                    widget: string
+                    required: false
+                  - label: "howItWorks"
+                    name: howItWorks
+                    widget: string
+                    required: false
+              - label: "معرفات المنصات المميزة الاحتياطية"
+                name: featuredFallbackIds
+                widget: list
+                required: false
+                hint: "Stable platform IDs"
+                field: { label: "Value", name: value, widget: string }
+              - label: "منصات السحابة البصرية"
+                name: homePlatformCloud
+                widget: list
+                required: false
+                hint: "Stable platform IDs"
+                field: { label: "Value", name: value, widget: string }
+          - label: "الهوية والصور"
+            name: assets
+            widget: object
+            collapsed: true
+            fields:
+              - label: "brandLogo"
+                name: brandLogo
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "الصورة / Image"
+                    name: src
+                    widget: image
+                    required: false
+                  - label: "النص البديل / Alt text"
+                    name: alt
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                        required: false
+                      - label: "English"
+                        name: en
+                        widget: string
+                        required: false
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                        required: false
+              - label: "favicon"
+                name: favicon
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "الصورة / Image"
+                    name: src
+                    widget: image
+                    required: false
+                  - label: "النص البديل / Alt text"
+                    name: alt
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                        required: false
+                      - label: "English"
+                        name: en
+                        widget: string
+                        required: false
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                        required: false
+              - label: "heroLogo"
+                name: heroLogo
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "الصورة / Image"
+                    name: src
+                    widget: image
+                    required: false
+                  - label: "النص البديل / Alt text"
+                    name: alt
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                        required: false
+                      - label: "English"
+                        name: en
+                        widget: string
+                        required: false
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                        required: false
+              - label: "platformFallbackLogo"
+                name: platformFallbackLogo
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "الصورة / Image"
+                    name: src
+                    widget: image
+                    required: false
+                  - label: "النص البديل / Alt text"
+                    name: alt
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                        required: false
+                      - label: "English"
+                        name: en
+                        widget: string
+                        required: false
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                        required: false
+              - label: "الأيقونات القابلة للتحرير"
+                name: icons
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "back"
+                    name: back
+                    widget: string
+                    required: false
+                  - label: "check"
+                    name: check
+                    widget: string
+                    required: false
+                  - label: "close"
+                    name: close
+                    widget: string
+                    required: false
+                  - label: "compare"
+                    name: compare
+                    widget: string
+                    required: false
+                  - label: "developer"
+                    name: developer
+                    widget: string
+                    required: false
+                  - label: "developerMark"
+                    name: developerMark
+                    widget: string
+                    required: false
+                  - label: "external"
+                    name: external
+                    widget: string
+                    required: false
+                  - label: "favoriteOff"
+                    name: favoriteOff
+                    widget: string
+                    required: false
+                  - label: "favoriteOn"
+                    name: favoriteOn
+                    widget: string
+                    required: false
+                  - label: "install"
+                    name: install
+                    widget: string
+                    required: false
+                  - label: "path"
+                    name: path
+                    widget: string
+                    required: false
+                  - label: "problemCert"
+                    name: problemCert
+                    widget: string
+                    required: false
+                  - label: "problemCompare"
+                    name: problemCompare
+                    widget: string
+                    required: false
+                  - label: "problemMany"
+                    name: problemMany
+                    widget: string
+                    required: false
+                  - label: "problemPrice"
+                    name: problemPrice
+                    widget: string
+                    required: false
+                  - label: "quiz"
+                    name: quiz
+                    widget: string
+                    required: false
+                  - label: "random"
+                    name: random
+                    widget: string
+                    required: false
+                  - label: "reset"
+                    name: reset
+                    widget: string
+                    required: false
+                  - label: "search"
+                    name: search
+                    widget: string
+                    required: false
+                  - label: "share"
+                    name: share
+                    widget: string
+                    required: false
+                  - label: "themeDark"
+                    name: themeDark
+                    widget: string
+                    required: false
+                  - label: "themeLight"
+                    name: themeLight
+                    widget: string
+                    required: false
           - label: "نصوص الموقع"
             name: siteText
             widget: object
             collapsed: true
             fields:
-              - label: "العربية"
-                name: "ar"
+              - label: "accessibility"
+                name: accessibility
                 widget: object
                 collapsed: true
                 fields:
-
-              - label: "English"
-                name: "en"
+                  - label: "close"
+                    name: close
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "language"
+                    name: language
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "languageCount"
+                    name: languageCount
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "search"
+                    name: search
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "searchPlaceholder"
+                    name: searchPlaceholder
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "theme"
+                    name: theme
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "common"
+                name: common
                 widget: object
                 collapsed: true
                 fields:
-
-              - label: "Türkçe"
-                name: "tr"
+                  - label: "all"
+                    name: all
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "anyCategory"
+                    name: anyCategory
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "anyLanguage"
+                    name: anyLanguage
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "category"
+                    name: category
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "certCount"
+                    name: certCount
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "certificate"
+                    name: certificate
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "certificate_available"
+                    name: certificate_available
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "certificate_free"
+                    name: certificate_free
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "contentUnits"
+                    name: contentUnits
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "certifications"
+                        name: certifications
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "courses"
+                        name: courses
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "items"
+                        name: items
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "job_simulations"
+                        name: job_simulations
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "learning_paths"
+                        name: learning_paths
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "materials"
+                        name: materials
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "modules"
+                        name: modules
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                  - label: "favorite"
+                    name: favorite
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "freeContent"
+                    name: freeContent
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "freeCount"
+                    name: freeCount
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "lastVerified"
+                    name: lastVerified
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "no"
+                    name: no
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "platformCount"
+                    name: platformCount
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "price"
+                    name: price
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pricing_free"
+                    name: pricing_free
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pricing_free_display"
+                    name: pricing_free_display
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pricing_freemium"
+                    name: pricing_freemium
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pricing_mixed"
+                    name: pricing_mixed
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pricing_paid"
+                    name: pricing_paid
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pricing_unknown"
+                    name: pricing_unknown
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "privacyNote"
+                    name: privacyNote
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "reset"
+                    name: reset
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "share"
+                    name: share
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "unfavorite"
+                    name: unfavorite
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "verification"
+                    name: verification
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "verification_outdated"
+                    name: verification_outdated
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "verification_recent"
+                    name: verification_recent
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "yes"
+                    name: yes
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "comparison"
+                name: comparison
                 widget: object
                 collapsed: true
                 fields:
-
+                  - label: "clear"
+                    name: clear
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "compare"
+                    name: compare
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "compareBar"
+                    name: compareBar
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "compareNow"
+                    name: compareNow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "comparePlatforms"
+                    name: comparePlatforms
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "compareTitle"
+                    name: compareTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "maxCompare"
+                    name: maxCompare
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "selected"
+                    name: selected
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "errors"
+                name: errors
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "copied"
+                    name: copied
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "errorLoading"
+                    name: errorLoading
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "loading"
+                    name: loading
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "unknown"
+                    name: unknown
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "explore"
+                name: explore
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "allTab"
+                    name: allTab
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "browsePlatforms"
+                    name: browsePlatforms
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "categoriesEyebrow"
+                    name: categoriesEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "categoriesSubtitle"
+                    name: categoriesSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "categoriesTitle"
+                    name: categoriesTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "chipArabic"
+                    name: chipArabic
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "chipBusiness"
+                    name: chipBusiness
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "chipCertificate"
+                    name: chipCertificate
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "chipEnglish"
+                    name: chipEnglish
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "chipFree"
+                    name: chipFree
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "chipTechnology"
+                    name: chipTechnology
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "explorerEyebrow"
+                    name: explorerEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "explorerSubtitle"
+                    name: explorerSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "explorerTitle"
+                    name: explorerTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "favoritesTab"
+                    name: favoritesTab
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "featuredSubtitle"
+                    name: featuredSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "featuredTitle"
+                    name: featuredTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "filterCategory"
+                    name: filterCategory
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "filterLanguage"
+                    name: filterLanguage
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "filterPricing"
+                    name: filterPricing
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "filterVerification"
+                    name: filterVerification
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "freeOnly"
+                    name: freeOnly
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "heroSearchPlaceholder"
+                    name: heroSearchPlaceholder
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "heroSubtitle"
+                    name: heroSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: text
+                      - label: "English"
+                        name: en
+                        widget: text
+                      - label: "Türkçe"
+                        name: tr
+                        widget: text
+                  - label: "heroTitle"
+                    name: heroTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "installApp"
+                    name: installApp
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "installed"
+                    name: installed
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "noResults"
+                    name: noResults
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "platformsAvailable"
+                    name: platformsAvailable
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "randomPlatform"
+                    name: randomPlatform
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "recentTab"
+                    name: recentTab
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortBy"
+                    name: sortBy
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortFree"
+                    name: sortFree
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortName"
+                    name: sortName
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortOfficialCount"
+                    name: sortOfficialCount
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortRecent"
+                    name: sortRecent
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortRecommended"
+                    name: sortRecommended
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortVerified"
+                    name: sortVerified
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sortViewed"
+                    name: sortViewed
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "trustCopy"
+                    name: trustCopy
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "withCertificate"
+                    name: withCertificate
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "footer"
+                name: footer
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "developedBy"
+                    name: developedBy
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "footer"
+                    name: footer
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "footerDeveloper"
+                    name: footerDeveloper
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "siteName"
+                    name: siteName
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "tagline"
+                    name: tagline
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "unionBadge"
+                    name: unionBadge
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "home"
+                name: home
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "landingDeveloperEyebrow"
+                    name: landingDeveloperEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingDeveloperText"
+                    name: landingDeveloperText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: text
+                      - label: "English"
+                        name: en
+                        widget: text
+                      - label: "Türkçe"
+                        name: tr
+                        widget: text
+                  - label: "landingDeveloperTitle"
+                    name: landingDeveloperTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingExploreCta"
+                    name: landingExploreCta
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingFinalCta"
+                    name: landingFinalCta
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingFinalText"
+                    name: landingFinalText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingFinalTitle"
+                    name: landingFinalTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingHeroSubtitle"
+                    name: landingHeroSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: text
+                      - label: "English"
+                        name: en
+                        widget: text
+                      - label: "Türkçe"
+                        name: tr
+                        widget: text
+                  - label: "landingHeroTitle"
+                    name: landingHeroTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingHowEyebrow"
+                    name: landingHowEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingHowTitle"
+                    name: landingHowTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingLearnMore"
+                    name: landingLearnMore
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingNotMarketplace"
+                    name: landingNotMarketplace
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingProblemEyebrow"
+                    name: landingProblemEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingProblemSubtitle"
+                    name: landingProblemSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingProblemTitle"
+                    name: landingProblemTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingStatsEyebrow"
+                    name: landingStatsEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingStatsTitle"
+                    name: landingStatsTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingWhatEyebrow"
+                    name: landingWhatEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingWhatText"
+                    name: landingWhatText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: text
+                      - label: "English"
+                        name: en
+                        widget: text
+                      - label: "Türkçe"
+                        name: tr
+                        widget: text
+                  - label: "landingWhatTitle"
+                    name: landingWhatTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingWhyEyebrow"
+                    name: landingWhyEyebrow
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "landingWhyText"
+                    name: landingWhyText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: text
+                      - label: "English"
+                        name: en
+                        widget: text
+                      - label: "Türkçe"
+                        name: tr
+                        widget: text
+                  - label: "landingWhyTitle"
+                    name: landingWhyTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemCert"
+                    name: problemCert
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemCertText"
+                    name: problemCertText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemCompare"
+                    name: problemCompare
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemCompareText"
+                    name: problemCompareText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemMany"
+                    name: problemMany
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemManyText"
+                    name: problemManyText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemPrice"
+                    name: problemPrice
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "problemPriceText"
+                    name: problemPriceText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepChoose"
+                    name: stepChoose
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepChooseText"
+                    name: stepChooseText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepCompare"
+                    name: stepCompare
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepCompareText"
+                    name: stepCompareText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepFilter"
+                    name: stepFilter
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepFilterText"
+                    name: stepFilterText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepOfficial"
+                    name: stepOfficial
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepOfficialText"
+                    name: stepOfficialText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepSearch"
+                    name: stepSearch
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stepSearchText"
+                    name: stepSearchText
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "navigation"
+                name: navigation
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "navCategories"
+                    name: navCategories
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "navCompare"
+                    name: navCompare
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "navExplore"
+                    name: navExplore
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "navFeatured"
+                    name: navFeatured
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "navHome"
+                    name: navHome
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "platform"
+                name: platform
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "backToHome"
+                    name: backToHome
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "bestFor"
+                    name: bestFor
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "details"
+                    name: details
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "facts"
+                    name: facts
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "limitations"
+                    name: limitations
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "officialCatalog"
+                    name: officialCatalog
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "officialContent"
+                    name: officialContent
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "officialSite"
+                    name: officialSite
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "overview"
+                    name: overview
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "platformNotFound"
+                    name: platformNotFound
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "removeSaved"
+                    name: removeSaved
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "savePlatform"
+                    name: savePlatform
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "sharePlatform"
+                    name: sharePlatform
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "similarPlatforms"
+                    name: similarPlatforms
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "strengths"
+                    name: strengths
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+              - label: "quiz"
+                name: quiz
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "buildPath"
+                    name: buildPath
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "certImportant"
+                    name: certImportant
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "certNotImportant"
+                    name: certNotImportant
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "freePreferred"
+                    name: freePreferred
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "generatePath"
+                    name: generatePath
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "goalAI"
+                    name: goalAI
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "goalBusiness"
+                    name: goalBusiness
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "goalCyber"
+                    name: goalCyber
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "goalEnglish"
+                    name: goalEnglish
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "goalProgramming"
+                    name: goalProgramming
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "match"
+                    name: match
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "paidOkay"
+                    name: paidOkay
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pathGoal"
+                    name: pathGoal
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pathSubtitle"
+                    name: pathSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "pathTitle"
+                    name: pathTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "qBudget"
+                    name: qBudget
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "qCategory"
+                    name: qCategory
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "qCertificate"
+                    name: qCertificate
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "qLanguage"
+                    name: qLanguage
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "quizResults"
+                    name: quizResults
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "quizSubtitle"
+                    name: quizSubtitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "quizTitle"
+                    name: quizTitle
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "showResults"
+                    name: showResults
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "stage"
+                    name: stage
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+          - label: "التصنيفات"
+            name: categories
+            widget: list
+            summary: "{{fields.id}}"
+            fields:
+              - label: "معرّف تقني — لا تغيّره بعد النشر"
+                name: id
+                widget: string
+                hint: "Stable ID used by platform references"
+              - label: "الاسم المترجم"
+                name: label
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "الأيقونة"
+                name: icon
+                widget: string
+                required: false
+              - label: "مفعّل"
+                name: enabled
+                widget: boolean
+                default: true
+              - label: "ترتيب العرض"
+                name: displayOrder
+                widget: number
+                value_type: int
+                required: false
+          - label: "اللغات"
+            name: languages
+            widget: list
+            summary: "{{fields.id}}"
+            fields:
+              - label: "معرّف تقني — لا تغيّره بعد النشر"
+                name: id
+                widget: string
+                hint: "Stable ID used by platform references"
+              - label: "الاسم المترجم"
+                name: label
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "مفعّل"
+                name: enabled
+                widget: boolean
+                default: true
+              - label: "ترتيب العرض"
+                name: displayOrder
+                widget: number
+                value_type: int
+                required: false
+          - label: "الاختبار والترشيحات"
+            name: quiz
+            widget: object
+            collapsed: true
+            fields:
+              - label: "الفلاتر السريعة"
+                name: quickFilters
+                widget: list
+                fields:
+                  - label: "ID"
+                    name: id
+                    widget: string
+                  - label: "النوع"
+                    name: type
+                    widget: select
+                    options: [free, certificate, category, language]
+                  - label: "Target ID"
+                    name: targetId
+                    widget: string
+                    required: false
+                  - label: "النص"
+                    name: label
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "الأيقونة"
+                    name: icon
+                    widget: string
+                    required: false
+              - label: "أسئلة الاختبار"
+                name: questions
+                widget: list
+                summary: "{{fields.id}}"
+                fields:
+                  - label: "ID"
+                    name: id
+                    widget: string
+                  - label: "النوع"
+                    name: type
+                    widget: select
+                    options: [category, language, choice]
+                  - label: "السؤال"
+                    name: label
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "خيار الكل"
+                    name: anyLabel
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                        required: false
+                      - label: "English"
+                        name: en
+                        widget: string
+                        required: false
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                        required: false
+                  - label: "الخيارات"
+                    name: options
+                    widget: list
+                    required: false
+                    fields:
+                      - label: "ID"
+                        name: id
+                        widget: string
+                      - label: "النص"
+                        name: label
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+              - label: "عنوان النتائج"
+                name: resultsTitle
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "نص نسبة التوافق"
+                name: matchLabel
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "زر عرض النتائج"
+                name: showResultsLabel
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "المسارات التعليمية"
+                name: learningPaths
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "ai"
+                    name: ai
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "اسم الهدف"
+                        name: label
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "المراحل"
+                        name: stages
+                        widget: list
+                        field:
+                          label: "معرفات المنصات في المرحلة"
+                          name: value
+                          widget: list
+                          field: { label: "Platform ID", name: value, widget: string }
+                  - label: "business"
+                    name: business
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "اسم الهدف"
+                        name: label
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "المراحل"
+                        name: stages
+                        widget: list
+                        field:
+                          label: "معرفات المنصات في المرحلة"
+                          name: value
+                          widget: list
+                          field: { label: "Platform ID", name: value, widget: string }
+                  - label: "cyber"
+                    name: cyber
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "اسم الهدف"
+                        name: label
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "المراحل"
+                        name: stages
+                        widget: list
+                        field:
+                          label: "معرفات المنصات في المرحلة"
+                          name: value
+                          widget: list
+                          field: { label: "Platform ID", name: value, widget: string }
+                  - label: "english"
+                    name: english
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "اسم الهدف"
+                        name: label
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "المراحل"
+                        name: stages
+                        widget: list
+                        field:
+                          label: "معرفات المنصات في المرحلة"
+                          name: value
+                          widget: list
+                          field: { label: "Platform ID", name: value, widget: string }
+                  - label: "programming"
+                    name: programming
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "اسم الهدف"
+                        name: label
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "المراحل"
+                        name: stages
+                        widget: list
+                        field:
+                          label: "معرفات المنصات في المرحلة"
+                          name: value
+                          widget: list
+                          field: { label: "Platform ID", name: value, widget: string }
+          - label: "المقارنة"
+            name: comparison
+            widget: object
+            collapsed: true
+            fields:
+              - label: "الحد الأقصى للمقارنة"
+                name: maxPlatforms
+                widget: number
+                value_type: int
+              - label: "رمز القيمة الفارغة"
+                name: emptyValue
+                widget: string
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - label: "home"
+                name: home
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+                  - label: "English"
+                    name: en
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+                  - label: "Türkçe"
+                    name: tr
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+              - label: "explore"
+                name: explore
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+                  - label: "English"
+                    name: en
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+                  - label: "Türkçe"
+                    name: tr
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+              - label: "platform"
+                name: platform
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+                  - label: "English"
+                    name: en
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
+                  - label: "Türkçe"
+                    name: tr
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "Page title"
+                        name: title
+                        widget: string
+                      - label: "Meta description"
+                        name: description
+                        widget: text
+                      - label: "Open Graph title"
+                        name: ogTitle
+                        widget: string
+                      - label: "Open Graph description"
+                        name: ogDescription
+                        widget: text
+                      - label: "Open Graph image"
+                        name: ogImage
+                        widget: image
+                        required: false
           - label: "المنصات"
             name: platforms
             widget: list
-            summary: "{{fields.name}}"
+            summary: "{{fields.id}} — {{fields.name.en}}"
             fields:
-              - { label: "ID", name: id, widget: string }
-              - { label: "اسم المنصة", name: name, widget: string }
-              - { label: "الوصف العربي", name: description_ar, widget: text, required: false }
-              - { label: "English description", name: description_en, widget: text, required: false }
-              - { label: "Türkçe açıklama", name: description_tr, widget: text, required: false }
-              - { label: "التصنيف", name: category, widget: string }
+              - label: "معرّف تقني — لا تغيّره بعد النشر"
+                name: id
+                widget: string
+                hint: "Stable platform ID"
+              - label: "اسم المنصة"
+                name: name
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: string
+                  - label: "English"
+                    name: en
+                    widget: string
+                  - label: "Türkçe"
+                    name: tr
+                    widget: string
+              - label: "الوصف"
+                name: description
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "العربية"
+                    name: ar
+                    widget: text
+                    required: false
+                  - label: "English"
+                    name: en
+                    widget: text
+                    required: false
+                  - label: "Türkçe"
+                    name: tr
+                    widget: text
+                    required: false
+              - label: "معرّف التصنيف"
+                name: categoryId
+                widget: string
+                hint: "Use an ID from التصنيفات"
+              - label: "معرفات اللغات"
+                name: languageIds
+                widget: list
+                required: false
+                hint: "Use IDs from اللغات"
+                field: { label: "Value", name: value, widget: string }
               - label: "حالة السعر"
                 name: pricingModel
                 widget: select
-                options:
-                  - { label: "مجاني", value: free }
-                  - { label: "مجاني جزئيًا", value: freemium }
-                  - { label: "مدفوع", value: paid }
-                  - { label: "مختلط", value: mixed }
-              - { label: "يوفر محتوى مجاني", name: hasFreeContent, widget: boolean, default: false }
-              - { label: "يوفر شهادات", name: certificateAvailable, widget: boolean, default: false }
-              - { label: "الشهادات مجانية", name: freeCertificate, widget: boolean, default: false }
-              - label: "اللغات"
-                name: languages
-                widget: list
+                options: [free, freemium, paid, mixed, unknown]
+              - label: "يوفر محتوى مجاني"
+                name: hasFreeContent
+                widget: boolean
+                default: false
+              - label: "يوفر شهادات"
+                name: certificateAvailable
+                widget: boolean
+                default: false
+              - label: "الشهادات مجانية"
+                name: freeCertificate
+                widget: boolean
+                default: false
+              - label: "نوع المنصة"
+                name: platformType
+                widget: string
                 required: false
-                field: { label: "اللغة", name: "value", widget: string }
-              - { label: "نوع المنصة", name: platformType, widget: string, required: false }
-              - { label: "الموقع الرسمي", name: officialUrl, widget: string, required: false }
-              - { label: "رابط الكتالوج", name: catalogUrl, widget: string, required: false }
-              - { label: "رابط الشعار", name: logoUrl, widget: string, required: false }
-              - { label: "عدد المحتوى الرسمي", name: officialCount, widget: number, value_type: int, required: false }
+              - label: "الموقع الرسمي"
+                name: officialUrl
+                widget: string
+                required: false
+              - label: "رابط الكتالوج"
+                name: catalogUrl
+                widget: string
+                required: false
+              - label: "شعار المنصة"
+                name: logo
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "الصورة"
+                    name: src
+                    widget: image
+                    required: false
+                  - label: "النص البديل"
+                    name: alt
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                        required: false
+                      - label: "English"
+                        name: en
+                        widget: string
+                        required: false
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                        required: false
+              - label: "عدد المحتوى الرسمي"
+                name: officialCount
+                widget: number
+                value_type: int
+                required: false
               - label: "نوع العدد الرسمي"
                 name: officialCountType
                 widget: select
                 required: false
-                options:
-                  - { label: courses, value: courses }
-                  - { label: modules, value: modules }
-                  - { label: learning_paths, value: learning_paths }
-                  - { label: job_simulations, value: job_simulations }
-                  - { label: certifications, value: certifications }
-                  - { label: materials, value: materials }
-                  - { label: items, value: items }
-              - { label: "آخر تحقق", name: lastVerified, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
-              - label: "مناسب لـ — عربي"
-                name: "best_for_ar"
-                widget: list
+                options: [courses, modules, learning_paths, job_simulations, certifications, materials, items]
+              - label: "آخر تحقق"
+                name: lastVerified
+                widget: datetime
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
                 required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "Best for — English"
-                name: "best_for_en"
-                widget: list
+              - label: "المحتوى التحريري"
+                name: editorial
+                widget: object
+                collapsed: true
+                fields:
+                  - label: "مناسب لـ"
+                    name: bestFor
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                      - label: "English"
+                        name: en
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                      - label: "Türkçe"
+                        name: tr
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                  - label: "نقاط القوة"
+                    name: strengths
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                      - label: "English"
+                        name: en
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                      - label: "Türkçe"
+                        name: tr
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                  - label: "القيود"
+                    name: limitations
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                      - label: "English"
+                        name: en
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+                      - label: "Türkçe"
+                        name: tr
+                        widget: list
+                        required: false
+                        field: { label: "Value", name: value, widget: string }
+              - label: "منصة مميزة"
+                name: featured
+                widget: boolean
+                default: false
+              - label: "ترتيب العرض"
+                name: displayOrder
+                widget: number
+                value_type: int
                 required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "Uygun — Türkçe"
-                name: "best_for_tr"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "نقاط القوة — عربي"
-                name: "strengths_ar"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "Strengths — English"
-                name: "strengths_en"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "Güçlü yönler — Türkçe"
-                name: "strengths_tr"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "القيود — عربي"
-                name: "limitations_ar"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "Limitations — English"
-                name: "limitations_en"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - label: "Sınırlamalar — Türkçe"
-                name: "limitations_tr"
-                widget: list
-                required: false
-                field: { label: "Value", name: "value", widget: string }
-              - { label: "منصة مميزة", name: featured, widget: boolean, default: false }
-              - { label: "ترتيب العرض", name: displayOrder, widget: number, value_type: int, required: false }
