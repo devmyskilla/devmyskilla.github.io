@@ -21,6 +21,12 @@ test('Decap uses GitHub main and edits data.json', () => {
   assert.match(config, /name: freeCertificate/);
 });
 
+test('Decap generator preserves the configured OAuth proxy', () => {
+  const config = read('admin/config.yml');
+  assert.match(config, /base_url: https:\/\/dunya-decap-oauth\.atomy8774\.workers\.dev/);
+  assert.match(config, /auth_endpoint: auth/);
+});
+
 test('language groups are nested under the siteText object', () => {
   const config = read('admin/config.yml');
   assert.match(config, /name: siteText\n            widget: object\n            collapsed: true\n            fields:\n              - label: "العربية"/);
