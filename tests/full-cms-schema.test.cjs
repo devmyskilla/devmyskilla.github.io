@@ -21,3 +21,16 @@ test('stable IDs are unique and platform references resolve', () => {
     for (const id of platform.languageIds || []) assert.ok(languageIds.has(id), `${platform.id}: bad languageId ${id}`);
   }
 });
+
+test('editable concepts are stored as ar/en/tr triplets', () => {
+  for (const value of [data.settings.siteName, data.settings.developerName, data.settings.copyright]) {
+    assert.deepEqual(Object.keys(value).sort(), ['ar','en','tr']);
+  }
+  for (const category of data.categories) assert.deepEqual(Object.keys(category.label).sort(), ['ar','en','tr']);
+  for (const language of data.languages) assert.deepEqual(Object.keys(language.label).sort(), ['ar','en','tr']);
+  for (const platform of data.platforms) {
+    assert.deepEqual(Object.keys(platform.name).sort(), ['ar','en','tr']);
+    assert.deepEqual(Object.keys(platform.description).sort(), ['ar','en','tr']);
+    assert.deepEqual(Object.keys(platform.logo.alt).sort(), ['ar','en','tr']);
+  }
+});
