@@ -22,11 +22,11 @@ test('directory tabs expose tab semantics and selected state on explore page', (
   assert.match(explore,/data-tab="all"[^>]*aria-selected="true"/);
 });
 
-test('service worker v11 caches JSON runtime and production assets', () => {
-  assert.match(sw,/dunya-al-dawrat-v11/);
+test('service worker v12 caches CMS runtime and production assets', () => {
+  assert.match(sw,/dunya-al-dawrat-v12/);
   for (const asset of [
     './index.html','./explore.html','./platform.html','./course.html','./css/branding.css','./css/landing.css','./css/profile.css',
-    './data.json','./js/data-loader.js','./js/landing.js','./js/platform-core.js','./js/platform-directory.js','./js/platform-detail.js',
+    './data.json','./js/content-api.js','./js/i18n.js','./js/site-runtime.js','./js/data-loader.js','./js/landing.js','./js/platform-core.js','./js/platform-directory.js','./js/platform-detail.js',
     './assets/dunya-logo-192.png','./assets/dunya-logo.svg','./assets/dunya-logo-hero-v3.webp'
   ]) assert.ok(sw.includes(asset),`missing ${asset}`);
   for (const obsolete of ['./js/platform-data.js','./js/supabase-config.js','./js/data.js','./js/landing-i18n.js']) {
@@ -54,7 +54,11 @@ test('profile page loads its dedicated stylesheet', () => {
   assert.match(platform,/css\/profile\.css/);
 });
 
-test('manifest describes a platform discovery and comparison product', () => {
-  assert.match(manifest.description,/منصات/);
-  assert.match(manifest.description,/مقارنة/);
+test('static manifest remains a valid fallback while runtime manifest is CMS-managed', () => {
+  assert.equal(typeof manifest.name,'string');
+  assert.equal(typeof manifest.description,'string');
+  assert.match(index,/id="appManifest"/);
+  assert.match(explore,/id="appManifest"/);
+  assert.match(platform,/id="appManifest"/);
+  assert.match(fs.readFileSync('js/site-runtime.js','utf8'),/createManifest/);
 });
