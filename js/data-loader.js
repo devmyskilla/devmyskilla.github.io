@@ -3,16 +3,22 @@
   if (typeof module === 'object' && module.exports) module.exports = api;
   if (root) root.DataLoader = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function(){
+  const REQUIRED_SECTIONS = ['settings','assets','seo','siteText','categories','languages','quiz','comparison','platforms'];
+
+  function isObject(value){ return value && typeof value === 'object' && !Array.isArray(value); }
+
   function validate(data){
-    if (!data || typeof data !== 'object' || Array.isArray(data)) {
-      throw new Error('data.json must contain an object');
+    if (!isObject(data)) throw new Error('data.json must contain an object');
+    for (const key of REQUIRED_SECTIONS) {
+      if (!Object.hasOwn(data,key)) throw new Error(`data.json ${key} is required`);
     }
-    if (!data.siteText || typeof data.siteText !== 'object' || Array.isArray(data.siteText)) {
-      throw new Error('data.json siteText is required');
+    if (!isObject(data.settings) || !isObject(data.assets) || !isObject(data.seo) || !isObject(data.siteText)) {
+      throw new Error('data.json CMS object sections are invalid');
     }
-    if (!Array.isArray(data.platforms)) {
-      throw new Error('data.json platforms must be an array');
+    if (!Array.isArray(data.categories) || !Array.isArray(data.languages) || !Array.isArray(data.platforms)) {
+      throw new Error('data.json CMS collection sections are invalid');
     }
+    if (!isObject(data.quiz) || !isObject(data.comparison)) throw new Error('data.json quiz/comparison are invalid');
     return data;
   }
 
