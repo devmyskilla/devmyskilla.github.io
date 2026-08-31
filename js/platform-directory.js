@@ -1,27 +1,33 @@
-(function(root, factory){
-  const core = typeof module === 'object' && module.exports ? require('./platform-core.js') : root.PlatformCore;
-  const api = factory(core);
-  if (typeof module === 'object' && module.exports) module.exports = api;
-  if (root) root.PlatformDirectory = api;
-})(typeof globalThis !== 'undefined' ? globalThis : this, function(PlatformCore){
-  if (!PlatformCore) throw new Error('PlatformCore is required');
-  function uniqueSorted(values){ return [...new Set(values.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b))); }
+(function(root,factory){
+  const core=typeof module==='object'&&module.exports?require('./platform-core.js'):root.PlatformCore;
+  const api=factory(core);
+  if(typeof module==='object'&&module.exports)module.exports=api;
+  if(root)root.PlatformDirectory=api;
+})(typeof globalThis!=='undefined'?globalThis:this,function(PlatformCore){
+  if(!PlatformCore)throw new Error('PlatformCore is required');
+
+  function uniqueSorted(values){return[...new Set(values.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b)))}
   function getFilterOptions(platforms){
-    const list = Array.isArray(platforms) ? platforms : [];
-    return {
-      categories: uniqueSorted(list.map(p=>p.category)),
-      languages: uniqueSorted(list.flatMap(p=>Array.isArray(p.languages)?p.languages:[])),
-      pricingModels: uniqueSorted(list.map(p=>p.pricingModel).filter(x=>x && x!=='unknown'))
+    const list=Array.isArray(platforms)?platforms:[];
+    return{
+      categories:uniqueSorted(list.map(p=>p.categoryId)),
+      languages:uniqueSorted(list.flatMap(p=>Array.isArray(p.languageIds)?p.languageIds:[])),
+      pricingModels:uniqueSorted(list.map(p=>p.pricingModel).filter(x=>x&&x!=='unknown'))
     };
   }
   function getStats(platforms){
-    const list = Array.isArray(platforms) ? platforms : [];
-    return {platforms:list.length,free:list.filter(p=>p.hasFreeContent===true).length,certificates:list.filter(p=>p.certificateAvailable===true).length,languages:new Set(list.flatMap(p=>Array.isArray(p.languages)?p.languages:[])).size};
+    const list=Array.isArray(platforms)?platforms:[];
+    return{
+      platforms:list.length,
+      free:list.filter(p=>p.hasFreeContent===true).length,
+      certificates:list.filter(p=>p.certificateAvailable===true).length,
+      languages:new Set(list.flatMap(p=>Array.isArray(p.languageIds)?p.languageIds:[])).size
+    };
   }
   function getCategoryGroups(platforms){
-    const counts = new Map();
-    (Array.isArray(platforms)?platforms:[]).forEach(p=>{if(p.category)counts.set(p.category,(counts.get(p.category)||0)+1)});
-    return [...counts.entries()].map(([category,count])=>({category,count})).sort((a,b)=>b.count-a.count || a.category.localeCompare(b.category));
+    const counts=new Map();
+    (Array.isArray(platforms)?platforms:[]).forEach(p=>{if(p.categoryId)counts.set(p.categoryId,(counts.get(p.categoryId)||0)+1)});
+    return[...counts.entries()].map(([categoryId,count])=>({categoryId,count})).sort((a,b)=>b.count-a.count||a.categoryId.localeCompare(b.categoryId));
   }
   function getFeatured(platforms,fallbackFeaturedIds=[]){
     const list=Array.isArray(platforms)?platforms:[];
@@ -31,40 +37,35 @@
     return fallbackFeaturedIds.map(id=>byId.get(id)).filter(Boolean);
   }
   function getVisiblePlatforms(platforms,state={}){return PlatformCore.sortPlatforms(PlatformCore.filterPlatforms(platforms,state),state.sort||'recommended')}
-  function cardFacts(platform,lang='en',now=new Date()){
-    return {
-      countLabel:PlatformCore.contentCountLabel(platform,lang),
+  function cardFacts(platform,now=new Date()){
+    return{
+      officialContent:PlatformCore.officialContent(platform),
       verification:PlatformCore.verificationState(platform&&platform.lastVerified,now),
       showOfficialCount:PlatformCore.shouldShowOfficialCount(platform),
       showVerification:PlatformCore.shouldShowVerification(platform),
-      languages:Array.isArray(platform&&platform.languages)?platform.languages:[],
+      languageIds:Array.isArray(platform&&platform.languageIds)?platform.languageIds:[],
       pricingModel:platform&&platform.pricingModel?platform.pricingModel:'unknown',
       hasFreeContent:platform&&platform.hasFreeContent===true,
       certificateAvailable:platform&&platform.certificateAvailable===true,
       freeCertificate:platform&&platform.freeCertificate===true
     };
   }
-  function firstLocalized(owner,prefix,lang){const key=`${prefix}_${lang}`,fallback=`${prefix}_en`;const values=Array.isArray(owner&&owner[key])&&owner[key].length?owner[key]:(Array.isArray(owner&&owner[fallback])?owner[fallback]:[]);return values[0]||''}
-  function comparisonRows(platforms,lang='en',now=new Date()){
-    return (Array.isArray(platforms)?platforms:[]).map(p=>({
-      id:p.id,name:p.name,logoUrl:p.logoUrl||'',category:p.category||'',pricingModel:p.pricingModel||'unknown',
+  function comparisonRows(platforms,now=new Date()){
+    return(Array.isArray(platforms)?platforms:[]).map(p=>({
+      id:p.id,name:p.name,logo:p.logo||{src:'',alt:{ar:'',en:'',tr:''}},categoryId:p.categoryId||'',pricingModel:p.pricingModel||'unknown',
       hasFreeContent:p.hasFreeContent===true,certificateAvailable:p.certificateAvailable===true,freeCertificate:p.freeCertificate===true,
-      languages:Array.isArray(p.languages)?p.languages:[],countLabel:PlatformCore.contentCountLabel(p,lang),
+      languageIds:Array.isArray(p.languageIds)?p.languageIds:[],officialContent:PlatformCore.officialContent(p),
       showOfficialCount:PlatformCore.shouldShowOfficialCount(p),verification:PlatformCore.verificationState(p.lastVerified,now),
       showVerification:PlatformCore.shouldShowVerification(p),lastVerified:p.lastVerified||null,
-      bestFor:firstLocalized(p,'best_for',lang),officialUrl:p.officialUrl||''
+      editorial:p.editorial||{bestFor:{ar:[],en:[],tr:[]},strengths:{ar:[],en:[],tr:[]},limitations:{ar:[],en:[],tr:[]}},
+      officialUrl:p.officialUrl||''
     }));
   }
   function migrateComparisonIds(currentIds,legacyIds,validIds,max=3){
     const source=Array.isArray(currentIds)?currentIds:(Array.isArray(legacyIds)?legacyIds:[]);
-    const valid=new Set(Array.isArray(validIds)?validIds:[]);
-    const result=[];
-    for(const id of source){
-      if(!valid.has(id)||result.includes(id))continue;
-      result.push(id);
-      if(result.length>=max)break;
-    }
+    const valid=new Set(Array.isArray(validIds)?validIds:[]),result=[];
+    for(const id of source){if(!valid.has(id)||result.includes(id))continue;result.push(id);if(result.length>=max)break}
     return result;
   }
-  return {getFilterOptions,getStats,getCategoryGroups,getFeatured,getVisiblePlatforms,cardFacts,comparisonRows,migrateComparisonIds};
+  return{getFilterOptions,getStats,getCategoryGroups,getFeatured,getVisiblePlatforms,cardFacts,comparisonRows,migrateComparisonIds};
 });
