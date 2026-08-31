@@ -1,4 +1,4 @@
-const CACHE = 'dunya-al-dawrat-v10';
+const CACHE = 'dunya-al-dawrat-v11';
 const CORE = [
   './','./index.html','./explore.html','./platform.html','./course.html','./offline.html','./data.json',
   './css/style.css','./css/branding.css','./css/landing.css','./css/profile.css',
@@ -37,9 +37,10 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
 
   const isDataRequest = url.pathname.endsWith('/data.json');
-  const needsFreshCopy = isDataRequest || event.request.mode === 'navigate' || ['script', 'style'].includes(event.request.destination);
+  const isAdminConfigRequest = url.pathname.endsWith('/admin/config.yml');
+  const needsFreshCopy = isDataRequest || isAdminConfigRequest || event.request.mode === 'navigate' || ['script', 'style'].includes(event.request.destination);
   if (needsFreshCopy) {
-    event.respondWith(networkFirst(event.request, isDataRequest ? null : './offline.html'));
+    event.respondWith(networkFirst(event.request, (isDataRequest || isAdminConfigRequest) ? null : './offline.html'));
     return;
   }
 
