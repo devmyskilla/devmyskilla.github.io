@@ -11,7 +11,8 @@ Object.assign(data.assets.icons,{
   problemPrice:data.assets.icons.problemPrice||'◐',
   problemCert:data.assets.icons.problemCert||'✓',
   problemCompare:data.assets.icons.problemCompare||'⇄',
-  developerMark:data.assets.icons.developerMark||'أ'
+  developerMark:data.assets.icons.developerMark||'أ',
+  recent:data.assets.icons.recent||'↻'
 });
 
 data.settings ||= {};
