@@ -66,8 +66,12 @@
     function platformList(platform,key,override){
       const value=platform&&platform.editorial&&platform.editorial[key];
       if(!isObject(value))return[];
-      const list=value[override||lang]||value.en||value.ar||value.tr||[];
-      return Array.isArray(list)?[...list]:[];
+      const wanted=override||lang;
+      for(const candidate of [wanted,'en','ar','tr']){
+        const list=value[candidate];
+        if(Array.isArray(list)&&list.length)return[...list];
+      }
+      return[];
     }
     function contentCountLabel(platform,override){
       const raw=platform&&platform.officialCount;
