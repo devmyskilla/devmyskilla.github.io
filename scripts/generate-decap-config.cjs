@@ -32,9 +32,8 @@ const config = `backend:
   name: github
   repo: devmyskilla/devmyskilla.github.io
   branch: main
-  # After deploying your OAuth proxy, uncomment and replace the next line.
-  # base_url: https://YOUR-OAUTH-PROXY.example.com
-  # auth_endpoint: auth
+  base_url: https://dunya-decap-oauth.atomy8774.workers.dev
+  auth_endpoint: auth
 
 site_url: https://devmyskilla.github.io
 logo_url: https://devmyskilla.github.io/assets/dunya-logo-192.png
