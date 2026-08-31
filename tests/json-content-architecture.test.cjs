@@ -1,25 +1,28 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const ContentAPI = require('../js/content-api.js');
 
 const read = path => fs.readFileSync(path, 'utf8');
-
+const data = JSON.parse(read('data.json'));
 const pages = ['index.html', 'explore.html', 'platform.html'].map(read);
 
-test('data.json preserves the current platform catalog and editable landing copy', () => {
-  const data = JSON.parse(read('data.json'));
+test('data.json preserves the platform catalog and editable localized landing copy', () => {
   assert.equal(typeof data.siteText, 'object');
   assert.ok(Array.isArray(data.platforms));
   assert.equal(data.platforms.length, 110);
   assert.equal(new Set(data.platforms.map(p => p.id)).size, data.platforms.length);
-  assert.ok(data.siteText.ar.landingHeroTitle);
-  assert.ok(data.siteText.en.landingHeroTitle);
-  assert.ok(data.siteText.tr.landingHeroTitle);
+  for (const lang of ['ar','en','tr']) {
+    const api = ContentAPI.create(data,lang);
+    assert.ok(api.text('landingHeroTitle').trim(),`landingHeroTitle missing in ${lang}`);
+  }
 });
 
 test('data.json is the single runtime content source', () => {
   for (const html of pages) {
     assert.match(html, /js\/data-loader\.js/);
+    assert.match(html, /js\/content-api\.js/);
+    assert.match(html, /js\/site-runtime\.js/);
     assert.doesNotMatch(html, /supabase-config|platform-data\.js|js\/data\.js|landing-i18n\.js/);
   }
 });
