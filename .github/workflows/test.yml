@@ -17,21 +17,8 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           for f in js/*.js scripts/*.cjs; do node --check "$f"; done
-      - name: Validate JSON catalog
-        run: |
-          node - <<'NODE'
-          const fs = require('node:fs');
-          const data = JSON.parse(fs.readFileSync('data.json','utf8'));
-          if (!data.siteText || typeof data.siteText !== 'object') throw new Error('siteText is missing');
-          if (!Array.isArray(data.platforms)) throw new Error('platforms must be an array');
-          if (data.platforms.length !== 110) throw new Error(`Expected 110 platforms, received ${data.platforms.length}`);
-          const ids = data.platforms.map(row => row.id);
-          if (new Set(ids).size !== ids.length) throw new Error('Duplicate platform IDs found');
-          for (const lang of ['ar','en','tr']) {
-            if (!data.siteText[lang] || typeof data.siteText[lang] !== 'object') throw new Error(`Missing siteText.${lang}`);
-          }
-          console.log(`Validated ${data.platforms.length} JSON platforms`);
-          NODE
+      - name: Validate full CMS content
+        run: node scripts/validate-content.cjs
       - name: Verify Decap configuration matches data.json
         run: node scripts/generate-decap-config.cjs --check
       - name: Prevent legacy Supabase runtime dependencies
@@ -40,4 +27,5 @@ jobs:
             echo 'Legacy Supabase runtime reference detected'
             exit 1
           fi
-      - run: git diff --check
+      - name: Run git diff --check
+        run: git diff --check
