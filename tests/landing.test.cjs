@@ -4,8 +4,8 @@ const Landing = require('../js/landing.js');
 
 test('landing stats delegate to platform-level normalized data', () => {
   const stats = Landing.buildStats([
-    {hasFreeContent:true,certificateAvailable:true,languages:['Arabic','English']},
-    {hasFreeContent:false,certificateAvailable:true,languages:['English']}
+    {hasFreeContent:true,certificateAvailable:true,languageIds:['Arabic','English']},
+    {hasFreeContent:false,certificateAvailable:true,languageIds:['English']}
   ]);
   assert.deepEqual(stats,{platforms:2,free:1,certificates:2,languages:2});
 });
