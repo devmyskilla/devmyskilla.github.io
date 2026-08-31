@@ -97,7 +97,12 @@
       "developer": "✦",
       "back": "←",
       "themeLight": "☀",
-      "themeDark": "◐"
+      "themeDark": "◐",
+      "problemMany": "⌘",
+      "problemPrice": "◐",
+      "problemCert": "✓",
+      "problemCompare": "⇄",
+      "developerMark": "أ"
     }
   },
   "seo": {
