@@ -1,45 +1,91 @@
 # Decap CMS setup for Dunya Al-Dawrat
 
-The public site remains a static GitHub Pages site. Decap CMS only edits `data.json` in this repository; the browser then reads that file with the Fetch API.
+The public site remains a static GitHub Pages site. Decap CMS edits the central `data.json`; the browser reads that file and applies the content through `js/content-api.js` and `js/site-runtime.js`.
 
-## What is already configured
+## What the CMS controls
 
-- Admin page: `/admin/`
-- Backend: GitHub
-- Repository: `devmyskilla/devmyskilla.github.io`
-- Publish branch: `main`
-- Editable content file: `data.json`
-- Platform fields include pricing, free-content status, certificates, free certificates, languages, links, optional verification/count data, descriptions and editorial fields.
-- All current Arabic, English and Turkish `siteText` keys are generated into the CMS configuration.
+The `/admin/` editor now exposes the full editable content surface:
 
-## One-time authentication setup
+- **إعدادات الموقع** — site name, developer name, copyright, default language, theme color, public links, featured/platform-cloud IDs.
+- **الهوية والصور** — brand logo, favicon, hero logo, fallback platform logo, localized alt text, editable visual icons.
+- **نصوص الموقع** — all user-facing Arabic, English and Turkish copy grouped by function.
+- **التصنيفات** — stable ID, localized label, icon, enabled state, display order.
+- **اللغات** — stable ID, localized label, enabled state, display order.
+- **الاختبار والترشيحات** — quick filters, questions, answer labels, result labels and learning paths.
+- **المقارنة** — comparison limit and empty-value presentation.
+- **SEO** — page title, meta description, Open Graph title/description/image for home, explore and platform pages in all three languages.
+- **المنصات** — localized name/description, stable category/language references, pricing, free content, certificates, links, logo/alt, official count, verification date, editorial lists, featured flag and display order.
 
-GitHub authentication for Decap needs an OAuth server/proxy; GitHub Pages itself cannot keep an OAuth client secret.
+The application logic, HTML component structure, CSS classes and routing logic remain code, not editable CMS content. Raw HTML/CSS/JavaScript injection is intentionally not supported.
 
-1. Create a GitHub OAuth App in GitHub developer settings.
-2. Deploy a Decap-compatible OAuth proxy. A lightweight Cloudflare Worker/serverless OAuth proxy is a suitable option.
-3. Configure the OAuth App callback URL to the callback URL required by that proxy.
-4. Store the GitHub OAuth client secret only in the proxy's secret/environment store. Never commit it to this repository.
-5. In `admin/config.yml`, uncomment `base_url` and replace `https://YOUR-OAUTH-PROXY.example.com` with the proxy origin. Keep `auth_endpoint: auth` unless your proxy documents a different path.
-6. Anyone who publishes through the GitHub backend must have push/write access to `devmyskilla/devmyskilla.github.io`.
-7. After GitHub Pages deploys, open `https://devmyskilla.github.io/admin/` and sign in with GitHub.
+## Authentication
 
-## Editing content
+The configured backend is:
 
-Edit **النصوص والمنصات** in Decap CMS. Saving/publishing commits the changed `data.json` to `main`. GitHub Pages then redeploys the static site, and `js/data-loader.js` fetches the updated JSON on the next page load.
+```yaml
+backend:
+  name: github
+  repo: devmyskilla/devmyskilla.github.io
+  branch: main
+  base_url: https://dunya-decap-oauth.atomy8774.workers.dev
+  auth_endpoint: auth
+```
 
-## Adding a new text key
+GitHub Pages cannot store the OAuth client secret. The secret must stay only in the Cloudflare Worker secret/environment store and must never be committed to this repository. The GitHub OAuth callback must match the callback used by the deployed proxy. Anyone publishing through the GitHub backend needs write access to the repository.
 
-If a developer adds a new key under `siteText` directly in `data.json`, regenerate the CMS field list with:
+## Editing and publishing
+
+Open `https://devmyskilla.github.io/admin/`, sign in with GitHub, edit the appropriate group, then publish. Decap commits the updated `data.json` to `main`; GitHub Pages redeploys it and the site fetches the fresh JSON on the next load.
+
+Images use Decap's Media Library:
+
+```text
+media_folder: assets/uploads
+public_folder: /assets/uploads
+```
+
+Upload or select an image through the image field rather than typing an arbitrary file path when possible. Localized `alt` text should be completed for Arabic, English and Turkish.
+
+## Stable IDs: important
+
+These identifiers are data keys, not display labels:
+
+- `platform.id`
+- `category.id`
+- `language.id`
+- platform `categoryId`
+- platform `languageIds`
+
+You can freely change the visible localized labels. Do **not** change a published stable ID unless you also migrate every reference to it. Changing only the label does not break filters or links.
+
+Learning-path stages and some editorial settings intentionally reference platform IDs rather than platform names so that renaming a platform does not break the configuration.
+
+## Regenerating the CMS configuration
+
+`scripts/generate-decap-config.cjs` is the source of truth for `admin/config.yml`. After changing the content schema, run:
 
 ```bash
 node scripts/generate-decap-config.cjs
+node scripts/generate-decap-config.cjs --check
 ```
 
-CI verifies that `admin/config.yml` still matches the current `siteText` schema by running the generator with `--check`.
+Do not hand-edit generated fields in `admin/config.yml`; update the generator/schema instead. CI rejects a generated config that is out of sync with `data.json`.
 
-## Important data rules
+## Validation
 
-- Use `pricingModel: free` for fully free platforms. The Arabic UI displays `مجاناً`.
-- Set `freeCertificate: true` only when certificates are actually free; the Arabic UI then displays `الشهادات المجانية`.
-- Leave `officialCount` or `lastVerified` empty when unknown. The site omits those facts instead of displaying an “unknown/unverified” warning.
+Before merging content-schema changes, run:
+
+```bash
+node --test tests/*.test.cjs
+node scripts/validate-content.cjs
+node scripts/generate-decap-config.cjs --check
+```
+
+The validator requires exactly 110 current platforms, unique stable IDs, valid category/language references and the expected Arabic/English/Turkish content shapes.
+
+## Content rules
+
+- Use `pricingModel: free` for fully free platforms; the Arabic display remains `مجاناً` unless an editor changes that UI label deliberately.
+- Set `freeCertificate: true` only when a certificate is actually free.
+- Leave `officialCount` or `lastVerified` empty when unknown. Optional missing facts are hidden instead of inventing an “unknown” value.
+- Do not place OAuth secrets, tokens or other credentials in `data.json`, `admin/config.yml` or any public repository file.
