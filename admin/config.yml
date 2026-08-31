@@ -314,6 +314,10 @@ collections:
                     name: random
                     widget: string
                     required: false
+                  - label: "recent"
+                    name: recent
+                    widget: string
+                    required: false
                   - label: "reset"
                     name: reset
                     widget: string
