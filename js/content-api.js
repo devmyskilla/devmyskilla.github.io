@@ -14,11 +14,24 @@
     if(!isObject(value))return'';
     return value[lang]||value.en||value.ar||value.tr||'';
   }
+  function normalizeSiteTextKey(key){return String(key||'').replace(/^siteText\./,'')}
+  function findSiteTextPath(siteText,key){
+    if(!isObject(siteText))return'';
+    const wanted=normalizeSiteTextKey(key);
+    if(!wanted)return'';
+    if(wanted.includes('.'))return byPath(siteText,wanted)!==undefined?`siteText.${wanted}`:'';
+    const matches=[];
+    for(const [groupName,group] of Object.entries(siteText)){
+      if(isObject(group)&&Object.hasOwn(group,wanted))matches.push(`siteText.${groupName}.${wanted}`);
+    }
+    return matches.length===1?matches[0]:'';
+  }
   function findSiteText(siteText,key){
     if(!isObject(siteText))return undefined;
-    if(String(key).includes('.'))return byPath(siteText,key);
+    const wanted=normalizeSiteTextKey(key);
+    if(wanted.includes('.'))return byPath(siteText,wanted);
     for(const group of Object.values(siteText)){
-      if(isObject(group)&&Object.hasOwn(group,key))return group[key];
+      if(isObject(group)&&Object.hasOwn(group,wanted))return group[wanted];
     }
     return undefined;
   }
@@ -39,6 +52,7 @@
     function setLang(next){if(SUPPORTED.includes(next))lang=next;return lang}
     function getLang(){return lang}
     function text(path,override){return localized(findSiteText(data&&data.siteText,path),override||lang)}
+    function findTextPath(key){return findSiteTextPath(data&&data.siteText,key)}
     function rawSetting(path){return byPath(data&&data.settings,path)}
     function setting(path,override){return localized(rawSetting(path),override||lang)}
     function rawAsset(path){return byPath(data&&data.assets,path)}
@@ -86,8 +100,8 @@
     function raw(path){return byPath(data,path)}
     function localize(value,override){return localized(value,override||lang)}
 
-    return{data,text,setting,rawSetting,asset,rawAsset,icon,link,category,language,categoryLabel,languageLabel,seo,platformName,platformDescription,platformList,contentCountLabel,safeUrl,setLang,getLang,raw,localize};
+    return{data,text,findTextPath,setting,rawSetting,asset,rawAsset,icon,link,category,language,categoryLabel,languageLabel,seo,platformName,platformDescription,platformList,contentCountLabel,safeUrl,setLang,getLang,raw,localize};
   }
 
-  return{create,safeUrl};
+  return{create,safeUrl,findSiteTextPath};
 });
