@@ -9,7 +9,7 @@
     'editorial.bestFor':'localizedList','editorial.strengths':'localizedList','editorial.limitations':'localizedList',
     officialUrl:'link',catalogUrl:'link',logo:'asset',categoryId:'categoryRef',languageIds:'languageRefs',
     pricingModel:'pricingRef',hasFreeContent:'boolean',certificateAvailable:'boolean',freeCertificate:'boolean',
-    officialCount:'number',officialCountType:'text',lastVerified:'text',platformType:'text',featured:'boolean',displayOrder:'number'
+    officialCount:'nullableNumber',officialCountType:'text',lastVerified:'text',platformType:'text',featured:'boolean',displayOrder:'number'
   };
   const SETTING_FIELDS={siteName:'localizedText',developerName:'localizedText',copyright:'localizedText',defaultLanguage:'text',themeColor:'text'};
   const SEO_FIELDS=new Set(['title','description','ogTitle','ogDescription','ogImage']);
