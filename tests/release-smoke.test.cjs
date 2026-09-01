@@ -22,11 +22,12 @@ test('directory tabs expose tab semantics and selected state on explore page', (
   assert.match(explore,/data-tab="all"[^>]*aria-selected="true"/);
 });
 
-test('service worker v12 caches CMS runtime and production assets', () => {
-  assert.match(sw,/dunya-al-dawrat-v12/);
+test('service worker v13 caches CMS runtime and production assets', () => {
+  assert.match(sw,/dunya-al-dawrat-v13/);
   for (const asset of [
-    './index.html','./explore.html','./platform.html','./course.html','./css/branding.css','./css/landing.css','./css/profile.css',
+    './index.html','./explore.html','./platform.html','./course.html','./css/branding.css','./css/landing.css','./css/profile.css','./css/inline-editor.css',
     './data.json','./js/content-api.js','./js/i18n.js','./js/site-runtime.js','./js/data-loader.js','./js/landing.js','./js/platform-core.js','./js/platform-directory.js','./js/platform-detail.js',
+    './js/edit-descriptors.js','./js/inline-editor-config.js','./js/inline-editor-api.js','./js/inline-editor.js',
     './assets/dunya-logo-192.png','./assets/dunya-logo.svg','./assets/dunya-logo-hero-v3.webp'
   ]) assert.ok(sw.includes(asset),`missing ${asset}`);
   for (const obsolete of ['./js/platform-data.js','./js/supabase-config.js','./js/data.js','./js/landing-i18n.js']) {
