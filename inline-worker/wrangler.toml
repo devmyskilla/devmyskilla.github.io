@@ -1,0 +1,13 @@
+name = "dunya-inline-editor"
+main = "src/worker.mjs"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGIN = "https://devmyskilla.github.io"
+GITHUB_REPO = "devmyskilla/devmyskilla.github.io"
+GITHUB_BRANCH = "main"
+SESSION_TTL_SECONDS = "3600"
+
+[[kv_namespaces]]
+binding = "INLINE_SESSIONS"
