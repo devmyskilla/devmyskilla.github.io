@@ -4,6 +4,27 @@ const fs=require('node:fs');
 
 const data=JSON.parse(fs.readFileSync('data.json','utf8'));
 async function schema(){return import('../inline-worker/src/edit-schema.mjs')}
+async function worker(){return import('../inline-worker/src/worker.mjs')}
+
+class FakeKV{
+  constructor(){this.map=new Map()}
+  async put(key,value,opts={}){this.map.set(key,{value:String(value),opts})}
+  async get(key,type){const row=this.map.get(key);if(!row)return null;return type==='json'?JSON.parse(row.value):row.value}
+  async delete(key){this.map.delete(key)}
+}
+function env(overrides={}){
+  return{
+    INLINE_SESSIONS:new FakeKV(),
+    GITHUB_OAUTH_ID:'client-id',GITHUB_OAUTH_SECRET:'client-secret',
+    ALLOWED_ORIGIN:'https://devmyskilla.github.io',
+    GITHUB_REPO:'devmyskilla/devmyskilla.github.io',GITHUB_BRANCH:'main',SESSION_TTL_SECONDS:'3600',
+    ...overrides
+  };
+}
+function req(path,{method='GET',origin='https://devmyskilla.github.io',headers={},body}={}){
+  const h=new Headers(headers);if(origin!==null)h.set('Origin',origin);
+  return new Request(`https://inline.example${path}`,{method,headers:h,body:body===undefined?undefined:JSON.stringify(body)});
+}
 
 test('server patch engine rejects protected platform id',async()=>{
   const {applyPatch}=await schema();
@@ -51,4 +72,74 @@ test('full-document validation keeps the 110-platform and stable-reference contr
   const bad=structuredClone(data);
   bad.platforms[0].languageIds=['not-real'];
   assert.throws(()=>validateDocument(bad),/language/i);
+});
+
+test('worker rejects API requests from an unapproved origin',async()=>{
+  const {default:handler}=await worker();
+  const response=await handler.fetch(req('/inline/session',{origin:'https://evil.example'}),env());
+  assert.equal(response.status,403);
+});
+
+test('worker starts OAuth with one-time state stored in KV',async()=>{
+  const {default:handler}=await worker();
+  const e=env();
+  const response=await handler.fetch(req('/inline/auth',{origin:null}),e);
+  assert.equal(response.status,302);
+  const location=response.headers.get('location');
+  assert.match(location,/github\.com\/login\/oauth\/authorize/);
+  const state=new URL(location).searchParams.get('state');
+  assert.ok(state);
+  assert.ok(await e.INLINE_SESSIONS.get(`oauth:${state}`));
+});
+
+test('callback rejects an invalid or already-consumed OAuth state',async()=>{
+  const {default:handler}=await worker();
+  const response=await handler.fetch(req('/inline/callback?code=x&state=bad',{origin:null}),env());
+  assert.equal(response.status,400);
+});
+
+test('session response never exposes the GitHub access token',async()=>{
+  const {default:handler}=await worker();
+  const e=env();
+  await e.INLINE_SESSIONS.put('session:s1',JSON.stringify({githubToken:'secret-token',login:'admin',avatarUrl:'avatar',expiresAt:Date.now()+60000}));
+  const response=await handler.fetch(req('/inline/session',{headers:{Authorization:'Bearer s1'}}),e);
+  assert.equal(response.status,200);
+  const text=await response.text();
+  assert.doesNotMatch(text,/secret-token|githubToken|access_token/i);
+  assert.deepEqual(JSON.parse(text).user,{login:'admin',avatarUrl:'avatar'});
+});
+
+test('stale baseSha returns 409 and never sends a GitHub write',async()=>{
+  const {default:handler}=await worker();
+  const e=env();let writes=0;
+  await e.INLINE_SESSIONS.put('session:s1',JSON.stringify({githubToken:'secret-token',login:'admin',avatarUrl:'',expiresAt:Date.now()+60000}));
+  e.FETCH=async(url,options={})=>{
+    if(options.method==='PUT')writes++;
+    return new Response(JSON.stringify({sha:'current-sha',content:btoa(JSON.stringify(data))}),{status:200,headers:{'content-type':'application/json'}});
+  };
+  const response=await handler.fetch(req('/inline/patch',{method:'POST',headers:{Authorization:'Bearer s1'},body:{target:{kind:'platform',id:data.platforms[0].id,field:'description'},baseSha:'stale-sha',value:{ar:'أ',en:'A',tr:'A'}}}),e);
+  assert.equal(response.status,409);
+  assert.equal(writes,0);
+});
+
+test('valid patch writes only data.json and returns the new SHA without exposing token',async()=>{
+  const {default:handler}=await worker();
+  const e=env();let putBody=null;
+  await e.INLINE_SESSIONS.put('session:s1',JSON.stringify({githubToken:'secret-token',login:'admin',avatarUrl:'',expiresAt:Date.now()+60000}));
+  e.FETCH=async(url,options={})=>{
+    if(options.method==='PUT'){
+      putBody=JSON.parse(options.body);
+      return new Response(JSON.stringify({content:{sha:'new-sha'}}),{status:200,headers:{'content-type':'application/json'}});
+    }
+    return new Response(JSON.stringify({sha:'current-sha',content:btoa(unescape(encodeURIComponent(JSON.stringify(data))))}),{status:200,headers:{'content-type':'application/json'}});
+  };
+  const value={ar:'تعديل',en:'Edit',tr:'Düzenle'};
+  const response=await handler.fetch(req('/inline/patch',{method:'POST',headers:{Authorization:'Bearer s1'},body:{target:{kind:'platform',id:data.platforms[0].id,field:'description'},baseSha:'current-sha',value}}),e);
+  assert.equal(response.status,200);
+  const result=await response.json();
+  assert.equal(result.sha,'new-sha');
+  assert.deepEqual(result.value,value);
+  assert.ok(putBody.sha==='current-sha');
+  assert.ok(typeof putBody.content==='string');
+  assert.doesNotMatch(JSON.stringify(result),/secret-token/);
 });
