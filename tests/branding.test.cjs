@@ -35,7 +35,7 @@ test('manifest and service worker keep safe fallback brand assets', () => {
   }
   assert.ok(sw.includes('./assets/dunya-logo-hero-v3.webp'));
   assert.ok(sw.includes('./css/branding.css'));
-  assert.match(sw, /dunya-al-dawrat-v12/);
+  assert.match(sw, /dunya-al-dawrat-v13/);
 });
 
 test('shared branding CSS defines image logo sizing', () => {
