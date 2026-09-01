@@ -75,6 +75,13 @@ test('dynamic platform description uses a stable id',()=>{
   assert.deepEqual(r.value,loc('وصف','Description','Açıklama'));
 });
 
+test('nullable platform counts stay nullable in the editor contract',()=>{
+  const api=EditDescriptors.create(data);
+  const r=api.resolveTarget({kind:'platform',id:'plat-1',field:'officialCount'});
+  assert.equal(r.descriptor.widget,'nullableNumber');
+  assert.equal(r.value,null);
+});
+
 test('platform stable id and arbitrary paths are never writable',()=>{
   const api=EditDescriptors.create(data);
   assert.equal(api.resolveTarget({kind:'platform',id:'plat-1',field:'id'}),null);
