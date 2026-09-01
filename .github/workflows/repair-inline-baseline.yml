@@ -21,22 +21,30 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Repair the malformed Microsoft language reference
+      - name: Repair malformed combined language references
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const data=JSON.parse(fs.readFileSync('data.json','utf8'));
-          const row=data.platforms.find(p=>p.id==='plat-5');
-          if(!row) throw new Error('plat-5 missing');
-          if(JSON.stringify(row.languageIds)===JSON.stringify(['ArabicEnglish'])) row.languageIds=['Arabic','English'];
+          const replacements={ArabicEnglish:['Arabic','English'],EnglishArabic:['English','Arabic']};
+          let changed=0;
+          for(const row of data.platforms||[]){
+            const next=[];
+            for(const id of row.languageIds||[]){
+              const parts=replacements[id]||[id];
+              for(const part of parts) if(!next.includes(part)) next.push(part);
+            }
+            if(JSON.stringify(next)!==JSON.stringify(row.languageIds||[])){row.languageIds=next;changed++;}
+          }
+          if(!changed) throw new Error('Expected at least one malformed combined language reference');
           fs.writeFileSync('data.json',JSON.stringify(data,null,2)+'\n');
+          console.log(`Repaired ${changed} platform language reference(s)`);
           NODE
           node scripts/validate-content.cjs
       - name: Commit repaired data
         run: |
-          if git diff --quiet -- data.json; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git commit -m "fix: repair Microsoft language references"
+          git commit -m "fix: repair malformed language references"
           git push origin HEAD:feat/inline-site-editor
