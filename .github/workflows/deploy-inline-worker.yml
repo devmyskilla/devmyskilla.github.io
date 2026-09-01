@@ -19,8 +19,8 @@ jobs:
         run: |
           umask 077
           printf '%s\n' \
-            "GITHUB_OAUTH_ID=${{ secrets.GITHUB_OAUTH_ID }}" \
-            "GITHUB_OAUTH_SECRET=${{ secrets.GITHUB_OAUTH_SECRET }}" \
+            "GITHUB_OAUTH_ID=${{ secrets.INLINE_GITHUB_OAUTH_ID }}" \
+            "GITHUB_OAUTH_SECRET=${{ secrets.INLINE_GITHUB_OAUTH_SECRET }}" \
             > inline-worker/.deploy-secrets.env
       - name: Deploy Worker
         env:
