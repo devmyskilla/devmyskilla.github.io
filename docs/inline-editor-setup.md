@@ -17,9 +17,24 @@
 
 `https://dunya-inline-editor.atomy8774.workers.dev/inline/callback`
 
-احتفظ بـ Client ID وClient Secret خارج GitHub. لا تضع أي قيمة سرية داخل `wrangler.toml` أو ملفات الموقع.
+احتفظ بـ Client ID وClient Secret خارج المستودع. لا تضع أي قيمة سرية داخل `wrangler.toml` أو ملفات الموقع.
 
-## 2. إعداد Cloudflare Worker
+## 2. GitHub Actions Secrets للنشر
+
+GitHub يحجز البادئة `GITHUB_` ولا يسمح بإنشاء Repository Secrets تبدأ بها. لذلك أضف في:
+
+`Settings → Secrets and variables → Actions → New repository secret`
+
+الأسماء التالية بالضبط:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+- `INLINE_GITHUB_OAUTH_ID` — قيمته هي GitHub OAuth Client ID
+- `INLINE_GITHUB_OAUTH_SECRET` — قيمته هي GitHub OAuth Client Secret
+
+Workflow النشر يحوّل الاسمين الأخيرين وقت النشر إلى متغيري Worker الداخليين `GITHUB_OAUTH_ID` و`GITHUB_OAUTH_SECRET`. لا تحتاج إلى إنشاء GitHub Actions Secrets بهذه الأسماء المحجوزة.
+
+## 3. إعداد Cloudflare Worker
 
 ملف الإعداد هو `inline-worker/wrangler.toml`. يحتوي المتغيرات العامة التالية:
 
@@ -31,7 +46,7 @@
 
 Wrangler الحديث يستطيع provision مورد KV تلقائيًا عند أول deploy لأن `INLINE_SESSIONS` معرّف بدون namespace ID. استخدم Wrangler 4.45 أو أحدث.
 
-من مجلد `inline-worker` سجّل دخول Cloudflare ثم خزّن بيانات OAuth كأسرار:
+إذا نشرت يدويًا من جهازك بدل GitHub Actions، فمن مجلد `inline-worker` خزّن بيانات OAuth كأسرار Cloudflare بالأسماء الداخلية:
 
 ```bash
 npx wrangler secret put GITHUB_OAUTH_ID
@@ -41,20 +56,21 @@ npx wrangler deploy
 
 لا تُدخل قيم الأسرار في الأوامر نفسها؛ Wrangler سيطلبها تفاعليًا.
 
-## 3. التحقق بعد النشر
+## 4. التحقق بعد النشر
 
 افتح `https://devmyskilla.github.io/?edit=1`. عند عدم وجود جلسة سيعرض المحرر زر تسجيل الدخول. بعد نجاح GitHub OAuth يجب أن تظهر أدوات التحرير فقط للحقول المسموح بها. المتصفح يحتفظ بمعرّف جلسة opaque فقط؛ GitHub access token يبقى داخل Worker/KV ولا يُرسل إلى الواجهة.
 
 الحفظ يقرأ أحدث `data.json` من `main` ويقارن `baseSha`. إذا تغيّر الملف منذ بدء التعديل، يرجع Worker تعارض HTTP 409 بدل الكتابة فوق تعديل أحدث. بعد نجاح الحفظ يكتب Worker `data.json` فقط.
 
-## 4. لوحة Decap
+## 5. لوحة Decap
 
 `/admin/` تبقى لوحة Decap CMS الكاملة، وبداخلها رابط **تحرير مباشر** يعيد إلى الصفحة الرئيسية مع `?edit=1`. النظامان يحرران المصدر نفسه `data.json`؛ لذلك حماية SHA في المحرر المباشر تمنع الكتابة الصامتة فوق تغييرات أحدث من Decap.
 
 ## أسرار يجب ألا تظهر في المستودع
 
-- `GITHUB_OAUTH_ID`
-- `GITHUB_OAUTH_SECRET`
+- `INLINE_GITHUB_OAUTH_ID` في GitHub Actions
+- `INLINE_GITHUB_OAUTH_SECRET` في GitHub Actions
+- `GITHUB_OAUTH_ID` و`GITHUB_OAUTH_SECRET` داخل بيئة Cloudflare Worker
 - GitHub access tokens
 - معرفات الجلسات الفعلية
 
