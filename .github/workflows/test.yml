@@ -16,7 +16,10 @@ jobs:
         with:
           node-version: 22
       - name: Apply deterministic inline integration patch
-        if: github.event_name == 'push' && github.ref_name == 'feat/inline-site-editor' && github.event.head_commit.message == 'chore: trigger deterministic inline integration'
+        if: >-
+          github.event_name == 'push' &&
+          github.ref_name == 'feat/inline-site-editor' &&
+          github.event.head_commit.message == 'chore: trigger deterministic inline integration'
         run: node scripts/patch-inline-app.cjs
       - name: Run unit and architecture tests
         run: node --test tests/*.test.cjs
@@ -36,7 +39,10 @@ jobs:
       - name: Run git diff --check
         run: git diff --check
       - name: Commit deterministic inline integration
-        if: github.event_name == 'push' && github.ref_name == 'feat/inline-site-editor' && github.event.head_commit.message == 'chore: trigger deterministic inline integration'
+        if: >-
+          github.event_name == 'push' &&
+          github.ref_name == 'feat/inline-site-editor' &&
+          github.event.head_commit.message == 'chore: trigger deterministic inline integration'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
