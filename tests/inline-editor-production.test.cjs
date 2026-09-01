@@ -18,7 +18,7 @@ test('service worker v13 precaches every inline editor browser asset',()=>{
 
 test('Decap admin exposes an explicit direct-edit entry point without embedding credentials',()=>{
   const html=read('admin/index.html');
-  assert.match(html,/href="\.\.\/?edit=1"/);
+  assert.match(html,/href="\.\.\/\?edit=1"/);
   assert.match(html,/تحرير مباشر/);
   assert.doesNotMatch(html,/GITHUB_OAUTH_SECRET|client_secret|access_token/i);
 });
