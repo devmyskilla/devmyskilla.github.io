@@ -51,7 +51,7 @@ test('patch preserves HTTP status for conflict handling',async()=>{
 test('logout calls the Worker then clears local session even if response body is empty',async()=>{
   const s=storage();s.setItem('dunya-inline-session','d'.repeat(48));
   let called=false;
-  const api=InlineEditorAPI.create({apiBase:'https://inline.example',storage:s,fetchFn:async()=>{called=true;return new Response('',{status:204})}});
+  const api=InlineEditorAPI.create({apiBase:'https://inline.example',storage:s,fetchFn:async()=>{called=true;return new Response(null,{status:204})}});
   await api.logout();
   assert.equal(called,true);
   assert.equal(api.getSessionId(),'');
