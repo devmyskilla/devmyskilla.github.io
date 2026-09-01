@@ -82,14 +82,16 @@ test('worker rejects API requests from an unapproved origin',async()=>{
   assert.equal(response.status,403);
 });
 
-test('worker starts OAuth with one-time state stored in KV',async()=>{
+test('worker starts OAuth with one-time state and least-privilege public repo scope',async()=>{
   const {default:handler}=await worker();
   const e=env();
   const response=await handler.fetch(req('/inline/auth',{origin:null}),e);
   assert.equal(response.status,302);
   const location=response.headers.get('location');
   assert.match(location,/github\.com\/login\/oauth\/authorize/);
-  const state=new URL(location).searchParams.get('state');
+  const authUrl=new URL(location);
+  assert.equal(authUrl.searchParams.get('scope'),'public_repo');
+  const state=authUrl.searchParams.get('state');
   assert.ok(state);
   assert.ok(await e.INLINE_SESSIONS.get(`oauth:${state}`));
 });
