@@ -11,10 +11,11 @@ const SEO_FIELDS=new Set(['title','description','ogTitle','ogDescription','ogIma
 const PRICING=new Set(['free','paid','mixed','unknown']);
 
 function object(value){return !!value&&typeof value==='object'&&!Array.isArray(value)}
+function container(value){return !!value&&typeof value==='object'}
 function clone(value){return structuredClone(value)}
 function parts(path){return String(path||'').split('.').filter(Boolean)}
 function get(owner,path){return parts(path).reduce((value,key)=>value&&Object.hasOwn(value,key)?value[key]:undefined,owner)}
-function set(owner,path,value){const keys=parts(path);if(!keys.length)throw new Error('unsupported target');let cursor=owner;for(const key of keys.slice(0,-1)){if(!object(cursor[key]))throw new Error('unsupported target');cursor=cursor[key]}cursor[keys.at(-1)]=value}
+function set(owner,path,value){const keys=parts(path);if(!keys.length)throw new Error('unsupported target');let cursor=owner;for(const key of keys.slice(0,-1)){if(!container(cursor[key]))throw new Error('unsupported target');cursor=cursor[key]}cursor[keys.at(-1)]=value}
 function findTextPath(siteText,key){
   if(!object(siteText))return'';
   const wanted=String(key||'').replace(/^siteText\./,'');
