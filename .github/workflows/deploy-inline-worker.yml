@@ -2,18 +2,12 @@ name: Deploy inline editor Worker
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - feat/inline-site-editor
 
 permissions:
   contents: read
 
 jobs:
   deploy:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      github.event.head_commit.message == 'deploy: trigger inline editor Worker'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
