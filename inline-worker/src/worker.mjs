@@ -40,7 +40,7 @@ async function oauthStart(request,env){
   const url=new URL(request.url),state=randomId();
   await env.INLINE_SESSIONS.put(`oauth:${state}`,JSON.stringify({createdAt:Date.now()}),{expirationTtl:600});
   const auth=new URL('https://github.com/login/oauth/authorize');
-  auth.searchParams.set('client_id',env.GITHUB_OAUTH_ID);auth.searchParams.set('redirect_uri',`${url.origin}/inline/callback`);auth.searchParams.set('scope','repo');auth.searchParams.set('state',state);
+  auth.searchParams.set('client_id',env.GITHUB_OAUTH_ID);auth.searchParams.set('redirect_uri',`${url.origin}/inline/callback`);auth.searchParams.set('scope','public_repo');auth.searchParams.set('state',state);
   return Response.redirect(auth.href,302);
 }
 async function oauthCallback(request,env){
