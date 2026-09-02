@@ -7,20 +7,21 @@ function storage(){
   return{values,getItem:key=>values.get(key)||null,setItem:(key,value)=>values.set(key,String(value)),removeItem:key=>values.delete(key)};
 }
 
-test('acceptAuthMessage stores only an opaque session from the site origin',()=>{
+test('acceptAuthMessage stores only an opaque session from the configured Worker origin',()=>{
   const s=storage();
   const api=InlineEditorAPI.create({apiBase:'https://inline.example',storage:s,siteOrigin:'https://devmyskilla.github.io'});
-  const accepted=api.acceptAuthMessage({origin:'https://devmyskilla.github.io',data:{type:'dunya-inline-auth',session:'a'.repeat(48),user:{login:'admin'},access_token:'never-store'}});
+  const accepted=api.acceptAuthMessage({origin:'https://inline.example',data:{type:'dunya-inline-auth',session:'a'.repeat(48),user:{login:'admin'},access_token:'never-store'}});
   assert.equal(accepted,true);
   assert.equal(s.values.get('dunya-inline-session'),'a'.repeat(48));
   assert.equal([...s.values.values()].some(v=>String(v).includes('never-store')),false);
 });
 
-test('acceptAuthMessage rejects another origin and malformed sessions',()=>{
+test('acceptAuthMessage rejects the site origin, another origin, and malformed sessions',()=>{
   const s=storage();
   const api=InlineEditorAPI.create({apiBase:'https://inline.example',storage:s,siteOrigin:'https://devmyskilla.github.io'});
+  assert.equal(api.acceptAuthMessage({origin:'https://devmyskilla.github.io',data:{type:'dunya-inline-auth',session:'a'.repeat(48)}}),false);
   assert.equal(api.acceptAuthMessage({origin:'https://evil.example',data:{type:'dunya-inline-auth',session:'a'.repeat(48)}}),false);
-  assert.equal(api.acceptAuthMessage({origin:'https://devmyskilla.github.io',data:{type:'dunya-inline-auth',session:'short'}}),false);
+  assert.equal(api.acceptAuthMessage({origin:'https://inline.example',data:{type:'dunya-inline-auth',session:'short'}}),false);
   assert.equal(api.getSessionId(),'');
 });
 
