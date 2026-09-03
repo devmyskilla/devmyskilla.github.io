@@ -2521,6 +2521,20 @@ collections:
                       - label: "Türkçe"
                         name: tr
                         widget: string
+                  - label: "fields"
+                    name: fields
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
                   - label: "limitations"
                     name: limitations
                     widget: object
@@ -2563,6 +2577,20 @@ collections:
                       - label: "Türkçe"
                         name: tr
                         widget: string
+                  - label: "officialPaths"
+                    name: officialPaths
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
                   - label: "officialSite"
                     name: officialSite
                     widget: object
@@ -2591,6 +2619,137 @@ collections:
                       - label: "Türkçe"
                         name: tr
                         widget: string
+                  - label: "pathTypes"
+                    name: pathTypes
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "career-path"
+                        name: career-path
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "learning-path"
+                        name: learning-path
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "other-official-path"
+                        name: other-official-path
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "professional-certificate"
+                        name: professional-certificate
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "professional-program"
+                        name: professional-program
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "role-path"
+                        name: role-path
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "skill-path"
+                        name: skill-path
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "specialization"
+                        name: specialization
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
+                      - label: "structured-series"
+                        name: structured-series
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: "العربية"
+                            name: ar
+                            widget: string
+                          - label: "English"
+                            name: en
+                            widget: string
+                          - label: "Türkçe"
+                            name: tr
+                            widget: string
                   - label: "platformNotFound"
                     name: platformNotFound
                     widget: object
@@ -2663,6 +2822,34 @@ collections:
                         widget: string
                   - label: "strengths"
                     name: strengths
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "viewAllOfficialPaths"
+                    name: viewAllOfficialPaths
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "viewOfficialPath"
+                    name: viewOfficialPath
                     widget: object
                     collapsed: true
                     fields:
