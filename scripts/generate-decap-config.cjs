@@ -124,6 +124,27 @@ function editorialFields(indent){
   out.push(localizedList('القيود','limitations',indent+4));
   return out.join('\n');
 }
+function platformResearchFields(indent){
+  const out=[];
+  out.push(`${pad(indent)}- label: ${q('المجالات / Fields')}\n${pad(indent)}  name: fields\n${pad(indent)}  widget: list\n${pad(indent)}  required: false\n${pad(indent)}  summary: ${q('{{fields.id}} — {{fields.name.en}}')}\n${pad(indent)}  fields:`);
+  out.push(scalar('معرّف المجال الثابت','id','string',indent+4,['hint: "Stable field ID"']));
+  out.push(localizedField('اسم المجال','name',indent+4));
+  out.push(scalar('رابط المجال الرسمي','officialUrl','string',indent+4,['required: false']));
+  out.push(`${pad(indent)}- label: ${q('المسارات الرسمية / Official Paths')}\n${pad(indent)}  name: officialPaths\n${pad(indent)}  widget: list\n${pad(indent)}  required: false\n${pad(indent)}  summary: ${q('{{fields.officialName}}')}\n${pad(indent)}  fields:`);
+  out.push(scalar('معرّف المسار الثابت','id','string',indent+4,['hint: "Stable path ID"']));
+  out.push(scalar('الاسم الرسمي الأصلي','officialName','string',indent+4));
+  out.push(localizedField('اسم العرض المترجم','name',indent+4));
+  out.push(`${pad(indent+4)}- label: ${q('نوع المسار')}\n${pad(indent+4)}  name: type\n${pad(indent+4)}  widget: select\n${pad(indent+4)}  options: [learning-path, career-path, skill-path, professional-certificate, professional-program, specialization, role-path, structured-series, other-official-path]`);
+  out.push(scalar('الرابط الرسمي المباشر','officialUrl','string',indent+4));
+  out.push(stringList('معرّفات المجالات المرتبطة','fieldIds',indent+4,{hint:'IDs from this platform fields list'}));
+  out.push(scalar('مسار مميز','featured','boolean',indent+4,['default: false']));
+  out.push(`${pad(indent)}- label: ${q('بيانات التحقق من المسارات')}\n${pad(indent)}  name: pathResearch\n${pad(indent)}  widget: object\n${pad(indent)}  collapsed: true\n${pad(indent)}  required: false\n${pad(indent)}  fields:`);
+  out.push(scalar('آخر تحقق','lastVerified','datetime',indent+4,['format: "YYYY-MM-DD"','date_format: "YYYY-MM-DD"','time_format: false','required: false']));
+  out.push(scalar('مصدر المجالات','fieldsSourceUrl','string',indent+4,['required: false']));
+  out.push(scalar('مصدر المسارات','pathsSourceUrl','string',indent+4,['required: false']));
+  out.push(scalar('رابط جميع المسارات','allPathsUrl','string',indent+4,['required: false']));
+  return out.join('\n');
+}
 function platformFields(indent){
   const out=[];
   out.push(scalar('معرّف تقني — لا تغيّره بعد النشر','id','string',indent,['hint: "Stable platform ID"']));
@@ -144,6 +165,7 @@ function platformFields(indent){
   out.push(scalar('عدد المحتوى الرسمي','officialCount','number',indent,['value_type: int','required: false']));
   out.push(`${pad(indent)}- label: ${q('نوع العدد الرسمي')}\n${pad(indent)}  name: officialCountType\n${pad(indent)}  widget: select\n${pad(indent)}  required: false\n${pad(indent)}  options: [courses, modules, learning_paths, job_simulations, certifications, materials, items]`);
   out.push(scalar('آخر تحقق','lastVerified','datetime',indent,['format: "YYYY-MM-DD"','date_format: "YYYY-MM-DD"','time_format: false','required: false']));
+  out.push(platformResearchFields(indent));
   out.push(editorialFields(indent));
   out.push(scalar('منصة مميزة','featured','boolean',indent,['default: false']));
   out.push(scalar('ترتيب العرض','displayOrder','number',indent,['value_type: int','required: false']));
