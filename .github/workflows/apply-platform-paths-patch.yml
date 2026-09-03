@@ -1,0 +1,47 @@
+name: Apply platform paths data patch
+
+on:
+  push:
+    branches:
+      - feat/platform-fields-paths
+    paths:
+      - data/platform-paths.patch.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: platform-paths-data-patch
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/platform-fields-paths
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Apply constrained patch
+        run: node scripts/apply-platform-paths-patch.cjs data/platform-paths.patch.json
+      - name: Regenerate Decap configuration
+        run: node scripts/generate-decap-config.cjs
+      - name: Validate patched content
+        run: |
+          node scripts/validate-content.cjs
+          node --test tests/platform-paths-schema.test.cjs tests/platform-paths-patch.test.cjs
+          node scripts/generate-decap-config.cjs --check
+      - name: Commit generated data changes
+        run: |
+          if git diff --quiet -- data.json admin/config.yml; then
+            echo "No generated data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json admin/config.yml
+          git commit -m "content: apply platform paths data patch"
+          git push origin HEAD:feat/platform-fields-paths
