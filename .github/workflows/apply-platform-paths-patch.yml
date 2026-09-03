@@ -34,6 +34,8 @@ jobs:
           node scripts/validate-content.cjs
           node --test tests/platform-paths-schema.test.cjs tests/platform-paths-patch.test.cjs
           node scripts/generate-decap-config.cjs --check
+      - name: Audit platform research
+        run: node scripts/platform-paths-audit.cjs --range 1:110
       - name: Commit generated data changes
         run: |
           if git diff --quiet -- data.json admin/config.yml; then
