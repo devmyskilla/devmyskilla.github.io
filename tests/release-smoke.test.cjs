@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const index = fs.readFileSync('index.html','utf8');
 const explore = fs.existsSync('explore.html') ? fs.readFileSync('explore.html','utf8') : '';
 const platform = fs.readFileSync('platform.html','utf8');
+const profileJs = fs.readFileSync('js/platform-detail.js','utf8');
 const sw = fs.readFileSync('sw.js','utf8');
 const manifest = JSON.parse(fs.readFileSync('manifest.webmanifest','utf8'));
 
@@ -53,6 +54,17 @@ test('landing page is separate from discovery application', () => {
 
 test('profile page loads its dedicated stylesheet', () => {
   assert.match(platform,/css\/profile\.css/);
+});
+
+test('profile detail integrates facts then learning sections then editorial without empty path copy',()=>{
+  assert.match(profileJs,/const fieldsHtml=fieldsMarkup\(model/);
+  assert.match(profileJs,/const pathsHtml=officialPathsMarkup\(model/);
+  assert.match(profileJs,/const learningSections=`\$\{fieldsHtml\}\$\{pathsHtml\}`/);
+  const facts=profileJs.indexOf('<section class="profile-facts"');
+  const learning=profileJs.indexOf('${learningSections}');
+  const editorial=profileJs.indexOf('<div class="profile-editorial">');
+  assert.ok(facts>=0&&learning>facts&&editorial>learning,'expected facts -> learning sections -> editorial order');
+  assert.doesNotMatch(profileJs,/no official paths|لا توجد مسارات|resmî yol bulunamadı/i);
 });
 
 test('static manifest remains a valid fallback while runtime manifest is CMS-managed', () => {
