@@ -26,15 +26,54 @@
     const bestFor=contentApi?contentApi.platformList(platform,'bestFor',lang):listFallback(platform.editorial&&platform.editorial.bestFor,lang);
     const strengths=contentApi?contentApi.platformList(platform,'strengths',lang):listFallback(platform.editorial&&platform.editorial.strengths,lang);
     const limitations=contentApi?contentApi.platformList(platform,'limitations',lang):listFallback(platform.editorial&&platform.editorial.limitations,lang);
+    const fields=(Array.isArray(platform.fields)?platform.fields:[]).map(field=>({
+      id:field&&field.id||'',
+      name:contentApi?contentApi.platformFieldName(field,lang):localize(field&&field.name,lang),
+      officialUrl:field&&field.officialUrl||''
+    }));
+    const officialPaths=PlatformCore.visibleOfficialPaths(platform,20).map(path=>({
+      id:path&&path.id||'',officialName:path&&path.officialName||'',
+      name:contentApi?contentApi.platformPathName(path,lang):localize(path&&path.name,lang),
+      type:path&&path.type||'',typeLabel:contentApi?contentApi.pathTypeLabel(path&&path.type,lang):path&&path.type||'',
+      officialUrl:path&&path.officialUrl||'',fieldIds:Array.isArray(path&&path.fieldIds)?[...path.fieldIds]:[],featured:path&&path.featured===true
+    }));
     return{
       id:platform.id,name,description,logo:{src:logoSrc,alt:logoAlt},categoryId:platform.categoryId||'',pricingModel:platform.pricingModel||'unknown',languageIds:Array.isArray(platform.languageIds)?[...platform.languageIds]:[],
       hasFreeContent:platform.hasFreeContent===true,certificateAvailable:platform.certificateAvailable===true,freeCertificate:platform.freeCertificate===true,platformType:platform.platformType||'',
       countLabel:contentApi?contentApi.contentCountLabel(platform,lang):'',showOfficialCount:PlatformCore.shouldShowOfficialCount(platform),verification:PlatformCore.verificationState(platform.lastVerified,now),showVerification:PlatformCore.shouldShowVerification(platform),lastVerified:platform.lastVerified||null,
-      officialUrl:platform.officialUrl||'',catalogUrl:platform.catalogUrl||'',bestFor,strengths,limitations
+      officialUrl:platform.officialUrl||'',catalogUrl:platform.catalogUrl||'',fields,officialPaths,
+      showAllPathsLink:PlatformCore.shouldShowAllPathsLink(platform,20),allPathsUrl:platform.pathResearch&&platform.pathResearch.allPathsUrl||'',
+      bestFor,strengths,limitations
     };
   }
   function similarPlatforms(platforms,current,limit=3){if(!current)return[];return(Array.isArray(platforms)?platforms:[]).filter(p=>p&&p.id!==current.id&&p.categoryId&&p.categoryId===current.categoryId).slice(0,Math.max(0,limit))}
   function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+  function fieldsMarkup(model,{title}={},safeUrlFn=value=>value){
+    const fields=Array.isArray(model&&model.fields)?model.fields:[];
+    if(!fields.length)return'';
+    const chips=fields.map(field=>{
+      const name=field&&field.name||'';
+      const url=safeUrlFn(field&&field.officialUrl||'');
+      return url?`<a class="profile-field-chip" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`:`<span class="profile-field-chip">${esc(name)}</span>`;
+    }).join('');
+    return`<section class="profile-learning profile-fields-section"><h2>${esc(title||'')}</h2><div class="profile-field-chips">${chips}</div></section>`;
+  }
+  function officialPathsMarkup(model,{title,viewPath,viewAll}={},safeUrlFn=value=>value){
+    const paths=Array.isArray(model&&model.officialPaths)?model.officialPaths:[];
+    if(!paths.length)return'';
+    const cards=paths.map(path=>{
+      const url=safeUrlFn(path&&path.officialUrl||'');
+      if(!url)return'';
+      const name=String(path&&path.name||'');
+      const officialName=String(path&&path.officialName||'');
+      const showOfficialName=officialName.trim()&&officialName.trim().toLocaleLowerCase()!==name.trim().toLocaleLowerCase();
+      return`<a class="profile-path-card" href="${esc(url)}" target="_blank" rel="noopener noreferrer"><span class="profile-path-type">${esc(path&&path.typeLabel||'')}</span><strong>${esc(name)}</strong>${showOfficialName?`<small class="profile-path-official-name">${esc(officialName)}</small>`:''}<span class="profile-path-action">${esc(viewPath||'')} ↗</span></a>`;
+    }).filter(Boolean).join('');
+    if(!cards)return'';
+    const allUrl=model&&model.showAllPathsLink?safeUrlFn(model.allPathsUrl||''):'';
+    const all=allUrl?`<a class="btn btn-soft profile-paths-all" href="${esc(allUrl)}" target="_blank" rel="noopener noreferrer">${esc(viewAll||'')} ↗</a>`:'';
+    return`<section class="profile-learning profile-paths-section"><h2>${esc(title||'')}</h2><div class="profile-path-grid">${cards}</div>${all}</section>`;
+  }
   function readJSON(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch(_){return fallback}}
   function writeJSON(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch(_){}}
   function recordView(platform){const views=readJSON('dunya-views-v2',{});views[platform.id]=(views[platform.id]||0)+1;writeJSON('dunya-views-v2',views);let recent=readJSON('dunya-recent-v2',[]).map((x,i)=>typeof x==='string'?{id:x,ts:Date.now()-i}:x).filter(x=>x&&x.id&&x.id!==platform.id);recent.unshift({id:platform.id,ts:Date.now()});writeJSON('dunya-recent-v2',recent.slice(0,16))}
@@ -76,5 +115,5 @@
     if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
   }
   if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>initBrowser().catch(err=>{console.error(err);const el=document.getElementById('profileLoading');if(el)el.textContent=getText('errorLoading')||'Unable to load content'}));
-  return{findPlatform,buildDetailModel,similarPlatforms};
+  return{findPlatform,buildDetailModel,fieldsMarkup,officialPathsMarkup,similarPlatforms};
 });
