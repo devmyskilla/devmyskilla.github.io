@@ -77,6 +77,9 @@
     }
     function platformName(platform,override){return localized(platform&&platform.name,override||lang)}
     function platformDescription(platform,override){return localized(platform&&platform.description,override||lang)}
+    function platformFieldName(field,override){return localized(field&&field.name,override||lang)}
+    function platformPathName(path,override){return localized(path&&path.name,override||lang)}
+    function pathTypeLabel(type,override){return localized(byPath(data&&data.siteText,`platform.pathTypes.${type}`),override||lang)}
     function platformList(platform,key,override){
       const value=platform&&platform.editorial&&platform.editorial[key];
       if(!isObject(value))return[];
@@ -100,7 +103,7 @@
     function raw(path){return byPath(data,path)}
     function localize(value,override){return localized(value,override||lang)}
 
-    return{data,text,findTextPath,setting,rawSetting,asset,rawAsset,icon,link,category,language,categoryLabel,languageLabel,seo,platformName,platformDescription,platformList,contentCountLabel,safeUrl,setLang,getLang,raw,localize};
+    return{data,text,findTextPath,setting,rawSetting,asset,rawAsset,icon,link,category,language,categoryLabel,languageLabel,seo,platformName,platformDescription,platformFieldName,platformPathName,pathTypeLabel,platformList,contentCountLabel,safeUrl,setLang,getLang,raw,localize};
   }
 
   return{create,safeUrl,findSiteTextPath};
