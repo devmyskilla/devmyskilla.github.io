@@ -1008,7 +1008,79 @@
         "tr": "JPMorgan ve BCG gibi küresel şirketlerden sanal iş deneyimleri sunan benzersiz bir platform. Gerçek pratik deneyim kazanın ve özgeçmişinizi oluşturun."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "software-engineering",
+          "name": {
+            "ar": "هندسة البرمجيات وتقنية المعلومات",
+            "en": "Software Engineering & IT",
+            "tr": "Yazılım Mühendisliği ve BT"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Security",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "banking-finance",
+          "name": {
+            "ar": "البنوك والتمويل",
+            "en": "Banking & Finance",
+            "tr": "Bankacılık ve Finans"
+          }
+        },
+        {
+          "id": "accounting-advisory",
+          "name": {
+            "ar": "المحاسبة والاستشارات",
+            "en": "Accounting & Advisory",
+            "tr": "Muhasebe ve Danışmanlık"
+          }
+        },
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "human-resources",
+          "name": {
+            "ar": "الموارد البشرية والتوظيف",
+            "en": "Human Resources & Recruiting",
+            "tr": "İnsan Kaynakları ve İşe Alım"
+          }
+        },
+        {
+          "id": "career-development",
+          "name": {
+            "ar": "التطوير المهني ومهارات المقابلات",
+            "en": "Career Development & Interview Skills",
+            "tr": "Kariyer Gelişimi ve Mülakat Becerileri"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.theforage.com/simulations",
+        "pathsSourceUrl": "https://www.theforage.com/simulations"
+      }
     },
     {
       "languageIds": [
@@ -1063,7 +1135,156 @@
         "tr": "Microsoft'un resmi öğrenme platformu. Azure, Microsoft 365, Power Platform, siber güvenlik ve yapay zeka alanlarında ücretsiz ve ücretli kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "application-development",
+          "name": {
+            "ar": "تطوير التطبيقات",
+            "en": "Application Development",
+            "tr": "Uygulama Geliştirme"
+          }
+        },
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "data-management",
+          "name": {
+            "ar": "إدارة البيانات والتحليلات",
+            "en": "Data Management & Analytics",
+            "tr": "Veri Yönetimi ve Analitik"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن",
+            "en": "Security",
+            "tr": "Güvenlik"
+          }
+        },
+        {
+          "id": "technical-infrastructure",
+          "name": {
+            "ar": "البنية التحتية التقنية والسحابة",
+            "en": "Technical Infrastructure & Cloud",
+            "tr": "Teknik Altyapı ve Bulut"
+          }
+        },
+        {
+          "id": "business-applications",
+          "name": {
+            "ar": "تطبيقات الأعمال",
+            "en": "Business Applications",
+            "tr": "İş Uygulamaları"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "developer",
+          "officialName": "Developer",
+          "name": {
+            "ar": "مسار المطور",
+            "en": "Developer",
+            "tr": "Geliştirici"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.microsoft.com/en-us/training/career-paths/developer",
+          "fieldIds": [
+            "application-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-engineer",
+          "officialName": "AI Engineer",
+          "name": {
+            "ar": "مهندس الذكاء الاصطناعي",
+            "en": "AI Engineer",
+            "tr": "Yapay Zekâ Mühendisi"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.microsoft.com/en-us/training/career-paths/ai-engineer",
+          "fieldIds": [
+            "artificial-intelligence"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-analyst",
+          "officialName": "Data Analyst",
+          "name": {
+            "ar": "محلل البيانات",
+            "en": "Data Analyst",
+            "tr": "Veri Analisti"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.microsoft.com/en-us/training/career-paths/data-analyst",
+          "fieldIds": [
+            "data-management"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-scientist",
+          "officialName": "Data Scientist",
+          "name": {
+            "ar": "عالم البيانات",
+            "en": "Data Scientist",
+            "tr": "Veri Bilimci"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.microsoft.com/en-us/training/career-paths/data-scientist",
+          "fieldIds": [
+            "data-management",
+            "artificial-intelligence"
+          ],
+          "featured": false
+        },
+        {
+          "id": "security-engineer",
+          "officialName": "Security Engineer",
+          "name": {
+            "ar": "مهندس الأمن",
+            "en": "Security Engineer",
+            "tr": "Güvenlik Mühendisi"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.microsoft.com/en-us/training/career-paths/security-engineer",
+          "fieldIds": [
+            "security"
+          ],
+          "featured": false
+        },
+        {
+          "id": "solution-architect",
+          "officialName": "Solutions Architect",
+          "name": {
+            "ar": "مهندس الحلول",
+            "en": "Solutions Architect",
+            "tr": "Çözüm Mimarı"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.microsoft.com/en-us/training/career-paths/solution-architect",
+          "fieldIds": [
+            "technical-infrastructure",
+            "business-applications"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://learn.microsoft.com/en-us/training/browse/",
+        "pathsSourceUrl": "https://learn.microsoft.com/en-us/training/career-paths/"
+      }
     },
     {
       "languageIds": [
@@ -1117,7 +1338,111 @@
         "tr": "Birleşmiş Milletler'e bağlı ITU Akademisi. Telekomünikasyon, siber güvenlik, yapay zeka ve dijital politikalar alanlarında kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "digital-transformation",
+          "name": {
+            "ar": "التحول الرقمي",
+            "en": "Digital Transformation",
+            "tr": "Dijital Dönüşüm"
+          }
+        },
+        {
+          "id": "digital-inclusion",
+          "name": {
+            "ar": "الشمول الرقمي",
+            "en": "Digital Inclusion",
+            "tr": "Dijital Kapsayıcılık"
+          }
+        },
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "broadband",
+          "name": {
+            "ar": "النطاق العريض السلكي واللاسلكي",
+            "en": "Wireless & Fixed Broadband",
+            "tr": "Kablosuz ve Sabit Geniş Bant"
+          }
+        },
+        {
+          "id": "e-government",
+          "name": {
+            "ar": "الحكومة الإلكترونية",
+            "en": "E-Government",
+            "tr": "E-Devlet"
+          }
+        },
+        {
+          "id": "ict-regulation",
+          "name": {
+            "ar": "تنظيم الاتصالات وتقنية المعلومات",
+            "en": "ICT/Telecom Regulation",
+            "tr": "BT ve Telekom Düzenlemeleri"
+          }
+        },
+        {
+          "id": "big-data-statistics",
+          "name": {
+            "ar": "البيانات الضخمة والإحصاء",
+            "en": "Big Data & Statistics",
+            "tr": "Büyük Veri ve İstatistik"
+          }
+        },
+        {
+          "id": "satellite-communications",
+          "name": {
+            "ar": "اتصالات الأقمار الصناعية",
+            "en": "Satellite Communications",
+            "tr": "Uydu Haberleşmesi"
+          }
+        },
+        {
+          "id": "spectrum-management",
+          "name": {
+            "ar": "إدارة الطيف الترددي",
+            "en": "Spectrum Management",
+            "tr": "Spektrum Yönetimi"
+          }
+        },
+        {
+          "id": "ict-environment",
+          "name": {
+            "ar": "تقنية المعلومات والبيئة والمناخ",
+            "en": "ICT, Environment & Climate",
+            "tr": "BT, Çevre ve İklim"
+          }
+        },
+        {
+          "id": "internet-of-things",
+          "name": {
+            "ar": "إنترنت الأشياء",
+            "en": "Internet of Things",
+            "tr": "Nesnelerin İnterneti"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://academy.itu.int/training-courses/full-catalogue",
+        "pathsSourceUrl": "https://academy.itu.int/training-courses/full-catalogue"
+      }
     },
     {
       "languageIds": [
@@ -1171,7 +1496,151 @@
         "tr": "Harvard ve MIT tarafından kurulan öncü bir eğitim platformu. En iyi üniversitelerden binlerce kurs sunar. Ücretsiz dinleyin, sertifika için ödeme yapın."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "computer-science",
+          "name": {
+            "ar": "علوم الحاسوب",
+            "en": "Computer Science",
+            "tr": "Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "business-management",
+          "name": {
+            "ar": "الأعمال والإدارة",
+            "en": "Business & Management",
+            "tr": "İşletme ve Yönetim"
+          }
+        },
+        {
+          "id": "healthcare",
+          "name": {
+            "ar": "الرعاية الصحية",
+            "en": "Healthcare",
+            "tr": "Sağlık"
+          }
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "اللغات",
+            "en": "Languages",
+            "tr": "Diller"
+          }
+        },
+        {
+          "id": "education",
+          "name": {
+            "ar": "التعليم",
+            "en": "Education",
+            "tr": "Eğitim"
+          }
+        },
+        {
+          "id": "engineering",
+          "name": {
+            "ar": "الهندسة",
+            "en": "Engineering",
+            "tr": "Mühendislik"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "harvard-data-science",
+          "officialName": "Data Science",
+          "name": {
+            "ar": "شهادة هارفارد المهنية في علم البيانات",
+            "en": "HarvardX Data Science Professional Certificate",
+            "tr": "HarvardX Veri Bilimi Profesyonel Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://proxy.edx.org/certificates/professional-certificate/harvardx-data-science",
+          "fieldIds": [
+            "data-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "harvard-cs-cybersecurity",
+          "officialName": "Computer Science for Cybersecurity",
+          "name": {
+            "ar": "علوم الحاسوب للأمن السيبراني",
+            "en": "Computer Science for Cybersecurity",
+            "tr": "Siber Güvenlik için Bilgisayar Bilimleri"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://proxy.edx.org/certificates/professional-certificate/harvardx-computer-science-for-cybersecurity",
+          "fieldIds": [
+            "computer-science",
+            "cybersecurity"
+          ],
+          "featured": false
+        },
+        {
+          "id": "mit-statistics-data-science",
+          "officialName": "Statistics and Data Science (General Track)",
+          "name": {
+            "ar": "الإحصاء وعلم البيانات - المسار العام",
+            "en": "Statistics and Data Science (General Track)",
+            "tr": "İstatistik ve Veri Bilimi - Genel Yol"
+          },
+          "type": "professional-program",
+          "officialUrl": "https://proxy.edx.org/masters/micromasters/mitx-statistics-and-data-science-general-track",
+          "fieldIds": [
+            "data-science",
+            "artificial-intelligence"
+          ],
+          "featured": false
+        },
+        {
+          "id": "cambridge-healthcare-data-science",
+          "officialName": "Healthcare Data Science",
+          "name": {
+            "ar": "علم البيانات للرعاية الصحية",
+            "en": "Healthcare Data Science",
+            "tr": "Sağlık Veri Bilimi"
+          },
+          "type": "professional-program",
+          "officialUrl": "https://www.edx.org/masters/micromasters/universityofcambridge-healthcare-data-science/",
+          "fieldIds": [
+            "data-science",
+            "healthcare"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.edx.org/learn",
+        "pathsSourceUrl": "https://www.edx.org/programs"
+      }
     },
     {
       "languageIds": [
@@ -1225,7 +1694,174 @@
         "tr": "Programlama öğrenmek için etkileşimli bir platform. Python, JavaScript, HTML/CSS, SQL ve daha fazlasında öğrenme yolları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "computer-science",
+          "name": {
+            "ar": "علوم الحاسوب",
+            "en": "Computer Science",
+            "tr": "Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "web-development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات والتحليلات",
+            "en": "Data Science & Analytics",
+            "tr": "Veri Bilimi ve Analitik"
+          }
+        },
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "design-ux",
+          "name": {
+            "ar": "التصميم وتجربة المستخدم",
+            "en": "Design & UX",
+            "tr": "Tasarım ve UX"
+          }
+        },
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          }
+        },
+        {
+          "id": "cloud-devops",
+          "name": {
+            "ar": "السحابة وDevOps",
+            "en": "Cloud & DevOps",
+            "tr": "Bulut ve DevOps"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "back-end-engineer",
+          "officialName": "Back-End Engineer Career Path",
+          "name": {
+            "ar": "مسار مهندس الواجهة الخلفية",
+            "en": "Back-End Engineer Career Path",
+            "tr": "Back-End Mühendisi Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.codecademy.com/learn/paths/back-end-engineer-career-path",
+          "fieldIds": [
+            "web-development",
+            "programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "computer-science-path",
+          "officialName": "Computer Science Path",
+          "name": {
+            "ar": "مسار علوم الحاسوب",
+            "en": "Computer Science Path",
+            "tr": "Bilgisayar Bilimleri Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.codecademy.com/learn/paths/computer-science",
+          "fieldIds": [
+            "computer-science",
+            "programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "front-end-engineer",
+          "officialName": "Front-End Engineer Career Path",
+          "name": {
+            "ar": "مسار مهندس الواجهة الأمامية",
+            "en": "Front-End Engineer Career Path",
+            "tr": "Front-End Mühendisi Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.codecademy.com/learn/paths/front-end-engineer-career-path",
+          "fieldIds": [
+            "web-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "full-stack-engineer",
+          "officialName": "Full-Stack Engineer Career Path",
+          "name": {
+            "ar": "مسار مهندس Full-Stack",
+            "en": "Full-Stack Engineer Career Path",
+            "tr": "Full-Stack Mühendisi Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.codecademy.com/learn/paths/full-stack-engineer-career-path",
+          "fieldIds": [
+            "web-development",
+            "programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "machine-learning-ai-engineer",
+          "officialName": "Machine Learning/AI Engineer Career Path",
+          "name": {
+            "ar": "مسار مهندس تعلم الآلة والذكاء الاصطناعي",
+            "en": "Machine Learning/AI Engineer Career Path",
+            "tr": "Makine Öğrenmesi/Yapay Zekâ Mühendisi Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.codecademy.com/learn/paths/machine-learning-engineer",
+          "fieldIds": [
+            "artificial-intelligence",
+            "data-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-engineer",
+          "officialName": "Data Engineer Career Path",
+          "name": {
+            "ar": "مسار مهندس البيانات",
+            "en": "Data Engineer Career Path",
+            "tr": "Veri Mühendisi Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.codecademy.com/learn/paths/data-engineer",
+          "fieldIds": [
+            "data-science"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.codecademy.com/catalog",
+        "pathsSourceUrl": "https://www.codecademy.com/catalog"
+      }
     },
     {
       "languageIds": [
@@ -1279,7 +1915,87 @@
         "tr": "Birleşmiş Milletler Eğitim ve Araştırma Enstitüsü'ne (UNITAR) bağlı bir eğitim platformu. Sürdürülebilir kalkınma, diplomasi, kriz yönetimi ve liderlik kursları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "peace",
+          "name": {
+            "ar": "السلام والأمن",
+            "en": "Peace",
+            "tr": "Barış"
+          }
+        },
+        {
+          "id": "people",
+          "name": {
+            "ar": "الناس والتنمية الاجتماعية",
+            "en": "People",
+            "tr": "İnsanlar"
+          }
+        },
+        {
+          "id": "planet",
+          "name": {
+            "ar": "الكوكب والبيئة",
+            "en": "Planet",
+            "tr": "Gezegen ve Çevre"
+          }
+        },
+        {
+          "id": "prosperity",
+          "name": {
+            "ar": "الازدهار والتنمية الاقتصادية",
+            "en": "Prosperity",
+            "tr": "Refah"
+          }
+        },
+        {
+          "id": "multilateral-diplomacy",
+          "name": {
+            "ar": "الدبلوماسية متعددة الأطراف",
+            "en": "Multilateral Diplomacy",
+            "tr": "Çok Taraflı Diplomasi"
+          }
+        },
+        {
+          "id": "sdg-implementation",
+          "name": {
+            "ar": "تسريع تنفيذ أهداف التنمية المستدامة",
+            "en": "Accelerating SDG Implementation",
+            "tr": "SKA Uygulamasını Hızlandırma"
+          }
+        },
+        {
+          "id": "satellite-analysis",
+          "name": {
+            "ar": "تحليل الأقمار الصناعية وUNOSAT",
+            "en": "Satellite Analysis & UNOSAT",
+            "tr": "Uydu Analizi ve UNOSAT"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "online-diploma-multilateral-diplomacy-2026",
+          "officialName": "Online Diploma in Multilateral Diplomacy 2026 - Edition 2",
+          "name": {
+            "ar": "الدبلوم الإلكتروني في الدبلوماسية متعددة الأطراف 2026 - الإصدار الثاني",
+            "en": "Online Diploma in Multilateral Diplomacy 2026 - Edition 2",
+            "tr": "Çok Taraflı Diplomasi Çevrimiçi Diploması 2026 - 2. Dönem"
+          },
+          "type": "professional-program",
+          "officialUrl": "https://event.unitar.org/full-catalog/online-diploma-multilateral-diplomacy-2026-edition-2",
+          "fieldIds": [
+            "multilateral-diplomacy"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://unitar.org/about/unitar/organizational-chart",
+        "pathsSourceUrl": "https://unitar.org/sustainable-development-goals/all/our-portfolio"
+      }
     },
     {
       "languageIds": [
@@ -1333,7 +2049,71 @@
         "tr": "Resmi Huawei Akademisi. Ağ, yapay zeka, bulut bilişim, siber güvenlik ve IoT alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "cloud-platforms-services",
+          "name": {
+            "ar": "الحوسبة السحابية والخدمات",
+            "en": "Cloud Platforms & Services",
+            "tr": "Bulut Platformları ve Hizmetleri"
+          }
+        },
+        {
+          "id": "ai-computing",
+          "name": {
+            "ar": "الذكاء الاصطناعي والحوسبة",
+            "en": "AI & Computing",
+            "tr": "Yapay Zekâ ve Bilişim"
+          }
+        },
+        {
+          "id": "data-databases",
+          "name": {
+            "ar": "البيانات وقواعد البيانات",
+            "en": "Data & Databases",
+            "tr": "Veri ve Veritabanları"
+          }
+        },
+        {
+          "id": "networking-datacom",
+          "name": {
+            "ar": "الشبكات واتصالات البيانات",
+            "en": "Networking & Datacom",
+            "tr": "Ağ ve Veri İletişimi"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن",
+            "en": "Security",
+            "tr": "Güvenlik"
+          }
+        },
+        {
+          "id": "wireless-optical",
+          "name": {
+            "ar": "الاتصالات اللاسلكية والبصرية",
+            "en": "Wireless & Optical Communications",
+            "tr": "Kablosuz ve Optik İletişim"
+          }
+        },
+        {
+          "id": "project-management",
+          "name": {
+            "ar": "إدارة المشاريع",
+            "en": "Project Management",
+            "tr": "Proje Yönetimi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://e.huawei.com/en/talent/ict-academy/",
+        "pathsSourceUrl": "https://e.huawei.com/en/talent/cert/"
+      }
     },
     {
       "languageIds": [
@@ -1387,7 +2167,31 @@
         "tr": "ingilizce öğrenmek için başlangıçtan ileri seviyeye kadar tüm seviyeleri kapsayan, üniversite hazırlığına odaklanan eksiksiz bir öğrenme yolu sunar. Eğitim ve medeniyetler gibi diğer alanlarda da kursları vardır."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "english-college-preparation",
+          "name": {
+            "ar": "اللغة الإنجليزية والاستعداد للجامعة",
+            "en": "English & College Preparation",
+            "tr": "İngilizce ve Üniversite Hazırlığı"
+          }
+        },
+        {
+          "id": "teacher-development",
+          "name": {
+            "ar": "التطوير المهني للمعلمين",
+            "en": "Teacher Professional Development",
+            "tr": "Öğretmen Mesleki Gelişimi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.aucegypt.edu/academics/free-english-courses",
+        "pathsSourceUrl": "https://openlearn.aucegypt.edu/"
+      }
     },
     {
       "languageIds": [
@@ -1441,7 +2245,63 @@
         "tr": "HP'nin yaşam boyu öğrenme platformu. Girişimcilik, dijital pazarlama, finansal beceriler ve BT alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "communication",
+          "name": {
+            "ar": "التواصل",
+            "en": "Communication",
+            "tr": "İletişim"
+          }
+        },
+        {
+          "id": "digital-business-skills",
+          "name": {
+            "ar": "مهارات الأعمال الرقمية",
+            "en": "Digital Business Skills",
+            "tr": "Dijital İş Becerileri"
+          }
+        },
+        {
+          "id": "entrepreneurship",
+          "name": {
+            "ar": "ريادة الأعمال",
+            "en": "Entrepreneurship",
+            "tr": "Girişimcilik"
+          }
+        },
+        {
+          "id": "finance",
+          "name": {
+            "ar": "التمويل",
+            "en": "Finance",
+            "tr": "Finans"
+          }
+        },
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "professional-development",
+          "name": {
+            "ar": "التطوير المهني",
+            "en": "Professional Development",
+            "tr": "Mesleki Gelişim"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.life-global.org/",
+        "pathsSourceUrl": "https://www.life-global.org/"
+      }
     },
     {
       "languageIds": [
@@ -1495,7 +2355,156 @@
         "tr": "Yapay zeka ve makine öğreniminde Nvidia'nın öncü platformu. Derin öğrenme, CUDA, görüntü işleme ve üretken yapay zeka alanlarında ücretsiz kurslar sunar. Tüm kurslar ücretsizdir ancak yalnızca biri sertifika verir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "accelerated-computing",
+          "name": {
+            "ar": "الحوسبة المسرعة",
+            "en": "Accelerated Computing",
+            "tr": "Hızlandırılmış Hesaplama"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "deep-learning",
+          "name": {
+            "ar": "التعلم العميق",
+            "en": "Deep Learning",
+            "tr": "Derin Öğrenme"
+          }
+        },
+        {
+          "id": "generative-ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي التوليدي والنماذج اللغوية الكبيرة",
+            "en": "Generative AI & LLMs",
+            "tr": "Üretken Yapay Zekâ ve Büyük Dil Modelleri"
+          }
+        },
+        {
+          "id": "ai-infrastructure",
+          "name": {
+            "ar": "البنية التحتية للذكاء الاصطناعي",
+            "en": "AI Infrastructure",
+            "tr": "Yapay Zekâ Altyapısı"
+          }
+        },
+        {
+          "id": "ai-networking",
+          "name": {
+            "ar": "شبكات الذكاء الاصطناعي",
+            "en": "AI Networking",
+            "tr": "Yapay Zekâ Ağları"
+          }
+        },
+        {
+          "id": "robotics",
+          "name": {
+            "ar": "الروبوتات",
+            "en": "Robotics",
+            "tr": "Robotik"
+          }
+        },
+        {
+          "id": "openusd-graphics",
+          "name": {
+            "ar": "OpenUSD والرسومات والمحاكاة",
+            "en": "OpenUSD, Graphics & Simulation",
+            "tr": "OpenUSD, Grafik ve Simülasyon"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "accelerated-computing",
+          "officialName": "Accelerated Computing",
+          "name": {
+            "ar": "مسار الحوسبة المسرعة",
+            "en": "Accelerated Computing",
+            "tr": "Hızlandırılmış Hesaplama Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.nvidia.com/en-us/learn/learning-path/accelerated-computing/",
+          "fieldIds": [
+            "accelerated-computing"
+          ],
+          "featured": false
+        },
+        {
+          "id": "accelerated-data-science",
+          "officialName": "Accelerated Data Science",
+          "name": {
+            "ar": "مسار علم البيانات المسرع",
+            "en": "Accelerated Data Science",
+            "tr": "Hızlandırılmış Veri Bilimi Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.nvidia.com/en-us/learn/learning-path/accelerated-data-science/",
+          "fieldIds": [
+            "data-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "deep-learning",
+          "officialName": "Deep Learning",
+          "name": {
+            "ar": "مسار التعلم العميق",
+            "en": "Deep Learning",
+            "tr": "Derin Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.nvidia.com/en-us/learn/learning-path/deep-learning/",
+          "fieldIds": [
+            "deep-learning"
+          ],
+          "featured": false
+        },
+        {
+          "id": "generative-ai-llm",
+          "officialName": "Generative AI and LLMs",
+          "name": {
+            "ar": "مسارات الذكاء الاصطناعي التوليدي والنماذج اللغوية الكبيرة",
+            "en": "Generative AI and LLMs",
+            "tr": "Üretken Yapay Zekâ ve Büyük Dil Modeli Yolları"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.nvidia.com/en-us/learn/learning-path/generative-ai-llm/",
+          "fieldIds": [
+            "generative-ai"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-networking",
+          "officialName": "NVIDIA AI Networking Learning Path",
+          "name": {
+            "ar": "مسار شبكات الذكاء الاصطناعي من NVIDIA",
+            "en": "NVIDIA AI Networking Learning Path",
+            "tr": "NVIDIA Yapay Zekâ Ağları Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.nvidia.com/en-us/learn/learning-paths/ai-networking/",
+          "fieldIds": [
+            "ai-networking",
+            "ai-infrastructure"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.nvidia.com/en-us/learn/learning-paths/",
+        "pathsSourceUrl": "https://www.nvidia.com/en-us/learn/learning-paths/"
+      }
     },
     {
       "languageIds": [
@@ -1549,7 +2558,133 @@
         "tr": "Resmi Cisco Akademisi. Ağ (CCNA), siber güvenlik, IoT ve Linux alanlarında küresel olarak tanınan sertifikalarla kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "networking",
+          "name": {
+            "ar": "الشبكات",
+            "en": "Networking",
+            "tr": "Ağ Teknolojileri"
+          }
+        },
+        {
+          "id": "ai-data-science",
+          "name": {
+            "ar": "الذكاء الاصطناعي وعلم البيانات",
+            "en": "AI & Data Science",
+            "tr": "Yapay Zekâ ve Veri Bilimi"
+          }
+        },
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          }
+        },
+        {
+          "id": "information-technology",
+          "name": {
+            "ar": "تقنية المعلومات",
+            "en": "Information Technology",
+            "tr": "Bilgi Teknolojileri"
+          }
+        },
+        {
+          "id": "digital-literacy",
+          "name": {
+            "ar": "المهارات الرقمية",
+            "en": "Digital Literacy",
+            "tr": "Dijital Okuryazarlık"
+          }
+        },
+        {
+          "id": "professional-skills",
+          "name": {
+            "ar": "المهارات المهنية",
+            "en": "Professional Skills",
+            "tr": "Mesleki Beceriler"
+          }
+        },
+        {
+          "id": "sustainability",
+          "name": {
+            "ar": "الاستدامة",
+            "en": "Sustainability",
+            "tr": "Sürdürülebilirlik"
+          }
+        },
+        {
+          "id": "packet-tracer",
+          "name": {
+            "ar": "Cisco Packet Tracer",
+            "en": "Cisco Packet Tracer",
+            "tr": "Cisco Packet Tracer"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "junior-cybersecurity-analyst",
+          "officialName": "Junior Cybersecurity Analyst Career Path",
+          "name": {
+            "ar": "مسار محلل الأمن السيبراني المبتدئ",
+            "en": "Junior Cybersecurity Analyst Career Path",
+            "tr": "Junior Siber Güvenlik Analisti Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.netacad.com/career-paths/cybersecurity",
+          "fieldIds": [
+            "cybersecurity"
+          ],
+          "featured": false
+        },
+        {
+          "id": "network-technician",
+          "officialName": "Network Technician Career Path",
+          "name": {
+            "ar": "مسار فني الشبكات",
+            "en": "Network Technician Career Path",
+            "tr": "Ağ Teknisyeni Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.netacad.com/ja/career-paths/network-technician?courseLang=en-US",
+          "fieldIds": [
+            "networking"
+          ],
+          "featured": false
+        },
+        {
+          "id": "cybersecurity-defense-analyst",
+          "officialName": "Cybersecurity Defense Analyst Career Path",
+          "name": {
+            "ar": "مسار محلل الدفاع السيبراني",
+            "en": "Cybersecurity Defense Analyst Career Path",
+            "tr": "Siber Güvenlik Savunma Analisti Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.netacad.com/career-paths/splunk-cybersecurity-defense-analyst?courseLang=en-US",
+          "fieldIds": [
+            "cybersecurity"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.netacad.com/",
+        "pathsSourceUrl": "https://www.netacad.com/careers/pathways"
+      }
     },
     {
       "languageIds": [
@@ -1603,7 +2738,87 @@
         "tr": "BK'deki Açık Üniversite'ye bağlı bir platform. Tamamen ücretsiz yüzlerce akademik kurs ve tamamlama sertifikaları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "money-business",
+          "name": {
+            "ar": "المال والأعمال",
+            "en": "Money & Business",
+            "tr": "Para ve İşletme"
+          }
+        },
+        {
+          "id": "education-development",
+          "name": {
+            "ar": "التعليم والتنمية",
+            "en": "Education & Development",
+            "tr": "Eğitim ve Gelişim"
+          }
+        },
+        {
+          "id": "health-sports-psychology",
+          "name": {
+            "ar": "الصحة والرياضة وعلم النفس",
+            "en": "Health, Sports & Psychology",
+            "tr": "Sağlık, Spor ve Psikoloji"
+          }
+        },
+        {
+          "id": "history-arts",
+          "name": {
+            "ar": "التاريخ والفنون",
+            "en": "History & The Arts",
+            "tr": "Tarih ve Sanat"
+          }
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "اللغات",
+            "en": "Languages",
+            "tr": "Diller"
+          }
+        },
+        {
+          "id": "nature-environment",
+          "name": {
+            "ar": "الطبيعة والبيئة",
+            "en": "Nature & Environment",
+            "tr": "Doğa ve Çevre"
+          }
+        },
+        {
+          "id": "science-maths-technology",
+          "name": {
+            "ar": "العلوم والرياضيات والتقنية",
+            "en": "Science, Maths & Technology",
+            "tr": "Fen, Matematik ve Teknoloji"
+          }
+        },
+        {
+          "id": "society-politics-law",
+          "name": {
+            "ar": "المجتمع والسياسة والقانون",
+            "en": "Society, Politics & Law",
+            "tr": "Toplum, Siyaset ve Hukuk"
+          }
+        },
+        {
+          "id": "digital-computing",
+          "name": {
+            "ar": "الرقمنة والحوسبة",
+            "en": "Digital & Computing",
+            "tr": "Dijital ve Bilişim"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.open.edu/openlearn/free-courses/full-catalogue",
+        "pathsSourceUrl": "https://www.open.edu/openlearn/free-courses/full-catalogue"
+      }
     },
     {
       "languageIds": [
@@ -1658,7 +2873,79 @@
         "tr": "Google'ın resmi beceri geliştirme platformu. Google Ads, Analytics, dijital pazarlama, Android ve bulut alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "google-ads",
+          "name": {
+            "ar": "إعلانات Google",
+            "en": "Google Ads",
+            "tr": "Google Ads"
+          }
+        },
+        {
+          "id": "google-marketing-platform",
+          "name": {
+            "ar": "Google Marketing Platform",
+            "en": "Google Marketing Platform",
+            "tr": "Google Marketing Platform"
+          }
+        },
+        {
+          "id": "google-analytics",
+          "name": {
+            "ar": "Google Analytics",
+            "en": "Google Analytics",
+            "tr": "Google Analytics"
+          }
+        },
+        {
+          "id": "business-profile",
+          "name": {
+            "ar": "الملف التجاري على Google",
+            "en": "Google Business Profile",
+            "tr": "Google İşletme Profili"
+          }
+        },
+        {
+          "id": "google-ad-manager",
+          "name": {
+            "ar": "Google Ad Manager",
+            "en": "Google Ad Manager",
+            "tr": "Google Ad Manager"
+          }
+        },
+        {
+          "id": "google-admob",
+          "name": {
+            "ar": "Google AdMob",
+            "en": "Google AdMob",
+            "tr": "Google AdMob"
+          }
+        },
+        {
+          "id": "authorized-buyers",
+          "name": {
+            "ar": "Authorized Buyers",
+            "en": "Authorized Buyers",
+            "tr": "Authorized Buyers"
+          }
+        },
+        {
+          "id": "waze",
+          "name": {
+            "ar": "Waze",
+            "en": "Waze",
+            "tr": "Waze"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://skillshop.withgoogle.com/",
+        "pathsSourceUrl": "https://skillshop.withgoogle.com/"
+      }
     },
     {
       "languageIds": [
@@ -1712,7 +2999,103 @@
         "tr": "Basitleştirilmiş bir şekilde programlama öğrenmek için etkileşimli bir uygulama ve platform. Mobil öğrenme ile Python, Java, C++, JavaScript gibi birçok dili destekler."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "programming-foundations",
+          "name": {
+            "ar": "أساسيات البرمجة",
+            "en": "Programming Foundations",
+            "tr": "Programlama Temelleri"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "web-app-development",
+          "name": {
+            "ar": "تطوير الويب والتطبيقات",
+            "en": "Web & App Development",
+            "tr": "Web ve Uygulama Geliştirme"
+          }
+        },
+        {
+          "id": "advanced-programming",
+          "name": {
+            "ar": "البرمجة المتقدمة وأطر العمل",
+            "en": "Advanced Programming & Frameworks",
+            "tr": "İleri Programlama ve Frameworkler"
+          }
+        },
+        {
+          "id": "ai-generative",
+          "name": {
+            "ar": "الذكاء الاصطناعي والتقنيات التوليدية",
+            "en": "AI & Generative Technologies",
+            "tr": "Yapay Zekâ ve Üretken Teknolojiler"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "coding-foundations",
+          "officialName": "Coding Foundations",
+          "name": {
+            "ar": "أساسيات البرمجة",
+            "en": "Coding Foundations",
+            "tr": "Kodlama Temelleri"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.sololearn.com/en/learn/courses/coding-foundations",
+          "fieldIds": [
+            "programming-foundations",
+            "web-app-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "python-developer",
+          "officialName": "Python Developer",
+          "name": {
+            "ar": "مطور Python",
+            "en": "Python Developer",
+            "tr": "Python Geliştirici"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.sololearn.com/en/learn/courses/python-developer",
+          "fieldIds": [
+            "programming-foundations",
+            "advanced-programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "web-development",
+          "officialName": "Web Development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.sololearn.com/en/learn/courses/web-development",
+          "fieldIds": [
+            "web-app-development"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.sololearn.com/en/learn/",
+        "pathsSourceUrl": "https://www.sololearn.com/en/learn/"
+      }
     },
     {
       "languageIds": [
@@ -1766,7 +3149,154 @@
         "tr": "Elsevier'in araştırma eğitim akademisi. Akademik yazım, bilimsel yayıncılık, araştırma veri analizi ve referans yönetimi alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "research-preparation",
+          "name": {
+            "ar": "الإعداد للبحث",
+            "en": "Research Preparation",
+            "tr": "Araştırma Hazırlığı"
+          }
+        },
+        {
+          "id": "research-writing",
+          "name": {
+            "ar": "الكتابة البحثية",
+            "en": "Writing for Research",
+            "tr": "Araştırma Yazımı"
+          }
+        },
+        {
+          "id": "publication-process",
+          "name": {
+            "ar": "عملية النشر",
+            "en": "Publication Process",
+            "tr": "Yayın Süreci"
+          }
+        },
+        {
+          "id": "peer-review",
+          "name": {
+            "ar": "مراجعة الأقران",
+            "en": "Peer Review",
+            "tr": "Hakem Değerlendirmesi"
+          }
+        },
+        {
+          "id": "research-communication",
+          "name": {
+            "ar": "التواصل البحثي",
+            "en": "Research Communication",
+            "tr": "Araştırma İletişimi"
+          }
+        },
+        {
+          "id": "research-career",
+          "name": {
+            "ar": "المسار المهني للباحث",
+            "en": "Research Career",
+            "tr": "Araştırma Kariyeri"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "research-preparation",
+          "officialName": "Research preparation",
+          "name": {
+            "ar": "الإعداد للبحث",
+            "en": "Research preparation",
+            "tr": "Araştırma hazırlığı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://researcheracademy.elsevier.com/research-preparation",
+          "fieldIds": [
+            "research-preparation"
+          ],
+          "featured": false
+        },
+        {
+          "id": "writing-for-research",
+          "officialName": "Writing for research",
+          "name": {
+            "ar": "الكتابة من أجل البحث",
+            "en": "Writing for research",
+            "tr": "Araştırma için yazım"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://researcheracademy.elsevier.com/writing-research",
+          "fieldIds": [
+            "research-writing"
+          ],
+          "featured": false
+        },
+        {
+          "id": "publication-process",
+          "officialName": "Publication process",
+          "name": {
+            "ar": "عملية النشر",
+            "en": "Publication process",
+            "tr": "Yayın süreci"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://researcheracademy.elsevier.com/publication-process",
+          "fieldIds": [
+            "publication-process"
+          ],
+          "featured": false
+        },
+        {
+          "id": "navigating-peer-review",
+          "officialName": "Navigating peer review",
+          "name": {
+            "ar": "التعامل مع مراجعة الأقران",
+            "en": "Navigating peer review",
+            "tr": "Hakem değerlendirmesinde ilerleme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://researcheracademy.elsevier.com/navigating-peer-review",
+          "fieldIds": [
+            "peer-review"
+          ],
+          "featured": false
+        },
+        {
+          "id": "communicating-your-research",
+          "officialName": "Communicating your research",
+          "name": {
+            "ar": "التواصل حول بحثك",
+            "en": "Communicating your research",
+            "tr": "Araştırmanızı iletişimle aktarma"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://researcheracademy.elsevier.com/communicating-research",
+          "fieldIds": [
+            "research-communication"
+          ],
+          "featured": false
+        },
+        {
+          "id": "career-path",
+          "officialName": "Career path",
+          "name": {
+            "ar": "المسار المهني للباحث",
+            "en": "Career path",
+            "tr": "Araştırmacı kariyer yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://origin.researcheracademy.elsevier.com/career-path",
+          "fieldIds": [
+            "research-career"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://researcheracademy.elsevier.com/learn",
+        "pathsSourceUrl": "https://researcheracademy.elsevier.com/"
+      }
     },
     {
       "languageIds": [
@@ -1820,7 +3350,169 @@
         "tr": "Web programlama öğrenmek için en popüler ücretsiz platform. HTML, CSS, JavaScript, Python, SQL, PHP ve daha fazlasında etkileşimli dersler sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "html-css",
+          "name": {
+            "ar": "HTML وCSS",
+            "en": "HTML & CSS",
+            "tr": "HTML ve CSS"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "backend-programming",
+          "name": {
+            "ar": "البرمجة الخلفية",
+            "en": "Backend Programming",
+            "tr": "Backend Programlama"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data Analytics",
+            "tr": "Veri Analitiği"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "html-study-plan",
+          "officialName": "HTML Study Plan",
+          "name": {
+            "ar": "خطة دراسة HTML",
+            "en": "HTML Study Plan",
+            "tr": "HTML Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/html/html_study_plan.asp",
+          "fieldIds": [
+            "html-css"
+          ],
+          "featured": false
+        },
+        {
+          "id": "css-study-plan",
+          "officialName": "CSS Study Plan",
+          "name": {
+            "ar": "خطة دراسة CSS",
+            "en": "CSS Study Plan",
+            "tr": "CSS Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/CSS/css_study_plan.asp",
+          "fieldIds": [
+            "html-css"
+          ],
+          "featured": false
+        },
+        {
+          "id": "javascript-study-plan",
+          "officialName": "JavaScript Study Plan",
+          "name": {
+            "ar": "خطة دراسة JavaScript",
+            "en": "JavaScript Study Plan",
+            "tr": "JavaScript Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/js/js_study_plan.asp",
+          "fieldIds": [
+            "javascript"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sql-study-plan",
+          "officialName": "SQL Study Plan",
+          "name": {
+            "ar": "خطة دراسة SQL",
+            "en": "SQL Study Plan",
+            "tr": "SQL Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/sql/sql_study_plan.asp",
+          "fieldIds": [
+            "data-analytics",
+            "backend-programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "csharp-study-plan",
+          "officialName": "C# Study Plan",
+          "name": {
+            "ar": "خطة دراسة C#",
+            "en": "C# Study Plan",
+            "tr": "C# Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/CS/cs_study_plan.php",
+          "fieldIds": [
+            "backend-programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "go-study-plan",
+          "officialName": "Go Study Plan",
+          "name": {
+            "ar": "خطة دراسة Go",
+            "en": "Go Study Plan",
+            "tr": "Go Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/go/go_study_plan.php",
+          "fieldIds": [
+            "backend-programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "r-study-plan",
+          "officialName": "R Study Plan",
+          "name": {
+            "ar": "خطة دراسة R",
+            "en": "R Study Plan",
+            "tr": "R Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/R/r_study_plan.asp",
+          "fieldIds": [
+            "data-analytics"
+          ],
+          "featured": false
+        },
+        {
+          "id": "php-study-plan",
+          "officialName": "PHP Study Plan",
+          "name": {
+            "ar": "خطة دراسة PHP",
+            "en": "PHP Study Plan",
+            "tr": "PHP Çalışma Planı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.w3schools.com/php/php_study_plan.asp",
+          "fieldIds": [
+            "backend-programming"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.w3schools.com/tutorials/",
+        "pathsSourceUrl": "https://www.w3schools.com/academy/academy_study_plans.php"
+      }
     },
     {
       "languageIds": [
@@ -1875,7 +3567,87 @@
         "tr": "Herkes için ücretsiz eğitim sunan kar amacı gütmeyen bir eğitim platformu. Yüksek kaliteli içerikle matematik, fen, programlama, tarih ve ekonomi konularını kapsar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "math",
+          "name": {
+            "ar": "الرياضيات",
+            "en": "Math",
+            "tr": "Matematik"
+          }
+        },
+        {
+          "id": "test-prep",
+          "name": {
+            "ar": "الاستعداد للاختبارات",
+            "en": "Test Prep",
+            "tr": "Sınav Hazırlığı"
+          }
+        },
+        {
+          "id": "ela",
+          "name": {
+            "ar": "فنون اللغة الإنجليزية",
+            "en": "English Language Arts",
+            "tr": "İngilizce Dil Sanatları"
+          }
+        },
+        {
+          "id": "science",
+          "name": {
+            "ar": "العلوم",
+            "en": "Science",
+            "tr": "Fen Bilimleri"
+          }
+        },
+        {
+          "id": "social-studies",
+          "name": {
+            "ar": "الدراسات الاجتماعية",
+            "en": "Social Studies",
+            "tr": "Sosyal Bilgiler"
+          }
+        },
+        {
+          "id": "computing",
+          "name": {
+            "ar": "الحوسبة",
+            "en": "Computing",
+            "tr": "Bilişim"
+          }
+        },
+        {
+          "id": "economics",
+          "name": {
+            "ar": "الاقتصاد",
+            "en": "Economics",
+            "tr": "Ekonomi"
+          }
+        },
+        {
+          "id": "life-skills",
+          "name": {
+            "ar": "المهارات الحياتية",
+            "en": "Life Skills",
+            "tr": "Yaşam Becerileri"
+          }
+        },
+        {
+          "id": "partner-content",
+          "name": {
+            "ar": "محتوى الشركاء",
+            "en": "Partner Courses",
+            "tr": "İş Ortağı Kursları"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.khanacademy.org/",
+        "pathsSourceUrl": "https://www.khanacademy.org/"
+      }
     },
     {
       "languageIds": [
