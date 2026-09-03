@@ -9405,7 +9405,95 @@
         "tr": "Linux, OpenShift, Ansible, konteynerler ve bulut için Red Hat’in resmi eğitim platformu; yapılandırılmış eğitim yolları, sınavlar ve profesyonel sertifikalar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "rhel-linux",
+          "name": {
+            "ar": "Red Hat Enterprise Linux وإدارة الأنظمة",
+            "en": "Red Hat Enterprise Linux & System Administration",
+            "tr": "Red Hat Enterprise Linux ve Sistem Yönetimi"
+          }
+        },
+        {
+          "id": "openshift-containers",
+          "name": {
+            "ar": "OpenShift والحاويات",
+            "en": "OpenShift & Containers",
+            "tr": "OpenShift ve Konteynerler"
+          }
+        },
+        {
+          "id": "ansible-automation",
+          "name": {
+            "ar": "Ansible والأتمتة",
+            "en": "Ansible & Automation",
+            "tr": "Ansible ve Otomasyon"
+          }
+        },
+        {
+          "id": "ai-mlops",
+          "name": {
+            "ar": "الذكاء الاصطناعي وMLOps",
+            "en": "AI & MLOps",
+            "tr": "Yapay Zekâ ve MLOps"
+          }
+        },
+        {
+          "id": "cloud-devops",
+          "name": {
+            "ar": "السحابة وDevOps",
+            "en": "Cloud & DevOps",
+            "tr": "Bulut ve DevOps"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن",
+            "en": "Security",
+            "tr": "Güvenlik"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "rhel-core-training",
+          "officialName": "Red Hat Enterprise Linux core training path",
+          "name": {
+            "ar": "المسار الأساسي لتدريب Red Hat Enterprise Linux",
+            "en": "Red Hat Enterprise Linux Core Training Path",
+            "tr": "Red Hat Enterprise Linux Temel Eğitim Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.redhat.com/en/services/training/red-hat-enterprise-linux",
+          "fieldIds": [
+            "rhel-linux"
+          ],
+          "featured": false
+        },
+        {
+          "id": "red-hat-ai-skills",
+          "officialName": "Red Hat AI skills path",
+          "name": {
+            "ar": "مسار مهارات Red Hat AI",
+            "en": "Red Hat AI Skills Path",
+            "tr": "Red Hat AI Beceri Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://www.redhat.com/en/resources/red-hat-ai-skills-path-datasheet",
+          "fieldIds": [
+            "ai-mlops",
+            "openshift-containers"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.redhat.com/en/services/training-and-certification",
+        "pathsSourceUrl": "https://www.redhat.com/en/engage/find-your-training-path"
+      }
     },
     {
       "languageIds": [
@@ -9459,7 +9547,79 @@
         "tr": "AWS’nin bulut, yapay zeka, güvenlik ve veri alanlarında binden fazla ücretsiz kaynak, ücretli abonelikler ve sertifika hazırlık yolları sunan resmi öğrenme platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "cloud-foundations",
+          "name": {
+            "ar": "أساسيات AWS والسحابة",
+            "en": "AWS & Cloud Foundations",
+            "tr": "AWS ve Bulut Temelleri"
+          }
+        },
+        {
+          "id": "architecture",
+          "name": {
+            "ar": "هندسة الحلول السحابية",
+            "en": "Cloud Architecture",
+            "tr": "Bulut Mimarisi"
+          }
+        },
+        {
+          "id": "development",
+          "name": {
+            "ar": "التطوير على AWS",
+            "en": "AWS Development",
+            "tr": "AWS Geliştirme"
+          }
+        },
+        {
+          "id": "operations-devops",
+          "name": {
+            "ar": "العمليات وDevOps",
+            "en": "Operations & DevOps",
+            "tr": "Operasyon ve DevOps"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن",
+            "en": "Security",
+            "tr": "Güvenlik"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "ai-ml",
+          "name": {
+            "ar": "الذكاء الاصطناعي وتعلم الآلة",
+            "en": "AI & Machine Learning",
+            "tr": "Yapay Zekâ ve Makine Öğrenmesi"
+          }
+        },
+        {
+          "id": "serverless",
+          "name": {
+            "ar": "الحوسبة بلا خوادم",
+            "en": "Serverless",
+            "tr": "Sunucusuz Bilişim"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://skillbuilder.aws/",
+        "pathsSourceUrl": "https://skillbuilder.aws/"
+      }
     },
     {
       "languageIds": [
@@ -9513,7 +9673,87 @@
         "tr": "Veritabanları, Java, bulut, yapay zeka ve Oracle uygulamalarında ücretsiz ve ücretli kaynaklar, laboratuvarlar ve sertifika yolları sunan resmi Oracle platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "oci",
+          "name": {
+            "ar": "Oracle Cloud Infrastructure",
+            "en": "Oracle Cloud Infrastructure",
+            "tr": "Oracle Cloud Infrastructure"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي في Oracle",
+            "en": "Oracle AI",
+            "tr": "Oracle Yapay Zekâ"
+          }
+        },
+        {
+          "id": "database",
+          "name": {
+            "ar": "قواعد بيانات Oracle",
+            "en": "Oracle Database",
+            "tr": "Oracle Veritabanı"
+          }
+        },
+        {
+          "id": "java",
+          "name": {
+            "ar": "Java",
+            "en": "Java",
+            "tr": "Java"
+          }
+        },
+        {
+          "id": "mysql",
+          "name": {
+            "ar": "MySQL",
+            "en": "MySQL",
+            "tr": "MySQL"
+          }
+        },
+        {
+          "id": "saas-applications",
+          "name": {
+            "ar": "تطبيقات Oracle Cloud SaaS",
+            "en": "Oracle Cloud SaaS Applications",
+            "tr": "Oracle Cloud SaaS Uygulamaları"
+          }
+        },
+        {
+          "id": "industry-solutions",
+          "name": {
+            "ar": "حلول القطاعات",
+            "en": "Industry Solutions",
+            "tr": "Sektör Çözümleri"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "oci-foundations-associate-2026",
+          "officialName": "Become an OCI Foundations Associate (2026)",
+          "name": {
+            "ar": "كن مساعدًا معتمدًا في أساسيات OCI لعام 2026",
+            "en": "Become an OCI Foundations Associate (2026)",
+            "tr": "OCI Foundations Associate Olun (2026)"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://mylearn.oracle.com/ou/learning-path/-become-an-oci-foundations-associate-2026/163541",
+          "fieldIds": [
+            "oci"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://mylearn.oracle.com/ou/learning-path/",
+        "pathsSourceUrl": "https://mylearn.oracle.com/ou/learning-path/"
+      }
     },
     {
       "languageIds": [
@@ -9567,7 +9807,118 @@
         "tr": "CRM, yapay zeka, veri, geliştirme ve yönetimde modüller, yollar ve projeler sunan ücretsiz Salesforce platformu; dijital rozetler ve profesyonel sertifika yolları içerir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "administration",
+          "name": {
+            "ar": "إدارة Salesforce",
+            "en": "Salesforce Administration",
+            "tr": "Salesforce Yönetimi"
+          }
+        },
+        {
+          "id": "development",
+          "name": {
+            "ar": "تطوير Salesforce",
+            "en": "Salesforce Development",
+            "tr": "Salesforce Geliştirme"
+          }
+        },
+        {
+          "id": "architecture",
+          "name": {
+            "ar": "هندسة Salesforce",
+            "en": "Salesforce Architecture",
+            "tr": "Salesforce Mimarisi"
+          }
+        },
+        {
+          "id": "ai-agentforce",
+          "name": {
+            "ar": "الذكاء الاصطناعي وAgentforce",
+            "en": "AI & Agentforce",
+            "tr": "Yapay Zekâ ve Agentforce"
+          }
+        },
+        {
+          "id": "data",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "sales-service",
+          "name": {
+            "ar": "المبيعات والخدمة",
+            "en": "Sales & Service",
+            "tr": "Satış ve Hizmet"
+          }
+        },
+        {
+          "id": "marketing-commerce",
+          "name": {
+            "ar": "التسويق والتجارة",
+            "en": "Marketing & Commerce",
+            "tr": "Pazarlama ve Ticaret"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "admin-beginner",
+          "officialName": "Admin Beginner",
+          "name": {
+            "ar": "مسار مسؤول Salesforce للمبتدئين",
+            "en": "Admin Beginner",
+            "tr": "Başlangıç Salesforce Yöneticisi"
+          },
+          "type": "role-path",
+          "officialUrl": "https://trailhead.salesforce.com/content/learn/trails/force_com_admin_beginner",
+          "fieldIds": [
+            "administration",
+            "data"
+          ],
+          "featured": false
+        },
+        {
+          "id": "developer-beginner",
+          "officialName": "Developer Beginner",
+          "name": {
+            "ar": "مسار مطور Salesforce للمبتدئين",
+            "en": "Developer Beginner",
+            "tr": "Başlangıç Salesforce Geliştiricisi"
+          },
+          "type": "role-path",
+          "officialUrl": "https://trailhead.salesforce.com/content/learn/trails/force_com_dev_beginner",
+          "fieldIds": [
+            "development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "architect-career",
+          "officialName": "Build Your Architect Career on Salesforce",
+          "name": {
+            "ar": "ابنِ مسيرتك كمهندس Salesforce",
+            "en": "Build Your Architect Career on Salesforce",
+            "tr": "Salesforce Mimarı Kariyerinizi Geliştirin"
+          },
+          "type": "career-path",
+          "officialUrl": "https://trailhead.salesforce.com/content/learn/trails/salesforce-architect-careers",
+          "fieldIds": [
+            "architecture"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://trailhead.salesforce.com/",
+        "pathsSourceUrl": "https://trailhead.salesforce.com/trails"
+      }
     },
     {
       "languageIds": [
@@ -9621,7 +9972,72 @@
         "tr": "ERP, S/4HANA, veri, analitik, bulut ve iş uygulamalarında ücretsiz kendi hızında kurslar, öğrenme yolculukları ve profesyonel sertifikalar sunan resmi SAP platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "cloud-btp",
+          "name": {
+            "ar": "السحابة وSAP BTP",
+            "en": "Cloud & SAP BTP",
+            "tr": "Bulut ve SAP BTP"
+          }
+        },
+        {
+          "id": "ux",
+          "name": {
+            "ar": "تجربة المستخدم",
+            "en": "User Experience",
+            "tr": "Kullanıcı Deneyimi"
+          }
+        },
+        {
+          "id": "erp-finance",
+          "name": {
+            "ar": "ERP والتمويل",
+            "en": "ERP & Finance",
+            "tr": "ERP ve Finans"
+          }
+        },
+        {
+          "id": "supply-chain",
+          "name": {
+            "ar": "سلسلة الإمداد",
+            "en": "Supply Chain",
+            "tr": "Tedarik Zinciri"
+          }
+        },
+        {
+          "id": "hr",
+          "name": {
+            "ar": "الموارد البشرية",
+            "en": "Human Resources",
+            "tr": "İnsan Kaynakları"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://learning.sap.com/",
+        "pathsSourceUrl": "https://learning.sap.com/learning-journeys",
+        "allPathsUrl": "https://learning.sap.com/learning-journeys"
+      }
     },
     {
       "languageIds": [
@@ -9675,7 +10091,81 @@
         "tr": "Belge veritabanları, MongoDB Atlas, geliştirme ve veri yönetimi için ücretsiz kurslar, öğrenme yolları ve sertifika hazırlığı sunan resmi MongoDB platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "database-fundamentals",
+          "name": {
+            "ar": "أساسيات MongoDB وقواعد البيانات",
+            "en": "MongoDB & Database Fundamentals",
+            "tr": "MongoDB ve Veritabanı Temelleri"
+          }
+        },
+        {
+          "id": "application-development",
+          "name": {
+            "ar": "تطوير التطبيقات",
+            "en": "Application Development",
+            "tr": "Uygulama Geliştirme"
+          }
+        },
+        {
+          "id": "data-modeling",
+          "name": {
+            "ar": "نمذجة البيانات",
+            "en": "Data Modeling",
+            "tr": "Veri Modelleme"
+          }
+        },
+        {
+          "id": "atlas-administration",
+          "name": {
+            "ar": "إدارة MongoDB Atlas",
+            "en": "MongoDB Atlas Administration",
+            "tr": "MongoDB Atlas Yönetimi"
+          }
+        },
+        {
+          "id": "search-vector",
+          "name": {
+            "ar": "البحث والبحث المتجهي",
+            "en": "Search & Vector Search",
+            "tr": "Arama ve Vektör Arama"
+          }
+        },
+        {
+          "id": "genai",
+          "name": {
+            "ar": "الذكاء الاصطناعي التوليدي",
+            "en": "Generative AI",
+            "tr": "Üretken Yapay Zekâ"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "nodejs-developer",
+          "officialName": "MongoDB Node.js Developer Path",
+          "name": {
+            "ar": "مسار مطور MongoDB باستخدام Node.js",
+            "en": "MongoDB Node.js Developer Path",
+            "tr": "MongoDB Node.js Geliştirici Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.mongodb.com/learning-paths/mongodb-nodejs-developer-path",
+          "fieldIds": [
+            "application-development",
+            "database-fundamentals"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://learn.mongodb.com/catalog",
+        "pathsSourceUrl": "https://learn.mongodb.com/catalog",
+        "allPathsUrl": "https://learn.mongodb.com/catalog"
+      }
     },
     {
       "languageIds": [
@@ -9729,7 +10219,55 @@
         "tr": "Redis veritabanları, veri mimarisi, önbellekleme ve yüksek performanslı uygulama geliştirme için ücretsiz kurslar ve bazı öğrenmelerde tamamlama belgeleri sunan platform."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "redis-fundamentals",
+          "name": {
+            "ar": "أساسيات Redis",
+            "en": "Redis Fundamentals",
+            "tr": "Redis Temelleri"
+          }
+        },
+        {
+          "id": "redis-cloud",
+          "name": {
+            "ar": "Redis Cloud",
+            "en": "Redis Cloud",
+            "tr": "Redis Cloud"
+          }
+        },
+        {
+          "id": "redis-software",
+          "name": {
+            "ar": "Redis Software",
+            "en": "Redis Software",
+            "tr": "Redis Software"
+          }
+        },
+        {
+          "id": "operations-scaling",
+          "name": {
+            "ar": "التشغيل والتوسع",
+            "en": "Operations & Scaling",
+            "tr": "Operasyon ve Ölçekleme"
+          }
+        },
+        {
+          "id": "vector-search-genai",
+          "name": {
+            "ar": "البحث المتجهي والذكاء الاصطناعي التوليدي",
+            "en": "Vector Search & GenAI",
+            "tr": "Vektör Arama ve Üretken Yapay Zekâ"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://redis.io/tutorials/university/",
+        "pathsSourceUrl": "https://university.redis.io/"
+      }
     },
     {
       "languageIds": [
@@ -9783,7 +10321,63 @@
         "tr": "Elasticsearch, Kibana, Observability ve Security için ücretsiz kendi hızında modüller, ücretli kurslar ve profesyonel sertifika hazırlığı sunan resmi Elastic platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "elasticsearch",
+          "name": {
+            "ar": "Elasticsearch",
+            "en": "Elasticsearch",
+            "tr": "Elasticsearch"
+          }
+        },
+        {
+          "id": "kibana",
+          "name": {
+            "ar": "Kibana وتصور البيانات",
+            "en": "Kibana & Visualization",
+            "tr": "Kibana ve Görselleştirme"
+          }
+        },
+        {
+          "id": "observability",
+          "name": {
+            "ar": "المراقبة والرصد",
+            "en": "Observability",
+            "tr": "Gözlemlenebilirlik"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "Elastic Security",
+            "en": "Elastic Security",
+            "tr": "Elastic Security"
+          }
+        },
+        {
+          "id": "search",
+          "name": {
+            "ar": "البحث المؤسسي",
+            "en": "Enterprise Search",
+            "tr": "Kurumsal Arama"
+          }
+        },
+        {
+          "id": "genai-vector",
+          "name": {
+            "ar": "الذكاء الاصطناعي والبحث المتجهي",
+            "en": "AI & Vector Search",
+            "tr": "Yapay Zekâ ve Vektör Arama"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.elastic.co/training/",
+        "pathsSourceUrl": "https://www.elastic.co/training/"
+      }
     },
     {
       "languageIds": [
@@ -9837,7 +10431,137 @@
         "tr": "Bulut veri platformu, SQL, veri mühendisliği ve yapay zeka için isteğe bağlı kurslar, ücretsiz atölyeler, öğrenme yolları ve rozetler sunan Snowflake platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "data-warehousing",
+          "name": {
+            "ar": "مستودعات البيانات",
+            "en": "Data Warehousing",
+            "tr": "Veri Ambarı"
+          }
+        },
+        {
+          "id": "data-engineering",
+          "name": {
+            "ar": "هندسة البيانات",
+            "en": "Data Engineering",
+            "tr": "Veri Mühendisliği"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "app-development",
+          "name": {
+            "ar": "تطوير تطبيقات البيانات",
+            "en": "Data Application Development",
+            "tr": "Veri Uygulama Geliştirme"
+          }
+        },
+        {
+          "id": "snowpark",
+          "name": {
+            "ar": "Snowpark وPython",
+            "en": "Snowpark & Python",
+            "tr": "Snowpark ve Python"
+          }
+        },
+        {
+          "id": "governance-security",
+          "name": {
+            "ar": "الحوكمة والأمن",
+            "en": "Governance & Security",
+            "tr": "Yönetişim ve Güvenlik"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي التوليدي",
+            "en": "Generative AI",
+            "tr": "Üretken Yapay Zekâ"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "first-concepts",
+          "officialName": "Level Up: First Concepts Series Track",
+          "name": {
+            "ar": "مسار Level Up: المفاهيم الأولى",
+            "en": "Level Up: First Concepts Series Track",
+            "tr": "Level Up: İlk Kavramlar Serisi"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://learn.snowflake.com/en/pages/level-up-track",
+          "fieldIds": [
+            "data-warehousing"
+          ],
+          "featured": false
+        },
+        {
+          "id": "hands-on-essentials",
+          "officialName": "Hands-On Essentials Track",
+          "name": {
+            "ar": "مسار الأساسيات العملية",
+            "en": "Hands-On Essentials Track",
+            "tr": "Uygulamalı Temeller Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://learn.snowflake.com/en/pages/hands-on-essentials-track/",
+          "fieldIds": [
+            "data-warehousing",
+            "data-engineering",
+            "data-science",
+            "app-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-engineer-track",
+          "officialName": "Data Engineer Track",
+          "name": {
+            "ar": "مسار مهندس البيانات",
+            "en": "Data Engineer Track",
+            "tr": "Veri Mühendisi Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.snowflake.com/en/pages/data-engineer-track/",
+          "fieldIds": [
+            "data-engineering",
+            "snowpark"
+          ],
+          "featured": false
+        },
+        {
+          "id": "snowpro-track",
+          "officialName": "SnowPro Certification Track",
+          "name": {
+            "ar": "مسار شهادة SnowPro",
+            "en": "SnowPro Certification Track",
+            "tr": "SnowPro Sertifika Yolu"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://learn.snowflake.com/en/pages/snowpro-track",
+          "fieldIds": [
+            "data-warehousing",
+            "governance-security"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://learn.snowflake.com/en/courses",
+        "pathsSourceUrl": "https://learn.snowflake.com/en/pages/university-faqs"
+      }
     },
     {
       "languageIds": [
@@ -9891,7 +10615,63 @@
         "tr": "Veri mühendisliği, Apache Spark, lakehouse mimarisi, üretken yapay zeka ve veri biliminde kendi hızında eğitim ve sertifika odaklı yollar sunan Databricks platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "data-engineering",
+          "name": {
+            "ar": "هندسة البيانات",
+            "en": "Data Engineering",
+            "tr": "Veri Mühendisliği"
+          }
+        },
+        {
+          "id": "data-science-ml",
+          "name": {
+            "ar": "علم البيانات وتعلم الآلة",
+            "en": "Data Science & Machine Learning",
+            "tr": "Veri Bilimi ve Makine Öğrenmesi"
+          }
+        },
+        {
+          "id": "generative-ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي التوليدي",
+            "en": "Generative AI",
+            "tr": "Üretken Yapay Zekâ"
+          }
+        },
+        {
+          "id": "sql-bi",
+          "name": {
+            "ar": "SQL وذكاء الأعمال",
+            "en": "SQL & Business Intelligence",
+            "tr": "SQL ve İş Zekâsı"
+          }
+        },
+        {
+          "id": "lakehouse",
+          "name": {
+            "ar": "هندسة Lakehouse",
+            "en": "Lakehouse Architecture",
+            "tr": "Lakehouse Mimarisi"
+          }
+        },
+        {
+          "id": "platform-admin",
+          "name": {
+            "ar": "إدارة منصة Databricks",
+            "en": "Databricks Platform Administration",
+            "tr": "Databricks Platform Yönetimi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.databricks.com/learn/training/home",
+        "pathsSourceUrl": "https://www.databricks.com/learn/training/home"
+      }
     },
     {
       "languageIds": [
@@ -9945,7 +10725,63 @@
         "tr": "Apache Kafka, Apache Flink ve akış verileri için ücretsiz kurslar, laboratuvarlar, kaynaklar ve uzmanlık sertifikası hazırlığı sunan Confluent öğrenme merkezi."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "apache-kafka",
+          "name": {
+            "ar": "Apache Kafka",
+            "en": "Apache Kafka",
+            "tr": "Apache Kafka"
+          }
+        },
+        {
+          "id": "apache-flink",
+          "name": {
+            "ar": "Apache Flink",
+            "en": "Apache Flink",
+            "tr": "Apache Flink"
+          }
+        },
+        {
+          "id": "kafka-streams",
+          "name": {
+            "ar": "Kafka Streams",
+            "en": "Kafka Streams",
+            "tr": "Kafka Streams"
+          }
+        },
+        {
+          "id": "ksqldb",
+          "name": {
+            "ar": "ksqlDB",
+            "en": "ksqlDB",
+            "tr": "ksqlDB"
+          }
+        },
+        {
+          "id": "connectors",
+          "name": {
+            "ar": "موصلات البيانات",
+            "en": "Data Connectors",
+            "tr": "Veri Bağlayıcıları"
+          }
+        },
+        {
+          "id": "streaming-architecture",
+          "name": {
+            "ar": "هندسة تدفق البيانات",
+            "en": "Streaming Architecture",
+            "tr": "Akış Mimarisi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://developer.confluent.io/courses/",
+        "pathsSourceUrl": "https://developer.confluent.io/courses/"
+      }
     },
     {
       "languageIds": [
@@ -9999,7 +10835,96 @@
         "tr": "Otomasyon, RPA, yapay zeka ve iş süreçleri için tamamen ücretsiz UiPath akademisi; rol bazlı yollar, projeler, rozetler ve sertifika hazırlığı sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "automation-development",
+          "name": {
+            "ar": "تطوير الأتمتة",
+            "en": "Automation Development",
+            "tr": "Otomasyon Geliştirme"
+          }
+        },
+        {
+          "id": "business-analysis",
+          "name": {
+            "ar": "تحليل أعمال الأتمتة",
+            "en": "Automation Business Analysis",
+            "tr": "Otomasyon İş Analizi"
+          }
+        },
+        {
+          "id": "agentic-ai",
+          "name": {
+            "ar": "الأتمتة الوكيلية والذكاء الاصطناعي",
+            "en": "Agentic Automation & AI",
+            "tr": "Ajan Tabanlı Otomasyon ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "process-mining",
+          "name": {
+            "ar": "تنقيب العمليات",
+            "en": "Process Mining",
+            "tr": "Süreç Madenciliği"
+          }
+        },
+        {
+          "id": "testing",
+          "name": {
+            "ar": "اختبار البرمجيات والأتمتة",
+            "en": "Testing & Test Automation",
+            "tr": "Test ve Test Otomasyonu"
+          }
+        },
+        {
+          "id": "infrastructure-architecture",
+          "name": {
+            "ar": "البنية التحتية وهندسة الحلول",
+            "en": "Infrastructure & Solution Architecture",
+            "tr": "Altyapı ve Çözüm Mimarisi"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "automation-developer-professional",
+          "officialName": "Automation Developer Professional Training (v2024.10)",
+          "name": {
+            "ar": "التدريب الاحترافي لمطور الأتمتة",
+            "en": "Automation Developer Professional Training (v2024.10)",
+            "tr": "Otomasyon Geliştirici Profesyonel Eğitimi (v2024.10)"
+          },
+          "type": "role-path",
+          "officialUrl": "https://academy.cloud.uipath.com/learning-plans/automation-developer-professional-training",
+          "fieldIds": [
+            "automation-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "automation-developer-career",
+          "officialName": "Automation Developer Career",
+          "name": {
+            "ar": "المسار المهني لمطور الأتمتة",
+            "en": "Automation Developer Career",
+            "tr": "Otomasyon Geliştirici Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://academy.cloud.uipath.com/career-paths/automation-developer",
+          "fieldIds": [
+            "automation-development",
+            "infrastructure-architecture"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://academy.uipath.com/",
+        "pathsSourceUrl": "https://academy.uipath.com/learning-plans",
+        "allPathsUrl": "https://academy.uipath.com/learning-plans"
+      }
     },
     {
       "languageIds": [
@@ -10053,7 +10978,86 @@
         "tr": "Akıllı otomasyon, RPA ve yapay zeka için ücretsiz Automation Anywhere öğrenme platformu; uygulamalı yollar, dijital rozetler ve sertifika hazırlığı sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "automation-development",
+          "name": {
+            "ar": "تطوير الأتمتة",
+            "en": "Automation Development",
+            "tr": "Otomasyon Geliştirme"
+          }
+        },
+        {
+          "id": "business-analysis",
+          "name": {
+            "ar": "تحليل الأعمال",
+            "en": "Business Analysis",
+            "tr": "İş Analizi"
+          }
+        },
+        {
+          "id": "administration",
+          "name": {
+            "ar": "إدارة منصة الأتمتة",
+            "en": "Automation Administration",
+            "tr": "Otomasyon Yönetimi"
+          }
+        },
+        {
+          "id": "ai-document",
+          "name": {
+            "ar": "الذكاء الاصطناعي وأتمتة المستندات",
+            "en": "AI & Document Automation",
+            "tr": "Yapay Zekâ ve Belge Otomasyonu"
+          }
+        },
+        {
+          "id": "process-discovery",
+          "name": {
+            "ar": "اكتشاف العمليات",
+            "en": "Process Discovery",
+            "tr": "Süreç Keşfi"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "developer-start",
+          "officialName": "Automation Developer Career Quest - Start Phase",
+          "name": {
+            "ar": "رحلة مطور الأتمتة - مرحلة البداية",
+            "en": "Automation Developer Career Quest - Start Phase",
+            "tr": "Otomasyon Geliştirici Kariyer Yolculuğu - Başlangıç"
+          },
+          "type": "career-path",
+          "officialUrl": "https://upskill.automationanywhere.com/learn/learning-path/automation-developer-career-quest-start-phase",
+          "fieldIds": [
+            "automation-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "developer-accelerate",
+          "officialName": "Automation Developer Career Quest - Accelerate Phase",
+          "name": {
+            "ar": "رحلة مطور الأتمتة - مرحلة التسريع",
+            "en": "Automation Developer Career Quest - Accelerate Phase",
+            "tr": "Otomasyon Geliştirici Kariyer Yolculuğu - Hızlanma"
+          },
+          "type": "career-path",
+          "officialUrl": "https://upskill.automationanywhere.com/learn/learning-path/automation-developer-career-quest-accelerate-phase",
+          "fieldIds": [
+            "automation-development"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://university.automationanywhere.com/",
+        "pathsSourceUrl": "https://upskill.automationanywhere.com/"
+      }
     },
     {
       "languageIds": [
@@ -10107,7 +11111,63 @@
         "tr": "Process Mining, süreç yürütme yönetimi ve iş analitiği için yüzlerce ücretsiz eğitim içeriği, öğrenme yolu ve dijital rozet sunan Celonis Akademisi."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "process-mining",
+          "name": {
+            "ar": "تنقيب العمليات",
+            "en": "Process Mining",
+            "tr": "Süreç Madenciliği"
+          }
+        },
+        {
+          "id": "process-intelligence",
+          "name": {
+            "ar": "ذكاء العمليات",
+            "en": "Process Intelligence",
+            "tr": "Süreç Zekâsı"
+          }
+        },
+        {
+          "id": "data-integration",
+          "name": {
+            "ar": "تكامل وهندسة البيانات",
+            "en": "Data Integration & Engineering",
+            "tr": "Veri Entegrasyonu ve Mühendisliği"
+          }
+        },
+        {
+          "id": "process-apps",
+          "name": {
+            "ar": "تطبيقات العمليات",
+            "en": "Process Apps",
+            "tr": "Süreç Uygulamaları"
+          }
+        },
+        {
+          "id": "analysis",
+          "name": {
+            "ar": "تحليل العمليات",
+            "en": "Process Analysis",
+            "tr": "Süreç Analizi"
+          }
+        },
+        {
+          "id": "administration",
+          "name": {
+            "ar": "إدارة Celonis",
+            "en": "Celonis Administration",
+            "tr": "Celonis Yönetimi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://academy.celonis.com/",
+        "pathsSourceUrl": "https://academy.celonis.com/"
+      }
     },
     {
       "languageIds": [
@@ -10161,7 +11221,126 @@
         "tr": "Oyun geliştirme, genişletilmiş gerçeklik, C# ve 3B tasarım için yollar, projeler ve yüzlerce saat uygulamalı içerik sunan ücretsiz resmi Unity platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "editor-essentials",
+          "name": {
+            "ar": "أساسيات Unity Editor",
+            "en": "Unity Editor Essentials",
+            "tr": "Unity Editor Temelleri"
+          }
+        },
+        {
+          "id": "scripting-gameplay",
+          "name": {
+            "ar": "البرمجة وتطوير الألعاب",
+            "en": "Scripting & Gameplay",
+            "tr": "Programlama ve Oyun Geliştirme"
+          }
+        },
+        {
+          "id": "graphics-vfx",
+          "name": {
+            "ar": "الرسومات والمؤثرات البصرية",
+            "en": "Graphics & Visual Effects",
+            "tr": "Grafik ve Görsel Efektler"
+          }
+        },
+        {
+          "id": "2d-mobile",
+          "name": {
+            "ar": "تطوير ثنائي الأبعاد والجوال",
+            "en": "2D & Mobile Development",
+            "tr": "2D ve Mobil Geliştirme"
+          }
+        },
+        {
+          "id": "xr-vr",
+          "name": {
+            "ar": "الواقع الممتد والافتراضي",
+            "en": "XR & VR",
+            "tr": "XR ve VR"
+          }
+        },
+        {
+          "id": "ui-audio-animation",
+          "name": {
+            "ar": "الواجهة والصوت والتحريك",
+            "en": "UI, Audio & Animation",
+            "tr": "Arayüz, Ses ve Animasyon"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "unity-essentials",
+          "officialName": "Unity Essentials",
+          "name": {
+            "ar": "أساسيات Unity",
+            "en": "Unity Essentials",
+            "tr": "Unity Temelleri"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://learn.unity.com/pathway/unity-essentials",
+          "fieldIds": [
+            "editor-essentials"
+          ],
+          "featured": false
+        },
+        {
+          "id": "junior-programmer",
+          "officialName": "Junior Programmer",
+          "name": {
+            "ar": "المبرمج المبتدئ",
+            "en": "Junior Programmer",
+            "tr": "Junior Programcı"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.unity.com/pathway/junior-programmer",
+          "fieldIds": [
+            "scripting-gameplay"
+          ],
+          "featured": false
+        },
+        {
+          "id": "creative-core",
+          "officialName": "Creative Core",
+          "name": {
+            "ar": "الأساس الإبداعي",
+            "en": "Creative Core",
+            "tr": "Yaratıcı Temeller"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://learn.unity.com/pathway/creative-core",
+          "fieldIds": [
+            "graphics-vfx",
+            "ui-audio-animation"
+          ],
+          "featured": false
+        },
+        {
+          "id": "vr-development",
+          "officialName": "VR Development",
+          "name": {
+            "ar": "تطوير الواقع الافتراضي",
+            "en": "VR Development",
+            "tr": "VR Geliştirme"
+          },
+          "type": "career-path",
+          "officialUrl": "https://learn.unity.com/pathway/vr-development",
+          "fieldIds": [
+            "xr-vr",
+            "scripting-gameplay"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://learn.unity.com/learn/",
+        "pathsSourceUrl": "https://learn.unity.com/learn/"
+      }
     },
     {
       "languageIds": [
@@ -10215,7 +11394,63 @@
         "tr": "Unreal Engine, oyun geliştirme, 3B grafik, sanal prodüksiyon ve mimari görselleştirme için ücretsiz kurs ve eğitimler sunan Epic Games öğrenme platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "unreal-basics",
+          "name": {
+            "ar": "أساسيات Unreal Engine",
+            "en": "Unreal Engine Fundamentals",
+            "tr": "Unreal Engine Temelleri"
+          }
+        },
+        {
+          "id": "blueprints",
+          "name": {
+            "ar": "Blueprints والبرمجة المرئية",
+            "en": "Blueprints & Visual Scripting",
+            "tr": "Blueprints ve Görsel Programlama"
+          }
+        },
+        {
+          "id": "cpp-gameplay",
+          "name": {
+            "ar": "C++ وبرمجة الألعاب",
+            "en": "C++ & Gameplay Programming",
+            "tr": "C++ ve Oyun Programlama"
+          }
+        },
+        {
+          "id": "art-environments",
+          "name": {
+            "ar": "الفن والبيئات ثلاثية الأبعاد",
+            "en": "3D Art & Environments",
+            "tr": "3D Sanat ve Ortamlar"
+          }
+        },
+        {
+          "id": "animation-cinematics",
+          "name": {
+            "ar": "التحريك والسينمائيات",
+            "en": "Animation & Cinematics",
+            "tr": "Animasyon ve Sinematik"
+          }
+        },
+        {
+          "id": "xr-virtual-production",
+          "name": {
+            "ar": "XR والإنتاج الافتراضي",
+            "en": "XR & Virtual Production",
+            "tr": "XR ve Sanal Prodüksiyon"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://dev.epicgames.com/documentation/unreal-engine/get-started",
+        "pathsSourceUrl": "https://dev.epicgames.com/community/unreal-engine/learning"
+      }
     },
     {
       "languageIds": [
@@ -10269,7 +11504,63 @@
         "tr": "Modelleme, animasyon, ışıklandırma, 3B sanat ve efektlerde profesyonel kurslar ve proje dosyaları sunan, Blender’ı destekleyen ücretli abonelik platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "blender-fundamentals",
+          "name": {
+            "ar": "أساسيات Blender",
+            "en": "Blender Fundamentals",
+            "tr": "Blender Temelleri"
+          }
+        },
+        {
+          "id": "modeling-sculpting",
+          "name": {
+            "ar": "النمذجة والنحت",
+            "en": "Modeling & Sculpting",
+            "tr": "Modelleme ve Heykel"
+          }
+        },
+        {
+          "id": "animation-rigging",
+          "name": {
+            "ar": "التحريك والـRigging",
+            "en": "Animation & Rigging",
+            "tr": "Animasyon ve Rigging"
+          }
+        },
+        {
+          "id": "geometry-nodes",
+          "name": {
+            "ar": "Geometry Nodes",
+            "en": "Geometry Nodes",
+            "tr": "Geometry Nodes"
+          }
+        },
+        {
+          "id": "shading-lighting",
+          "name": {
+            "ar": "الخامات والإضاءة والرندر",
+            "en": "Shading, Lighting & Rendering",
+            "tr": "Gölgelendirme, Işık ve Render"
+          }
+        },
+        {
+          "id": "compositing-video",
+          "name": {
+            "ar": "المؤثرات والتركيب وتحرير الفيديو",
+            "en": "Compositing & Video Editing",
+            "tr": "Compositing ve Video Düzenleme"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://studio.blender.org/training/",
+        "pathsSourceUrl": "https://studio.blender.org/training/"
+      }
     },
     {
       "languageIds": [
@@ -10323,7 +11614,124 @@
         "tr": "Photoshop, Illustrator, Premiere Pro, Acrobat, Express ve daha fazlası için ücretsiz eğitimler ve kurslar, uygulamalı kaynaklar ve bazı rozetler sunan resmi Adobe platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "photo-editing",
+          "name": {
+            "ar": "تحرير الصور",
+            "en": "Photo Editing",
+            "tr": "Fotoğraf Düzenleme"
+          }
+        },
+        {
+          "id": "design-illustration",
+          "name": {
+            "ar": "التصميم والرسم التوضيحي",
+            "en": "Design & Illustration",
+            "tr": "Tasarım ve İllüstrasyon"
+          }
+        },
+        {
+          "id": "video-animation",
+          "name": {
+            "ar": "الفيديو والتحريك",
+            "en": "Video & Animation",
+            "tr": "Video ve Animasyon"
+          }
+        },
+        {
+          "id": "generative-ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي التوليدي وFirefly",
+            "en": "Generative AI & Firefly",
+            "tr": "Üretken Yapay Zekâ ve Firefly"
+          }
+        },
+        {
+          "id": "3d",
+          "name": {
+            "ar": "التصميم ثلاثي الأبعاد",
+            "en": "3D",
+            "tr": "3D"
+          }
+        },
+        {
+          "id": "documents-acrobat",
+          "name": {
+            "ar": "المستندات وAcrobat",
+            "en": "Documents & Acrobat",
+            "tr": "Belgeler ve Acrobat"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "photo-editing",
+          "officialName": "Photo editing",
+          "name": {
+            "ar": "تحرير الصور",
+            "en": "Photo Editing",
+            "tr": "Fotoğraf Düzenleme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.adobe.com/learn/photoshop/paths/photo-editing",
+          "fieldIds": [
+            "photo-editing"
+          ],
+          "featured": false
+        },
+        {
+          "id": "branding-identity",
+          "officialName": "Branding and identity",
+          "name": {
+            "ar": "الهوية والعلامة التجارية",
+            "en": "Branding and Identity",
+            "tr": "Markalaşma ve Kimlik"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.adobe.com/learn/illustrator/paths/branding-and-identity",
+          "fieldIds": [
+            "design-illustration"
+          ],
+          "featured": false
+        },
+        {
+          "id": "graphic-design",
+          "officialName": "Graphic design",
+          "name": {
+            "ar": "التصميم الجرافيكي",
+            "en": "Graphic Design",
+            "tr": "Grafik Tasarım"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.adobe.com/learn/illustrator/paths/graphic-design-foundational-skills",
+          "fieldIds": [
+            "design-illustration"
+          ],
+          "featured": false
+        },
+        {
+          "id": "marketing-layout-design",
+          "officialName": "Marketing layout design",
+          "name": {
+            "ar": "تصميم تخطيطات التسويق",
+            "en": "Marketing Layout Design",
+            "tr": "Pazarlama Düzen Tasarımı"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.adobe.com/learn/illustrator/paths/marketing-layout-design",
+          "fieldIds": [
+            "design-illustration"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.adobe.com/learn",
+        "pathsSourceUrl": "https://www.adobe.com/learn"
+      }
     },
     {
       "languageIds": [
@@ -10377,7 +11785,71 @@
         "tr": "Tasarım, sunum, marka, içerik üretimi, Canva araçları ve yapay zekada ücretsiz kurslar ve dersler; bazı kurslarda sertifika sunan Canva Design School."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "graphic-design",
+          "name": {
+            "ar": "التصميم الجرافيكي",
+            "en": "Graphic Design",
+            "tr": "Grafik Tasarım"
+          }
+        },
+        {
+          "id": "visual-suite",
+          "name": {
+            "ar": "Canva Visual Suite",
+            "en": "Canva Visual Suite",
+            "tr": "Canva Visual Suite"
+          }
+        },
+        {
+          "id": "presentations",
+          "name": {
+            "ar": "العروض التقديمية",
+            "en": "Presentations",
+            "tr": "Sunumlar"
+          }
+        },
+        {
+          "id": "social-media",
+          "name": {
+            "ar": "التواصل الاجتماعي",
+            "en": "Social Media",
+            "tr": "Sosyal Medya"
+          }
+        },
+        {
+          "id": "branding-marketing",
+          "name": {
+            "ar": "العلامة التجارية والتسويق",
+            "en": "Branding & Marketing",
+            "tr": "Markalaşma ve Pazarlama"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي في Canva",
+            "en": "Canva AI",
+            "tr": "Canva Yapay Zekâ"
+          }
+        },
+        {
+          "id": "education",
+          "name": {
+            "ar": "Canva للتعليم",
+            "en": "Canva for Education",
+            "tr": "Eğitim için Canva"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.canva.com/design-school/explore/",
+        "pathsSourceUrl": "https://www.canva.com/design-school/courses/"
+      }
     },
     {
       "languageIds": [
@@ -10431,7 +11903,71 @@
         "tr": "UX, UI, etkileşim ve insan merkezli tasarımda uzman küresel platform; ücretli üyelikle kendi hızında kurslar ve profesyonel kurs sertifikaları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "ux-design",
+          "name": {
+            "ar": "تصميم تجربة المستخدم",
+            "en": "User Experience Design",
+            "tr": "Kullanıcı Deneyimi Tasarımı"
+          }
+        },
+        {
+          "id": "ui-design",
+          "name": {
+            "ar": "تصميم واجهة المستخدم",
+            "en": "User Interface Design",
+            "tr": "Kullanıcı Arayüzü Tasarımı"
+          }
+        },
+        {
+          "id": "interaction-design",
+          "name": {
+            "ar": "تصميم التفاعل",
+            "en": "Interaction Design",
+            "tr": "Etkileşim Tasarımı"
+          }
+        },
+        {
+          "id": "user-research",
+          "name": {
+            "ar": "بحث المستخدم",
+            "en": "User Research",
+            "tr": "Kullanıcı Araştırması"
+          }
+        },
+        {
+          "id": "usability",
+          "name": {
+            "ar": "قابلية الاستخدام",
+            "en": "Usability",
+            "tr": "Kullanılabilirlik"
+          }
+        },
+        {
+          "id": "accessibility",
+          "name": {
+            "ar": "إتاحة الوصول",
+            "en": "Accessibility",
+            "tr": "Erişilebilirlik"
+          }
+        },
+        {
+          "id": "service-design",
+          "name": {
+            "ar": "تصميم الخدمات",
+            "en": "Service Design",
+            "tr": "Hizmet Tasarımı"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.interaction-design.org/courses",
+        "pathsSourceUrl": "https://www.interaction-design.org/courses"
+      }
     },
     {
       "languageIds": [
