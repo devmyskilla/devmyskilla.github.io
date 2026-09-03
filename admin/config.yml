@@ -3898,6 +3898,103 @@ collections:
                 date_format: "YYYY-MM-DD"
                 time_format: false
                 required: false
+              - label: "المجالات / Fields"
+                name: fields
+                widget: list
+                required: false
+                summary: "{{fields.id}} — {{fields.name.en}}"
+                fields:
+                  - label: "معرّف المجال الثابت"
+                    name: id
+                    widget: string
+                    hint: "Stable field ID"
+                  - label: "اسم المجال"
+                    name: name
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "رابط المجال الرسمي"
+                    name: officialUrl
+                    widget: string
+                    required: false
+              - label: "المسارات الرسمية / Official Paths"
+                name: officialPaths
+                widget: list
+                required: false
+                summary: "{{fields.officialName}}"
+                fields:
+                  - label: "معرّف المسار الثابت"
+                    name: id
+                    widget: string
+                    hint: "Stable path ID"
+                  - label: "الاسم الرسمي الأصلي"
+                    name: officialName
+                    widget: string
+                  - label: "اسم العرض المترجم"
+                    name: name
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: "العربية"
+                        name: ar
+                        widget: string
+                      - label: "English"
+                        name: en
+                        widget: string
+                      - label: "Türkçe"
+                        name: tr
+                        widget: string
+                  - label: "نوع المسار"
+                    name: type
+                    widget: select
+                    options: [learning-path, career-path, skill-path, professional-certificate, professional-program, specialization, role-path, structured-series, other-official-path]
+                  - label: "الرابط الرسمي المباشر"
+                    name: officialUrl
+                    widget: string
+                  - label: "معرّفات المجالات المرتبطة"
+                    name: fieldIds
+                    widget: list
+                    required: false
+                    hint: "IDs from this platform fields list"
+                    field: { label: "Value", name: value, widget: string }
+                  - label: "مسار مميز"
+                    name: featured
+                    widget: boolean
+                    default: false
+              - label: "بيانات التحقق من المسارات"
+                name: pathResearch
+                widget: object
+                collapsed: true
+                required: false
+                fields:
+                  - label: "آخر تحقق"
+                    name: lastVerified
+                    widget: datetime
+                    format: "YYYY-MM-DD"
+                    date_format: "YYYY-MM-DD"
+                    time_format: false
+                    required: false
+                  - label: "مصدر المجالات"
+                    name: fieldsSourceUrl
+                    widget: string
+                    required: false
+                  - label: "مصدر المسارات"
+                    name: pathsSourceUrl
+                    widget: string
+                    required: false
+                  - label: "رابط جميع المسارات"
+                    name: allPathsUrl
+                    widget: string
+                    required: false
               - label: "المحتوى التحريري"
                 name: editorial
                 widget: object
