@@ -35,6 +35,17 @@ test('Decap exposes translations, taxonomy IDs and platform fields',()=>{
   assert.match(config,/name: editorial/);
 });
 
+test('Decap exposes platform fields, official paths and research metadata',()=>{
+  const config=read('admin/config.yml');
+  assert.match(config,/name: fields/);
+  assert.match(config,/name: officialPaths/);
+  assert.match(config,/name: pathResearch/);
+  assert.match(config,/name: officialName/);
+  assert.match(config,/name: fieldIds/);
+  assert.match(config,/name: allPathsUrl/);
+  for(const type of ['learning-path','career-path','skill-path','professional-certificate','professional-program','specialization','role-path','structured-series','other-official-path'])assert.ok(config.includes(type),`missing path type ${type}`);
+});
+
 test('image fields use media library and OAuth proxy remains configured',()=>{
   const config=read('admin/config.yml');
   assert.match(config,/widget: image/);
