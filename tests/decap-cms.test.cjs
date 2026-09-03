@@ -42,6 +42,8 @@ test('Decap exposes platform fields, official paths and research metadata',()=>{
   assert.match(config,/name: pathResearch/);
   assert.match(config,/name: officialName/);
   assert.match(config,/name: fieldIds/);
+  assert.match(config,/name: fieldsSourceUrl/);
+  assert.match(config,/name: pathsSourceUrl/);
   assert.match(config,/name: allPathsUrl/);
   for(const type of ['learning-path','career-path','skill-path','professional-certificate','professional-program','specialization','role-path','structured-series','other-official-path'])assert.ok(config.includes(type),`missing path type ${type}`);
 });
