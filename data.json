@@ -3702,7 +3702,66 @@
         "tr": "Dünyanın en büyük öğrenme kurs pazarı. Tüm alanlarda binlerce kurs barındırır. Bazıları ücretsiz, diğerleri ücretlidir. DiscUdemy üzerinden Udemy kurslarını ücretsiz alın."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "development",
+          "name": {
+            "ar": "التطوير والبرمجة",
+            "en": "Development",
+            "tr": "Geliştirme"
+          },
+          "officialUrl": "https://www.discudemy.com/category/Development"
+        },
+        {
+          "id": "graphic-design",
+          "name": {
+            "ar": "التصميم الجرافيكي",
+            "en": "Graphic Design",
+            "tr": "Grafik Tasarım"
+          },
+          "officialUrl": "https://www.discudemy.com/category/Graphic-Design"
+        },
+        {
+          "id": "network-system",
+          "name": {
+            "ar": "الشبكات والأنظمة",
+            "en": "Network & System",
+            "tr": "Ağ ve Sistem"
+          },
+          "officialUrl": "https://www.discudemy.com/category/Network-System"
+        },
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال",
+            "en": "Business",
+            "tr": "İşletme"
+          }
+        },
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "personal-development",
+          "name": {
+            "ar": "التطوير الشخصي",
+            "en": "Personal Development",
+            "tr": "Kişisel Gelişim"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.discudemy.com/category",
+        "pathsSourceUrl": "https://www.discudemy.com/"
+      }
     },
     {
       "languageIds": [
@@ -3756,7 +3815,79 @@
         "tr": "Google'ın veri bilimi ve yapay zeka platformu. Python, makine öğrenimi ve veri analizinde ücretsiz kurslar, yarışmalar ve uygulamalı projeler sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "python-programming",
+          "name": {
+            "ar": "Python والبرمجة",
+            "en": "Python & Programming",
+            "tr": "Python ve Programlama"
+          }
+        },
+        {
+          "id": "data-manipulation",
+          "name": {
+            "ar": "معالجة البيانات",
+            "en": "Data Manipulation",
+            "tr": "Veri İşleme"
+          }
+        },
+        {
+          "id": "machine-learning",
+          "name": {
+            "ar": "تعلم الآلة",
+            "en": "Machine Learning",
+            "tr": "Makine Öğrenmesi"
+          }
+        },
+        {
+          "id": "data-visualization",
+          "name": {
+            "ar": "تصور البيانات",
+            "en": "Data Visualization",
+            "tr": "Veri Görselleştirme"
+          }
+        },
+        {
+          "id": "sql-databases",
+          "name": {
+            "ar": "SQL وقواعد البيانات",
+            "en": "SQL & Databases",
+            "tr": "SQL ve Veritabanları"
+          }
+        },
+        {
+          "id": "deep-learning-computer-vision",
+          "name": {
+            "ar": "التعلم العميق والرؤية الحاسوبية",
+            "en": "Deep Learning & Computer Vision",
+            "tr": "Derin Öğrenme ve Bilgisayarlı Görü"
+          }
+        },
+        {
+          "id": "nlp-ai-ethics",
+          "name": {
+            "ar": "معالجة اللغة وأخلاقيات الذكاء الاصطناعي",
+            "en": "NLP & AI Ethics",
+            "tr": "Doğal Dil İşleme ve Yapay Zekâ Etiği"
+          }
+        },
+        {
+          "id": "geospatial-analysis",
+          "name": {
+            "ar": "التحليل الجغرافي المكاني",
+            "en": "Geospatial Analysis",
+            "tr": "Coğrafi Mekânsal Analiz"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.kaggle.com/learn",
+        "pathsSourceUrl": "https://www.kaggle.com/learn"
+      }
     },
     {
       "languageIds": [
@@ -3810,7 +3941,63 @@
         "tr": "GitHub'ın öğrenme platformu. Git, GitHub, DevOps ve iş akışı otomasyonu alanlarında ücretsiz etkileşimli kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "github-fundamentals",
+          "name": {
+            "ar": "أساسيات Git وGitHub",
+            "en": "Git & GitHub Fundamentals",
+            "tr": "Git ve GitHub Temelleri"
+          }
+        },
+        {
+          "id": "github-actions",
+          "name": {
+            "ar": "GitHub Actions والأتمتة",
+            "en": "GitHub Actions & Automation",
+            "tr": "GitHub Actions ve Otomasyon"
+          }
+        },
+        {
+          "id": "codespaces",
+          "name": {
+            "ar": "GitHub Codespaces",
+            "en": "GitHub Codespaces",
+            "tr": "GitHub Codespaces"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "أمن المستودعات",
+            "en": "Repository Security",
+            "tr": "Depo Güvenliği"
+          }
+        },
+        {
+          "id": "copilot",
+          "name": {
+            "ar": "GitHub Copilot",
+            "en": "GitHub Copilot",
+            "tr": "GitHub Copilot"
+          }
+        },
+        {
+          "id": "github-pages",
+          "name": {
+            "ar": "GitHub Pages",
+            "en": "GitHub Pages",
+            "tr": "GitHub Pages"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://skills.github.com/",
+        "pathsSourceUrl": "https://skills.github.com/"
+      }
     },
     {
       "languageIds": [
@@ -3864,7 +4051,87 @@
         "tr": "Google Cloud öğrenme platformu. Bulut bilişim, büyük veri, makine öğrenimi ve bulut mimarisi alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "cloud-foundations",
+          "name": {
+            "ar": "أساسيات Google Cloud",
+            "en": "Google Cloud Foundations",
+            "tr": "Google Cloud Temelleri"
+          }
+        },
+        {
+          "id": "ai-ml",
+          "name": {
+            "ar": "الذكاء الاصطناعي وتعلم الآلة",
+            "en": "AI & Machine Learning",
+            "tr": "Yapay Zekâ ve Makine Öğrenmesi"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "infrastructure-networking",
+          "name": {
+            "ar": "البنية التحتية والشبكات",
+            "en": "Infrastructure & Networking",
+            "tr": "Altyapı ve Ağ"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن السحابي",
+            "en": "Cloud Security",
+            "tr": "Bulut Güvenliği"
+          }
+        },
+        {
+          "id": "application-development",
+          "name": {
+            "ar": "تطوير التطبيقات السحابية",
+            "en": "Cloud Application Development",
+            "tr": "Bulut Uygulama Geliştirme"
+          }
+        },
+        {
+          "id": "devops",
+          "name": {
+            "ar": "DevOps وSRE",
+            "en": "DevOps & SRE",
+            "tr": "DevOps ve SRE"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "intro-generative-ai",
+          "officialName": "Beginner: Introduction to Generative AI",
+          "name": {
+            "ar": "مبتدئ: مقدمة إلى الذكاء الاصطناعي التوليدي",
+            "en": "Beginner: Introduction to Generative AI",
+            "tr": "Başlangıç: Üretken Yapay Zekâya Giriş"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.skills.google/paths/118",
+          "fieldIds": [
+            "ai-ml"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.skills.google/",
+        "pathsSourceUrl": "https://www.skills.google/paths/118"
+      }
     },
     {
       "languageIds": [
@@ -3919,7 +4186,104 @@
         "tr": "Tamamen ücretsiz programlama öğrenmek için kar amacı gütmeyen bir platform. Web geliştirme, Python, makine öğrenimi ve veri biliminde ücretsiz sertifikalarla öğrenme yolları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "web-design",
+          "name": {
+            "ar": "تصميم وتطوير الويب",
+            "en": "Web Design & Development",
+            "tr": "Web Tasarımı ve Geliştirme"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript والخوارزميات",
+            "en": "JavaScript & Algorithms",
+            "tr": "JavaScript ve Algoritmalar"
+          }
+        },
+        {
+          "id": "backend-apis",
+          "name": {
+            "ar": "الخلفية وواجهات API",
+            "en": "Back End & APIs",
+            "tr": "Back End ve API'ler"
+          }
+        },
+        {
+          "id": "python-data",
+          "name": {
+            "ar": "Python والبيانات",
+            "en": "Python & Data",
+            "tr": "Python ve Veri"
+          }
+        },
+        {
+          "id": "databases",
+          "name": {
+            "ar": "قواعد البيانات",
+            "en": "Databases",
+            "tr": "Veritabanları"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "responsive-web-design-v9",
+          "officialName": "Responsive Web Design Certification",
+          "name": {
+            "ar": "شهادة تصميم الويب المتجاوب",
+            "en": "Responsive Web Design Certification",
+            "tr": "Duyarlı Web Tasarımı Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://www.freecodecamp.org/learn/responsive-web-design-v9/",
+          "fieldIds": [
+            "web-design"
+          ],
+          "featured": false
+        },
+        {
+          "id": "full-stack-developer-v9",
+          "officialName": "Full Stack Developer Certification",
+          "name": {
+            "ar": "شهادة مطور Full Stack",
+            "en": "Full Stack Developer Certification",
+            "tr": "Full Stack Geliştirici Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://www.freecodecamp.org/learn/full-stack-developer-v9/",
+          "fieldIds": [
+            "web-design",
+            "javascript",
+            "backend-apis",
+            "databases"
+          ],
+          "featured": false
+        },
+        {
+          "id": "javascript-algorithms-v8",
+          "officialName": "JavaScript Algorithms and Data Structures",
+          "name": {
+            "ar": "خوارزميات JavaScript وهياكل البيانات",
+            "en": "JavaScript Algorithms and Data Structures",
+            "tr": "JavaScript Algoritmaları ve Veri Yapıları"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+          "fieldIds": [
+            "javascript"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.freecodecamp.org/learn/",
+        "pathsSourceUrl": "https://www.freecodecamp.org/learn/"
+      }
     },
     {
       "languageIds": [
@@ -3974,7 +4338,155 @@
         "tr": "En iyi üniversitelerden ve şirketlerden kurslar sunan öncü bir platform. İçerik tamamen ücretsizdir ancak sertifika için ödeme yapmanız gerekir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "data-science-ai",
+          "name": {
+            "ar": "علم البيانات والذكاء الاصطناعي",
+            "en": "Data Science & AI",
+            "tr": "Veri Bilimi ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "computer-science-it",
+          "name": {
+            "ar": "علوم الحاسوب وتقنية المعلومات",
+            "en": "Computer Science & IT",
+            "tr": "Bilgisayar Bilimleri ve BT"
+          }
+        },
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال",
+            "en": "Business",
+            "tr": "İşletme"
+          }
+        },
+        {
+          "id": "health",
+          "name": {
+            "ar": "الصحة",
+            "en": "Health",
+            "tr": "Sağlık"
+          }
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "تعلم اللغات",
+            "en": "Language Learning",
+            "tr": "Dil Öğrenimi"
+          }
+        },
+        {
+          "id": "physical-science-engineering",
+          "name": {
+            "ar": "العلوم الفيزيائية والهندسة",
+            "en": "Physical Science & Engineering",
+            "tr": "Fiziksel Bilimler ve Mühendislik"
+          }
+        },
+        {
+          "id": "social-sciences",
+          "name": {
+            "ar": "العلوم الاجتماعية",
+            "en": "Social Sciences",
+            "tr": "Sosyal Bilimler"
+          }
+        },
+        {
+          "id": "arts-humanities",
+          "name": {
+            "ar": "الفنون والعلوم الإنسانية",
+            "en": "Arts & Humanities",
+            "tr": "Sanat ve Beşeri Bilimler"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "google-data-analytics",
+          "officialName": "Google Data Analytics Professional Certificate",
+          "name": {
+            "ar": "شهادة Google المهنية في تحليل البيانات",
+            "en": "Google Data Analytics Professional Certificate",
+            "tr": "Google Veri Analitiği Profesyonel Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://www.coursera.org/professional-certificates/google-data-analytics",
+          "fieldIds": [
+            "data-science-ai"
+          ],
+          "featured": false
+        },
+        {
+          "id": "google-cybersecurity",
+          "officialName": "Google Cybersecurity Professional Certificate",
+          "name": {
+            "ar": "شهادة Google المهنية في الأمن السيبراني",
+            "en": "Google Cybersecurity Professional Certificate",
+            "tr": "Google Siber Güvenlik Profesyonel Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "fieldIds": [
+            "computer-science-it"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ibm-data-science",
+          "officialName": "IBM Data Science Professional Certificate",
+          "name": {
+            "ar": "شهادة IBM المهنية في علم البيانات",
+            "en": "IBM Data Science Professional Certificate",
+            "tr": "IBM Veri Bilimi Profesyonel Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://www.coursera.org/professional-certificates/ibm-data-science",
+          "fieldIds": [
+            "data-science-ai"
+          ],
+          "featured": false
+        },
+        {
+          "id": "meta-front-end",
+          "officialName": "Meta Front-End Developer Professional Certificate",
+          "name": {
+            "ar": "شهادة Meta المهنية لمطور الواجهة الأمامية",
+            "en": "Meta Front-End Developer Professional Certificate",
+            "tr": "Meta Front-End Geliştirici Profesyonel Sertifikası"
+          },
+          "type": "professional-certificate",
+          "officialUrl": "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+          "fieldIds": [
+            "computer-science-it"
+          ],
+          "featured": false
+        },
+        {
+          "id": "machine-learning-specialization",
+          "officialName": "Machine Learning Specialization",
+          "name": {
+            "ar": "تخصص تعلم الآلة",
+            "en": "Machine Learning Specialization",
+            "tr": "Makine Öğrenmesi Uzmanlığı"
+          },
+          "type": "specialization",
+          "officialUrl": "https://www.coursera.org/specializations/machine-learning-introduction",
+          "fieldIds": [
+            "data-science-ai"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.coursera.org/courses",
+        "pathsSourceUrl": "https://www.coursera.org/certificates/launch-your-career/"
+      }
     },
     {
       "languageIds": [
@@ -4028,7 +4540,87 @@
         "tr": "Proje yönetimi, siber güvenlik, yapay zeka ve veri analizi alanlarında profesyonel sertifikalarla kurslar sunan bir eğitim platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "generative-ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي التوليدي",
+            "en": "Generative AI",
+            "tr": "Üretken Yapay Zekâ"
+          }
+        },
+        {
+          "id": "ai-ml",
+          "name": {
+            "ar": "الذكاء الاصطناعي وتعلم الآلة",
+            "en": "AI & Machine Learning",
+            "tr": "Yapay Zekâ ve Makine Öğrenmesi"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات وتحليلات الأعمال",
+            "en": "Data Science & Business Analytics",
+            "tr": "Veri Bilimi ve İş Analitiği"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cyber Security",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "cloud-devops",
+          "name": {
+            "ar": "الحوسبة السحابية وDevOps",
+            "en": "Cloud Computing & DevOps",
+            "tr": "Bulut Bilişim ve DevOps"
+          }
+        },
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "digital-marketing",
+          "name": {
+            "ar": "التسويق الرقمي",
+            "en": "Digital Marketing",
+            "tr": "Dijital Pazarlama"
+          }
+        },
+        {
+          "id": "project-management",
+          "name": {
+            "ar": "إدارة المشاريع",
+            "en": "Project Management",
+            "tr": "Proje Yönetimi"
+          }
+        },
+        {
+          "id": "business-leadership",
+          "name": {
+            "ar": "الأعمال والقيادة",
+            "en": "Business & Leadership",
+            "tr": "İşletme ve Liderlik"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.simplilearn.com/skillup-free-online-courses",
+        "pathsSourceUrl": "https://www.simplilearn.com/skillup-free-online-courses"
+      }
     },
     {
       "languageIds": [
@@ -4083,7 +4675,87 @@
         "tr": "Binlerce kursta ücretsiz sertifikalar sunan öncü bir ücretsiz eğitim platformu. İş, teknik ve kişisel becerileri kapsar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "it",
+          "name": {
+            "ar": "تقنية المعلومات",
+            "en": "Information Technology (IT)",
+            "tr": "Bilgi Teknolojileri"
+          }
+        },
+        {
+          "id": "health",
+          "name": {
+            "ar": "الصحة",
+            "en": "Health",
+            "tr": "Sağlık"
+          }
+        },
+        {
+          "id": "language",
+          "name": {
+            "ar": "اللغات",
+            "en": "Language",
+            "tr": "Dil"
+          }
+        },
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال",
+            "en": "Business",
+            "tr": "İşletme"
+          }
+        },
+        {
+          "id": "management",
+          "name": {
+            "ar": "الإدارة",
+            "en": "Management",
+            "tr": "Yönetim"
+          }
+        },
+        {
+          "id": "personal-development",
+          "name": {
+            "ar": "التطوير الشخصي",
+            "en": "Personal Development",
+            "tr": "Kişisel Gelişim"
+          }
+        },
+        {
+          "id": "sales-marketing",
+          "name": {
+            "ar": "المبيعات والتسويق",
+            "en": "Sales & Marketing",
+            "tr": "Satış ve Pazarlama"
+          }
+        },
+        {
+          "id": "engineering-construction",
+          "name": {
+            "ar": "الهندسة والإنشاءات",
+            "en": "Engineering & Construction",
+            "tr": "Mühendislik ve İnşaat"
+          }
+        },
+        {
+          "id": "teaching-academics",
+          "name": {
+            "ar": "التدريس والأكاديميا",
+            "en": "Teaching & Academics",
+            "tr": "Öğretim ve Akademi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://alison.com/courses",
+        "pathsSourceUrl": "https://alison.com/courses"
+      }
     },
     {
       "languageIds": [
@@ -4137,7 +4809,71 @@
         "tr": "Kar amacı gütmeyen Saylor Akademisi. Üniversite düzeyinde tamamen ücretsiz akademik kurslar ve tamamlama sertifikaları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "arts-humanities",
+          "name": {
+            "ar": "الفنون والعلوم الإنسانية",
+            "en": "Arts and Humanities",
+            "tr": "Sanat ve Beşeri Bilimler"
+          }
+        },
+        {
+          "id": "business-administration",
+          "name": {
+            "ar": "إدارة الأعمال",
+            "en": "Business Administration",
+            "tr": "İşletme Yönetimi"
+          }
+        },
+        {
+          "id": "computer-science",
+          "name": {
+            "ar": "علوم الحاسوب",
+            "en": "Computer Science",
+            "tr": "Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "english-second-language",
+          "name": {
+            "ar": "الإنجليزية كلغة ثانية",
+            "en": "English as a Second Language",
+            "tr": "İkinci Dil Olarak İngilizce"
+          }
+        },
+        {
+          "id": "professional-development",
+          "name": {
+            "ar": "التطوير المهني",
+            "en": "Professional Development",
+            "tr": "Mesleki Gelişim"
+          }
+        },
+        {
+          "id": "science-mathematics",
+          "name": {
+            "ar": "العلوم والرياضيات",
+            "en": "Science and Mathematics",
+            "tr": "Fen ve Matematik"
+          }
+        },
+        {
+          "id": "social-science",
+          "name": {
+            "ar": "العلوم الاجتماعية",
+            "en": "Social Science",
+            "tr": "Sosyal Bilimler"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://learn.saylor.org/course/",
+        "pathsSourceUrl": "https://learn.saylor.org/course/"
+      }
     },
     {
       "languageIds": [
@@ -4191,7 +4927,63 @@
         "tr": "Arapça programlama ve modern teknolojiler öğrenmek için bir Suudi platformu. Programlama dilleri, siber güvenlik ve veritabanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          }
+        },
+        {
+          "id": "web-development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          }
+        },
+        {
+          "id": "mobile-development",
+          "name": {
+            "ar": "تطوير تطبيقات الجوال",
+            "en": "Mobile Development",
+            "tr": "Mobil Geliştirme"
+          }
+        },
+        {
+          "id": "databases",
+          "name": {
+            "ar": "قواعد البيانات",
+            "en": "Databases",
+            "tr": "Veritabanları"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "data-ai",
+          "name": {
+            "ar": "البيانات والذكاء الاصطناعي",
+            "en": "Data & AI",
+            "tr": "Veri ve Yapay Zekâ"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://satr.codes/",
+        "pathsSourceUrl": "https://satr.codes/"
+      }
     },
     {
       "languageIds": [
@@ -4245,7 +5037,63 @@
         "tr": "Kraliçe Rania Vakfı'ndan bir Arap eğitim platformu. En iyi Arap ve küresel üniversitelerden Arapça ücretsiz çevrimiçi kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال وريادة الأعمال",
+            "en": "Business & Entrepreneurship",
+            "tr": "İşletme ve Girişimcilik"
+          }
+        },
+        {
+          "id": "technology",
+          "name": {
+            "ar": "التقنية والمهارات الرقمية",
+            "en": "Technology & Digital Skills",
+            "tr": "Teknoloji ve Dijital Beceriler"
+          }
+        },
+        {
+          "id": "education",
+          "name": {
+            "ar": "التعليم والتدريس",
+            "en": "Education & Teaching",
+            "tr": "Eğitim ve Öğretim"
+          }
+        },
+        {
+          "id": "health",
+          "name": {
+            "ar": "الصحة",
+            "en": "Health",
+            "tr": "Sağlık"
+          }
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "اللغات",
+            "en": "Languages",
+            "tr": "Diller"
+          }
+        },
+        {
+          "id": "personal-professional",
+          "name": {
+            "ar": "المهارات الشخصية والمهنية",
+            "en": "Personal & Professional Skills",
+            "tr": "Kişisel ve Mesleki Beceriler"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.edraak.org/explore/?type=course",
+        "pathsSourceUrl": "https://www.edraak.org/explore/?type=course"
+      }
     },
     {
       "languageIds": [
@@ -4299,7 +5147,63 @@
         "tr": "Binlerce ücretsiz kursu olan bir Arap platformu. Programlama, diller, tasarım, yönetim ve pazarlama alanlarında akredite sertifikalarla kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          }
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "اللغات",
+            "en": "Languages",
+            "tr": "Diller"
+          }
+        },
+        {
+          "id": "design",
+          "name": {
+            "ar": "التصميم",
+            "en": "Design",
+            "tr": "Tasarım"
+          }
+        },
+        {
+          "id": "management-business",
+          "name": {
+            "ar": "الإدارة والأعمال",
+            "en": "Management & Business",
+            "tr": "Yönetim ve İşletme"
+          }
+        },
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "personal-development",
+          "name": {
+            "ar": "التطوير الشخصي",
+            "en": "Personal Development",
+            "tr": "Kişisel Gelişim"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.m3aarf.com/certified/courses",
+        "pathsSourceUrl": "https://www.m3aarf.com/certified/courses"
+      }
     },
     {
       "languageIds": [
@@ -4353,7 +5257,71 @@
         "tr": "Arap açık eğitim platformu. Gönüllü eğitmenlerden çeşitli alanlarda Arapça ücretsiz akademik materyaller sunar. Bazı dersler için tamamlama sertifikası verir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "business-management",
+          "name": {
+            "ar": "الإدارة والأعمال",
+            "en": "Business & Management",
+            "tr": "İşletme ve Yönetim"
+          }
+        },
+        {
+          "id": "technology",
+          "name": {
+            "ar": "التقنية وعلوم الحاسوب",
+            "en": "Technology & Computer Science",
+            "tr": "Teknoloji ve Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "humanities",
+          "name": {
+            "ar": "العلوم الإنسانية",
+            "en": "Humanities",
+            "tr": "Beşeri Bilimler"
+          }
+        },
+        {
+          "id": "social-sciences",
+          "name": {
+            "ar": "العلوم الاجتماعية",
+            "en": "Social Sciences",
+            "tr": "Sosyal Bilimler"
+          }
+        },
+        {
+          "id": "education",
+          "name": {
+            "ar": "التعليم",
+            "en": "Education",
+            "tr": "Eğitim"
+          }
+        },
+        {
+          "id": "health",
+          "name": {
+            "ar": "الصحة",
+            "en": "Health",
+            "tr": "Sağlık"
+          }
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "اللغات",
+            "en": "Languages",
+            "tr": "Diller"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.rwaq.org/courses",
+        "pathsSourceUrl": "https://www.rwaq.org/courses"
+      }
     },
     {
       "languageIds": [
@@ -4407,7 +5375,176 @@
         "tr": "Veri bilimi, yapay zeka ve istatistiksel analiz öğrenmek için özel bir platform. Python, R, SQL ve daha fazlasında yüzlerce etkileşimli kurs sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "python",
+          "name": {
+            "ar": "Python",
+            "en": "Python",
+            "tr": "Python"
+          }
+        },
+        {
+          "id": "r",
+          "name": {
+            "ar": "R",
+            "en": "R",
+            "tr": "R"
+          }
+        },
+        {
+          "id": "sql",
+          "name": {
+            "ar": "SQL",
+            "en": "SQL",
+            "tr": "SQL"
+          }
+        },
+        {
+          "id": "data-analysis",
+          "name": {
+            "ar": "تحليل البيانات",
+            "en": "Data Analysis",
+            "tr": "Veri Analizi"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "machine-learning",
+          "name": {
+            "ar": "تعلم الآلة والذكاء الاصطناعي",
+            "en": "Machine Learning & AI",
+            "tr": "Makine Öğrenmesi ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "data-engineering",
+          "name": {
+            "ar": "هندسة البيانات",
+            "en": "Data Engineering",
+            "tr": "Veri Mühendisliği"
+          }
+        },
+        {
+          "id": "bi-visualization",
+          "name": {
+            "ar": "ذكاء الأعمال وتصور البيانات",
+            "en": "BI & Data Visualization",
+            "tr": "İş Zekâsı ve Veri Görselleştirme"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "data-analyst-python",
+          "officialName": "Data Analyst in Python",
+          "name": {
+            "ar": "محلل بيانات باستخدام Python",
+            "en": "Data Analyst in Python",
+            "tr": "Python ile Veri Analisti"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.datacamp.com/tracks/data-analyst-with-python",
+          "fieldIds": [
+            "python",
+            "data-analysis"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-engineer-python",
+          "officialName": "Data Engineer in Python",
+          "name": {
+            "ar": "مهندس بيانات باستخدام Python",
+            "en": "Data Engineer in Python",
+            "tr": "Python ile Veri Mühendisi"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.datacamp.com/tracks/data-engineer-in-python",
+          "fieldIds": [
+            "python",
+            "data-engineering"
+          ],
+          "featured": false
+        },
+        {
+          "id": "machine-learning-engineer",
+          "officialName": "Machine Learning Engineer",
+          "name": {
+            "ar": "مهندس تعلم الآلة",
+            "en": "Machine Learning Engineer",
+            "tr": "Makine Öğrenmesi Mühendisi"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.datacamp.com/tracks/machine-learning-engineer",
+          "fieldIds": [
+            "machine-learning",
+            "python"
+          ],
+          "featured": false
+        },
+        {
+          "id": "machine-learning-scientist-python",
+          "officialName": "Machine Learning Scientist in Python",
+          "name": {
+            "ar": "عالم تعلم الآلة باستخدام Python",
+            "en": "Machine Learning Scientist in Python",
+            "tr": "Python ile Makine Öğrenmesi Bilimcisi"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.datacamp.com/tracks/machine-learning-scientist-with-python",
+          "fieldIds": [
+            "machine-learning",
+            "python",
+            "data-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sql-fundamentals",
+          "officialName": "SQL Fundamentals",
+          "name": {
+            "ar": "أساسيات SQL",
+            "en": "SQL Fundamentals",
+            "tr": "SQL Temelleri"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://www.datacamp.com/tracks/sql-fundamentals",
+          "fieldIds": [
+            "sql"
+          ],
+          "featured": false
+        },
+        {
+          "id": "openai-fundamentals",
+          "officialName": "OpenAI Fundamentals",
+          "name": {
+            "ar": "أساسيات OpenAI",
+            "en": "OpenAI Fundamentals",
+            "tr": "OpenAI Temelleri"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://www.datacamp.com/tracks/openai-fundamentals",
+          "fieldIds": [
+            "machine-learning"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.datacamp.com/courses",
+        "pathsSourceUrl": "https://www.datacamp.com/tracks/career",
+        "allPathsUrl": "https://www.datacamp.com/tracks/career"
+      }
     },
     {
       "languageIds": [
@@ -4461,7 +5598,63 @@
         "tr": "Dijital pazarlama öğrenimi için Semrush Akademisi. SEO, içerik pazarlaması, PPC ve sosyal medya alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "seo",
+          "name": {
+            "ar": "تحسين محركات البحث SEO",
+            "en": "SEO",
+            "tr": "SEO"
+          }
+        },
+        {
+          "id": "content-marketing",
+          "name": {
+            "ar": "التسويق بالمحتوى",
+            "en": "Content Marketing",
+            "tr": "İçerik Pazarlaması"
+          }
+        },
+        {
+          "id": "ppc",
+          "name": {
+            "ar": "الإعلانات المدفوعة PPC",
+            "en": "PPC & Paid Advertising",
+            "tr": "PPC ve Ücretli Reklamcılık"
+          }
+        },
+        {
+          "id": "social-media",
+          "name": {
+            "ar": "وسائل التواصل الاجتماعي",
+            "en": "Social Media",
+            "tr": "Sosyal Medya"
+          }
+        },
+        {
+          "id": "competitive-research",
+          "name": {
+            "ar": "البحث التنافسي",
+            "en": "Competitive Research",
+            "tr": "Rekabet Araştırması"
+          }
+        },
+        {
+          "id": "analytics",
+          "name": {
+            "ar": "تحليلات التسويق",
+            "en": "Marketing Analytics",
+            "tr": "Pazarlama Analitiği"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.semrush.com/academy/",
+        "pathsSourceUrl": "https://www.semrush.com/academy/"
+      }
     },
     {
       "languageIds": [
@@ -4515,7 +5708,63 @@
         "tr": "BTK'nın resmi eğitim platformu. Programlama, siber güvenlik, veri bilimi, yapay zeka ve BT alanlarında ücretsiz kurslar ve sertifikalar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة وتطوير البرمجيات",
+            "en": "Programming & Software Development",
+            "tr": "Programlama ve Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "network-systems",
+          "name": {
+            "ar": "الشبكات والأنظمة",
+            "en": "Networks & Systems",
+            "tr": "Ağlar ve Sistemler"
+          }
+        },
+        {
+          "id": "digital-professional",
+          "name": {
+            "ar": "المهارات الرقمية والمهنية",
+            "en": "Digital & Professional Skills",
+            "tr": "Dijital ve Mesleki Beceriler"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.btkakademi.gov.tr/portal/courses",
+        "pathsSourceUrl": "https://www.btkakademi.gov.tr/portal/courses"
+      }
     },
     {
       "languageIds": [
@@ -4569,7 +5818,155 @@
         "tr": "MathWorks'tan MATLAB Akademisi. MATLAB, Simulink, sinyal işleme, görüntü işleme ve makine öğreniminde etkileşimli kurslar sunar. Bazı kurslar ücretsiz, bazıları ücretlidir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "matlab-programming",
+          "name": {
+            "ar": "برمجة MATLAB",
+            "en": "MATLAB Programming",
+            "tr": "MATLAB Programlama"
+          }
+        },
+        {
+          "id": "simulink-modeling",
+          "name": {
+            "ar": "النمذجة باستخدام Simulink",
+            "en": "Simulink Modeling",
+            "tr": "Simulink Modelleme"
+          }
+        },
+        {
+          "id": "data-analysis",
+          "name": {
+            "ar": "تحليل البيانات",
+            "en": "Data Analysis",
+            "tr": "Veri Analizi"
+          }
+        },
+        {
+          "id": "visualization",
+          "name": {
+            "ar": "تصور البيانات والرسومات",
+            "en": "Visualization & Graphics",
+            "tr": "Görselleştirme ve Grafik"
+          }
+        },
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "engineering-computing",
+          "name": {
+            "ar": "الحوسبة الهندسية",
+            "en": "Engineering Computing",
+            "tr": "Mühendislik Bilişimi"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "core-matlab-skills",
+          "officialName": "Core MATLAB Skills",
+          "name": {
+            "ar": "مهارات MATLAB الأساسية",
+            "en": "Core MATLAB Skills",
+            "tr": "Temel MATLAB Becerileri"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://matlabacademy.mathworks.com/details/core-matlab-skills/lpmlcms",
+          "fieldIds": [
+            "matlab-programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "build-matlab-proficiency",
+          "officialName": "Build MATLAB Proficiency",
+          "name": {
+            "ar": "بناء إتقان MATLAB",
+            "en": "Build MATLAB Proficiency",
+            "tr": "MATLAB Yetkinliği Geliştirme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://matlabacademy.mathworks.com/details/build-matlab-proficiency/lpmlbmp",
+          "fieldIds": [
+            "matlab-programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-analysis-matlab",
+          "officialName": "Data Analysis in MATLAB",
+          "name": {
+            "ar": "تحليل البيانات في MATLAB",
+            "en": "Data Analysis in MATLAB",
+            "tr": "MATLAB'da Veri Analizi"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://matlabacademy.mathworks.com/details/data-analysis-in-matlab/lpmldam",
+          "fieldIds": [
+            "data-analysis"
+          ],
+          "featured": false
+        },
+        {
+          "id": "build-simulink-proficiency",
+          "officialName": "Build Simulink Proficiency",
+          "name": {
+            "ar": "بناء إتقان Simulink",
+            "en": "Build Simulink Proficiency",
+            "tr": "Simulink Yetkinliği Geliştirme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://matlabacademy.mathworks.com/details/build-simulink-proficiency/lpslbsp",
+          "fieldIds": [
+            "simulink-modeling"
+          ],
+          "featured": false
+        },
+        {
+          "id": "visualization-matlab",
+          "officialName": "Visualization in MATLAB",
+          "name": {
+            "ar": "التصور في MATLAB",
+            "en": "Visualization in MATLAB",
+            "tr": "MATLAB'da Görselleştirme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://matlabacademy.mathworks.com/details/visualization-in-matlab/lpmlvzm",
+          "fieldIds": [
+            "visualization"
+          ],
+          "featured": false
+        },
+        {
+          "id": "software-development-matlab",
+          "officialName": "Software Development in MATLAB",
+          "name": {
+            "ar": "تطوير البرمجيات في MATLAB",
+            "en": "Software Development in MATLAB",
+            "tr": "MATLAB'da Yazılım Geliştirme"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://matlabacademy.mathworks.com/details/software-development-in-matlab/lpmlsdm",
+          "fieldIds": [
+            "software-development",
+            "matlab-programming"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://matlabacademy.mathworks.com/?page=1&fq=course&sort=featured",
+        "pathsSourceUrl": "https://matlabacademy.mathworks.com/"
+      }
     },
     {
       "languageIds": [
@@ -4624,7 +6021,72 @@
         "tr": "Pazarlama, satış ve müşteri hizmetleri için HubSpot Akademisi. Gelen pazarlama ve e-ticaret alanlarında tamamen ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "sales",
+          "name": {
+            "ar": "المبيعات",
+            "en": "Sales",
+            "tr": "Satış"
+          }
+        },
+        {
+          "id": "customer-service",
+          "name": {
+            "ar": "خدمة العملاء",
+            "en": "Customer Service",
+            "tr": "Müşteri Hizmetleri"
+          }
+        },
+        {
+          "id": "crm-revops",
+          "name": {
+            "ar": "CRM وعمليات الإيرادات",
+            "en": "CRM & Revenue Operations",
+            "tr": "CRM ve Gelir Operasyonları"
+          }
+        },
+        {
+          "id": "web-content",
+          "name": {
+            "ar": "المواقع والمحتوى",
+            "en": "Websites & Content",
+            "tr": "Web Siteleri ve İçerik"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "value-based-selling",
+          "officialName": "Value-Based Selling Learning Path",
+          "name": {
+            "ar": "مسار البيع القائم على القيمة",
+            "en": "Value-Based Selling Learning Path",
+            "tr": "Değer Odaklı Satış Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://academy.hubspot.com/learning-paths/value-based-selling",
+          "fieldIds": [
+            "sales",
+            "customer-service"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://academy.hubspot.com/courses?contentType=COURSE",
+        "pathsSourceUrl": "https://academy.hubspot.com/learning-paths/value-based-selling"
+      }
     },
     {
       "languageIds": [
@@ -4678,7 +6140,86 @@
         "tr": "Kodlama zorlukları ve beceri testi için küresel bir platform. Python, Java, SQL ve algoritmalarda etkileşimli kurslar ve beceri sertifikaları sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "problem-solving",
+          "name": {
+            "ar": "حل المشكلات والخوارزميات",
+            "en": "Problem Solving & Algorithms",
+            "tr": "Problem Çözme ve Algoritmalar"
+          }
+        },
+        {
+          "id": "sql",
+          "name": {
+            "ar": "SQL",
+            "en": "SQL",
+            "tr": "SQL"
+          }
+        },
+        {
+          "id": "python",
+          "name": {
+            "ar": "Python",
+            "en": "Python",
+            "tr": "Python"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "java",
+          "name": {
+            "ar": "Java",
+            "en": "Java",
+            "tr": "Java"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "interview-preparation-kit",
+          "officialName": "The HackerRank Interview Preparation Kit",
+          "name": {
+            "ar": "حزمة HackerRank للتحضير للمقابلات",
+            "en": "The HackerRank Interview Preparation Kit",
+            "tr": "HackerRank Mülakat Hazırlık Kiti"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.hackerrank.com/interview/interview-preparation-kit",
+          "fieldIds": [
+            "problem-solving"
+          ],
+          "featured": false
+        },
+        {
+          "id": "preparation-kits",
+          "officialName": "HackerRank Preparation Kits",
+          "name": {
+            "ar": "حزم HackerRank للتحضير",
+            "en": "HackerRank Preparation Kits",
+            "tr": "HackerRank Hazırlık Kitleri"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.hackerrank.com/interview/preparation-kits",
+          "fieldIds": [
+            "problem-solving"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.hackerrank.com/skills-verification",
+        "pathsSourceUrl": "https://www.hackerrank.com/interview/preparation-kits"
+      }
     },
     {
       "languageIds": [
@@ -4732,7 +6273,133 @@
         "tr": "Programlama, tasarım, pazarlama ve yönetim gibi çeşitli alanlarda binlerce ücretsiz kurs sunan bir Arap platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          },
+          "officialUrl": "https://www.coursat.org/category/programming"
+        },
+        {
+          "id": "design",
+          "name": {
+            "ar": "التصميم",
+            "en": "Design",
+            "tr": "Tasarım"
+          },
+          "officialUrl": "https://www.coursat.org/category/design"
+        },
+        {
+          "id": "languages",
+          "name": {
+            "ar": "اللغات",
+            "en": "Languages",
+            "tr": "Diller"
+          },
+          "officialUrl": "https://www.coursat.org/category/languages"
+        },
+        {
+          "id": "computer-networks",
+          "name": {
+            "ar": "شبكات الحاسوب",
+            "en": "Computer Networks",
+            "tr": "Bilgisayar Ağları"
+          }
+        },
+        {
+          "id": "information-security",
+          "name": {
+            "ar": "أمن المعلومات",
+            "en": "Information Security",
+            "tr": "Bilgi Güvenliği"
+          }
+        },
+        {
+          "id": "databases",
+          "name": {
+            "ar": "قواعد البيانات",
+            "en": "Databases",
+            "tr": "Veritabanları"
+          }
+        },
+        {
+          "id": "operating-systems",
+          "name": {
+            "ar": "أنظمة التشغيل",
+            "en": "Operating Systems",
+            "tr": "İşletim Sistemleri"
+          }
+        },
+        {
+          "id": "web-development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          },
+          "officialUrl": "https://www.coursat.org/category/webdev"
+        },
+        {
+          "id": "management-economics",
+          "name": {
+            "ar": "الإدارة والاقتصاد",
+            "en": "Management & Economics",
+            "tr": "Yönetim ve Ekonomi"
+          },
+          "officialUrl": "https://www.coursat.org/category/management-economy"
+        },
+        {
+          "id": "computer-science",
+          "name": {
+            "ar": "علوم الحاسوب",
+            "en": "Computer Science",
+            "tr": "Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "science",
+          "name": {
+            "ar": "العلوم",
+            "en": "Science",
+            "tr": "Fen Bilimleri"
+          }
+        },
+        {
+          "id": "mathematics",
+          "name": {
+            "ar": "الرياضيات",
+            "en": "Mathematics",
+            "tr": "Matematik"
+          }
+        },
+        {
+          "id": "software",
+          "name": {
+            "ar": "البرمجيات",
+            "en": "Software",
+            "tr": "Yazılım"
+          },
+          "officialUrl": "https://www.coursat.org/category/software"
+        },
+        {
+          "id": "personal-development",
+          "name": {
+            "ar": "تطوير الذات",
+            "en": "Personal Development",
+            "tr": "Kişisel Gelişim"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.coursat.org/categories",
+        "pathsSourceUrl": "https://www.coursat.org/categories"
+      }
     },
     {
       "languageIds": [
