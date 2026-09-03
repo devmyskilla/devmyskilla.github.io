@@ -1,5 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const ContentAPI = require('../js/content-api.js');
 
 const fixture = {
@@ -81,4 +82,16 @@ test('platform field/path helpers localize names and path types',()=>{
   assert.equal(api.platformFieldName(field),'Yapay Zekâ');
   assert.equal(api.pathTypeLabel('professional-certificate'),'Profesyonel sertifika');
   assert.equal(api.pathTypeLabel('unknown-type'),'');
+});
+
+test('production data contains localized fields and official-path labels',()=>{
+  const data=JSON.parse(fs.readFileSync('data.json','utf8'));
+  const api=ContentAPI.create(data,'ar');
+  assert.equal(api.text('platform.fields'),'المجالات');
+  assert.equal(api.text('platform.officialPaths'),'المسارات الرسمية');
+  assert.equal(api.pathTypeLabel('learning-path'),'مسار تعليمي');
+  api.setLang('en');
+  assert.equal(api.text('platform.viewAllOfficialPaths'),'View all official paths');
+  api.setLang('tr');
+  assert.equal(api.pathTypeLabel('role-path'),'Rol tabanlı yol');
 });
