@@ -6453,7 +6453,119 @@
         "tr": "Dünyanın en büyük öğrenme platformu. Tüm alanlarda 200.000'den fazla kurs barındırır. Birçok kurs ücretsiz, diğerleri çeşitli fiyatlarla ücretlidir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "development",
+          "name": {
+            "ar": "التطوير",
+            "en": "Development",
+            "tr": "Geliştirme"
+          }
+        },
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال",
+            "en": "Business",
+            "tr": "İşletme"
+          }
+        },
+        {
+          "id": "finance-accounting",
+          "name": {
+            "ar": "التمويل والمحاسبة",
+            "en": "Finance & Accounting",
+            "tr": "Finans ve Muhasebe"
+          }
+        },
+        {
+          "id": "it-software",
+          "name": {
+            "ar": "تقنية المعلومات والبرمجيات",
+            "en": "IT & Software",
+            "tr": "BT ve Yazılım"
+          }
+        },
+        {
+          "id": "office-productivity",
+          "name": {
+            "ar": "الإنتاجية المكتبية",
+            "en": "Office Productivity",
+            "tr": "Ofis Verimliliği"
+          }
+        },
+        {
+          "id": "personal-development",
+          "name": {
+            "ar": "التطوير الشخصي",
+            "en": "Personal Development",
+            "tr": "Kişisel Gelişim"
+          }
+        },
+        {
+          "id": "design",
+          "name": {
+            "ar": "التصميم",
+            "en": "Design",
+            "tr": "Tasarım"
+          }
+        },
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "lifestyle",
+          "name": {
+            "ar": "أسلوب الحياة",
+            "en": "Lifestyle",
+            "tr": "Yaşam Tarzı"
+          }
+        },
+        {
+          "id": "photography-video",
+          "name": {
+            "ar": "التصوير والفيديو",
+            "en": "Photography & Video",
+            "tr": "Fotoğraf ve Video"
+          }
+        },
+        {
+          "id": "health-fitness",
+          "name": {
+            "ar": "الصحة واللياقة",
+            "en": "Health & Fitness",
+            "tr": "Sağlık ve Fitness"
+          }
+        },
+        {
+          "id": "music",
+          "name": {
+            "ar": "الموسيقى",
+            "en": "Music",
+            "tr": "Müzik"
+          }
+        },
+        {
+          "id": "teaching-academics",
+          "name": {
+            "ar": "التدريس والأكاديميا",
+            "en": "Teaching & Academics",
+            "tr": "Öğretim ve Akademi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.udemy.com/courses/",
+        "pathsSourceUrl": "https://www.udemy.com/courses/"
+      }
     },
     {
       "languageIds": [
@@ -6507,7 +6619,111 @@
         "tr": "LinkedIn’in iş, teknoloji, yaratıcı alanlar ve kariyer becerilerinde binlerce kurs sunduğu profesyonel öğrenme platformu; öğrenme yolları ve tamamlama sertifikaları içerir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال",
+            "en": "Business",
+            "tr": "İşletme"
+          }
+        },
+        {
+          "id": "technology",
+          "name": {
+            "ar": "التقنية",
+            "en": "Technology",
+            "tr": "Teknoloji"
+          }
+        },
+        {
+          "id": "creative",
+          "name": {
+            "ar": "المهارات الإبداعية",
+            "en": "Creative",
+            "tr": "Yaratıcı Beceriler"
+          }
+        },
+        {
+          "id": "data-ai",
+          "name": {
+            "ar": "البيانات والذكاء الاصطناعي",
+            "en": "Data & AI",
+            "tr": "Veri ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "project-management",
+          "name": {
+            "ar": "إدارة المشاريع",
+            "en": "Project Management",
+            "tr": "Proje Yönetimi"
+          }
+        },
+        {
+          "id": "leadership-management",
+          "name": {
+            "ar": "القيادة والإدارة",
+            "en": "Leadership & Management",
+            "tr": "Liderlik ve Yönetim"
+          }
+        },
+        {
+          "id": "career-skills",
+          "name": {
+            "ar": "المهارات المهنية",
+            "en": "Career Skills",
+            "tr": "Kariyer Becerileri"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "become-software-developer",
+          "officialName": "Become a Software Developer",
+          "name": {
+            "ar": "كن مطور برمجيات",
+            "en": "Become a Software Developer",
+            "tr": "Yazılım Geliştirici Ol"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.linkedin.com/learning/paths/become-a-software-developer",
+          "fieldIds": [
+            "software-development",
+            "technology"
+          ],
+          "featured": false
+        },
+        {
+          "id": "become-data-analyst",
+          "officialName": "Become a Data Analyst",
+          "name": {
+            "ar": "كن محلل بيانات",
+            "en": "Become a Data Analyst",
+            "tr": "Veri Analisti Ol"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.linkedin.com/learning/paths/become-a-data-analyst",
+          "fieldIds": [
+            "data-ai"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.linkedin.com/learning/",
+        "pathsSourceUrl": "https://www.linkedin.com/learning/paths"
+      }
     },
     {
       "languageIds": [
@@ -6561,7 +6777,103 @@
         "tr": "Yazılım geliştirme, bulut, siber güvenlik, veri ve yapay zekaya odaklanan; profesyonel yollar, beceri değerlendirmeleri ve tamamlama sertifikaları sunan teknoloji platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "cloud",
+          "name": {
+            "ar": "الحوسبة السحابية",
+            "en": "Cloud",
+            "tr": "Bulut"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Security",
+            "tr": "Güvenlik"
+          }
+        },
+        {
+          "id": "data",
+          "name": {
+            "ar": "البيانات",
+            "en": "Data",
+            "tr": "Veri"
+          }
+        },
+        {
+          "id": "it-operations",
+          "name": {
+            "ar": "عمليات تقنية المعلومات",
+            "en": "IT Operations",
+            "tr": "BT Operasyonları"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "cloud-security",
+          "officialName": "Cloud Security",
+          "name": {
+            "ar": "أمن السحابة",
+            "en": "Cloud Security",
+            "tr": "Bulut Güvenliği"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.pluralsight.com/paths/cloud-security",
+          "fieldIds": [
+            "cloud",
+            "security"
+          ],
+          "featured": false
+        },
+        {
+          "id": "machine-learning-essentials",
+          "officialName": "Machine Learning Essentials",
+          "name": {
+            "ar": "أساسيات تعلم الآلة",
+            "en": "Machine Learning Essentials",
+            "tr": "Makine Öğrenmesi Temelleri"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.pluralsight.com/paths/machine-learning-essentials",
+          "fieldIds": [
+            "data"
+          ],
+          "featured": false
+        },
+        {
+          "id": "machine-learning-engineering",
+          "officialName": "Machine Learning Engineering",
+          "name": {
+            "ar": "هندسة تعلم الآلة",
+            "en": "Machine Learning Engineering",
+            "tr": "Makine Öğrenmesi Mühendisliği"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.pluralsight.com/paths/machine-learning-engineering",
+          "fieldIds": [
+            "data",
+            "software-development"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.pluralsight.com/browse",
+        "pathsSourceUrl": "https://www.pluralsight.com/paths"
+      }
     },
     {
       "languageIds": [
@@ -6615,7 +6927,95 @@
         "tr": "Tasarım, illüstrasyon, fotoğraf, video, yazarlık ve girişimcilikte binlerce ders sunan, proje tabanlı öğrenmeye odaklı abonelik platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "ai-innovation",
+          "name": {
+            "ar": "الذكاء الاصطناعي والابتكار",
+            "en": "AI & Innovation",
+            "tr": "Yapay Zekâ ve İnovasyon"
+          }
+        },
+        {
+          "id": "animation-3d",
+          "name": {
+            "ar": "الرسوم المتحركة وثلاثية الأبعاد",
+            "en": "Animation & 3D",
+            "tr": "Animasyon ve 3D"
+          }
+        },
+        {
+          "id": "art-illustration",
+          "name": {
+            "ar": "الفن والرسم التوضيحي",
+            "en": "Art & Illustration",
+            "tr": "Sanat ve İllüstrasyon"
+          }
+        },
+        {
+          "id": "design",
+          "name": {
+            "ar": "التصميم",
+            "en": "Design",
+            "tr": "Tasarım"
+          }
+        },
+        {
+          "id": "development",
+          "name": {
+            "ar": "التطوير",
+            "en": "Development",
+            "tr": "Geliştirme"
+          }
+        },
+        {
+          "id": "film-video",
+          "name": {
+            "ar": "الفيلم والفيديو",
+            "en": "Film & Video",
+            "tr": "Film ve Video"
+          }
+        },
+        {
+          "id": "marketing-business",
+          "name": {
+            "ar": "التسويق والأعمال",
+            "en": "Marketing & Business",
+            "tr": "Pazarlama ve İşletme"
+          }
+        },
+        {
+          "id": "photography",
+          "name": {
+            "ar": "التصوير",
+            "en": "Photography",
+            "tr": "Fotoğrafçılık"
+          }
+        },
+        {
+          "id": "productivity",
+          "name": {
+            "ar": "الإنتاجية",
+            "en": "Productivity",
+            "tr": "Verimlilik"
+          }
+        },
+        {
+          "id": "writing-publishing",
+          "name": {
+            "ar": "الكتابة والنشر",
+            "en": "Writing & Publishing",
+            "tr": "Yazarlık ve Yayıncılık"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.skillshare.com/en/browse",
+        "pathsSourceUrl": "https://www.skillshare.com/en/browse"
+      }
     },
     {
       "languageIds": [
@@ -6669,7 +7069,111 @@
         "tr": "İş, yazarlık, yemek, sanat, spor, liderlik ve daha birçok alanda dünyaca tanınmış uzmanların yüksek kaliteli derslerini sunan ücretli platform."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "acting-performing",
+          "name": {
+            "ar": "التمثيل والفنون الأدائية",
+            "en": "Acting & Performing Arts",
+            "tr": "Oyunculuk ve Sahne Sanatları"
+          }
+        },
+        {
+          "id": "art-design",
+          "name": {
+            "ar": "الفن والتصميم",
+            "en": "Art & Design",
+            "tr": "Sanat ve Tasarım"
+          }
+        },
+        {
+          "id": "business-entrepreneurship",
+          "name": {
+            "ar": "الأعمال وريادة الأعمال",
+            "en": "Business & Entrepreneurship",
+            "tr": "İşletme ve Girişimcilik"
+          }
+        },
+        {
+          "id": "community-government",
+          "name": {
+            "ar": "المجتمع والحكومة",
+            "en": "Community & Government",
+            "tr": "Toplum ve Yönetim"
+          }
+        },
+        {
+          "id": "film-tv",
+          "name": {
+            "ar": "السينما والتلفزيون",
+            "en": "Film & TV",
+            "tr": "Film ve TV"
+          }
+        },
+        {
+          "id": "food-drink",
+          "name": {
+            "ar": "الطعام والشراب",
+            "en": "Food & Drink",
+            "tr": "Yemek ve İçecek"
+          }
+        },
+        {
+          "id": "games-digital-media",
+          "name": {
+            "ar": "الألعاب والإعلام الرقمي",
+            "en": "Games & Digital Media",
+            "tr": "Oyunlar ve Dijital Medya"
+          }
+        },
+        {
+          "id": "health-wellness",
+          "name": {
+            "ar": "الصحة والعافية",
+            "en": "Health & Wellness",
+            "tr": "Sağlık ve İyi Yaşam"
+          }
+        },
+        {
+          "id": "music",
+          "name": {
+            "ar": "الموسيقى",
+            "en": "Music",
+            "tr": "Müzik"
+          }
+        },
+        {
+          "id": "science-technology",
+          "name": {
+            "ar": "العلوم والتقنية",
+            "en": "Science & Technology",
+            "tr": "Bilim ve Teknoloji"
+          }
+        },
+        {
+          "id": "sports-athletics",
+          "name": {
+            "ar": "الرياضة والألعاب الرياضية",
+            "en": "Sports & Athletics",
+            "tr": "Spor ve Atletizm"
+          }
+        },
+        {
+          "id": "writing",
+          "name": {
+            "ar": "الكتابة",
+            "en": "Writing",
+            "tr": "Yazarlık"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.masterclass.com/categories",
+        "pathsSourceUrl": "https://www.masterclass.com/categories"
+      }
     },
     {
       "languageIds": [
@@ -6723,7 +7227,47 @@
         "tr": "Matematik, bilgisayar bilimi, yapay zeka ve mantığı problem çözme ve görsel alıştırmalarla öğreten; ücretsiz katman ve ücretli tam erişim sunan platform."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "math",
+          "name": {
+            "ar": "الرياضيات",
+            "en": "Math",
+            "tr": "Matematik"
+          }
+        },
+        {
+          "id": "computer-science",
+          "name": {
+            "ar": "علوم الحاسوب",
+            "en": "Computer Science",
+            "tr": "Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "science-technology",
+          "name": {
+            "ar": "العلوم والتقنية",
+            "en": "Science & Technology",
+            "tr": "Bilim ve Teknoloji"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://brilliant.org/courses/",
+        "pathsSourceUrl": "https://brilliant.org/courses/"
+      }
     },
     {
       "languageIds": [
@@ -6777,7 +7321,80 @@
         "tr": "Programlama, yazılım mühendisliği, sistem tasarımı ve yapay zekada metin tabanlı kurslar, uygulamalı laboratuvarlar ve yollar sunan; ücretsiz ve ücretli içerikli geliştirici platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "web-development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          }
+        },
+        {
+          "id": "programming-languages",
+          "name": {
+            "ar": "لغات البرمجة",
+            "en": "Programming Languages",
+            "tr": "Programlama Dilleri"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "machine-learning-ai",
+          "name": {
+            "ar": "تعلم الآلة والذكاء الاصطناعي",
+            "en": "Machine Learning & AI",
+            "tr": "Makine Öğrenmesi ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "cloud-devops",
+          "name": {
+            "ar": "السحابة وDevOps",
+            "en": "Cloud & DevOps",
+            "tr": "Bulut ve DevOps"
+          }
+        },
+        {
+          "id": "interview-prep",
+          "name": {
+            "ar": "التحضير للمقابلات",
+            "en": "Interview Preparation",
+            "tr": "Mülakat Hazırlığı"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "front-end-developer",
+          "officialName": "Become a Front-end Developer",
+          "name": {
+            "ar": "كن مطور واجهة أمامية",
+            "en": "Become a Front-end Developer",
+            "tr": "Front-end Geliştirici Ol"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.educative.io/path/become-front-end-developer",
+          "fieldIds": [
+            "web-development",
+            "programming-languages"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.educative.io/explore",
+        "pathsSourceUrl": "https://www.educative.io/path/become-front-end-developer"
+      }
     },
     {
       "languageIds": [
@@ -6831,7 +7448,96 @@
         "tr": "Video, alıştırma, proje ve yapılandırılmış yollarla programlama, web geliştirme ve tasarım öğreten; deneme sonrası ücretli erişim ve bazı programlarda sertifika sunan platform."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "web-development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          }
+        },
+        {
+          "id": "python",
+          "name": {
+            "ar": "Python",
+            "en": "Python",
+            "tr": "Python"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "data-analysis",
+          "name": {
+            "ar": "تحليل البيانات",
+            "en": "Data Analysis",
+            "tr": "Veri Analizi"
+          }
+        },
+        {
+          "id": "ux-design",
+          "name": {
+            "ar": "تصميم تجربة المستخدم",
+            "en": "UX Design",
+            "tr": "UX Tasarımı"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "AI",
+            "tr": "Yapay Zekâ"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "web-design-track",
+          "officialName": "Web Design",
+          "name": {
+            "ar": "مسار تصميم الويب",
+            "en": "Web Design",
+            "tr": "Web Tasarımı Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://teamtreehouse.com/tracks/web-design",
+          "fieldIds": [
+            "web-development",
+            "ux-design"
+          ],
+          "featured": false
+        },
+        {
+          "id": "beginning-python",
+          "officialName": "Beginning Python",
+          "name": {
+            "ar": "Python للمبتدئين",
+            "en": "Beginning Python",
+            "tr": "Başlangıç Python"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://teamtreehouse.com/tracks/beginning-python",
+          "fieldIds": [
+            "python"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://teamtreehouse.com/tracks",
+        "pathsSourceUrl": "https://teamtreehouse.com/tracks",
+        "allPathsUrl": "https://teamtreehouse.com/tracks"
+      }
     },
     {
       "languageIds": [
@@ -6885,7 +7591,82 @@
         "tr": "Kodun ders içinde doğrudan düzenlenebildiği etkileşimli bir platform; HTML, CSS, JavaScript, React ve frontend geliştirmede ücretsiz ve ücretli kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "html-css",
+          "name": {
+            "ar": "HTML وCSS",
+            "en": "HTML & CSS",
+            "tr": "HTML ve CSS"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "react",
+          "name": {
+            "ar": "React",
+            "en": "React",
+            "tr": "React"
+          }
+        },
+        {
+          "id": "frontend",
+          "name": {
+            "ar": "تطوير الواجهة الأمامية",
+            "en": "Frontend Development",
+            "tr": "Frontend Geliştirme"
+          }
+        },
+        {
+          "id": "fullstack",
+          "name": {
+            "ar": "التطوير المتكامل Full Stack",
+            "en": "Fullstack Development",
+            "tr": "Fullstack Geliştirme"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "ar": "الذكاء الاصطناعي للبرمجة",
+            "en": "AI for Developers",
+            "tr": "Geliştiriciler için Yapay Zekâ"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "frontend-developer-career",
+          "officialName": "The Frontend Developer Career Path",
+          "name": {
+            "ar": "مسار مطور الواجهة الأمامية",
+            "en": "The Frontend Developer Career Path",
+            "tr": "Frontend Geliştirici Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://scrimba.com/learn/frontend",
+          "fieldIds": [
+            "html-css",
+            "javascript",
+            "react",
+            "frontend"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://scrimba.com/courses",
+        "pathsSourceUrl": "https://scrimba.com/learn/frontend"
+      }
     },
     {
       "languageIds": [
@@ -6939,7 +7720,154 @@
         "tr": "JavaScript, React, Node.js, TypeScript ve frontend mühendisliğinde sektör uzmanlarından derinlemesine kurslar sunan; bazı ücretsiz içerikler ve ücretli tam erişim içeren platform."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "web-development",
+          "name": {
+            "ar": "تطوير الويب",
+            "en": "Web Development",
+            "tr": "Web Geliştirme"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "react",
+          "name": {
+            "ar": "React",
+            "en": "React",
+            "tr": "React"
+          }
+        },
+        {
+          "id": "css",
+          "name": {
+            "ar": "CSS",
+            "en": "CSS",
+            "tr": "CSS"
+          }
+        },
+        {
+          "id": "backend-fullstack",
+          "name": {
+            "ar": "الخلفية والتطوير المتكامل",
+            "en": "Backend & Fullstack",
+            "tr": "Backend ve Fullstack"
+          }
+        },
+        {
+          "id": "computer-science",
+          "name": {
+            "ar": "علوم الحاسوب",
+            "en": "Computer Science",
+            "tr": "Bilgisayar Bilimleri"
+          }
+        },
+        {
+          "id": "professional-development",
+          "name": {
+            "ar": "التطوير المهني للمطورين",
+            "en": "Developer Professional Skills",
+            "tr": "Geliştirici Mesleki Becerileri"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "beginner",
+          "officialName": "Beginner Learning Path",
+          "name": {
+            "ar": "مسار المبتدئين",
+            "en": "Beginner Learning Path",
+            "tr": "Başlangıç Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://frontendmasters.com/learn/beginner/",
+          "fieldIds": [
+            "web-development",
+            "javascript",
+            "css"
+          ],
+          "featured": false
+        },
+        {
+          "id": "professional",
+          "officialName": "Professional Learning Path",
+          "name": {
+            "ar": "المسار الاحترافي",
+            "en": "Professional Learning Path",
+            "tr": "Profesyonel Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://frontendmasters.com/learn/professional/",
+          "fieldIds": [
+            "web-development",
+            "javascript",
+            "react",
+            "professional-development"
+          ],
+          "featured": false
+        },
+        {
+          "id": "fullstack",
+          "officialName": "Fullstack Learning Path",
+          "name": {
+            "ar": "مسار Fullstack",
+            "en": "Fullstack Learning Path",
+            "tr": "Fullstack Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://frontendmasters.com/learn/fullstack/",
+          "fieldIds": [
+            "backend-fullstack",
+            "javascript"
+          ],
+          "featured": false
+        },
+        {
+          "id": "computer-science",
+          "officialName": "Computer Science Learning Path",
+          "name": {
+            "ar": "مسار علوم الحاسوب",
+            "en": "Computer Science Learning Path",
+            "tr": "Bilgisayar Bilimleri Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://frontendmasters.com/learn/computer-science/",
+          "fieldIds": [
+            "computer-science",
+            "javascript"
+          ],
+          "featured": false
+        },
+        {
+          "id": "javascript",
+          "officialName": "JavaScript Learning Path",
+          "name": {
+            "ar": "مسار JavaScript",
+            "en": "JavaScript Learning Path",
+            "tr": "JavaScript Öğrenme Yolu"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://frontendmasters.com/learn/javascript/",
+          "fieldIds": [
+            "javascript"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://frontendmasters.com/courses/",
+        "pathsSourceUrl": "https://frontendmasters.com/faq/learning-paths/"
+      }
     },
     {
       "languageIds": [
@@ -6993,7 +7921,103 @@
         "tr": "Web geliştirmeyi sıfırdan gerçek projelerle öğreten tamamen ücretsiz ve açık kaynak müfredat; HTML, CSS, JavaScript, Node.js, Ruby, veritabanları ve Git’i kapsar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "html-css",
+          "name": {
+            "ar": "HTML وCSS",
+            "en": "HTML & CSS",
+            "tr": "HTML ve CSS"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "nodejs",
+          "name": {
+            "ar": "Node.js",
+            "en": "Node.js",
+            "tr": "Node.js"
+          }
+        },
+        {
+          "id": "ruby-rails",
+          "name": {
+            "ar": "Ruby وRails",
+            "en": "Ruby & Rails",
+            "tr": "Ruby ve Rails"
+          }
+        },
+        {
+          "id": "databases",
+          "name": {
+            "ar": "قواعد البيانات",
+            "en": "Databases",
+            "tr": "Veritabanları"
+          }
+        },
+        {
+          "id": "career",
+          "name": {
+            "ar": "الاستعداد للعمل كمطور",
+            "en": "Developer Career Preparation",
+            "tr": "Geliştirici Kariyer Hazırlığı"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "full-stack-javascript",
+          "officialName": "Full Stack JavaScript",
+          "name": {
+            "ar": "Full Stack JavaScript",
+            "en": "Full Stack JavaScript",
+            "tr": "Full Stack JavaScript"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.theodinproject.com/paths/full-stack-javascript",
+          "fieldIds": [
+            "html-css",
+            "javascript",
+            "nodejs",
+            "databases",
+            "career"
+          ],
+          "featured": false
+        },
+        {
+          "id": "full-stack-ruby-rails",
+          "officialName": "Full Stack Ruby on Rails",
+          "name": {
+            "ar": "Full Stack Ruby on Rails",
+            "en": "Full Stack Ruby on Rails",
+            "tr": "Full Stack Ruby on Rails"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://www.theodinproject.com/paths/full-stack-ruby-on-rails",
+          "fieldIds": [
+            "html-css",
+            "ruby-rails",
+            "databases",
+            "javascript",
+            "career"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.theodinproject.com/paths",
+        "pathsSourceUrl": "https://www.theodinproject.com/paths",
+        "allPathsUrl": "https://www.theodinproject.com/paths"
+      }
     },
     {
       "languageIds": [
@@ -7047,7 +8071,147 @@
         "tr": "Onlarca programlama dilinde alıştırmalar, topluluk geri bildirimi ve mentorluk sunan tamamen ücretsiz kodlama pratik platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "python",
+          "name": {
+            "ar": "Python",
+            "en": "Python",
+            "tr": "Python"
+          }
+        },
+        {
+          "id": "javascript",
+          "name": {
+            "ar": "JavaScript",
+            "en": "JavaScript",
+            "tr": "JavaScript"
+          }
+        },
+        {
+          "id": "java",
+          "name": {
+            "ar": "Java",
+            "en": "Java",
+            "tr": "Java"
+          }
+        },
+        {
+          "id": "rust",
+          "name": {
+            "ar": "Rust",
+            "en": "Rust",
+            "tr": "Rust"
+          }
+        },
+        {
+          "id": "go",
+          "name": {
+            "ar": "Go",
+            "en": "Go",
+            "tr": "Go"
+          }
+        },
+        {
+          "id": "cpp",
+          "name": {
+            "ar": "C++",
+            "en": "C++",
+            "tr": "C++"
+          }
+        },
+        {
+          "id": "functional-languages",
+          "name": {
+            "ar": "اللغات الوظيفية",
+            "en": "Functional Languages",
+            "tr": "Fonksiyonel Diller"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "python-track",
+          "officialName": "Python Track",
+          "name": {
+            "ar": "مسار Python",
+            "en": "Python Track",
+            "tr": "Python Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://exercism.org/tracks/python",
+          "fieldIds": [
+            "python"
+          ],
+          "featured": false
+        },
+        {
+          "id": "javascript-track",
+          "officialName": "JavaScript Track",
+          "name": {
+            "ar": "مسار JavaScript",
+            "en": "JavaScript Track",
+            "tr": "JavaScript Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://exercism.org/tracks/javascript",
+          "fieldIds": [
+            "javascript"
+          ],
+          "featured": false
+        },
+        {
+          "id": "java-track",
+          "officialName": "Java Track",
+          "name": {
+            "ar": "مسار Java",
+            "en": "Java Track",
+            "tr": "Java Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://exercism.org/tracks/java",
+          "fieldIds": [
+            "java"
+          ],
+          "featured": false
+        },
+        {
+          "id": "rust-track",
+          "officialName": "Rust Track",
+          "name": {
+            "ar": "مسار Rust",
+            "en": "Rust Track",
+            "tr": "Rust Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://exercism.org/tracks/rust",
+          "fieldIds": [
+            "rust"
+          ],
+          "featured": false
+        },
+        {
+          "id": "go-track",
+          "officialName": "Go Track",
+          "name": {
+            "ar": "مسار Go",
+            "en": "Go Track",
+            "tr": "Go Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://exercism.org/tracks/go",
+          "fieldIds": [
+            "go"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://exercism.org/docs/tracks",
+        "pathsSourceUrl": "https://exercism.org/tracks"
+      }
     },
     {
       "languageIds": [
@@ -7101,7 +8265,47 @@
         "tr": "50’den fazla dilde kısa “kata” görevleri, rütbe ve puan sistemi ve çözüm karşılaştırma topluluğu ile algoritmik düşünmeyi geliştiren küresel kodlama platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "algorithms",
+          "name": {
+            "ar": "الخوارزميات",
+            "en": "Algorithms",
+            "tr": "Algoritmalar"
+          }
+        },
+        {
+          "id": "data-structures",
+          "name": {
+            "ar": "هياكل البيانات",
+            "en": "Data Structures",
+            "tr": "Veri Yapıları"
+          }
+        },
+        {
+          "id": "problem-solving",
+          "name": {
+            "ar": "حل المشكلات",
+            "en": "Problem Solving",
+            "tr": "Problem Çözme"
+          }
+        },
+        {
+          "id": "programming-languages",
+          "name": {
+            "ar": "لغات البرمجة",
+            "en": "Programming Languages",
+            "tr": "Programlama Dilleri"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.codewars.com/kata",
+        "pathsSourceUrl": "https://www.codewars.com/collections"
+      }
     },
     {
       "languageIds": [
@@ -7155,7 +8359,106 @@
         "tr": "Teknik mülakat hazırlığı, algoritmalar, veri yapıları ve veritabanı pratiği için popüler platform; geniş ücretsiz içerik ve Premium özellikler sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "algorithms",
+          "name": {
+            "ar": "الخوارزميات",
+            "en": "Algorithms",
+            "tr": "Algoritmalar"
+          }
+        },
+        {
+          "id": "data-structures",
+          "name": {
+            "ar": "هياكل البيانات",
+            "en": "Data Structures",
+            "tr": "Veri Yapıları"
+          }
+        },
+        {
+          "id": "sql-databases",
+          "name": {
+            "ar": "SQL وقواعد البيانات",
+            "en": "SQL & Databases",
+            "tr": "SQL ve Veritabanları"
+          }
+        },
+        {
+          "id": "interview-prep",
+          "name": {
+            "ar": "التحضير للمقابلات التقنية",
+            "en": "Technical Interview Preparation",
+            "tr": "Teknik Mülakat Hazırlığı"
+          }
+        },
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "leetcode-75",
+          "officialName": "LeetCode 75",
+          "name": {
+            "ar": "خطة LeetCode 75",
+            "en": "LeetCode 75",
+            "tr": "LeetCode 75 Planı"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://leetcode.com/studyplan/leetcode-75/",
+          "fieldIds": [
+            "algorithms",
+            "data-structures",
+            "interview-prep"
+          ],
+          "featured": false
+        },
+        {
+          "id": "top-interview-150",
+          "officialName": "Top Interview 150",
+          "name": {
+            "ar": "أفضل 150 سؤالًا للمقابلات",
+            "en": "Top Interview 150",
+            "tr": "En İyi 150 Mülakat Sorusu"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://leetcode.com/studyplan/top-interview-150/",
+          "fieldIds": [
+            "algorithms",
+            "data-structures",
+            "interview-prep"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sql-50",
+          "officialName": "SQL 50",
+          "name": {
+            "ar": "خطة SQL 50",
+            "en": "SQL 50",
+            "tr": "SQL 50 Planı"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://leetcode.com/studyplan/top-sql-50/",
+          "fieldIds": [
+            "sql-databases",
+            "interview-prep"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://leetcode.com/problemset/",
+        "pathsSourceUrl": "https://leetcode.com/studyplan/"
+      }
     },
     {
       "languageIds": [
@@ -7209,7 +8512,132 @@
         "tr": "Gerçek kod yazarak ve projeler tamamlayarak veri bilimi, analiz, Python, SQL ve R öğreten; ücretsiz katman, ücretli yollar ve tamamlama sertifikaları sunan platform."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "data-analysis",
+          "name": {
+            "ar": "تحليل البيانات",
+            "en": "Data Analysis",
+            "tr": "Veri Analizi"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "data-engineering",
+          "name": {
+            "ar": "هندسة البيانات",
+            "en": "Data Engineering",
+            "tr": "Veri Mühendisliği"
+          }
+        },
+        {
+          "id": "python",
+          "name": {
+            "ar": "Python",
+            "en": "Python",
+            "tr": "Python"
+          }
+        },
+        {
+          "id": "sql",
+          "name": {
+            "ar": "SQL",
+            "en": "SQL",
+            "tr": "SQL"
+          }
+        },
+        {
+          "id": "excel-bi",
+          "name": {
+            "ar": "Excel وذكاء الأعمال",
+            "en": "Excel & Business Intelligence",
+            "tr": "Excel ve İş Zekâsı"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "junior-data-analyst",
+          "officialName": "Junior Data Analyst",
+          "name": {
+            "ar": "محلل بيانات مبتدئ",
+            "en": "Junior Data Analyst",
+            "tr": "Junior Veri Analisti"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.dataquest.io/path/junior-data-analyst/",
+          "fieldIds": [
+            "data-analysis",
+            "excel-bi",
+            "sql",
+            "python"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-analyst-python",
+          "officialName": "Data Analyst in Python",
+          "name": {
+            "ar": "محلل بيانات باستخدام Python",
+            "en": "Data Analyst in Python",
+            "tr": "Python ile Veri Analisti"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.dataquest.io/path/data-analyst/",
+          "fieldIds": [
+            "data-analysis",
+            "python",
+            "sql"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-scientist",
+          "officialName": "Data Scientist in Python",
+          "name": {
+            "ar": "عالم بيانات باستخدام Python",
+            "en": "Data Scientist in Python",
+            "tr": "Python ile Veri Bilimci"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.dataquest.io/path/data-scientist/",
+          "fieldIds": [
+            "data-science",
+            "python"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-engineer",
+          "officialName": "Data Engineer",
+          "name": {
+            "ar": "مهندس بيانات",
+            "en": "Data Engineer",
+            "tr": "Veri Mühendisi"
+          },
+          "type": "career-path",
+          "officialUrl": "https://www.dataquest.io/path/data-engineer/",
+          "fieldIds": [
+            "data-engineering",
+            "python",
+            "sql"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.dataquest.io/catalog/",
+        "pathsSourceUrl": "https://www.dataquest.io/catalog/career-paths/"
+      }
     },
     {
       "languageIds": [
@@ -7263,7 +8691,148 @@
         "tr": "İstatistik, Python, SQL, Power BI ve makine öğrenmesinde yollar sunan veri ve yapay zeka platformu; ücretsiz içerik, ücretli planlar ve sertifikalar içerir."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "data-literacy",
+          "name": {
+            "ar": "ثقافة البيانات",
+            "en": "Data Literacy",
+            "tr": "Veri Okuryazarlığı"
+          }
+        },
+        {
+          "id": "data-analysis",
+          "name": {
+            "ar": "تحليل البيانات",
+            "en": "Data Analysis",
+            "tr": "Veri Analizi"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "machine-learning-ai",
+          "name": {
+            "ar": "تعلم الآلة والذكاء الاصطناعي",
+            "en": "Machine Learning & AI",
+            "tr": "Makine Öğrenmesi ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "data-engineering",
+          "name": {
+            "ar": "هندسة البيانات",
+            "en": "Data Engineering",
+            "tr": "Veri Mühendisliği"
+          }
+        },
+        {
+          "id": "visualization-bi",
+          "name": {
+            "ar": "التصور وذكاء الأعمال",
+            "en": "Visualization & BI",
+            "tr": "Görselleştirme ve İş Zekâsı"
+          }
+        },
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة",
+            "en": "Programming",
+            "tr": "Programlama"
+          }
+        },
+        {
+          "id": "math-statistics",
+          "name": {
+            "ar": "الرياضيات والإحصاء",
+            "en": "Math & Statistics",
+            "tr": "Matematik ve İstatistik"
+          }
+        },
+        {
+          "id": "finance",
+          "name": {
+            "ar": "التمويل",
+            "en": "Finance",
+            "tr": "Finans"
+          }
+        },
+        {
+          "id": "cloud-mlops",
+          "name": {
+            "ar": "السحابة وMLOps",
+            "en": "Cloud & MLOps",
+            "tr": "Bulut ve MLOps"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "data-analyst",
+          "officialName": "Data Analyst Career Track",
+          "name": {
+            "ar": "المسار المهني لمحلل البيانات",
+            "en": "Data Analyst Career Track",
+            "tr": "Veri Analisti Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://365datascience.com/career-tracks/data-analyst/",
+          "fieldIds": [
+            "data-analysis",
+            "visualization-bi",
+            "programming"
+          ],
+          "featured": false
+        },
+        {
+          "id": "data-scientist",
+          "officialName": "Data Scientist Career Track",
+          "name": {
+            "ar": "المسار المهني لعالم البيانات",
+            "en": "Data Scientist Career Track",
+            "tr": "Veri Bilimci Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://365datascience.com/career-tracks/data-scientist/",
+          "fieldIds": [
+            "data-science",
+            "machine-learning-ai",
+            "math-statistics"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-engineer",
+          "officialName": "AI Engineer Career Track",
+          "name": {
+            "ar": "المسار المهني لمهندس الذكاء الاصطناعي",
+            "en": "AI Engineer Career Track",
+            "tr": "Yapay Zekâ Mühendisi Kariyer Yolu"
+          },
+          "type": "career-path",
+          "officialUrl": "https://365datascience.com/career-tracks/ai-engineer/",
+          "fieldIds": [
+            "machine-learning-ai",
+            "programming",
+            "cloud-mlops"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://365datascience.com/courses/",
+        "pathsSourceUrl": "https://365datascience.com/career-tracks/",
+        "allPathsUrl": "https://365datascience.com/career-tracks/"
+      }
     },
     {
       "languageIds": [
@@ -7317,7 +8886,55 @@
         "tr": "Programlama, veri, bulut, yapay zeka ve iş alanlarında binlerce kitap, kurs, video ve canlı etkinliği ücretli abonelikle bir araya getiren profesyonel teknoloji kütüphanesi."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "data-ai",
+          "name": {
+            "ar": "البيانات والذكاء الاصطناعي",
+            "en": "Data & AI",
+            "tr": "Veri ve Yapay Zekâ"
+          }
+        },
+        {
+          "id": "cloud-infrastructure",
+          "name": {
+            "ar": "السحابة والبنية التحتية",
+            "en": "Cloud & Infrastructure",
+            "tr": "Bulut ve Altyapı"
+          }
+        },
+        {
+          "id": "security",
+          "name": {
+            "ar": "الأمن",
+            "en": "Security",
+            "tr": "Güvenlik"
+          }
+        },
+        {
+          "id": "business-technology",
+          "name": {
+            "ar": "الأعمال والتقنية",
+            "en": "Business & Technology",
+            "tr": "İşletme ve Teknoloji"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.oreilly.com/online-learning/",
+        "pathsSourceUrl": "https://learning.oreilly.com/"
+      }
     },
     {
       "languageIds": [
@@ -7371,7 +8988,109 @@
         "tr": "Yapay zeka, programlama, veri, bulut ve otonom sistemlerde ücretsiz kurslar ve proje tabanlı ücretli Nanodegree programları sunan teknoloji platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "programming",
+          "name": {
+            "ar": "البرمجة والتطوير",
+            "en": "Programming & Development",
+            "tr": "Programlama ve Geliştirme"
+          }
+        },
+        {
+          "id": "cloud",
+          "name": {
+            "ar": "الحوسبة السحابية",
+            "en": "Cloud Computing",
+            "tr": "Bulut Bilişim"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "business",
+          "name": {
+            "ar": "الأعمال والمنتجات",
+            "en": "Business & Product",
+            "tr": "İşletme ve Ürün"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "intro-cybersecurity",
+          "officialName": "Introduction to Cybersecurity Nanodegree",
+          "name": {
+            "ar": "Nanodegree مقدمة إلى الأمن السيبراني",
+            "en": "Introduction to Cybersecurity Nanodegree",
+            "tr": "Siber Güvenliğe Giriş Nanodegree"
+          },
+          "type": "professional-program",
+          "officialUrl": "https://www.udacity.com/course/intro-to-cybersecurity-nanodegree--nd545",
+          "fieldIds": [
+            "cybersecurity"
+          ],
+          "featured": false
+        },
+        {
+          "id": "security-analyst",
+          "officialName": "Security Analyst Nanodegree",
+          "name": {
+            "ar": "Nanodegree محلل الأمن",
+            "en": "Security Analyst Nanodegree",
+            "tr": "Güvenlik Analisti Nanodegree"
+          },
+          "type": "professional-program",
+          "officialUrl": "https://www.udacity.com/course/security-analyst-nanodegree--nd324",
+          "fieldIds": [
+            "cybersecurity"
+          ],
+          "featured": false
+        },
+        {
+          "id": "security-engineer",
+          "officialName": "Security Engineer Nanodegree",
+          "name": {
+            "ar": "Nanodegree مهندس الأمن",
+            "en": "Security Engineer Nanodegree",
+            "tr": "Güvenlik Mühendisi Nanodegree"
+          },
+          "type": "professional-program",
+          "officialUrl": "https://www.udacity.com/course/security-engineer-nanodegree--nd698",
+          "fieldIds": [
+            "cybersecurity"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.udacity.com/courses/all",
+        "pathsSourceUrl": "https://www.udacity.com/courses/all"
+      }
     },
     {
       "languageIds": [
@@ -7425,7 +9144,88 @@
         "tr": "JetBrains’in Python, Java, Kotlin, SQL ve daha fazlasını gerçek uygulamalar geliştirerek öğreten proje tabanlı platformu; yapılandırılmış yollar ve sertifikalar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "python",
+          "name": {
+            "ar": "Python",
+            "en": "Python",
+            "tr": "Python"
+          }
+        },
+        {
+          "id": "java",
+          "name": {
+            "ar": "Java",
+            "en": "Java",
+            "tr": "Java"
+          }
+        },
+        {
+          "id": "kotlin",
+          "name": {
+            "ar": "Kotlin",
+            "en": "Kotlin",
+            "tr": "Kotlin"
+          }
+        },
+        {
+          "id": "frontend",
+          "name": {
+            "ar": "تطوير الواجهة الأمامية",
+            "en": "Frontend Development",
+            "tr": "Frontend Geliştirme"
+          }
+        },
+        {
+          "id": "backend",
+          "name": {
+            "ar": "تطوير الواجهة الخلفية",
+            "en": "Backend Development",
+            "tr": "Backend Geliştirme"
+          }
+        },
+        {
+          "id": "data-science",
+          "name": {
+            "ar": "علم البيانات",
+            "en": "Data Science",
+            "tr": "Veri Bilimi"
+          }
+        },
+        {
+          "id": "math-bioinformatics",
+          "name": {
+            "ar": "الرياضيات والمعلوماتية الحيوية",
+            "en": "Math & Bioinformatics",
+            "tr": "Matematik ve Biyoinformatik"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "python-developer",
+          "officialName": "Python Developer",
+          "name": {
+            "ar": "مطور Python",
+            "en": "Python Developer",
+            "tr": "Python Geliştirici"
+          },
+          "type": "career-path",
+          "officialUrl": "https://go.hyperskill.org/python-developer",
+          "fieldIds": [
+            "python",
+            "backend"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://hyperskill.org/tracks",
+        "pathsSourceUrl": "https://go.hyperskill.org/python-developer"
+      }
     },
     {
       "languageIds": [
@@ -7479,7 +9279,79 @@
         "tr": "Linux, Kubernetes, cloud native, DevOps, güvenlik ve açık kaynak alanlarında ücretsiz ve ücretli kurslar ile profesyonel sertifikalar sunan Linux Foundation eğitim platformu."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "cloud-containers",
+          "name": {
+            "ar": "السحابة والحاويات",
+            "en": "Cloud & Containers",
+            "tr": "Bulut ve Konteynerler"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "devops-sre",
+          "name": {
+            "ar": "DevOps وSRE",
+            "en": "DevOps & Site Reliability",
+            "tr": "DevOps ve Site Güvenilirliği"
+          }
+        },
+        {
+          "id": "system-administration",
+          "name": {
+            "ar": "إدارة الأنظمة",
+            "en": "System Administration",
+            "tr": "Sistem Yönetimi"
+          }
+        },
+        {
+          "id": "open-source",
+          "name": {
+            "ar": "تطوير المصادر المفتوحة",
+            "en": "Open Source Development",
+            "tr": "Açık Kaynak Geliştirme"
+          }
+        },
+        {
+          "id": "linux-kernel",
+          "name": {
+            "ar": "نواة Linux",
+            "en": "Linux Kernel Development",
+            "tr": "Linux Çekirdek Geliştirme"
+          }
+        },
+        {
+          "id": "web-app-development",
+          "name": {
+            "ar": "تطوير الويب والتطبيقات",
+            "en": "Web & Application Development",
+            "tr": "Web ve Uygulama Geliştirme"
+          }
+        },
+        {
+          "id": "ai-ml",
+          "name": {
+            "ar": "الذكاء الاصطناعي وتعلم الآلة",
+            "en": "AI & ML",
+            "tr": "Yapay Zekâ ve Makine Öğrenmesi"
+          }
+        }
+      ],
+      "officialPaths": [],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://training.linuxfoundation.org/full-catalog/",
+        "pathsSourceUrl": "https://training.linuxfoundation.org/full-catalog/"
+      }
     },
     {
       "languageIds": [
