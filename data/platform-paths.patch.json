@@ -1,0 +1,72 @@
+{
+  "siteTextPlatform": {
+    "fields": {
+      "ar": "المجالات",
+      "en": "Fields & Subject Areas",
+      "tr": "Alanlar ve Konular"
+    },
+    "officialPaths": {
+      "ar": "المسارات الرسمية",
+      "en": "Official Learning Paths",
+      "tr": "Resmî Öğrenme Yolları"
+    },
+    "viewOfficialPath": {
+      "ar": "عرض المسار الرسمي",
+      "en": "View official path",
+      "tr": "Resmî yolu görüntüle"
+    },
+    "viewAllOfficialPaths": {
+      "ar": "عرض جميع المسارات الرسمية",
+      "en": "View all official paths",
+      "tr": "Tüm resmî yolları görüntüle"
+    },
+    "pathTypes": {
+      "learning-path": {
+        "ar": "مسار تعليمي",
+        "en": "Learning path",
+        "tr": "Öğrenme yolu"
+      },
+      "career-path": {
+        "ar": "مسار مهني",
+        "en": "Career path",
+        "tr": "Kariyer yolu"
+      },
+      "skill-path": {
+        "ar": "مسار مهارة",
+        "en": "Skill path",
+        "tr": "Beceri yolu"
+      },
+      "professional-certificate": {
+        "ar": "شهادة مهنية",
+        "en": "Professional certificate",
+        "tr": "Profesyonel sertifika"
+      },
+      "professional-program": {
+        "ar": "برنامج مهني",
+        "en": "Professional program",
+        "tr": "Profesyonel program"
+      },
+      "specialization": {
+        "ar": "تخصص",
+        "en": "Specialization",
+        "tr": "Uzmanlık"
+      },
+      "role-path": {
+        "ar": "مسار وظيفي",
+        "en": "Role-based path",
+        "tr": "Rol tabanlı yol"
+      },
+      "structured-series": {
+        "ar": "سلسلة منظمة",
+        "en": "Structured series",
+        "tr": "Yapılandırılmış seri"
+      },
+      "other-official-path": {
+        "ar": "مسار رسمي",
+        "en": "Official path",
+        "tr": "Resmî yol"
+      }
+    }
+  },
+  "platforms": []
+}
