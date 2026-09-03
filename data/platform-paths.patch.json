@@ -1,10 +1,10 @@
 {
   "siteTextPlatform": {
-    "fields": {"ar":"المجالات","en":"Fields & Subject Areas","tr":"Alanlar ve Konular"},
-    "officialPaths": {"ar":"المسارات الرسمية","en":"Official Learning Paths","tr":"Resmî Öğrenme Yolları"},
-    "viewOfficialPath": {"ar":"عرض المسار الرسمي","en":"View official path","tr":"Resmî yolu görüntüle"},
-    "viewAllOfficialPaths": {"ar":"عرض جميع المسارات الرسمية","en":"View all official paths","tr":"Tüm resmî yolları görüntüle"},
-    "pathTypes": {
+    "fields":{"ar":"المجالات","en":"Fields & Subject Areas","tr":"Alanlar ve Konular"},
+    "officialPaths":{"ar":"المسارات الرسمية","en":"Official Learning Paths","tr":"Resmî Öğrenme Yolları"},
+    "viewOfficialPath":{"ar":"عرض المسار الرسمي","en":"View official path","tr":"Resmî yolu görüntüle"},
+    "viewAllOfficialPaths":{"ar":"عرض جميع المسارات الرسمية","en":"View all official paths","tr":"Tüm resmî yolları görüntüle"},
+    "pathTypes":{
       "learning-path":{"ar":"مسار تعليمي","en":"Learning path","tr":"Öğrenme yolu"},
       "career-path":{"ar":"مسار مهني","en":"Career path","tr":"Kariyer yolu"},
       "skill-path":{"ar":"مسار مهارة","en":"Skill path","tr":"Beceri yolu"},
@@ -16,94 +16,299 @@
       "other-official-path":{"ar":"مسار رسمي","en":"Official path","tr":"Resmî yol"}
     }
   },
-  "platforms": [
+  "platforms":[
     {
-      "id":"plat-1",
+      "id":"plat-4",
       "fields":[
-        {"id":"business-management","name":{"ar":"الأعمال والإدارة","en":"Business & Management","tr":"İşletme ve Yönetim"},"officialUrl":"https://www.futurelearn.com/subjects/business-and-management-courses"},
-        {"id":"creative-arts-media","name":{"ar":"الفنون الإبداعية والإعلام","en":"Creative Arts & Media","tr":"Yaratıcı Sanatlar ve Medya"},"officialUrl":"https://www.futurelearn.com/subjects/creative-arts-and-media-courses"},
-        {"id":"healthcare-medicine","name":{"ar":"الرعاية الصحية والطب","en":"Healthcare & Medicine","tr":"Sağlık ve Tıp"},"officialUrl":"https://www.futurelearn.com/subjects/healthcare-medicine-courses"},
-        {"id":"history","name":{"ar":"التاريخ","en":"History","tr":"Tarih"},"officialUrl":"https://www.futurelearn.com/subjects/history-courses"},
-        {"id":"it-computer-science","name":{"ar":"تقنية المعلومات وعلوم الحاسوب","en":"IT & Computer Science","tr":"BT ve Bilgisayar Bilimleri"},"officialUrl":"https://www.futurelearn.com/subjects/it-and-computer-science-courses"},
-        {"id":"language","name":{"ar":"اللغات","en":"Language","tr":"Dil"},"officialUrl":"https://www.futurelearn.com/subjects/language-courses"},
-        {"id":"law","name":{"ar":"القانون","en":"Law","tr":"Hukuk"},"officialUrl":"https://www.futurelearn.com/subjects/law-courses"},
-        {"id":"literature","name":{"ar":"الأدب","en":"Literature","tr":"Edebiyat"},"officialUrl":"https://www.futurelearn.com/subjects/literature-courses"},
-        {"id":"nature-environment","name":{"ar":"الطبيعة والبيئة","en":"Nature & Environment","tr":"Doğa ve Çevre"},"officialUrl":"https://www.futurelearn.com/subjects/nature-and-environment-courses"},
-        {"id":"politics-society","name":{"ar":"السياسة والمجتمع","en":"Politics & Society","tr":"Siyaset ve Toplum"},"officialUrl":"https://www.futurelearn.com/subjects/politics-and-society-courses"},
-        {"id":"psychology-mental-health","name":{"ar":"علم النفس والصحة النفسية","en":"Psychology & Mental Health","tr":"Psikoloji ve Ruh Sağlığı"},"officialUrl":"https://www.futurelearn.com/subjects/psychology-and-mental-health-courses"},
-        {"id":"science-engineering-maths","name":{"ar":"العلوم والهندسة والرياضيات","en":"Science, Engineering & Maths","tr":"Fen, Mühendislik ve Matematik"},"officialUrl":"https://www.futurelearn.com/subjects/science-engineering-and-maths-courses"},
-        {"id":"study-skills","name":{"ar":"مهارات الدراسة","en":"Study Skills","tr":"Çalışma Becerileri"},"officialUrl":"https://www.futurelearn.com/subjects/study-skills-courses"},
-        {"id":"teaching","name":{"ar":"التدريس","en":"Teaching","tr":"Öğretim"},"officialUrl":"https://www.futurelearn.com/subjects/teaching-courses"}
-      ],
-      "officialPaths":[
-        {"id":"advanced-applied-ai-azure","officialName":"Advanced and Applied AI on Microsoft Azure","name":{"ar":"الذكاء الاصطناعي المتقدم والتطبيقي على Microsoft Azure","en":"Advanced and Applied AI on Microsoft Azure","tr":"Microsoft Azure'da İleri ve Uygulamalı Yapay Zekâ"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/applied-ai-on-microsoft","fieldIds":["it-computer-science"],"featured":false},
-        {"id":"advanced-cyber-defence-offensive-security","officialName":"Advanced Cyber Defence & Offensive Security","name":{"ar":"الدفاع السيبراني المتقدم والأمن الهجومي","en":"Advanced Cyber Defence & Offensive Security","tr":"İleri Siber Savunma ve Ofansif Güvenlik"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/advanced-cyber-defense-and-offensive-security","fieldIds":["it-computer-science"],"featured":false},
-        {"id":"agentic-ai","officialName":"Agentic AI","name":{"ar":"الذكاء الاصطناعي الوكيلي","en":"Agentic AI","tr":"Ajan Tabanlı Yapay Zekâ"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/agentic-ai-experttrack-pathway","fieldIds":["it-computer-science"],"featured":false},
-        {"id":"ai-data-engineering","officialName":"AI and Data Engineering","name":{"ar":"الذكاء الاصطناعي وهندسة البيانات","en":"AI and Data Engineering","tr":"Yapay Zekâ ve Veri Mühendisliği"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/ai-and-data-engineering","fieldIds":["it-computer-science"],"featured":false},
-        {"id":"ai-healthcare","officialName":"AI Applications in Healthcare","name":{"ar":"تطبيقات الذكاء الاصطناعي في الرعاية الصحية","en":"AI Applications in Healthcare","tr":"Sağlık Hizmetlerinde Yapay Zekâ Uygulamaları"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/ai-applications-in-healthcare","fieldIds":["it-computer-science","healthcare-medicine"],"featured":false},
-        {"id":"ai-design-engineering-azure","officialName":"AI Design and Engineering with Microsoft Azure","name":{"ar":"تصميم وهندسة الذكاء الاصطناعي باستخدام Microsoft Azure","en":"AI Design and Engineering with Microsoft Azure","tr":"Microsoft Azure ile Yapay Zekâ Tasarımı ve Mühendisliği"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/ai-engineer-with-microsoft-azure","fieldIds":["it-computer-science"],"featured":false},
-        {"id":"ai-executive-leadership","officialName":"AI Executive Leadership","name":{"ar":"القيادة التنفيذية في الذكاء الاصطناعي","en":"AI Executive Leadership","tr":"Yapay Zekâ Üst Düzey Liderliği"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/ai-executive-leadership","fieldIds":["business-management","it-computer-science"],"featured":false},
-        {"id":"ai-business-strategy-innovation","officialName":"AI for Business Strategy & Innovation","name":{"ar":"الذكاء الاصطناعي لاستراتيجية الأعمال والابتكار","en":"AI for Business Strategy & Innovation","tr":"İş Stratejisi ve İnovasyon için Yapay Zekâ"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/ai-for-business-strategy-and-innovation","fieldIds":["business-management","it-computer-science"],"featured":false},
-        {"id":"applied-data-analysis","officialName":"Applied Data Analysis","name":{"ar":"تحليل البيانات التطبيقي","en":"Applied Data Analysis","tr":"Uygulamalı Veri Analizi"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/applied-data-analysis","fieldIds":["it-computer-science","business-management"],"featured":false},
-        {"id":"autism-knowledge-experiences","officialName":"Autism: Developing Knowledge of Autistic Experiences","name":{"ar":"التوحد: تطوير المعرفة بتجارب الأشخاص المصابين بالتوحد","en":"Autism: Developing Knowledge of Autistic Experiences","tr":"Otizm: Otistik Deneyimler Hakkında Bilgi Geliştirme"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/autism-developing-knowledge-of-autistic-experiences","fieldIds":["psychology-mental-health"],"featured":false},
-        {"id":"successful-baker-bbc-good-food","officialName":"Become a Successful Baker with BBC Good Food","name":{"ar":"كن خبازًا ناجحًا مع BBC Good Food","en":"Become a Successful Baker with BBC Good Food","tr":"BBC Good Food ile Başarılı Bir Fırıncı Olun"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/become-successful-baker-bbc-good-food","fieldIds":["creative-arts-media"],"featured":false},
-        {"id":"behavioural-science-organisational-performance","officialName":"Behavioural Science for Organisational Performance","name":{"ar":"العلوم السلوكية للأداء المؤسسي","en":"Behavioural Science for Organisational Performance","tr":"Kurumsal Performans için Davranış Bilimi"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/behavioural-science","fieldIds":["psychology-mental-health","business-management"],"featured":false},
-        {"id":"behavioural-science-influencing-decisions","officialName":"Behavioural Science: Influencing Behaviour and Designing Decisions","name":{"ar":"العلوم السلوكية: التأثير في السلوك وتصميم القرارات","en":"Behavioural Science: Influencing Behaviour and Designing Decisions","tr":"Davranış Bilimi: Davranışı Etkileme ve Karar Tasarlama"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/behavioural-science-influencing-behaviour-and-designing-decisions","fieldIds":["psychology-mental-health","business-management"],"featured":false},
-        {"id":"blended-learning-vocational","officialName":"Blended Learning Essentials for Vocational Education and Training","name":{"ar":"أساسيات التعلم المدمج للتعليم والتدريب المهني","en":"Blended Learning Essentials for Vocational Education and Training","tr":"Mesleki Eğitim için Harmanlanmış Öğrenme Temelleri"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/blended-learning","fieldIds":["teaching"],"featured":false},
-        {"id":"business-analysis-professional","officialName":"Business Analysis Professional","name":{"ar":"محترف تحليل الأعمال","en":"Business Analysis Professional","tr":"İş Analizi Uzmanı"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/business-analysis-professional","fieldIds":["business-management"],"featured":false},
-        {"id":"career-confidence-employability","officialName":"Career Confidence and Employability Pathways","name":{"ar":"مسارات الثقة المهنية وقابلية التوظيف","en":"Career Confidence and Employability Pathways","tr":"Kariyer Güveni ve İstihdam Edilebilirlik Yolları"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/career-confidence-and-employability-pathways","fieldIds":["business-management","study-skills"],"featured":false},
-        {"id":"contemporary-chinese-i","officialName":"Contemporary Chinese I","name":{"ar":"الصينية المعاصرة 1","en":"Contemporary Chinese I","tr":"Çağdaş Çince I"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/contemporary-chinese-i","fieldIds":["language"],"featured":false},
-        {"id":"contemporary-chinese-ii","officialName":"Contemporary Chinese II","name":{"ar":"الصينية المعاصرة 2","en":"Contemporary Chinese II","tr":"Çağdaş Çince II"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/contemporary-chinese-ii","fieldIds":["language"],"featured":false},
-        {"id":"contemporary-chinese-iii","officialName":"Contemporary Chinese III","name":{"ar":"الصينية المعاصرة 3","en":"Contemporary Chinese III","tr":"Çağdaş Çince III"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/contemporary-chinese-iii","fieldIds":["language"],"featured":false},
-        {"id":"contemporary-chinese-iv","officialName":"Contemporary Chinese IV","name":{"ar":"الصينية المعاصرة 4","en":"Contemporary Chinese IV","tr":"Çağdaş Çince IV"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/contemporary-chinese-iv","fieldIds":["language"],"featured":false},
-        {"id":"core-cyber-defence-intelligence","officialName":"Core Cyber Defence & Intelligence Operations","name":{"ar":"عمليات الدفاع السيبراني والاستخبارات الأساسية","en":"Core Cyber Defence & Intelligence Operations","tr":"Temel Siber Savunma ve İstihbarat Operasyonları"},"type":"structured-series","officialUrl":"https://www.futurelearn.com/experttracks/core-cyber-defense-and-intelligence-operations","fieldIds":["it-computer-science"],"featured":false}
-      ],
-      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.futurelearn.com/subjects","pathsSourceUrl":"https://www.futurelearn.com/experttracks","allPathsUrl":"https://www.futurelearn.com/experttracks"}
-    },
-    {
-      "id":"plat-2",
-      "fields":[
-        {"id":"focus-areas","name":{"ar":"مجالات التركيز","en":"Focus Areas","tr":"Odak Alanları"}},
-        {"id":"strategies","name":{"ar":"الاستراتيجيات","en":"Strategies","tr":"Stratejiler"}},
-        {"id":"leading-managing","name":{"ar":"القيادة والإدارة","en":"Leading & Managing","tr":"Liderlik ve Yönetim"}},
-        {"id":"operational-support","name":{"ar":"الدعم التشغيلي","en":"Operational Support","tr":"Operasyonel Destek"}},
-        {"id":"communication-languages","name":{"ar":"التواصل واللغات","en":"Communication & Languages","tr":"İletişim ve Diller"}},
-        {"id":"career-support","name":{"ar":"الدعم المهني","en":"Career Support","tr":"Kariyer Desteği"}}
-      ],
-      "officialPaths":[
-        {"id":"systems-strengthening","officialName":"Systems Strengthening","name":{"ar":"تعزيز الأنظمة","en":"Systems Strengthening","tr":"Sistemlerin Güçlendirilmesi"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41047","fieldIds":["strategies"],"featured":false},
-        {"id":"violence-girls-boys-women","officialName":"Violence against girls, boys and women","name":{"ar":"العنف ضد الفتيات والفتيان والنساء","en":"Violence against girls, boys and women","tr":"Kız Çocuklarına, Erkek Çocuklarına ve Kadınlara Yönelik Şiddet"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=49766","fieldIds":["focus-areas"],"featured":false},
-        {"id":"sbc-research","officialName":"SBC Research","name":{"ar":"البحث في التغيير الاجتماعي والسلوكي","en":"SBC Research","tr":"Sosyal ve Davranışsal Değişim Araştırması"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41050","fieldIds":["strategies"],"featured":false},
-        {"id":"sbc-intro","officialName":"SBC Intro","name":{"ar":"مقدمة في التغيير الاجتماعي والسلوكي","en":"SBC Intro","tr":"Sosyal ve Davranışsal Değişime Giriş"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=40959","fieldIds":["strategies"],"featured":false},
-        {"id":"sbc-basics","officialName":"SBC Basics","name":{"ar":"أساسيات التغيير الاجتماعي والسلوكي","en":"SBC Basics","tr":"Sosyal ve Davranışsal Değişim Temelleri"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41002","fieldIds":["strategies"],"featured":false},
-        {"id":"sbc-humanitarian-events","officialName":"SBC and Humanitarian Events","name":{"ar":"التغيير الاجتماعي والسلوكي والأحداث الإنسانية","en":"SBC and Humanitarian Events","tr":"Sosyal ve Davranışsal Değişim ve İnsani Olaylar"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41048","fieldIds":["strategies","focus-areas"],"featured":false},
-        {"id":"humanitarian-action-level-2","officialName":"UNICEF Fundamentals of Humanitarian Action: Level 2","name":{"ar":"أساسيات العمل الإنساني في اليونيسف: المستوى الثاني","en":"UNICEF Fundamentals of Humanitarian Action: Level 2","tr":"UNICEF İnsani Yardım Temelleri: Seviye 2"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=46782","fieldIds":["focus-areas"],"featured":false},
-        {"id":"gender","officialName":"Gender","name":{"ar":"النوع الاجتماعي","en":"Gender","tr":"Toplumsal Cinsiyet"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=45091","fieldIds":["strategies"],"featured":false},
-        {"id":"sbc-advanced","officialName":"SBC Advanced","name":{"ar":"التغيير الاجتماعي والسلوكي المتقدم","en":"SBC Advanced","tr":"İleri Sosyal ve Davranışsal Değişim"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41003","fieldIds":["strategies"],"featured":false},
-        {"id":"immunization-basics","officialName":"Immunization Basics","name":{"ar":"أساسيات التحصين","en":"Immunization Basics","tr":"Bağışıklama Temelleri"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41049","fieldIds":["focus-areas","strategies"],"featured":false},
-        {"id":"social-norms","officialName":"Social Norms","name":{"ar":"الأعراف الاجتماعية","en":"Social Norms","tr":"Sosyal Normlar"},"type":"learning-path","officialUrl":"https://agora.unicef.org/course/info.php?id=41042","fieldIds":["strategies"],"featured":false}
-      ],
-      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://agora.unicef.org/mod/page/view.php?id=36648&lang=en","pathsSourceUrl":"https://agora.unicef.org/local/catalogue/"}
-    },
-    {
-      "id":"plat-3",
-      "fields":[
-        {"id":"artificial-intelligence","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
-        {"id":"business-professional-skills","name":{"ar":"مهارات الأعمال والمهارات المهنية","en":"Business & Professional Skills","tr":"İş ve Profesyonel Beceriler"}},
-        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}},
+        {"id":"software-engineering","name":{"ar":"هندسة البرمجيات وتقنية المعلومات","en":"Software Engineering & IT","tr":"Yazılım Mühendisliği ve BT"}},
         {"id":"data-analytics","name":{"ar":"البيانات والتحليلات","en":"Data & Analytics","tr":"Veri ve Analitik"}},
-        {"id":"design","name":{"ar":"التصميم","en":"Design","tr":"Tasarım"}},
-        {"id":"it-cloud","name":{"ar":"تقنية المعلومات والحوسبة السحابية","en":"IT & Cloud","tr":"BT ve Bulut"}},
-        {"id":"software-development","name":{"ar":"تطوير البرمجيات","en":"Software Development","tr":"Yazılım Geliştirme"}},
-        {"id":"education","name":{"ar":"التعليم","en":"Education","tr":"Eğitim"}},
-        {"id":"healthcare","name":{"ar":"الرعاية الصحية","en":"Healthcare","tr":"Sağlık"}},
+        {"id":"security","name":{"ar":"الأمن السيبراني","en":"Security","tr":"Siber Güvenlik"}},
+        {"id":"banking-finance","name":{"ar":"البنوك والتمويل","en":"Banking & Finance","tr":"Bankacılık ve Finans"}},
+        {"id":"accounting-advisory","name":{"ar":"المحاسبة والاستشارات","en":"Accounting & Advisory","tr":"Muhasebe ve Danışmanlık"}},
         {"id":"marketing","name":{"ar":"التسويق","en":"Marketing","tr":"Pazarlama"}},
-        {"id":"sports-entertainment","name":{"ar":"الرياضة والترفيه","en":"Sports & Entertainment","tr":"Spor ve Eğlence"}}
+        {"id":"human-resources","name":{"ar":"الموارد البشرية والتوظيف","en":"Human Resources & Recruiting","tr":"İnsan Kaynakları ve İşe Alım"}},
+        {"id":"career-development","name":{"ar":"التطوير المهني ومهارات المقابلات","en":"Career Development & Interview Skills","tr":"Kariyer Gelişimi ve Mülakat Becerileri"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.theforage.com/simulations","pathsSourceUrl":"https://www.theforage.com/simulations"}
+    },
+    {
+      "id":"plat-5",
+      "fields":[
+        {"id":"application-development","name":{"ar":"تطوير التطبيقات","en":"Application Development","tr":"Uygulama Geliştirme"}},
+        {"id":"artificial-intelligence","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
+        {"id":"data-management","name":{"ar":"إدارة البيانات والتحليلات","en":"Data Management & Analytics","tr":"Veri Yönetimi ve Analitik"}},
+        {"id":"security","name":{"ar":"الأمن","en":"Security","tr":"Güvenlik"}},
+        {"id":"technical-infrastructure","name":{"ar":"البنية التحتية التقنية والسحابة","en":"Technical Infrastructure & Cloud","tr":"Teknik Altyapı ve Bulut"}},
+        {"id":"business-applications","name":{"ar":"تطبيقات الأعمال","en":"Business Applications","tr":"İş Uygulamaları"}}
       ],
       "officialPaths":[
-        {"id":"data-analytics-fluency","officialName":"Data Analytics Fluency Pathway","name":{"ar":"مسار إتقان تحليلات البيانات","en":"Data Analytics Fluency Pathway","tr":"Veri Analitiği Yetkinlik Yolu"},"type":"skill-path","officialUrl":"https://skillsbuild.org/college-students/data-science","fieldIds":["data-analytics"],"featured":false}
+        {"id":"developer","officialName":"Developer","name":{"ar":"مسار المطور","en":"Developer","tr":"Geliştirici"},"type":"career-path","officialUrl":"https://learn.microsoft.com/en-us/training/career-paths/developer","fieldIds":["application-development"],"featured":false},
+        {"id":"ai-engineer","officialName":"AI Engineer","name":{"ar":"مهندس الذكاء الاصطناعي","en":"AI Engineer","tr":"Yapay Zekâ Mühendisi"},"type":"career-path","officialUrl":"https://learn.microsoft.com/en-us/training/career-paths/ai-engineer","fieldIds":["artificial-intelligence"],"featured":false},
+        {"id":"data-analyst","officialName":"Data Analyst","name":{"ar":"محلل البيانات","en":"Data Analyst","tr":"Veri Analisti"},"type":"career-path","officialUrl":"https://learn.microsoft.com/en-us/training/career-paths/data-analyst","fieldIds":["data-management"],"featured":false},
+        {"id":"data-scientist","officialName":"Data Scientist","name":{"ar":"عالم البيانات","en":"Data Scientist","tr":"Veri Bilimci"},"type":"career-path","officialUrl":"https://learn.microsoft.com/en-us/training/career-paths/data-scientist","fieldIds":["data-management","artificial-intelligence"],"featured":false},
+        {"id":"security-engineer","officialName":"Security Engineer","name":{"ar":"مهندس الأمن","en":"Security Engineer","tr":"Güvenlik Mühendisi"},"type":"career-path","officialUrl":"https://learn.microsoft.com/en-us/training/career-paths/security-engineer","fieldIds":["security"],"featured":false},
+        {"id":"solution-architect","officialName":"Solutions Architect","name":{"ar":"مهندس الحلول","en":"Solutions Architect","tr":"Çözüm Mimarı"},"type":"career-path","officialUrl":"https://learn.microsoft.com/en-us/training/career-paths/solution-architect","fieldIds":["technical-infrastructure","business-applications"],"featured":false}
       ],
-      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://skillsbuild.org/learning-catalog","pathsSourceUrl":"https://skillsbuild.org/college-students/data-science"}
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://learn.microsoft.com/en-us/training/browse/","pathsSourceUrl":"https://learn.microsoft.com/en-us/training/career-paths/"}
+    },
+    {
+      "id":"plat-6",
+      "fields":[
+        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}},
+        {"id":"digital-transformation","name":{"ar":"التحول الرقمي","en":"Digital Transformation","tr":"Dijital Dönüşüm"}},
+        {"id":"digital-inclusion","name":{"ar":"الشمول الرقمي","en":"Digital Inclusion","tr":"Dijital Kapsayıcılık"}},
+        {"id":"artificial-intelligence","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
+        {"id":"broadband","name":{"ar":"النطاق العريض السلكي واللاسلكي","en":"Wireless & Fixed Broadband","tr":"Kablosuz ve Sabit Geniş Bant"}},
+        {"id":"e-government","name":{"ar":"الحكومة الإلكترونية","en":"E-Government","tr":"E-Devlet"}},
+        {"id":"ict-regulation","name":{"ar":"تنظيم الاتصالات وتقنية المعلومات","en":"ICT/Telecom Regulation","tr":"BT ve Telekom Düzenlemeleri"}},
+        {"id":"big-data-statistics","name":{"ar":"البيانات الضخمة والإحصاء","en":"Big Data & Statistics","tr":"Büyük Veri ve İstatistik"}},
+        {"id":"satellite-communications","name":{"ar":"اتصالات الأقمار الصناعية","en":"Satellite Communications","tr":"Uydu Haberleşmesi"}},
+        {"id":"spectrum-management","name":{"ar":"إدارة الطيف الترددي","en":"Spectrum Management","tr":"Spektrum Yönetimi"}},
+        {"id":"ict-environment","name":{"ar":"تقنية المعلومات والبيئة والمناخ","en":"ICT, Environment & Climate","tr":"BT, Çevre ve İklim"}},
+        {"id":"internet-of-things","name":{"ar":"إنترنت الأشياء","en":"Internet of Things","tr":"Nesnelerin İnterneti"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://academy.itu.int/training-courses/full-catalogue","pathsSourceUrl":"https://academy.itu.int/training-courses/full-catalogue"}
+    },
+    {
+      "id":"plat-7",
+      "fields":[
+        {"id":"computer-science","name":{"ar":"علوم الحاسوب","en":"Computer Science","tr":"Bilgisayar Bilimleri"}},
+        {"id":"data-science","name":{"ar":"علم البيانات","en":"Data Science","tr":"Veri Bilimi"}},
+        {"id":"artificial-intelligence","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
+        {"id":"business-management","name":{"ar":"الأعمال والإدارة","en":"Business & Management","tr":"İşletme ve Yönetim"}},
+        {"id":"healthcare","name":{"ar":"الرعاية الصحية","en":"Healthcare","tr":"Sağlık"}},
+        {"id":"languages","name":{"ar":"اللغات","en":"Languages","tr":"Diller"}},
+        {"id":"education","name":{"ar":"التعليم","en":"Education","tr":"Eğitim"}},
+        {"id":"engineering","name":{"ar":"الهندسة","en":"Engineering","tr":"Mühendislik"}},
+        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}}
+      ],
+      "officialPaths":[
+        {"id":"harvard-data-science","officialName":"Data Science","name":{"ar":"شهادة هارفارد المهنية في علم البيانات","en":"HarvardX Data Science Professional Certificate","tr":"HarvardX Veri Bilimi Profesyonel Sertifikası"},"type":"professional-certificate","officialUrl":"https://proxy.edx.org/certificates/professional-certificate/harvardx-data-science","fieldIds":["data-science"],"featured":false},
+        {"id":"harvard-cs-cybersecurity","officialName":"Computer Science for Cybersecurity","name":{"ar":"علوم الحاسوب للأمن السيبراني","en":"Computer Science for Cybersecurity","tr":"Siber Güvenlik için Bilgisayar Bilimleri"},"type":"professional-certificate","officialUrl":"https://proxy.edx.org/certificates/professional-certificate/harvardx-computer-science-for-cybersecurity","fieldIds":["computer-science","cybersecurity"],"featured":false},
+        {"id":"mit-statistics-data-science","officialName":"Statistics and Data Science (General Track)","name":{"ar":"الإحصاء وعلم البيانات - المسار العام","en":"Statistics and Data Science (General Track)","tr":"İstatistik ve Veri Bilimi - Genel Yol"},"type":"professional-program","officialUrl":"https://proxy.edx.org/masters/micromasters/mitx-statistics-and-data-science-general-track","fieldIds":["data-science","artificial-intelligence"],"featured":false},
+        {"id":"cambridge-healthcare-data-science","officialName":"Healthcare Data Science","name":{"ar":"علم البيانات للرعاية الصحية","en":"Healthcare Data Science","tr":"Sağlık Veri Bilimi"},"type":"professional-program","officialUrl":"https://www.edx.org/masters/micromasters/universityofcambridge-healthcare-data-science/","fieldIds":["data-science","healthcare"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.edx.org/learn","pathsSourceUrl":"https://www.edx.org/programs"}
+    },
+    {
+      "id":"plat-8",
+      "fields":[
+        {"id":"computer-science","name":{"ar":"علوم الحاسوب","en":"Computer Science","tr":"Bilgisayar Bilimleri"}},
+        {"id":"web-development","name":{"ar":"تطوير الويب","en":"Web Development","tr":"Web Geliştirme"}},
+        {"id":"data-science","name":{"ar":"علم البيانات والتحليلات","en":"Data Science & Analytics","tr":"Veri Bilimi ve Analitik"}},
+        {"id":"artificial-intelligence","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
+        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}},
+        {"id":"design-ux","name":{"ar":"التصميم وتجربة المستخدم","en":"Design & UX","tr":"Tasarım ve UX"}},
+        {"id":"programming","name":{"ar":"البرمجة","en":"Programming","tr":"Programlama"}},
+        {"id":"cloud-devops","name":{"ar":"السحابة وDevOps","en":"Cloud & DevOps","tr":"Bulut ve DevOps"}}
+      ],
+      "officialPaths":[
+        {"id":"back-end-engineer","officialName":"Back-End Engineer Career Path","name":{"ar":"مسار مهندس الواجهة الخلفية","en":"Back-End Engineer Career Path","tr":"Back-End Mühendisi Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.codecademy.com/learn/paths/back-end-engineer-career-path","fieldIds":["web-development","programming"],"featured":false},
+        {"id":"computer-science-path","officialName":"Computer Science Path","name":{"ar":"مسار علوم الحاسوب","en":"Computer Science Path","tr":"Bilgisayar Bilimleri Yolu"},"type":"career-path","officialUrl":"https://www.codecademy.com/learn/paths/computer-science","fieldIds":["computer-science","programming"],"featured":false},
+        {"id":"front-end-engineer","officialName":"Front-End Engineer Career Path","name":{"ar":"مسار مهندس الواجهة الأمامية","en":"Front-End Engineer Career Path","tr":"Front-End Mühendisi Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.codecademy.com/learn/paths/front-end-engineer-career-path","fieldIds":["web-development"],"featured":false},
+        {"id":"full-stack-engineer","officialName":"Full-Stack Engineer Career Path","name":{"ar":"مسار مهندس Full-Stack","en":"Full-Stack Engineer Career Path","tr":"Full-Stack Mühendisi Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.codecademy.com/learn/paths/full-stack-engineer-career-path","fieldIds":["web-development","programming"],"featured":false},
+        {"id":"machine-learning-ai-engineer","officialName":"Machine Learning/AI Engineer Career Path","name":{"ar":"مسار مهندس تعلم الآلة والذكاء الاصطناعي","en":"Machine Learning/AI Engineer Career Path","tr":"Makine Öğrenmesi/Yapay Zekâ Mühendisi Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.codecademy.com/learn/paths/machine-learning-engineer","fieldIds":["artificial-intelligence","data-science"],"featured":false},
+        {"id":"data-engineer","officialName":"Data Engineer Career Path","name":{"ar":"مسار مهندس البيانات","en":"Data Engineer Career Path","tr":"Veri Mühendisi Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.codecademy.com/learn/paths/data-engineer","fieldIds":["data-science"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.codecademy.com/catalog","pathsSourceUrl":"https://www.codecademy.com/catalog"}
+    },
+    {
+      "id":"plat-9",
+      "fields":[
+        {"id":"peace","name":{"ar":"السلام والأمن","en":"Peace","tr":"Barış"}},
+        {"id":"people","name":{"ar":"الناس والتنمية الاجتماعية","en":"People","tr":"İnsanlar"}},
+        {"id":"planet","name":{"ar":"الكوكب والبيئة","en":"Planet","tr":"Gezegen ve Çevre"}},
+        {"id":"prosperity","name":{"ar":"الازدهار والتنمية الاقتصادية","en":"Prosperity","tr":"Refah"}},
+        {"id":"multilateral-diplomacy","name":{"ar":"الدبلوماسية متعددة الأطراف","en":"Multilateral Diplomacy","tr":"Çok Taraflı Diplomasi"}},
+        {"id":"sdg-implementation","name":{"ar":"تسريع تنفيذ أهداف التنمية المستدامة","en":"Accelerating SDG Implementation","tr":"SKA Uygulamasını Hızlandırma"}},
+        {"id":"satellite-analysis","name":{"ar":"تحليل الأقمار الصناعية وUNOSAT","en":"Satellite Analysis & UNOSAT","tr":"Uydu Analizi ve UNOSAT"}}
+      ],
+      "officialPaths":[
+        {"id":"online-diploma-multilateral-diplomacy-2026","officialName":"Online Diploma in Multilateral Diplomacy 2026 - Edition 2","name":{"ar":"الدبلوم الإلكتروني في الدبلوماسية متعددة الأطراف 2026 - الإصدار الثاني","en":"Online Diploma in Multilateral Diplomacy 2026 - Edition 2","tr":"Çok Taraflı Diplomasi Çevrimiçi Diploması 2026 - 2. Dönem"},"type":"professional-program","officialUrl":"https://event.unitar.org/full-catalog/online-diploma-multilateral-diplomacy-2026-edition-2","fieldIds":["multilateral-diplomacy"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://unitar.org/about/unitar/organizational-chart","pathsSourceUrl":"https://unitar.org/sustainable-development-goals/all/our-portfolio"}
+    },
+    {
+      "id":"plat-10",
+      "fields":[
+        {"id":"cloud-platforms-services","name":{"ar":"الحوسبة السحابية والخدمات","en":"Cloud Platforms & Services","tr":"Bulut Platformları ve Hizmetleri"}},
+        {"id":"ai-computing","name":{"ar":"الذكاء الاصطناعي والحوسبة","en":"AI & Computing","tr":"Yapay Zekâ ve Bilişim"}},
+        {"id":"data-databases","name":{"ar":"البيانات وقواعد البيانات","en":"Data & Databases","tr":"Veri ve Veritabanları"}},
+        {"id":"networking-datacom","name":{"ar":"الشبكات واتصالات البيانات","en":"Networking & Datacom","tr":"Ağ ve Veri İletişimi"}},
+        {"id":"security","name":{"ar":"الأمن","en":"Security","tr":"Güvenlik"}},
+        {"id":"wireless-optical","name":{"ar":"الاتصالات اللاسلكية والبصرية","en":"Wireless & Optical Communications","tr":"Kablosuz ve Optik İletişim"}},
+        {"id":"project-management","name":{"ar":"إدارة المشاريع","en":"Project Management","tr":"Proje Yönetimi"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://e.huawei.com/en/talent/ict-academy/","pathsSourceUrl":"https://e.huawei.com/en/talent/cert/"}
+    },
+    {
+      "id":"plat-11",
+      "fields":[
+        {"id":"english-college-preparation","name":{"ar":"اللغة الإنجليزية والاستعداد للجامعة","en":"English & College Preparation","tr":"İngilizce ve Üniversite Hazırlığı"}},
+        {"id":"teacher-development","name":{"ar":"التطوير المهني للمعلمين","en":"Teacher Professional Development","tr":"Öğretmen Mesleki Gelişimi"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.aucegypt.edu/academics/free-english-courses","pathsSourceUrl":"https://openlearn.aucegypt.edu/"}
+    },
+    {
+      "id":"plat-12",
+      "fields":[
+        {"id":"communication","name":{"ar":"التواصل","en":"Communication","tr":"İletişim"}},
+        {"id":"digital-business-skills","name":{"ar":"مهارات الأعمال الرقمية","en":"Digital Business Skills","tr":"Dijital İş Becerileri"}},
+        {"id":"entrepreneurship","name":{"ar":"ريادة الأعمال","en":"Entrepreneurship","tr":"Girişimcilik"}},
+        {"id":"finance","name":{"ar":"التمويل","en":"Finance","tr":"Finans"}},
+        {"id":"marketing","name":{"ar":"التسويق","en":"Marketing","tr":"Pazarlama"}},
+        {"id":"professional-development","name":{"ar":"التطوير المهني","en":"Professional Development","tr":"Mesleki Gelişim"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.life-global.org/","pathsSourceUrl":"https://www.life-global.org/"}
+    },
+    {
+      "id":"plat-13",
+      "fields":[
+        {"id":"accelerated-computing","name":{"ar":"الحوسبة المسرعة","en":"Accelerated Computing","tr":"Hızlandırılmış Hesaplama"}},
+        {"id":"data-science","name":{"ar":"علم البيانات","en":"Data Science","tr":"Veri Bilimi"}},
+        {"id":"deep-learning","name":{"ar":"التعلم العميق","en":"Deep Learning","tr":"Derin Öğrenme"}},
+        {"id":"generative-ai","name":{"ar":"الذكاء الاصطناعي التوليدي والنماذج اللغوية الكبيرة","en":"Generative AI & LLMs","tr":"Üretken Yapay Zekâ ve Büyük Dil Modelleri"}},
+        {"id":"ai-infrastructure","name":{"ar":"البنية التحتية للذكاء الاصطناعي","en":"AI Infrastructure","tr":"Yapay Zekâ Altyapısı"}},
+        {"id":"ai-networking","name":{"ar":"شبكات الذكاء الاصطناعي","en":"AI Networking","tr":"Yapay Zekâ Ağları"}},
+        {"id":"robotics","name":{"ar":"الروبوتات","en":"Robotics","tr":"Robotik"}},
+        {"id":"openusd-graphics","name":{"ar":"OpenUSD والرسومات والمحاكاة","en":"OpenUSD, Graphics & Simulation","tr":"OpenUSD, Grafik ve Simülasyon"}}
+      ],
+      "officialPaths":[
+        {"id":"accelerated-computing","officialName":"Accelerated Computing","name":{"ar":"مسار الحوسبة المسرعة","en":"Accelerated Computing","tr":"Hızlandırılmış Hesaplama Yolu"},"type":"learning-path","officialUrl":"https://www.nvidia.com/en-us/learn/learning-path/accelerated-computing/","fieldIds":["accelerated-computing"],"featured":false},
+        {"id":"accelerated-data-science","officialName":"Accelerated Data Science","name":{"ar":"مسار علم البيانات المسرع","en":"Accelerated Data Science","tr":"Hızlandırılmış Veri Bilimi Yolu"},"type":"learning-path","officialUrl":"https://www.nvidia.com/en-us/learn/learning-path/accelerated-data-science/","fieldIds":["data-science"],"featured":false},
+        {"id":"deep-learning","officialName":"Deep Learning","name":{"ar":"مسار التعلم العميق","en":"Deep Learning","tr":"Derin Öğrenme Yolu"},"type":"learning-path","officialUrl":"https://www.nvidia.com/en-us/learn/learning-path/deep-learning/","fieldIds":["deep-learning"],"featured":false},
+        {"id":"generative-ai-llm","officialName":"Generative AI and LLMs","name":{"ar":"مسارات الذكاء الاصطناعي التوليدي والنماذج اللغوية الكبيرة","en":"Generative AI and LLMs","tr":"Üretken Yapay Zekâ ve Büyük Dil Modeli Yolları"},"type":"learning-path","officialUrl":"https://www.nvidia.com/en-us/learn/learning-path/generative-ai-llm/","fieldIds":["generative-ai"],"featured":false},
+        {"id":"ai-networking","officialName":"NVIDIA AI Networking Learning Path","name":{"ar":"مسار شبكات الذكاء الاصطناعي من NVIDIA","en":"NVIDIA AI Networking Learning Path","tr":"NVIDIA Yapay Zekâ Ağları Öğrenme Yolu"},"type":"learning-path","officialUrl":"https://www.nvidia.com/en-us/learn/learning-paths/ai-networking/","fieldIds":["ai-networking","ai-infrastructure"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.nvidia.com/en-us/learn/learning-paths/","pathsSourceUrl":"https://www.nvidia.com/en-us/learn/learning-paths/"}
+    },
+    {
+      "id":"plat-14",
+      "fields":[
+        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}},
+        {"id":"networking","name":{"ar":"الشبكات","en":"Networking","tr":"Ağ Teknolojileri"}},
+        {"id":"ai-data-science","name":{"ar":"الذكاء الاصطناعي وعلم البيانات","en":"AI & Data Science","tr":"Yapay Zekâ ve Veri Bilimi"}},
+        {"id":"programming","name":{"ar":"البرمجة","en":"Programming","tr":"Programlama"}},
+        {"id":"information-technology","name":{"ar":"تقنية المعلومات","en":"Information Technology","tr":"Bilgi Teknolojileri"}},
+        {"id":"digital-literacy","name":{"ar":"المهارات الرقمية","en":"Digital Literacy","tr":"Dijital Okuryazarlık"}},
+        {"id":"professional-skills","name":{"ar":"المهارات المهنية","en":"Professional Skills","tr":"Mesleki Beceriler"}},
+        {"id":"sustainability","name":{"ar":"الاستدامة","en":"Sustainability","tr":"Sürdürülebilirlik"}},
+        {"id":"packet-tracer","name":{"ar":"Cisco Packet Tracer","en":"Cisco Packet Tracer","tr":"Cisco Packet Tracer"}}
+      ],
+      "officialPaths":[
+        {"id":"junior-cybersecurity-analyst","officialName":"Junior Cybersecurity Analyst Career Path","name":{"ar":"مسار محلل الأمن السيبراني المبتدئ","en":"Junior Cybersecurity Analyst Career Path","tr":"Junior Siber Güvenlik Analisti Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.netacad.com/career-paths/cybersecurity","fieldIds":["cybersecurity"],"featured":false},
+        {"id":"network-technician","officialName":"Network Technician Career Path","name":{"ar":"مسار فني الشبكات","en":"Network Technician Career Path","tr":"Ağ Teknisyeni Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.netacad.com/ja/career-paths/network-technician?courseLang=en-US","fieldIds":["networking"],"featured":false},
+        {"id":"cybersecurity-defense-analyst","officialName":"Cybersecurity Defense Analyst Career Path","name":{"ar":"مسار محلل الدفاع السيبراني","en":"Cybersecurity Defense Analyst Career Path","tr":"Siber Güvenlik Savunma Analisti Kariyer Yolu"},"type":"career-path","officialUrl":"https://www.netacad.com/career-paths/splunk-cybersecurity-defense-analyst?courseLang=en-US","fieldIds":["cybersecurity"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.netacad.com/","pathsSourceUrl":"https://www.netacad.com/careers/pathways"}
+    },
+    {
+      "id":"plat-15",
+      "fields":[
+        {"id":"money-business","name":{"ar":"المال والأعمال","en":"Money & Business","tr":"Para ve İşletme"}},
+        {"id":"education-development","name":{"ar":"التعليم والتنمية","en":"Education & Development","tr":"Eğitim ve Gelişim"}},
+        {"id":"health-sports-psychology","name":{"ar":"الصحة والرياضة وعلم النفس","en":"Health, Sports & Psychology","tr":"Sağlık, Spor ve Psikoloji"}},
+        {"id":"history-arts","name":{"ar":"التاريخ والفنون","en":"History & The Arts","tr":"Tarih ve Sanat"}},
+        {"id":"languages","name":{"ar":"اللغات","en":"Languages","tr":"Diller"}},
+        {"id":"nature-environment","name":{"ar":"الطبيعة والبيئة","en":"Nature & Environment","tr":"Doğa ve Çevre"}},
+        {"id":"science-maths-technology","name":{"ar":"العلوم والرياضيات والتقنية","en":"Science, Maths & Technology","tr":"Fen, Matematik ve Teknoloji"}},
+        {"id":"society-politics-law","name":{"ar":"المجتمع والسياسة والقانون","en":"Society, Politics & Law","tr":"Toplum, Siyaset ve Hukuk"}},
+        {"id":"digital-computing","name":{"ar":"الرقمنة والحوسبة","en":"Digital & Computing","tr":"Dijital ve Bilişim"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.open.edu/openlearn/free-courses/full-catalogue","pathsSourceUrl":"https://www.open.edu/openlearn/free-courses/full-catalogue"}
+    },
+    {
+      "id":"plat-16",
+      "fields":[
+        {"id":"google-ads","name":{"ar":"إعلانات Google","en":"Google Ads","tr":"Google Ads"}},
+        {"id":"google-marketing-platform","name":{"ar":"Google Marketing Platform","en":"Google Marketing Platform","tr":"Google Marketing Platform"}},
+        {"id":"google-analytics","name":{"ar":"Google Analytics","en":"Google Analytics","tr":"Google Analytics"}},
+        {"id":"business-profile","name":{"ar":"الملف التجاري على Google","en":"Google Business Profile","tr":"Google İşletme Profili"}},
+        {"id":"google-ad-manager","name":{"ar":"Google Ad Manager","en":"Google Ad Manager","tr":"Google Ad Manager"}},
+        {"id":"google-admob","name":{"ar":"Google AdMob","en":"Google AdMob","tr":"Google AdMob"}},
+        {"id":"authorized-buyers","name":{"ar":"Authorized Buyers","en":"Authorized Buyers","tr":"Authorized Buyers"}},
+        {"id":"waze","name":{"ar":"Waze","en":"Waze","tr":"Waze"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://skillshop.withgoogle.com/","pathsSourceUrl":"https://skillshop.withgoogle.com/"}
+    },
+    {
+      "id":"plat-17",
+      "fields":[
+        {"id":"programming-foundations","name":{"ar":"أساسيات البرمجة","en":"Programming Foundations","tr":"Programlama Temelleri"}},
+        {"id":"data-analytics","name":{"ar":"البيانات والتحليلات","en":"Data & Analytics","tr":"Veri ve Analitik"}},
+        {"id":"web-app-development","name":{"ar":"تطوير الويب والتطبيقات","en":"Web & App Development","tr":"Web ve Uygulama Geliştirme"}},
+        {"id":"advanced-programming","name":{"ar":"البرمجة المتقدمة وأطر العمل","en":"Advanced Programming & Frameworks","tr":"İleri Programlama ve Frameworkler"}},
+        {"id":"ai-generative","name":{"ar":"الذكاء الاصطناعي والتقنيات التوليدية","en":"AI & Generative Technologies","tr":"Yapay Zekâ ve Üretken Teknolojiler"}}
+      ],
+      "officialPaths":[
+        {"id":"coding-foundations","officialName":"Coding Foundations","name":{"ar":"أساسيات البرمجة","en":"Coding Foundations","tr":"Kodlama Temelleri"},"type":"learning-path","officialUrl":"https://www.sololearn.com/en/learn/courses/coding-foundations","fieldIds":["programming-foundations","web-app-development"],"featured":false},
+        {"id":"python-developer","officialName":"Python Developer","name":{"ar":"مطور Python","en":"Python Developer","tr":"Python Geliştirici"},"type":"career-path","officialUrl":"https://www.sololearn.com/en/learn/courses/python-developer","fieldIds":["programming-foundations","advanced-programming"],"featured":false},
+        {"id":"web-development","officialName":"Web Development","name":{"ar":"تطوير الويب","en":"Web Development","tr":"Web Geliştirme"},"type":"learning-path","officialUrl":"https://www.sololearn.com/en/learn/courses/web-development","fieldIds":["web-app-development"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.sololearn.com/en/learn/","pathsSourceUrl":"https://www.sololearn.com/en/learn/"}
+    },
+    {
+      "id":"plat-18",
+      "fields":[
+        {"id":"research-preparation","name":{"ar":"الإعداد للبحث","en":"Research Preparation","tr":"Araştırma Hazırlığı"}},
+        {"id":"research-writing","name":{"ar":"الكتابة البحثية","en":"Writing for Research","tr":"Araştırma Yazımı"}},
+        {"id":"publication-process","name":{"ar":"عملية النشر","en":"Publication Process","tr":"Yayın Süreci"}},
+        {"id":"peer-review","name":{"ar":"مراجعة الأقران","en":"Peer Review","tr":"Hakem Değerlendirmesi"}},
+        {"id":"research-communication","name":{"ar":"التواصل البحثي","en":"Research Communication","tr":"Araştırma İletişimi"}},
+        {"id":"research-career","name":{"ar":"المسار المهني للباحث","en":"Research Career","tr":"Araştırma Kariyeri"}}
+      ],
+      "officialPaths":[
+        {"id":"research-preparation","officialName":"Research preparation","name":{"ar":"الإعداد للبحث","en":"Research preparation","tr":"Araştırma hazırlığı"},"type":"learning-path","officialUrl":"https://researcheracademy.elsevier.com/research-preparation","fieldIds":["research-preparation"],"featured":false},
+        {"id":"writing-for-research","officialName":"Writing for research","name":{"ar":"الكتابة من أجل البحث","en":"Writing for research","tr":"Araştırma için yazım"},"type":"learning-path","officialUrl":"https://researcheracademy.elsevier.com/writing-research","fieldIds":["research-writing"],"featured":false},
+        {"id":"publication-process","officialName":"Publication process","name":{"ar":"عملية النشر","en":"Publication process","tr":"Yayın süreci"},"type":"learning-path","officialUrl":"https://researcheracademy.elsevier.com/publication-process","fieldIds":["publication-process"],"featured":false},
+        {"id":"navigating-peer-review","officialName":"Navigating peer review","name":{"ar":"التعامل مع مراجعة الأقران","en":"Navigating peer review","tr":"Hakem değerlendirmesinde ilerleme"},"type":"learning-path","officialUrl":"https://researcheracademy.elsevier.com/navigating-peer-review","fieldIds":["peer-review"],"featured":false},
+        {"id":"communicating-your-research","officialName":"Communicating your research","name":{"ar":"التواصل حول بحثك","en":"Communicating your research","tr":"Araştırmanızı iletişimle aktarma"},"type":"learning-path","officialUrl":"https://researcheracademy.elsevier.com/communicating-research","fieldIds":["research-communication"],"featured":false},
+        {"id":"career-path","officialName":"Career path","name":{"ar":"المسار المهني للباحث","en":"Career path","tr":"Araştırmacı kariyer yolu"},"type":"career-path","officialUrl":"https://origin.researcheracademy.elsevier.com/career-path","fieldIds":["research-career"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://researcheracademy.elsevier.com/learn","pathsSourceUrl":"https://researcheracademy.elsevier.com/"}
+    },
+    {
+      "id":"plat-19",
+      "fields":[
+        {"id":"html-css","name":{"ar":"HTML وCSS","en":"HTML & CSS","tr":"HTML ve CSS"}},
+        {"id":"javascript","name":{"ar":"JavaScript","en":"JavaScript","tr":"JavaScript"}},
+        {"id":"backend-programming","name":{"ar":"البرمجة الخلفية","en":"Backend Programming","tr":"Backend Programlama"}},
+        {"id":"data-analytics","name":{"ar":"البيانات والتحليلات","en":"Data Analytics","tr":"Veri Analitiği"}}
+      ],
+      "officialPaths":[
+        {"id":"html-study-plan","officialName":"HTML Study Plan","name":{"ar":"خطة دراسة HTML","en":"HTML Study Plan","tr":"HTML Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/html/html_study_plan.asp","fieldIds":["html-css"],"featured":false},
+        {"id":"css-study-plan","officialName":"CSS Study Plan","name":{"ar":"خطة دراسة CSS","en":"CSS Study Plan","tr":"CSS Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/CSS/css_study_plan.asp","fieldIds":["html-css"],"featured":false},
+        {"id":"javascript-study-plan","officialName":"JavaScript Study Plan","name":{"ar":"خطة دراسة JavaScript","en":"JavaScript Study Plan","tr":"JavaScript Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/js/js_study_plan.asp","fieldIds":["javascript"],"featured":false},
+        {"id":"sql-study-plan","officialName":"SQL Study Plan","name":{"ar":"خطة دراسة SQL","en":"SQL Study Plan","tr":"SQL Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/sql/sql_study_plan.asp","fieldIds":["data-analytics","backend-programming"],"featured":false},
+        {"id":"csharp-study-plan","officialName":"C# Study Plan","name":{"ar":"خطة دراسة C#","en":"C# Study Plan","tr":"C# Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/CS/cs_study_plan.php","fieldIds":["backend-programming"],"featured":false},
+        {"id":"go-study-plan","officialName":"Go Study Plan","name":{"ar":"خطة دراسة Go","en":"Go Study Plan","tr":"Go Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/go/go_study_plan.php","fieldIds":["backend-programming"],"featured":false},
+        {"id":"r-study-plan","officialName":"R Study Plan","name":{"ar":"خطة دراسة R","en":"R Study Plan","tr":"R Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/R/r_study_plan.asp","fieldIds":["data-analytics"],"featured":false},
+        {"id":"php-study-plan","officialName":"PHP Study Plan","name":{"ar":"خطة دراسة PHP","en":"PHP Study Plan","tr":"PHP Çalışma Planı"},"type":"learning-path","officialUrl":"https://www.w3schools.com/php/php_study_plan.asp","fieldIds":["backend-programming"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.w3schools.com/tutorials/","pathsSourceUrl":"https://www.w3schools.com/academy/academy_study_plans.php"}
+    },
+    {
+      "id":"plat-20",
+      "fields":[
+        {"id":"math","name":{"ar":"الرياضيات","en":"Math","tr":"Matematik"}},
+        {"id":"test-prep","name":{"ar":"الاستعداد للاختبارات","en":"Test Prep","tr":"Sınav Hazırlığı"}},
+        {"id":"ela","name":{"ar":"فنون اللغة الإنجليزية","en":"English Language Arts","tr":"İngilizce Dil Sanatları"}},
+        {"id":"science","name":{"ar":"العلوم","en":"Science","tr":"Fen Bilimleri"}},
+        {"id":"social-studies","name":{"ar":"الدراسات الاجتماعية","en":"Social Studies","tr":"Sosyal Bilgiler"}},
+        {"id":"computing","name":{"ar":"الحوسبة","en":"Computing","tr":"Bilişim"}},
+        {"id":"economics","name":{"ar":"الاقتصاد","en":"Economics","tr":"Ekonomi"}},
+        {"id":"life-skills","name":{"ar":"المهارات الحياتية","en":"Life Skills","tr":"Yaşam Becerileri"}},
+        {"id":"partner-content","name":{"ar":"محتوى الشركاء","en":"Partner Courses","tr":"İş Ortağı Kursları"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.khanacademy.org/","pathsSourceUrl":"https://www.khanacademy.org/"}
     }
   ]
 }
