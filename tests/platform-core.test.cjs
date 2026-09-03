@@ -102,3 +102,27 @@ test('comparison toggles an existing platform off', () => {
   assert.deepEqual(result.ids,['plat-1']);
   assert.equal(result.blocked,false);
 });
+
+test('normalizeStaticPlatform preserves fields, official paths and research metadata',()=>{
+  const row={
+    id:'plat-x',name:loc('س','X','X'),description:loc('','',''),
+    fields:[{id:'ai',name:loc('الذكاء الاصطناعي','Artificial Intelligence','Yapay Zekâ'),officialUrl:'https://example.com/ai'}],
+    officialPaths:[{id:'ai-path',officialName:'AI Path',name:loc('مسار الذكاء الاصطناعي','AI Path','Yapay Zekâ Yolu'),type:'learning-path',officialUrl:'https://example.com/paths/ai',fieldIds:['ai'],featured:true}],
+    pathResearch:{lastVerified:'2026-09-04',fieldsSourceUrl:'https://example.com/topics',pathsSourceUrl:'https://example.com/paths',allPathsUrl:'https://example.com/paths'}
+  };
+  const out=PlatformCore.normalizeStaticPlatform(row);
+  assert.equal(out.fields[0].id,'ai');
+  assert.equal(out.fields[0].name.en,'Artificial Intelligence');
+  assert.equal(out.officialPaths[0].officialName,'AI Path');
+  assert.deepEqual(out.officialPaths[0].fieldIds,['ai']);
+  assert.equal(out.pathResearch.lastVerified,'2026-09-04');
+});
+
+test('visibleOfficialPaths caps display at 20 and puts featured paths first',()=>{
+  const officialPaths=Array.from({length:25},(_,i)=>({id:`p-${i}`,featured:i===24}));
+  const visible=PlatformCore.visibleOfficialPaths({officialPaths},20);
+  assert.equal(visible.length,20);
+  assert.equal(visible[0].id,'p-24');
+  assert.equal(PlatformCore.shouldShowAllPathsLink({officialPaths,pathResearch:{allPathsUrl:'https://example.com/paths'}},20),true);
+  assert.equal(PlatformCore.shouldShowAllPathsLink({officialPaths,pathResearch:{}},20),false);
+});
