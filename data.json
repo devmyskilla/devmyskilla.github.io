@@ -52,7 +52,465 @@
         "tr": "Küresel üniversite grubuna bağlı bir Britanya eğitim platformu. Çeşitli alanlarda binlerce ücretsiz ve ücretli kurs sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "business-management",
+          "name": {
+            "ar": "الأعمال والإدارة",
+            "en": "Business & Management",
+            "tr": "İşletme ve Yönetim"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/business-and-management-courses"
+        },
+        {
+          "id": "creative-arts-media",
+          "name": {
+            "ar": "الفنون الإبداعية والإعلام",
+            "en": "Creative Arts & Media",
+            "tr": "Yaratıcı Sanatlar ve Medya"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/creative-arts-and-media-courses"
+        },
+        {
+          "id": "healthcare-medicine",
+          "name": {
+            "ar": "الرعاية الصحية والطب",
+            "en": "Healthcare & Medicine",
+            "tr": "Sağlık ve Tıp"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/healthcare-medicine-courses"
+        },
+        {
+          "id": "history",
+          "name": {
+            "ar": "التاريخ",
+            "en": "History",
+            "tr": "Tarih"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/history-courses"
+        },
+        {
+          "id": "it-computer-science",
+          "name": {
+            "ar": "تقنية المعلومات وعلوم الحاسوب",
+            "en": "IT & Computer Science",
+            "tr": "BT ve Bilgisayar Bilimleri"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/it-and-computer-science-courses"
+        },
+        {
+          "id": "language",
+          "name": {
+            "ar": "اللغات",
+            "en": "Language",
+            "tr": "Dil"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/language-courses"
+        },
+        {
+          "id": "law",
+          "name": {
+            "ar": "القانون",
+            "en": "Law",
+            "tr": "Hukuk"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/law-courses"
+        },
+        {
+          "id": "literature",
+          "name": {
+            "ar": "الأدب",
+            "en": "Literature",
+            "tr": "Edebiyat"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/literature-courses"
+        },
+        {
+          "id": "nature-environment",
+          "name": {
+            "ar": "الطبيعة والبيئة",
+            "en": "Nature & Environment",
+            "tr": "Doğa ve Çevre"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/nature-and-environment-courses"
+        },
+        {
+          "id": "politics-society",
+          "name": {
+            "ar": "السياسة والمجتمع",
+            "en": "Politics & Society",
+            "tr": "Siyaset ve Toplum"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/politics-and-society-courses"
+        },
+        {
+          "id": "psychology-mental-health",
+          "name": {
+            "ar": "علم النفس والصحة النفسية",
+            "en": "Psychology & Mental Health",
+            "tr": "Psikoloji ve Ruh Sağlığı"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/psychology-and-mental-health-courses"
+        },
+        {
+          "id": "science-engineering-maths",
+          "name": {
+            "ar": "العلوم والهندسة والرياضيات",
+            "en": "Science, Engineering & Maths",
+            "tr": "Fen, Mühendislik ve Matematik"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/science-engineering-and-maths-courses"
+        },
+        {
+          "id": "study-skills",
+          "name": {
+            "ar": "مهارات الدراسة",
+            "en": "Study Skills",
+            "tr": "Çalışma Becerileri"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/study-skills-courses"
+        },
+        {
+          "id": "teaching",
+          "name": {
+            "ar": "التدريس",
+            "en": "Teaching",
+            "tr": "Öğretim"
+          },
+          "officialUrl": "https://www.futurelearn.com/subjects/teaching-courses"
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "advanced-applied-ai-azure",
+          "officialName": "Advanced and Applied AI on Microsoft Azure",
+          "name": {
+            "ar": "الذكاء الاصطناعي المتقدم والتطبيقي على Microsoft Azure",
+            "en": "Advanced and Applied AI on Microsoft Azure",
+            "tr": "Microsoft Azure'da İleri ve Uygulamalı Yapay Zekâ"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/applied-ai-on-microsoft",
+          "fieldIds": [
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "advanced-cyber-defence-offensive-security",
+          "officialName": "Advanced Cyber Defence & Offensive Security",
+          "name": {
+            "ar": "الدفاع السيبراني المتقدم والأمن الهجومي",
+            "en": "Advanced Cyber Defence & Offensive Security",
+            "tr": "İleri Siber Savunma ve Ofansif Güvenlik"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/advanced-cyber-defense-and-offensive-security",
+          "fieldIds": [
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "agentic-ai",
+          "officialName": "Agentic AI",
+          "name": {
+            "ar": "الذكاء الاصطناعي الوكيلي",
+            "en": "Agentic AI",
+            "tr": "Ajan Tabanlı Yapay Zekâ"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/agentic-ai-experttrack-pathway",
+          "fieldIds": [
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-data-engineering",
+          "officialName": "AI and Data Engineering",
+          "name": {
+            "ar": "الذكاء الاصطناعي وهندسة البيانات",
+            "en": "AI and Data Engineering",
+            "tr": "Yapay Zekâ ve Veri Mühendisliği"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/ai-and-data-engineering",
+          "fieldIds": [
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-healthcare",
+          "officialName": "AI Applications in Healthcare",
+          "name": {
+            "ar": "تطبيقات الذكاء الاصطناعي في الرعاية الصحية",
+            "en": "AI Applications in Healthcare",
+            "tr": "Sağlık Hizmetlerinde Yapay Zekâ Uygulamaları"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/ai-applications-in-healthcare",
+          "fieldIds": [
+            "it-computer-science",
+            "healthcare-medicine"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-design-engineering-azure",
+          "officialName": "AI Design and Engineering with Microsoft Azure",
+          "name": {
+            "ar": "تصميم وهندسة الذكاء الاصطناعي باستخدام Microsoft Azure",
+            "en": "AI Design and Engineering with Microsoft Azure",
+            "tr": "Microsoft Azure ile Yapay Zekâ Tasarımı ve Mühendisliği"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/ai-engineer-with-microsoft-azure",
+          "fieldIds": [
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-executive-leadership",
+          "officialName": "AI Executive Leadership",
+          "name": {
+            "ar": "القيادة التنفيذية في الذكاء الاصطناعي",
+            "en": "AI Executive Leadership",
+            "tr": "Yapay Zekâ Üst Düzey Liderliği"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/ai-executive-leadership",
+          "fieldIds": [
+            "business-management",
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "ai-business-strategy-innovation",
+          "officialName": "AI for Business Strategy & Innovation",
+          "name": {
+            "ar": "الذكاء الاصطناعي لاستراتيجية الأعمال والابتكار",
+            "en": "AI for Business Strategy & Innovation",
+            "tr": "İş Stratejisi ve İnovasyon için Yapay Zekâ"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/ai-for-business-strategy-and-innovation",
+          "fieldIds": [
+            "business-management",
+            "it-computer-science"
+          ],
+          "featured": false
+        },
+        {
+          "id": "applied-data-analysis",
+          "officialName": "Applied Data Analysis",
+          "name": {
+            "ar": "تحليل البيانات التطبيقي",
+            "en": "Applied Data Analysis",
+            "tr": "Uygulamalı Veri Analizi"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/applied-data-analysis",
+          "fieldIds": [
+            "it-computer-science",
+            "business-management"
+          ],
+          "featured": false
+        },
+        {
+          "id": "autism-knowledge-experiences",
+          "officialName": "Autism: Developing Knowledge of Autistic Experiences",
+          "name": {
+            "ar": "التوحد: تطوير المعرفة بتجارب الأشخاص المصابين بالتوحد",
+            "en": "Autism: Developing Knowledge of Autistic Experiences",
+            "tr": "Otizm: Otistik Deneyimler Hakkında Bilgi Geliştirme"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/autism-developing-knowledge-of-autistic-experiences",
+          "fieldIds": [
+            "psychology-mental-health"
+          ],
+          "featured": false
+        },
+        {
+          "id": "successful-baker-bbc-good-food",
+          "officialName": "Become a Successful Baker with BBC Good Food",
+          "name": {
+            "ar": "كن خبازًا ناجحًا مع BBC Good Food",
+            "en": "Become a Successful Baker with BBC Good Food",
+            "tr": "BBC Good Food ile Başarılı Bir Fırıncı Olun"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/become-successful-baker-bbc-good-food",
+          "fieldIds": [
+            "creative-arts-media"
+          ],
+          "featured": false
+        },
+        {
+          "id": "behavioural-science-organisational-performance",
+          "officialName": "Behavioural Science for Organisational Performance",
+          "name": {
+            "ar": "العلوم السلوكية للأداء المؤسسي",
+            "en": "Behavioural Science for Organisational Performance",
+            "tr": "Kurumsal Performans için Davranış Bilimi"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/behavioural-science",
+          "fieldIds": [
+            "psychology-mental-health",
+            "business-management"
+          ],
+          "featured": false
+        },
+        {
+          "id": "behavioural-science-influencing-decisions",
+          "officialName": "Behavioural Science: Influencing Behaviour and Designing Decisions",
+          "name": {
+            "ar": "العلوم السلوكية: التأثير في السلوك وتصميم القرارات",
+            "en": "Behavioural Science: Influencing Behaviour and Designing Decisions",
+            "tr": "Davranış Bilimi: Davranışı Etkileme ve Karar Tasarlama"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/behavioural-science-influencing-behaviour-and-designing-decisions",
+          "fieldIds": [
+            "psychology-mental-health",
+            "business-management"
+          ],
+          "featured": false
+        },
+        {
+          "id": "blended-learning-vocational",
+          "officialName": "Blended Learning Essentials for Vocational Education and Training",
+          "name": {
+            "ar": "أساسيات التعلم المدمج للتعليم والتدريب المهني",
+            "en": "Blended Learning Essentials for Vocational Education and Training",
+            "tr": "Mesleki Eğitim için Harmanlanmış Öğrenme Temelleri"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/blended-learning",
+          "fieldIds": [
+            "teaching"
+          ],
+          "featured": false
+        },
+        {
+          "id": "business-analysis-professional",
+          "officialName": "Business Analysis Professional",
+          "name": {
+            "ar": "محترف تحليل الأعمال",
+            "en": "Business Analysis Professional",
+            "tr": "İş Analizi Uzmanı"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/business-analysis-professional",
+          "fieldIds": [
+            "business-management"
+          ],
+          "featured": false
+        },
+        {
+          "id": "career-confidence-employability",
+          "officialName": "Career Confidence and Employability Pathways",
+          "name": {
+            "ar": "مسارات الثقة المهنية وقابلية التوظيف",
+            "en": "Career Confidence and Employability Pathways",
+            "tr": "Kariyer Güveni ve İstihdam Edilebilirlik Yolları"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/career-confidence-and-employability-pathways",
+          "fieldIds": [
+            "business-management",
+            "study-skills"
+          ],
+          "featured": false
+        },
+        {
+          "id": "contemporary-chinese-i",
+          "officialName": "Contemporary Chinese I",
+          "name": {
+            "ar": "الصينية المعاصرة 1",
+            "en": "Contemporary Chinese I",
+            "tr": "Çağdaş Çince I"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/contemporary-chinese-i",
+          "fieldIds": [
+            "language"
+          ],
+          "featured": false
+        },
+        {
+          "id": "contemporary-chinese-ii",
+          "officialName": "Contemporary Chinese II",
+          "name": {
+            "ar": "الصينية المعاصرة 2",
+            "en": "Contemporary Chinese II",
+            "tr": "Çağdaş Çince II"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/contemporary-chinese-ii",
+          "fieldIds": [
+            "language"
+          ],
+          "featured": false
+        },
+        {
+          "id": "contemporary-chinese-iii",
+          "officialName": "Contemporary Chinese III",
+          "name": {
+            "ar": "الصينية المعاصرة 3",
+            "en": "Contemporary Chinese III",
+            "tr": "Çağdaş Çince III"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/contemporary-chinese-iii",
+          "fieldIds": [
+            "language"
+          ],
+          "featured": false
+        },
+        {
+          "id": "contemporary-chinese-iv",
+          "officialName": "Contemporary Chinese IV",
+          "name": {
+            "ar": "الصينية المعاصرة 4",
+            "en": "Contemporary Chinese IV",
+            "tr": "Çağdaş Çince IV"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/contemporary-chinese-iv",
+          "fieldIds": [
+            "language"
+          ],
+          "featured": false
+        },
+        {
+          "id": "core-cyber-defence-intelligence",
+          "officialName": "Core Cyber Defence & Intelligence Operations",
+          "name": {
+            "ar": "عمليات الدفاع السيبراني والاستخبارات الأساسية",
+            "en": "Core Cyber Defence & Intelligence Operations",
+            "tr": "Temel Siber Savunma ve İstihbarat Operasyonları"
+          },
+          "type": "structured-series",
+          "officialUrl": "https://www.futurelearn.com/experttracks/core-cyber-defense-and-intelligence-operations",
+          "fieldIds": [
+            "it-computer-science"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://www.futurelearn.com/subjects",
+        "pathsSourceUrl": "https://www.futurelearn.com/experttracks",
+        "allPathsUrl": "https://www.futurelearn.com/experttracks"
+      }
     },
     {
       "languageIds": [
@@ -106,7 +564,231 @@
         "tr": "UNICEF'e bağlı bir eğitim platformu. Çocuk koruma, eğitim, sağlık, sürdürülebilir kalkınma ve insani yardım alanlarında ücretsiz kurslar sunar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "focus-areas",
+          "name": {
+            "ar": "مجالات التركيز",
+            "en": "Focus Areas",
+            "tr": "Odak Alanları"
+          }
+        },
+        {
+          "id": "strategies",
+          "name": {
+            "ar": "الاستراتيجيات",
+            "en": "Strategies",
+            "tr": "Stratejiler"
+          }
+        },
+        {
+          "id": "leading-managing",
+          "name": {
+            "ar": "القيادة والإدارة",
+            "en": "Leading & Managing",
+            "tr": "Liderlik ve Yönetim"
+          }
+        },
+        {
+          "id": "operational-support",
+          "name": {
+            "ar": "الدعم التشغيلي",
+            "en": "Operational Support",
+            "tr": "Operasyonel Destek"
+          }
+        },
+        {
+          "id": "communication-languages",
+          "name": {
+            "ar": "التواصل واللغات",
+            "en": "Communication & Languages",
+            "tr": "İletişim ve Diller"
+          }
+        },
+        {
+          "id": "career-support",
+          "name": {
+            "ar": "الدعم المهني",
+            "en": "Career Support",
+            "tr": "Kariyer Desteği"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "systems-strengthening",
+          "officialName": "Systems Strengthening",
+          "name": {
+            "ar": "تعزيز الأنظمة",
+            "en": "Systems Strengthening",
+            "tr": "Sistemlerin Güçlendirilmesi"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41047",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "violence-girls-boys-women",
+          "officialName": "Violence against girls, boys and women",
+          "name": {
+            "ar": "العنف ضد الفتيات والفتيان والنساء",
+            "en": "Violence against girls, boys and women",
+            "tr": "Kız Çocuklarına, Erkek Çocuklarına ve Kadınlara Yönelik Şiddet"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=49766",
+          "fieldIds": [
+            "focus-areas"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sbc-research",
+          "officialName": "SBC Research",
+          "name": {
+            "ar": "البحث في التغيير الاجتماعي والسلوكي",
+            "en": "SBC Research",
+            "tr": "Sosyal ve Davranışsal Değişim Araştırması"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41050",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sbc-intro",
+          "officialName": "SBC Intro",
+          "name": {
+            "ar": "مقدمة في التغيير الاجتماعي والسلوكي",
+            "en": "SBC Intro",
+            "tr": "Sosyal ve Davranışsal Değişime Giriş"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=40959",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sbc-basics",
+          "officialName": "SBC Basics",
+          "name": {
+            "ar": "أساسيات التغيير الاجتماعي والسلوكي",
+            "en": "SBC Basics",
+            "tr": "Sosyal ve Davranışsal Değişim Temelleri"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41002",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sbc-humanitarian-events",
+          "officialName": "SBC and Humanitarian Events",
+          "name": {
+            "ar": "التغيير الاجتماعي والسلوكي والأحداث الإنسانية",
+            "en": "SBC and Humanitarian Events",
+            "tr": "Sosyal ve Davranışsal Değişim ve İnsani Olaylar"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41048",
+          "fieldIds": [
+            "strategies",
+            "focus-areas"
+          ],
+          "featured": false
+        },
+        {
+          "id": "humanitarian-action-level-2",
+          "officialName": "UNICEF Fundamentals of Humanitarian Action: Level 2",
+          "name": {
+            "ar": "أساسيات العمل الإنساني في اليونيسف: المستوى الثاني",
+            "en": "UNICEF Fundamentals of Humanitarian Action: Level 2",
+            "tr": "UNICEF İnsani Yardım Temelleri: Seviye 2"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=46782",
+          "fieldIds": [
+            "focus-areas"
+          ],
+          "featured": false
+        },
+        {
+          "id": "gender",
+          "officialName": "Gender",
+          "name": {
+            "ar": "النوع الاجتماعي",
+            "en": "Gender",
+            "tr": "Toplumsal Cinsiyet"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=45091",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "sbc-advanced",
+          "officialName": "SBC Advanced",
+          "name": {
+            "ar": "التغيير الاجتماعي والسلوكي المتقدم",
+            "en": "SBC Advanced",
+            "tr": "İleri Sosyal ve Davranışsal Değişim"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41003",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "immunization-basics",
+          "officialName": "Immunization Basics",
+          "name": {
+            "ar": "أساسيات التحصين",
+            "en": "Immunization Basics",
+            "tr": "Bağışıklama Temelleri"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41049",
+          "fieldIds": [
+            "focus-areas",
+            "strategies"
+          ],
+          "featured": false
+        },
+        {
+          "id": "social-norms",
+          "officialName": "Social Norms",
+          "name": {
+            "ar": "الأعراف الاجتماعية",
+            "en": "Social Norms",
+            "tr": "Sosyal Normlar"
+          },
+          "type": "learning-path",
+          "officialUrl": "https://agora.unicef.org/course/info.php?id=41042",
+          "fieldIds": [
+            "strategies"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://agora.unicef.org/mod/page/view.php?id=36648&lang=en",
+        "pathsSourceUrl": "https://agora.unicef.org/local/catalogue/"
+      }
     },
     {
       "languageIds": [
@@ -160,7 +842,119 @@
         "tr": "IBM'nin teknik beceri geliştirme için ücretsiz platformu. Yapay zeka, bulut bilişim, siber güvenlik, veri bilimi ve BT alanlarını kapsar."
       },
       "officialCountType": "courses",
-      "lastVerified": null
+      "lastVerified": null,
+      "fields": [
+        {
+          "id": "artificial-intelligence",
+          "name": {
+            "ar": "الذكاء الاصطناعي",
+            "en": "Artificial Intelligence",
+            "tr": "Yapay Zekâ"
+          }
+        },
+        {
+          "id": "business-professional-skills",
+          "name": {
+            "ar": "مهارات الأعمال والمهارات المهنية",
+            "en": "Business & Professional Skills",
+            "tr": "İş ve Profesyonel Beceriler"
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": {
+            "ar": "الأمن السيبراني",
+            "en": "Cybersecurity",
+            "tr": "Siber Güvenlik"
+          }
+        },
+        {
+          "id": "data-analytics",
+          "name": {
+            "ar": "البيانات والتحليلات",
+            "en": "Data & Analytics",
+            "tr": "Veri ve Analitik"
+          }
+        },
+        {
+          "id": "design",
+          "name": {
+            "ar": "التصميم",
+            "en": "Design",
+            "tr": "Tasarım"
+          }
+        },
+        {
+          "id": "it-cloud",
+          "name": {
+            "ar": "تقنية المعلومات والحوسبة السحابية",
+            "en": "IT & Cloud",
+            "tr": "BT ve Bulut"
+          }
+        },
+        {
+          "id": "software-development",
+          "name": {
+            "ar": "تطوير البرمجيات",
+            "en": "Software Development",
+            "tr": "Yazılım Geliştirme"
+          }
+        },
+        {
+          "id": "education",
+          "name": {
+            "ar": "التعليم",
+            "en": "Education",
+            "tr": "Eğitim"
+          }
+        },
+        {
+          "id": "healthcare",
+          "name": {
+            "ar": "الرعاية الصحية",
+            "en": "Healthcare",
+            "tr": "Sağlık"
+          }
+        },
+        {
+          "id": "marketing",
+          "name": {
+            "ar": "التسويق",
+            "en": "Marketing",
+            "tr": "Pazarlama"
+          }
+        },
+        {
+          "id": "sports-entertainment",
+          "name": {
+            "ar": "الرياضة والترفيه",
+            "en": "Sports & Entertainment",
+            "tr": "Spor ve Eğlence"
+          }
+        }
+      ],
+      "officialPaths": [
+        {
+          "id": "data-analytics-fluency",
+          "officialName": "Data Analytics Fluency Pathway",
+          "name": {
+            "ar": "مسار إتقان تحليلات البيانات",
+            "en": "Data Analytics Fluency Pathway",
+            "tr": "Veri Analitiği Yetkinlik Yolu"
+          },
+          "type": "skill-path",
+          "officialUrl": "https://skillsbuild.org/college-students/data-science",
+          "fieldIds": [
+            "data-analytics"
+          ],
+          "featured": false
+        }
+      ],
+      "pathResearch": {
+        "lastVerified": "2026-09-04",
+        "fieldsSourceUrl": "https://skillsbuild.org/learning-catalog",
+        "pathsSourceUrl": "https://skillsbuild.org/college-students/data-science"
+      }
     },
     {
       "languageIds": [
