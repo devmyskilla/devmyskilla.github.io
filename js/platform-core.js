@@ -43,6 +43,29 @@
     if(!value||typeof value!=='object')return text(value);
     return text(value.en||value.ar||value.tr);
   }
+  function normalizedUrl(value){
+    const raw=text(value).trim();
+    if(!raw)return'';
+    try{const url=new URL(raw);return /^https?:$/.test(url.protocol)?url.href:''}catch(_){return''}
+  }
+  function normalizeField(row={}){
+    return{id:text(row.id),name:localized(row.name),officialUrl:normalizedUrl(row.officialUrl)};
+  }
+  function normalizeOfficialPath(row={}){
+    return{
+      id:text(row.id),officialName:text(row.officialName),name:localized(row.name),type:text(row.type),
+      officialUrl:normalizedUrl(row.officialUrl),fieldIds:array(row.fieldIds),featured:row.featured===true
+    };
+  }
+  function normalizePathResearch(row={}){
+    const src=row&&typeof row==='object'&&!Array.isArray(row)?row:{};
+    return{
+      lastVerified:text(src.lastVerified),
+      fieldsSourceUrl:normalizedUrl(src.fieldsSourceUrl),
+      pathsSourceUrl:normalizedUrl(src.pathsSourceUrl),
+      allPathsUrl:normalizedUrl(src.allPathsUrl)
+    };
+  }
 
   function normalizeText(value=''){
     return String(value).toLowerCase().normalize('NFKD')
@@ -59,7 +82,9 @@
       logo:{src:'',alt:{ar:'',en:'',tr:''}},officialCount:null,officialCountType:'',lastVerified:null,
       editorial:{
         bestFor:{ar:[],en:[],tr:[]},strengths:{ar:[],en:[],tr:[]},limitations:{ar:[],en:[],tr:[]}
-      },featured:false,displayOrder:null
+      },
+      fields:[],officialPaths:[],pathResearch:{lastVerified:'',fieldsSourceUrl:'',pathsSourceUrl:'',allPathsUrl:''},
+      featured:false,displayOrder:null
     };
   }
 
@@ -93,10 +118,22 @@
         strengths:localizedLists(editorial.strengths,{ar:row.strengths_ar,en:row.strengths_en,tr:row.strengths_tr}),
         limitations:localizedLists(editorial.limitations,{ar:row.limitations_ar,en:row.limitations_en,tr:row.limitations_tr})
       },
+      fields:(Array.isArray(row.fields)?row.fields:[]).map(normalizeField),
+      officialPaths:(Array.isArray(row.officialPaths)?row.officialPaths:[]).map(normalizeOfficialPath),
+      pathResearch:normalizePathResearch(row.pathResearch),
       featured:row.featured===true,
       displayOrder:intOrNull(row.displayOrder??row.display_order)
     });
     return out;
+  }
+
+  function visibleOfficialPaths(platform={},limit=20){
+    const list=[...(Array.isArray(platform.officialPaths)?platform.officialPaths:[])];
+    return list.sort((a,b)=>Number(b&&b.featured===true)-Number(a&&a.featured===true)).slice(0,Math.max(0,limit));
+  }
+  function shouldShowAllPathsLink(platform={},limit=20){
+    const count=Array.isArray(platform.officialPaths)?platform.officialPaths.length:0;
+    return count>limit&&!!(platform.pathResearch&&platform.pathResearch.allPathsUrl);
   }
 
   function verificationState(value,now=new Date()){
@@ -193,5 +230,5 @@
     next.push(id);return{ids:next,blocked:false};
   }
 
-  return{normalizeText,normalizeStaticPlatform,verificationState,officialContent,pricingDisplayKey,certificateDisplayKey,shouldShowOfficialCount,shouldShowVerification,searchScore,filterPlatforms,sortPlatforms,toggleComparison};
+  return{normalizeText,normalizeStaticPlatform,visibleOfficialPaths,shouldShowAllPathsLink,verificationState,officialContent,pricingDisplayKey,certificateDisplayKey,shouldShowOfficialCount,shouldShowVerification,searchScore,filterPlatforms,sortPlatforms,toggleComparison};
 });
