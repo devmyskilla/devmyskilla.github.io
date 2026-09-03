@@ -1,4 +1,5 @@
 {
+  "platforms": [],
   "siteTextPlatform": {
     "fields": {
       "ar": "المجالات",
@@ -67,6 +68,5 @@
         "tr": "Resmî yol"
       }
     }
-  },
-  "platforms": []
+  }
 }
