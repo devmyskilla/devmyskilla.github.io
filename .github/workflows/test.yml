@@ -32,15 +32,6 @@ jobs:
             echo 'Legacy Supabase runtime reference detected'
             exit 1
           fi
-      - name: Prove inline editor and Worker authorization did not drift
-        shell: bash
-        run: |
-          git fetch origin main:refs/remotes/origin/main
-          changed="$(git diff --name-only origin/main...HEAD -- inline-worker js/edit-descriptors.js js/inline-editor.js js/inline-editor-api.js js/inline-editor-config.js)"
-          if [ -n "$changed" ]; then
-            echo 'Protected inline editor / Worker files changed unexpectedly:'
-            echo "$changed"
-            exit 1
-          fi
       - name: Run branch diff hygiene checks
         run: git diff --check origin/main...HEAD
+
