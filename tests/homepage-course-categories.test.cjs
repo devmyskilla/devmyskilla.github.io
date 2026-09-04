@@ -9,10 +9,11 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 test('homepage exposes course categories that link to filtered explore results', () => {
   const index = read('index.html');
   const landing = read('js/landing.js');
-  const exploreApp = read('js/app.js');
+  const exploreNav = read('js/explore-nav.js');
 
   assert.match(index, /id="landingCategoryGrid"/, 'homepage should include a categories grid');
   assert.match(landing, /function renderCategories\(/, 'landing page should render categories from site data');
   assert.match(landing, /categoryExploreUrl/, 'category links should preserve language and category in the URL');
-  assert.match(exploreApp, /params\.get\(['"]category['"]\)/, 'explore page should read the category query parameter');
+  assert.match(exploreNav, /params\.get\(['"]category['"]\)/, 'explore page should read the category query parameter');
+  assert.match(exploreNav, /filterCategory/, 'explore page should apply the selected category to the existing filter');
 });
