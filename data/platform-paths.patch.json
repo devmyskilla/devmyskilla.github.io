@@ -1,44 +1,304 @@
 {
-  "siteTextPlatform":{"fields":{"ar":"المجالات","en":"Fields & Subject Areas","tr":"Alanlar ve Konular"},"officialPaths":{"ar":"المسارات الرسمية","en":"Official Learning Paths","tr":"Resmî Öğrenme Yolları"},"viewOfficialPath":{"ar":"عرض المسار الرسمي","en":"View official path","tr":"Resmî yolu görüntüle"},"viewAllOfficialPaths":{"ar":"عرض جميع المسارات الرسمية","en":"View all official paths","tr":"Tüm resmî yolları görüntüle"},"pathTypes":{"learning-path":{"ar":"مسار تعليمي","en":"Learning path","tr":"Öğrenme yolu"},"career-path":{"ar":"مسار مهني","en":"Career path","tr":"Kariyer yolu"},"skill-path":{"ar":"مسار مهارة","en":"Skill path","tr":"Beceri yolu"},"professional-certificate":{"ar":"شهادة مهنية","en":"Professional certificate","tr":"Profesyonel sertifika"},"professional-program":{"ar":"برنامج مهني","en":"Professional program","tr":"Profesyonel program"},"specialization":{"ar":"تخصص","en":"Specialization","tr":"Uzmanlık"},"role-path":{"ar":"مسار وظيفي","en":"Role-based path","tr":"Rol tabanlı yol"},"structured-series":{"ar":"سلسلة منظمة","en":"Structured series","tr":"Yapılandırılmış seri"},"other-official-path":{"ar":"مسار رسمي","en":"Official path","tr":"Resmî yol"}}},
-  "platforms":[
-    {"id":"plat-61","fields":[{"id":"rhel-linux","name":{"ar":"Red Hat Enterprise Linux وإدارة الأنظمة","en":"Red Hat Enterprise Linux & System Administration","tr":"Red Hat Enterprise Linux ve Sistem Yönetimi"}},{"id":"openshift-containers","name":{"ar":"OpenShift والحاويات","en":"OpenShift & Containers","tr":"OpenShift ve Konteynerler"}},{"id":"ansible-automation","name":{"ar":"Ansible والأتمتة","en":"Ansible & Automation","tr":"Ansible ve Otomasyon"}},{"id":"ai-mlops","name":{"ar":"الذكاء الاصطناعي وMLOps","en":"AI & MLOps","tr":"Yapay Zekâ ve MLOps"}},{"id":"cloud-devops","name":{"ar":"السحابة وDevOps","en":"Cloud & DevOps","tr":"Bulut ve DevOps"}},{"id":"security","name":{"ar":"الأمن","en":"Security","tr":"Güvenlik"}}],"officialPaths":[{"id":"rhel-core-training","officialName":"Red Hat Enterprise Linux core training path","name":{"ar":"المسار الأساسي لتدريب Red Hat Enterprise Linux","en":"Red Hat Enterprise Linux Core Training Path","tr":"Red Hat Enterprise Linux Temel Eğitim Yolu"},"type":"learning-path","officialUrl":"https://www.redhat.com/en/services/training/red-hat-enterprise-linux","fieldIds":["rhel-linux"],"featured":false},{"id":"red-hat-ai-skills","officialName":"Red Hat AI skills path","name":{"ar":"مسار مهارات Red Hat AI","en":"Red Hat AI Skills Path","tr":"Red Hat AI Beceri Yolu"},"type":"skill-path","officialUrl":"https://www.redhat.com/en/resources/red-hat-ai-skills-path-datasheet","fieldIds":["ai-mlops","openshift-containers"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.redhat.com/en/services/training-and-certification","pathsSourceUrl":"https://www.redhat.com/en/engage/find-your-training-path"}},
-
-    {"id":"plat-62","fields":[{"id":"cloud-foundations","name":{"ar":"أساسيات AWS والسحابة","en":"AWS & Cloud Foundations","tr":"AWS ve Bulut Temelleri"}},{"id":"architecture","name":{"ar":"هندسة الحلول السحابية","en":"Cloud Architecture","tr":"Bulut Mimarisi"}},{"id":"development","name":{"ar":"التطوير على AWS","en":"AWS Development","tr":"AWS Geliştirme"}},{"id":"operations-devops","name":{"ar":"العمليات وDevOps","en":"Operations & DevOps","tr":"Operasyon ve DevOps"}},{"id":"security","name":{"ar":"الأمن","en":"Security","tr":"Güvenlik"}},{"id":"data-analytics","name":{"ar":"البيانات والتحليلات","en":"Data & Analytics","tr":"Veri ve Analitik"}},{"id":"ai-ml","name":{"ar":"الذكاء الاصطناعي وتعلم الآلة","en":"AI & Machine Learning","tr":"Yapay Zekâ ve Makine Öğrenmesi"}},{"id":"serverless","name":{"ar":"الحوسبة بلا خوادم","en":"Serverless","tr":"Sunucusuz Bilişim"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://skillbuilder.aws/","pathsSourceUrl":"https://skillbuilder.aws/"}},
-
-    {"id":"plat-63","fields":[{"id":"oci","name":{"ar":"Oracle Cloud Infrastructure","en":"Oracle Cloud Infrastructure","tr":"Oracle Cloud Infrastructure"}},{"id":"ai","name":{"ar":"الذكاء الاصطناعي في Oracle","en":"Oracle AI","tr":"Oracle Yapay Zekâ"}},{"id":"database","name":{"ar":"قواعد بيانات Oracle","en":"Oracle Database","tr":"Oracle Veritabanı"}},{"id":"java","name":{"ar":"Java","en":"Java","tr":"Java"}},{"id":"mysql","name":{"ar":"MySQL","en":"MySQL","tr":"MySQL"}},{"id":"saas-applications","name":{"ar":"تطبيقات Oracle Cloud SaaS","en":"Oracle Cloud SaaS Applications","tr":"Oracle Cloud SaaS Uygulamaları"}},{"id":"industry-solutions","name":{"ar":"حلول القطاعات","en":"Industry Solutions","tr":"Sektör Çözümleri"}}],"officialPaths":[{"id":"oci-foundations-associate-2026","officialName":"Become an OCI Foundations Associate (2026)","name":{"ar":"كن مساعدًا معتمدًا في أساسيات OCI لعام 2026","en":"Become an OCI Foundations Associate (2026)","tr":"OCI Foundations Associate Olun (2026)"},"type":"professional-certificate","officialUrl":"https://mylearn.oracle.com/ou/learning-path/-become-an-oci-foundations-associate-2026/163541","fieldIds":["oci"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://mylearn.oracle.com/ou/learning-path/","pathsSourceUrl":"https://mylearn.oracle.com/ou/learning-path/"}},
-
-    {"id":"plat-64","fields":[{"id":"administration","name":{"ar":"إدارة Salesforce","en":"Salesforce Administration","tr":"Salesforce Yönetimi"}},{"id":"development","name":{"ar":"تطوير Salesforce","en":"Salesforce Development","tr":"Salesforce Geliştirme"}},{"id":"architecture","name":{"ar":"هندسة Salesforce","en":"Salesforce Architecture","tr":"Salesforce Mimarisi"}},{"id":"ai-agentforce","name":{"ar":"الذكاء الاصطناعي وAgentforce","en":"AI & Agentforce","tr":"Yapay Zekâ ve Agentforce"}},{"id":"data","name":{"ar":"البيانات والتحليلات","en":"Data & Analytics","tr":"Veri ve Analitik"}},{"id":"sales-service","name":{"ar":"المبيعات والخدمة","en":"Sales & Service","tr":"Satış ve Hizmet"}},{"id":"marketing-commerce","name":{"ar":"التسويق والتجارة","en":"Marketing & Commerce","tr":"Pazarlama ve Ticaret"}}],"officialPaths":[{"id":"admin-beginner","officialName":"Admin Beginner","name":{"ar":"مسار مسؤول Salesforce للمبتدئين","en":"Admin Beginner","tr":"Başlangıç Salesforce Yöneticisi"},"type":"role-path","officialUrl":"https://trailhead.salesforce.com/content/learn/trails/force_com_admin_beginner","fieldIds":["administration","data"],"featured":false},{"id":"developer-beginner","officialName":"Developer Beginner","name":{"ar":"مسار مطور Salesforce للمبتدئين","en":"Developer Beginner","tr":"Başlangıç Salesforce Geliştiricisi"},"type":"role-path","officialUrl":"https://trailhead.salesforce.com/content/learn/trails/force_com_dev_beginner","fieldIds":["development"],"featured":false},{"id":"architect-career","officialName":"Build Your Architect Career on Salesforce","name":{"ar":"ابنِ مسيرتك كمهندس Salesforce","en":"Build Your Architect Career on Salesforce","tr":"Salesforce Mimarı Kariyerinizi Geliştirin"},"type":"career-path","officialUrl":"https://trailhead.salesforce.com/content/learn/trails/salesforce-architect-careers","fieldIds":["architecture"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://trailhead.salesforce.com/","pathsSourceUrl":"https://trailhead.salesforce.com/trails"}},
-
-    {"id":"plat-65","fields":[{"id":"software-development","name":{"ar":"تطوير البرمجيات","en":"Software Development","tr":"Yazılım Geliştirme"}},{"id":"data-analytics","name":{"ar":"البيانات والتحليلات","en":"Data & Analytics","tr":"Veri ve Analitik"}},{"id":"cloud-btp","name":{"ar":"السحابة وSAP BTP","en":"Cloud & SAP BTP","tr":"Bulut ve SAP BTP"}},{"id":"ux","name":{"ar":"تجربة المستخدم","en":"User Experience","tr":"Kullanıcı Deneyimi"}},{"id":"erp-finance","name":{"ar":"ERP والتمويل","en":"ERP & Finance","tr":"ERP ve Finans"}},{"id":"supply-chain","name":{"ar":"سلسلة الإمداد","en":"Supply Chain","tr":"Tedarik Zinciri"}},{"id":"hr","name":{"ar":"الموارد البشرية","en":"Human Resources","tr":"İnsan Kaynakları"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://learning.sap.com/","pathsSourceUrl":"https://learning.sap.com/learning-journeys","allPathsUrl":"https://learning.sap.com/learning-journeys"}},
-
-    {"id":"plat-66","fields":[{"id":"database-fundamentals","name":{"ar":"أساسيات MongoDB وقواعد البيانات","en":"MongoDB & Database Fundamentals","tr":"MongoDB ve Veritabanı Temelleri"}},{"id":"application-development","name":{"ar":"تطوير التطبيقات","en":"Application Development","tr":"Uygulama Geliştirme"}},{"id":"data-modeling","name":{"ar":"نمذجة البيانات","en":"Data Modeling","tr":"Veri Modelleme"}},{"id":"atlas-administration","name":{"ar":"إدارة MongoDB Atlas","en":"MongoDB Atlas Administration","tr":"MongoDB Atlas Yönetimi"}},{"id":"search-vector","name":{"ar":"البحث والبحث المتجهي","en":"Search & Vector Search","tr":"Arama ve Vektör Arama"}},{"id":"genai","name":{"ar":"الذكاء الاصطناعي التوليدي","en":"Generative AI","tr":"Üretken Yapay Zekâ"}}],"officialPaths":[{"id":"nodejs-developer","officialName":"MongoDB Node.js Developer Path","name":{"ar":"مسار مطور MongoDB باستخدام Node.js","en":"MongoDB Node.js Developer Path","tr":"MongoDB Node.js Geliştirici Yolu"},"type":"career-path","officialUrl":"https://learn.mongodb.com/learning-paths/mongodb-nodejs-developer-path","fieldIds":["application-development","database-fundamentals"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://learn.mongodb.com/catalog","pathsSourceUrl":"https://learn.mongodb.com/catalog","allPathsUrl":"https://learn.mongodb.com/catalog"}},
-
-    {"id":"plat-67","fields":[{"id":"redis-fundamentals","name":{"ar":"أساسيات Redis","en":"Redis Fundamentals","tr":"Redis Temelleri"}},{"id":"redis-cloud","name":{"ar":"Redis Cloud","en":"Redis Cloud","tr":"Redis Cloud"}},{"id":"redis-software","name":{"ar":"Redis Software","en":"Redis Software","tr":"Redis Software"}},{"id":"operations-scaling","name":{"ar":"التشغيل والتوسع","en":"Operations & Scaling","tr":"Operasyon ve Ölçekleme"}},{"id":"vector-search-genai","name":{"ar":"البحث المتجهي والذكاء الاصطناعي التوليدي","en":"Vector Search & GenAI","tr":"Vektör Arama ve Üretken Yapay Zekâ"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://redis.io/tutorials/university/","pathsSourceUrl":"https://university.redis.io/"}},
-
-    {"id":"plat-68","fields":[{"id":"elasticsearch","name":{"ar":"Elasticsearch","en":"Elasticsearch","tr":"Elasticsearch"}},{"id":"kibana","name":{"ar":"Kibana وتصور البيانات","en":"Kibana & Visualization","tr":"Kibana ve Görselleştirme"}},{"id":"observability","name":{"ar":"المراقبة والرصد","en":"Observability","tr":"Gözlemlenebilirlik"}},{"id":"security","name":{"ar":"Elastic Security","en":"Elastic Security","tr":"Elastic Security"}},{"id":"search","name":{"ar":"البحث المؤسسي","en":"Enterprise Search","tr":"Kurumsal Arama"}},{"id":"genai-vector","name":{"ar":"الذكاء الاصطناعي والبحث المتجهي","en":"AI & Vector Search","tr":"Yapay Zekâ ve Vektör Arama"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.elastic.co/training/","pathsSourceUrl":"https://www.elastic.co/training/"}},
-
-    {"id":"plat-69","fields":[{"id":"data-warehousing","name":{"ar":"مستودعات البيانات","en":"Data Warehousing","tr":"Veri Ambarı"}},{"id":"data-engineering","name":{"ar":"هندسة البيانات","en":"Data Engineering","tr":"Veri Mühendisliği"}},{"id":"data-science","name":{"ar":"علم البيانات","en":"Data Science","tr":"Veri Bilimi"}},{"id":"app-development","name":{"ar":"تطوير تطبيقات البيانات","en":"Data Application Development","tr":"Veri Uygulama Geliştirme"}},{"id":"snowpark","name":{"ar":"Snowpark وPython","en":"Snowpark & Python","tr":"Snowpark ve Python"}},{"id":"governance-security","name":{"ar":"الحوكمة والأمن","en":"Governance & Security","tr":"Yönetişim ve Güvenlik"}},{"id":"ai","name":{"ar":"الذكاء الاصطناعي التوليدي","en":"Generative AI","tr":"Üretken Yapay Zekâ"}}],"officialPaths":[{"id":"first-concepts","officialName":"Level Up: First Concepts Series Track","name":{"ar":"مسار Level Up: المفاهيم الأولى","en":"Level Up: First Concepts Series Track","tr":"Level Up: İlk Kavramlar Serisi"},"type":"learning-path","officialUrl":"https://learn.snowflake.com/en/pages/level-up-track","fieldIds":["data-warehousing"],"featured":false},{"id":"hands-on-essentials","officialName":"Hands-On Essentials Track","name":{"ar":"مسار الأساسيات العملية","en":"Hands-On Essentials Track","tr":"Uygulamalı Temeller Yolu"},"type":"learning-path","officialUrl":"https://learn.snowflake.com/en/pages/hands-on-essentials-track/","fieldIds":["data-warehousing","data-engineering","data-science","app-development"],"featured":false},{"id":"data-engineer-track","officialName":"Data Engineer Track","name":{"ar":"مسار مهندس البيانات","en":"Data Engineer Track","tr":"Veri Mühendisi Yolu"},"type":"career-path","officialUrl":"https://learn.snowflake.com/en/pages/data-engineer-track/","fieldIds":["data-engineering","snowpark"],"featured":false},{"id":"snowpro-track","officialName":"SnowPro Certification Track","name":{"ar":"مسار شهادة SnowPro","en":"SnowPro Certification Track","tr":"SnowPro Sertifika Yolu"},"type":"professional-certificate","officialUrl":"https://learn.snowflake.com/en/pages/snowpro-track","fieldIds":["data-warehousing","governance-security"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://learn.snowflake.com/en/courses","pathsSourceUrl":"https://learn.snowflake.com/en/pages/university-faqs"}},
-
-    {"id":"plat-70","fields":[{"id":"data-engineering","name":{"ar":"هندسة البيانات","en":"Data Engineering","tr":"Veri Mühendisliği"}},{"id":"data-science-ml","name":{"ar":"علم البيانات وتعلم الآلة","en":"Data Science & Machine Learning","tr":"Veri Bilimi ve Makine Öğrenmesi"}},{"id":"generative-ai","name":{"ar":"الذكاء الاصطناعي التوليدي","en":"Generative AI","tr":"Üretken Yapay Zekâ"}},{"id":"sql-bi","name":{"ar":"SQL وذكاء الأعمال","en":"SQL & Business Intelligence","tr":"SQL ve İş Zekâsı"}},{"id":"lakehouse","name":{"ar":"هندسة Lakehouse","en":"Lakehouse Architecture","tr":"Lakehouse Mimarisi"}},{"id":"platform-admin","name":{"ar":"إدارة منصة Databricks","en":"Databricks Platform Administration","tr":"Databricks Platform Yönetimi"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.databricks.com/learn/training/home","pathsSourceUrl":"https://www.databricks.com/learn/training/home"}},
-
-    {"id":"plat-71","fields":[{"id":"apache-kafka","name":{"ar":"Apache Kafka","en":"Apache Kafka","tr":"Apache Kafka"}},{"id":"apache-flink","name":{"ar":"Apache Flink","en":"Apache Flink","tr":"Apache Flink"}},{"id":"kafka-streams","name":{"ar":"Kafka Streams","en":"Kafka Streams","tr":"Kafka Streams"}},{"id":"ksqldb","name":{"ar":"ksqlDB","en":"ksqlDB","tr":"ksqlDB"}},{"id":"connectors","name":{"ar":"موصلات البيانات","en":"Data Connectors","tr":"Veri Bağlayıcıları"}},{"id":"streaming-architecture","name":{"ar":"هندسة تدفق البيانات","en":"Streaming Architecture","tr":"Akış Mimarisi"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://developer.confluent.io/courses/","pathsSourceUrl":"https://developer.confluent.io/courses/"}},
-
-    {"id":"plat-72","fields":[{"id":"automation-development","name":{"ar":"تطوير الأتمتة","en":"Automation Development","tr":"Otomasyon Geliştirme"}},{"id":"business-analysis","name":{"ar":"تحليل أعمال الأتمتة","en":"Automation Business Analysis","tr":"Otomasyon İş Analizi"}},{"id":"agentic-ai","name":{"ar":"الأتمتة الوكيلية والذكاء الاصطناعي","en":"Agentic Automation & AI","tr":"Ajan Tabanlı Otomasyon ve Yapay Zekâ"}},{"id":"process-mining","name":{"ar":"تنقيب العمليات","en":"Process Mining","tr":"Süreç Madenciliği"}},{"id":"testing","name":{"ar":"اختبار البرمجيات والأتمتة","en":"Testing & Test Automation","tr":"Test ve Test Otomasyonu"}},{"id":"infrastructure-architecture","name":{"ar":"البنية التحتية وهندسة الحلول","en":"Infrastructure & Solution Architecture","tr":"Altyapı ve Çözüm Mimarisi"}}],"officialPaths":[{"id":"automation-developer-professional","officialName":"Automation Developer Professional Training (v2024.10)","name":{"ar":"التدريب الاحترافي لمطور الأتمتة","en":"Automation Developer Professional Training (v2024.10)","tr":"Otomasyon Geliştirici Profesyonel Eğitimi (v2024.10)"},"type":"role-path","officialUrl":"https://academy.cloud.uipath.com/learning-plans/automation-developer-professional-training","fieldIds":["automation-development"],"featured":false},{"id":"automation-developer-career","officialName":"Automation Developer Career","name":{"ar":"المسار المهني لمطور الأتمتة","en":"Automation Developer Career","tr":"Otomasyon Geliştirici Kariyer Yolu"},"type":"career-path","officialUrl":"https://academy.cloud.uipath.com/career-paths/automation-developer","fieldIds":["automation-development","infrastructure-architecture"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://academy.uipath.com/","pathsSourceUrl":"https://academy.uipath.com/learning-plans","allPathsUrl":"https://academy.uipath.com/learning-plans"}},
-
-    {"id":"plat-73","fields":[{"id":"automation-development","name":{"ar":"تطوير الأتمتة","en":"Automation Development","tr":"Otomasyon Geliştirme"}},{"id":"business-analysis","name":{"ar":"تحليل الأعمال","en":"Business Analysis","tr":"İş Analizi"}},{"id":"administration","name":{"ar":"إدارة منصة الأتمتة","en":"Automation Administration","tr":"Otomasyon Yönetimi"}},{"id":"ai-document","name":{"ar":"الذكاء الاصطناعي وأتمتة المستندات","en":"AI & Document Automation","tr":"Yapay Zekâ ve Belge Otomasyonu"}},{"id":"process-discovery","name":{"ar":"اكتشاف العمليات","en":"Process Discovery","tr":"Süreç Keşfi"}}],"officialPaths":[{"id":"developer-start","officialName":"Automation Developer Career Quest - Start Phase","name":{"ar":"رحلة مطور الأتمتة - مرحلة البداية","en":"Automation Developer Career Quest - Start Phase","tr":"Otomasyon Geliştirici Kariyer Yolculuğu - Başlangıç"},"type":"career-path","officialUrl":"https://upskill.automationanywhere.com/learn/learning-path/automation-developer-career-quest-start-phase","fieldIds":["automation-development"],"featured":false},{"id":"developer-accelerate","officialName":"Automation Developer Career Quest - Accelerate Phase","name":{"ar":"رحلة مطور الأتمتة - مرحلة التسريع","en":"Automation Developer Career Quest - Accelerate Phase","tr":"Otomasyon Geliştirici Kariyer Yolculuğu - Hızlanma"},"type":"career-path","officialUrl":"https://upskill.automationanywhere.com/learn/learning-path/automation-developer-career-quest-accelerate-phase","fieldIds":["automation-development"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://university.automationanywhere.com/","pathsSourceUrl":"https://upskill.automationanywhere.com/"}},
-
-    {"id":"plat-74","fields":[{"id":"process-mining","name":{"ar":"تنقيب العمليات","en":"Process Mining","tr":"Süreç Madenciliği"}},{"id":"process-intelligence","name":{"ar":"ذكاء العمليات","en":"Process Intelligence","tr":"Süreç Zekâsı"}},{"id":"data-integration","name":{"ar":"تكامل وهندسة البيانات","en":"Data Integration & Engineering","tr":"Veri Entegrasyonu ve Mühendisliği"}},{"id":"process-apps","name":{"ar":"تطبيقات العمليات","en":"Process Apps","tr":"Süreç Uygulamaları"}},{"id":"analysis","name":{"ar":"تحليل العمليات","en":"Process Analysis","tr":"Süreç Analizi"}},{"id":"administration","name":{"ar":"إدارة Celonis","en":"Celonis Administration","tr":"Celonis Yönetimi"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://academy.celonis.com/","pathsSourceUrl":"https://academy.celonis.com/"}},
-
-    {"id":"plat-75","fields":[{"id":"editor-essentials","name":{"ar":"أساسيات Unity Editor","en":"Unity Editor Essentials","tr":"Unity Editor Temelleri"}},{"id":"scripting-gameplay","name":{"ar":"البرمجة وتطوير الألعاب","en":"Scripting & Gameplay","tr":"Programlama ve Oyun Geliştirme"}},{"id":"graphics-vfx","name":{"ar":"الرسومات والمؤثرات البصرية","en":"Graphics & Visual Effects","tr":"Grafik ve Görsel Efektler"}},{"id":"2d-mobile","name":{"ar":"تطوير ثنائي الأبعاد والجوال","en":"2D & Mobile Development","tr":"2D ve Mobil Geliştirme"}},{"id":"xr-vr","name":{"ar":"الواقع الممتد والافتراضي","en":"XR & VR","tr":"XR ve VR"}},{"id":"ui-audio-animation","name":{"ar":"الواجهة والصوت والتحريك","en":"UI, Audio & Animation","tr":"Arayüz, Ses ve Animasyon"}}],"officialPaths":[{"id":"unity-essentials","officialName":"Unity Essentials","name":{"ar":"أساسيات Unity","en":"Unity Essentials","tr":"Unity Temelleri"},"type":"learning-path","officialUrl":"https://learn.unity.com/pathway/unity-essentials","fieldIds":["editor-essentials"],"featured":false},{"id":"junior-programmer","officialName":"Junior Programmer","name":{"ar":"المبرمج المبتدئ","en":"Junior Programmer","tr":"Junior Programcı"},"type":"career-path","officialUrl":"https://learn.unity.com/pathway/junior-programmer","fieldIds":["scripting-gameplay"],"featured":false},{"id":"creative-core","officialName":"Creative Core","name":{"ar":"الأساس الإبداعي","en":"Creative Core","tr":"Yaratıcı Temeller"},"type":"learning-path","officialUrl":"https://learn.unity.com/pathway/creative-core","fieldIds":["graphics-vfx","ui-audio-animation"],"featured":false},{"id":"vr-development","officialName":"VR Development","name":{"ar":"تطوير الواقع الافتراضي","en":"VR Development","tr":"VR Geliştirme"},"type":"career-path","officialUrl":"https://learn.unity.com/pathway/vr-development","fieldIds":["xr-vr","scripting-gameplay"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://learn.unity.com/learn/","pathsSourceUrl":"https://learn.unity.com/learn/"}},
-
-    {"id":"plat-76","fields":[{"id":"unreal-basics","name":{"ar":"أساسيات Unreal Engine","en":"Unreal Engine Fundamentals","tr":"Unreal Engine Temelleri"}},{"id":"blueprints","name":{"ar":"Blueprints والبرمجة المرئية","en":"Blueprints & Visual Scripting","tr":"Blueprints ve Görsel Programlama"}},{"id":"cpp-gameplay","name":{"ar":"C++ وبرمجة الألعاب","en":"C++ & Gameplay Programming","tr":"C++ ve Oyun Programlama"}},{"id":"art-environments","name":{"ar":"الفن والبيئات ثلاثية الأبعاد","en":"3D Art & Environments","tr":"3D Sanat ve Ortamlar"}},{"id":"animation-cinematics","name":{"ar":"التحريك والسينمائيات","en":"Animation & Cinematics","tr":"Animasyon ve Sinematik"}},{"id":"xr-virtual-production","name":{"ar":"XR والإنتاج الافتراضي","en":"XR & Virtual Production","tr":"XR ve Sanal Prodüksiyon"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://dev.epicgames.com/documentation/unreal-engine/get-started","pathsSourceUrl":"https://dev.epicgames.com/community/unreal-engine/learning"}},
-
-    {"id":"plat-77","fields":[{"id":"blender-fundamentals","name":{"ar":"أساسيات Blender","en":"Blender Fundamentals","tr":"Blender Temelleri"}},{"id":"modeling-sculpting","name":{"ar":"النمذجة والنحت","en":"Modeling & Sculpting","tr":"Modelleme ve Heykel"}},{"id":"animation-rigging","name":{"ar":"التحريك والـRigging","en":"Animation & Rigging","tr":"Animasyon ve Rigging"}},{"id":"geometry-nodes","name":{"ar":"Geometry Nodes","en":"Geometry Nodes","tr":"Geometry Nodes"}},{"id":"shading-lighting","name":{"ar":"الخامات والإضاءة والرندر","en":"Shading, Lighting & Rendering","tr":"Gölgelendirme, Işık ve Render"}},{"id":"compositing-video","name":{"ar":"المؤثرات والتركيب وتحرير الفيديو","en":"Compositing & Video Editing","tr":"Compositing ve Video Düzenleme"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://studio.blender.org/training/","pathsSourceUrl":"https://studio.blender.org/training/"}},
-
-    {"id":"plat-78","fields":[{"id":"photo-editing","name":{"ar":"تحرير الصور","en":"Photo Editing","tr":"Fotoğraf Düzenleme"}},{"id":"design-illustration","name":{"ar":"التصميم والرسم التوضيحي","en":"Design & Illustration","tr":"Tasarım ve İllüstrasyon"}},{"id":"video-animation","name":{"ar":"الفيديو والتحريك","en":"Video & Animation","tr":"Video ve Animasyon"}},{"id":"generative-ai","name":{"ar":"الذكاء الاصطناعي التوليدي وFirefly","en":"Generative AI & Firefly","tr":"Üretken Yapay Zekâ ve Firefly"}},{"id":"3d","name":{"ar":"التصميم ثلاثي الأبعاد","en":"3D","tr":"3D"}},{"id":"documents-acrobat","name":{"ar":"المستندات وAcrobat","en":"Documents & Acrobat","tr":"Belgeler ve Acrobat"}}],"officialPaths":[{"id":"photo-editing","officialName":"Photo editing","name":{"ar":"تحرير الصور","en":"Photo Editing","tr":"Fotoğraf Düzenleme"},"type":"learning-path","officialUrl":"https://www.adobe.com/learn/photoshop/paths/photo-editing","fieldIds":["photo-editing"],"featured":false},{"id":"branding-identity","officialName":"Branding and identity","name":{"ar":"الهوية والعلامة التجارية","en":"Branding and Identity","tr":"Markalaşma ve Kimlik"},"type":"learning-path","officialUrl":"https://www.adobe.com/learn/illustrator/paths/branding-and-identity","fieldIds":["design-illustration"],"featured":false},{"id":"graphic-design","officialName":"Graphic design","name":{"ar":"التصميم الجرافيكي","en":"Graphic Design","tr":"Grafik Tasarım"},"type":"learning-path","officialUrl":"https://www.adobe.com/learn/illustrator/paths/graphic-design-foundational-skills","fieldIds":["design-illustration"],"featured":false},{"id":"marketing-layout-design","officialName":"Marketing layout design","name":{"ar":"تصميم تخطيطات التسويق","en":"Marketing Layout Design","tr":"Pazarlama Düzen Tasarımı"},"type":"learning-path","officialUrl":"https://www.adobe.com/learn/illustrator/paths/marketing-layout-design","fieldIds":["design-illustration"],"featured":false}],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.adobe.com/learn","pathsSourceUrl":"https://www.adobe.com/learn"}},
-
-    {"id":"plat-79","fields":[{"id":"graphic-design","name":{"ar":"التصميم الجرافيكي","en":"Graphic Design","tr":"Grafik Tasarım"}},{"id":"visual-suite","name":{"ar":"Canva Visual Suite","en":"Canva Visual Suite","tr":"Canva Visual Suite"}},{"id":"presentations","name":{"ar":"العروض التقديمية","en":"Presentations","tr":"Sunumlar"}},{"id":"social-media","name":{"ar":"التواصل الاجتماعي","en":"Social Media","tr":"Sosyal Medya"}},{"id":"branding-marketing","name":{"ar":"العلامة التجارية والتسويق","en":"Branding & Marketing","tr":"Markalaşma ve Pazarlama"}},{"id":"ai","name":{"ar":"الذكاء الاصطناعي في Canva","en":"Canva AI","tr":"Canva Yapay Zekâ"}},{"id":"education","name":{"ar":"Canva للتعليم","en":"Canva for Education","tr":"Eğitim için Canva"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.canva.com/design-school/explore/","pathsSourceUrl":"https://www.canva.com/design-school/courses/"}},
-
-    {"id":"plat-80","fields":[{"id":"ux-design","name":{"ar":"تصميم تجربة المستخدم","en":"User Experience Design","tr":"Kullanıcı Deneyimi Tasarımı"}},{"id":"ui-design","name":{"ar":"تصميم واجهة المستخدم","en":"User Interface Design","tr":"Kullanıcı Arayüzü Tasarımı"}},{"id":"interaction-design","name":{"ar":"تصميم التفاعل","en":"Interaction Design","tr":"Etkileşim Tasarımı"}},{"id":"user-research","name":{"ar":"بحث المستخدم","en":"User Research","tr":"Kullanıcı Araştırması"}},{"id":"usability","name":{"ar":"قابلية الاستخدام","en":"Usability","tr":"Kullanılabilirlik"}},{"id":"accessibility","name":{"ar":"إتاحة الوصول","en":"Accessibility","tr":"Erişilebilirlik"}},{"id":"service-design","name":{"ar":"تصميم الخدمات","en":"Service Design","tr":"Hizmet Tasarımı"}}],"officialPaths":[],"pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.interaction-design.org/courses","pathsSourceUrl":"https://www.interaction-design.org/courses"}}
+  "platforms": [
+    {
+      "id": "plat-81",
+      "fields": [
+        {"id":"illustration","name":{"ar":"الرسم التوضيحي","en":"Illustration","tr":"İllüstrasyon"}},
+        {"id":"craft","name":{"ar":"الحرف","en":"Craft","tr":"El Sanatları"}},
+        {"id":"marketing-business","name":{"ar":"التسويق والأعمال","en":"Marketing & Business","tr":"Pazarlama ve İşletme"}},
+        {"id":"photography-video","name":{"ar":"التصوير والفيديو","en":"Photography & Video","tr":"Fotoğraf ve Video"}},
+        {"id":"design","name":{"ar":"التصميم","en":"Design","tr":"Tasarım"}},
+        {"id":"3d-animation","name":{"ar":"التصميم ثلاثي الأبعاد والتحريك","en":"3D & Animation","tr":"3D ve Animasyon"}},
+        {"id":"architecture-spaces","name":{"ar":"العمارة والمساحات","en":"Architecture & Spaces","tr":"Mimarlık ve Mekânlar"}},
+        {"id":"writing","name":{"ar":"الكتابة","en":"Writing","tr":"Yazarlık"}},
+        {"id":"fashion","name":{"ar":"الأزياء","en":"Fashion","tr":"Moda"}},
+        {"id":"web-app-design","name":{"ar":"تصميم الويب والتطبيقات","en":"Web & App Design","tr":"Web ve Uygulama Tasarımı"}},
+        {"id":"music-audio","name":{"ar":"الموسيقى والصوت","en":"Music & Audio","tr":"Müzik ve Ses"}},
+        {"id":"ai","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}}
+      ],
+      "officialPaths": [
+        {"id":"social-media-marketing-specialization","officialName":"Social Media Marketing Specialization: Strategy, Branding and Content","name":{"ar":"تخصص التسويق عبر وسائل التواصل: الاستراتيجية والعلامة التجارية والمحتوى","en":"Social Media Marketing Specialization: Strategy, Branding and Content","tr":"Sosyal Medya Pazarlama Uzmanlığı: Strateji, Marka ve İçerik"},"type":"specialization","officialUrl":"https://www.domestika.org/en/courses/5704-social-media-marketing-specialization-strategy-branding-and-content","fieldIds":["marketing-business","design"],"featured":false},
+        {"id":"ux-ui-design-specialization","officialName":"UX/UI Design Specialization: From Research to Accessibility","name":{"ar":"تخصص تصميم UX/UI: من البحث إلى الإتاحة","en":"UX/UI Design Specialization: From Research to Accessibility","tr":"UX/UI Tasarım Uzmanlığı: Araştırmadan Erişilebilirliğe"},"type":"specialization","officialUrl":"https://www.domestika.org/en/courses/5667-ux-ui-design-specialization-from-research-to-accessibility/course","fieldIds":["web-app-design","design"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.domestika.org/en/courses","pathsSourceUrl":"https://www.domestika.org/en/courses/specializations"}
+    },
+    {
+      "id":"plat-82",
+      "fields":[
+        {"id":"photography-video","name":{"ar":"التصوير والفيديو","en":"Photography & Video","tr":"Fotoğraf ve Video"}},
+        {"id":"art-design","name":{"ar":"الفن والتصميم","en":"Art & Design","tr":"Sanat ve Tasarım"}},
+        {"id":"music-audio","name":{"ar":"الموسيقى والصوت","en":"Music & Audio","tr":"Müzik ve Ses"}},
+        {"id":"business-marketing","name":{"ar":"الأعمال والتسويق","en":"Business & Marketing","tr":"İşletme ve Pazarlama"}},
+        {"id":"lifestyle-wellness","name":{"ar":"نمط الحياة والعافية","en":"Lifestyle & Wellness","tr":"Yaşam Tarzı ve Sağlık"}},
+        {"id":"technology","name":{"ar":"التقنية والذكاء الاصطناعي وتجربة المستخدم","en":"Technology, AI & UX","tr":"Teknoloji, Yapay Zekâ ve UX"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.creativelive.com/faq","pathsSourceUrl":"https://www.creativelive.com/class"}
+    },
+    {
+      "id":"plat-83",
+      "fields":[
+        {"id":"engineering","name":{"ar":"الهندسة","en":"Engineering","tr":"Mühendislik"}},
+        {"id":"computer-science","name":{"ar":"علوم الحاسوب","en":"Computer Science","tr":"Bilgisayar Bilimleri"}},
+        {"id":"ai","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
+        {"id":"science-math","name":{"ar":"العلوم والرياضيات","en":"Science & Mathematics","tr":"Fen ve Matematik"}},
+        {"id":"business-management","name":{"ar":"الأعمال والإدارة","en":"Business & Management","tr":"İşletme ve Yönetim"}},
+        {"id":"humanities","name":{"ar":"العلوم الإنسانية","en":"Humanities","tr":"Beşeri Bilimler"}},
+        {"id":"social-sciences","name":{"ar":"العلوم الاجتماعية","en":"Social Sciences","tr":"Sosyal Bilimler"}},
+        {"id":"environment-sustainability","name":{"ar":"البيئة والاستدامة","en":"Environment & Sustainability","tr":"Çevre ve Sürdürülebilirlik"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://ocw.mit.edu/","pathsSourceUrl":"https://ocw.mit.edu/pages/get-started/"}
+    },
+    {
+      "id":"plat-84",
+      "fields":[
+        {"id":"engineering-manufacturing","name":{"ar":"الهندسة والتصنيع","en":"Engineering & Manufacturing","tr":"Mühendislik ve Üretim"}},
+        {"id":"ai-data","name":{"ar":"الذكاء الاصطناعي والبيانات","en":"AI & Data","tr":"Yapay Zekâ ve Veri"}},
+        {"id":"math-statistics","name":{"ar":"الرياضيات والإحصاء","en":"Mathematics & Statistics","tr":"Matematik ve İstatistik"}},
+        {"id":"science","name":{"ar":"العلوم","en":"Science","tr":"Fen Bilimleri"}},
+        {"id":"supply-chain","name":{"ar":"سلاسل الإمداد","en":"Supply Chain","tr":"Tedarik Zinciri"}},
+        {"id":"economics-policy","name":{"ar":"الاقتصاد والسياسات","en":"Economics & Policy","tr":"Ekonomi ve Politika"}},
+        {"id":"sustainability-energy","name":{"ar":"الاستدامة والطاقة","en":"Sustainability & Energy","tr":"Sürdürülebilirlik ve Enerji"}},
+        {"id":"humanities","name":{"ar":"العلوم الإنسانية والفلسفة","en":"Humanities & Philosophy","tr":"Beşeri Bilimler ve Felsefe"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://mitxonline.mit.edu/","pathsSourceUrl":"https://mitxonline.mit.edu/"}
+    },
+    {
+      "id":"plat-85",
+      "fields":[
+        {"id":"ai-data","name":{"ar":"الذكاء الاصطناعي والبيانات","en":"AI & Data","tr":"Yapay Zekâ ve Veri"}},
+        {"id":"computer-science","name":{"ar":"علوم الحاسوب","en":"Computer Science","tr":"Bilgisayar Bilimleri"}},
+        {"id":"engineering","name":{"ar":"الهندسة","en":"Engineering","tr":"Mühendislik"}},
+        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}},
+        {"id":"business-management","name":{"ar":"الأعمال والإدارة","en":"Business & Management","tr":"İşletme ve Yönetim"}},
+        {"id":"health-medicine","name":{"ar":"الصحة والطب","en":"Health & Medicine","tr":"Sağlık ve Tıp"}},
+        {"id":"education","name":{"ar":"التعليم","en":"Education","tr":"Eğitim"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://online.stanford.edu/","pathsSourceUrl":"https://online.stanford.edu/"}
+    },
+    {
+      "id":"plat-86",
+      "fields":[
+        {"id":"technology-innovation","name":{"ar":"التقنية والابتكار","en":"Technology & Innovation","tr":"Teknoloji ve İnovasyon"}},
+        {"id":"leadership-communication","name":{"ar":"القيادة والتواصل","en":"Leadership & Communication","tr":"Liderlik ve İletişim"}},
+        {"id":"health-care","name":{"ar":"الرعاية الصحية","en":"Health Care","tr":"Sağlık Hizmetleri"}},
+        {"id":"arts-humanities","name":{"ar":"الفنون والعلوم الإنسانية","en":"Arts & Humanities","tr":"Sanat ve Beşeri Bilimler"}},
+        {"id":"business-management","name":{"ar":"الأعمال والإدارة","en":"Business & Management","tr":"İşletme ve Yönetim"}},
+        {"id":"education","name":{"ar":"التعليم","en":"Education","tr":"Eğitim"}},
+        {"id":"government","name":{"ar":"الحكومة والسياسات","en":"Government","tr":"Kamu ve Yönetim"}},
+        {"id":"law","name":{"ar":"القانون","en":"Law","tr":"Hukuk"}},
+        {"id":"science-math","name":{"ar":"العلوم والرياضيات","en":"Science & Mathematics","tr":"Fen ve Matematik"}}
+      ],
+      "officialPaths":[
+        {"id":"harvard-on-digital","officialName":"Harvard on Digital","name":{"ar":"Harvard on Digital","en":"Harvard on Digital","tr":"Harvard on Digital"},"type":"learning-path","officialUrl":"https://harvardonline.harvard.edu/learning-paths/harvard-on-digital","fieldIds":["technology-innovation","business-management"],"featured":false},
+        {"id":"innovation-leadership","officialName":"Innovation Leadership","name":{"ar":"قيادة الابتكار","en":"Innovation Leadership","tr":"İnovasyon Liderliği"},"type":"learning-path","officialUrl":"https://harvardonline.harvard.edu/learning-paths/innovation-leadership","fieldIds":["leadership-communication","technology-innovation","business-management"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://harvardonline.harvard.edu/courses","pathsSourceUrl":"https://harvardonline.harvard.edu/learning-paths","allPathsUrl":"https://harvardonline.harvard.edu/learning-paths"}
+    },
+    {
+      "id":"plat-87",
+      "fields":[
+        {"id":"math-statistics","name":{"ar":"الرياضيات والإحصاء","en":"Mathematics & Statistics","tr":"Matematik ve İstatistik"}},
+        {"id":"computing","name":{"ar":"الحوسبة والبرمجة","en":"Computing & Programming","tr":"Bilişim ve Programlama"}},
+        {"id":"science-engineering","name":{"ar":"العلوم والهندسة","en":"Science & Engineering","tr":"Fen ve Mühendislik"}},
+        {"id":"social-sciences","name":{"ar":"العلوم الاجتماعية","en":"Social Sciences","tr":"Sosyal Bilimler"}},
+        {"id":"business-economics","name":{"ar":"الأعمال والاقتصاد","en":"Business & Economics","tr":"İşletme ve Ekonomi"}},
+        {"id":"languages","name":{"ar":"اللغات","en":"Languages","tr":"Diller"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://oli.cmu.edu/courses/","pathsSourceUrl":"https://oli.cmu.edu/courses/"}
+    },
+    {
+      "id":"plat-88",
+      "fields":[
+        {"id":"aerospace","name":{"ar":"هندسة الطيران والفضاء","en":"Aerospace Engineering","tr":"Havacılık ve Uzay Mühendisliği"}},
+        {"id":"agriculture","name":{"ar":"الهندسة الزراعية","en":"Agriculture Engineering","tr":"Tarım Mühendisliği"}},
+        {"id":"architecture","name":{"ar":"العمارة","en":"Architecture","tr":"Mimarlık"}},
+        {"id":"biotech","name":{"ar":"التقنية الحيوية والهندسة الحيوية","en":"Biotechnology & Bioengineering","tr":"Biyoteknoloji ve Biyomühendislik"}},
+        {"id":"chemical","name":{"ar":"الهندسة الكيميائية","en":"Chemical Engineering","tr":"Kimya Mühendisliği"}},
+        {"id":"civil","name":{"ar":"الهندسة المدنية","en":"Civil Engineering","tr":"İnşaat Mühendisliği"}},
+        {"id":"computer-science","name":{"ar":"علوم الحاسوب","en":"Computer Science","tr":"Bilgisayar Bilimleri"}},
+        {"id":"electrical","name":{"ar":"الهندسة الكهربائية","en":"Electrical Engineering","tr":"Elektrik Mühendisliği"}},
+        {"id":"humanities-social","name":{"ar":"العلوم الإنسانية والاجتماعية","en":"Humanities & Social Sciences","tr":"Beşeri ve Sosyal Bilimler"}},
+        {"id":"management","name":{"ar":"الإدارة","en":"Management","tr":"Yönetim"}},
+        {"id":"mathematics","name":{"ar":"الرياضيات","en":"Mathematics","tr":"Matematik"}},
+        {"id":"mechanical","name":{"ar":"الهندسة الميكانيكية","en":"Mechanical Engineering","tr":"Makine Mühendisliği"}},
+        {"id":"materials","name":{"ar":"هندسة المعادن والمواد","en":"Metallurgical & Materials Engineering","tr":"Metalurji ve Malzeme Mühendisliği"}},
+        {"id":"mining","name":{"ar":"هندسة التعدين","en":"Mining Engineering","tr":"Maden Mühendisliği"}},
+        {"id":"sports-science","name":{"ar":"علوم الرياضة","en":"Sports Science","tr":"Spor Bilimleri"}}
+      ],
+      "officialPaths":[
+        {"id":"nptel-domain-certification","officialName":"NPTEL Domain Certification","name":{"ar":"شهادة نطاق NPTEL","en":"NPTEL Domain Certification","tr":"NPTEL Alan Sertifikasyonu"},"type":"professional-program","officialUrl":"https://www.nptel.ac.in/domains","fieldIds":["aerospace","agriculture","architecture","biotech","chemical","civil","computer-science","electrical","humanities-social","management","mathematics","mechanical","materials","mining","sports-science"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://nptel.ac.in/domains/discipline","pathsSourceUrl":"https://www.nptel.ac.in/domains"}
+    },
+    {
+      "id":"plat-89",
+      "fields":[
+        {"id":"engineering-technology","name":{"ar":"الهندسة والتقنية","en":"Engineering & Technology","tr":"Mühendislik ve Teknoloji"}},
+        {"id":"science-math","name":{"ar":"العلوم والرياضيات","en":"Science & Mathematics","tr":"Fen ve Matematik"}},
+        {"id":"management-commerce","name":{"ar":"الإدارة والتجارة","en":"Management & Commerce","tr":"Yönetim ve Ticaret"}},
+        {"id":"humanities-social","name":{"ar":"العلوم الإنسانية والاجتماعية","en":"Humanities & Social Sciences","tr":"Beşeri ve Sosyal Bilimler"}},
+        {"id":"education","name":{"ar":"التعليم","en":"Education","tr":"Eğitim"}},
+        {"id":"law","name":{"ar":"القانون","en":"Law","tr":"Hukuk"}},
+        {"id":"health","name":{"ar":"الصحة","en":"Health","tr":"Sağlık"}},
+        {"id":"arts-design","name":{"ar":"الفنون والتصميم","en":"Arts & Design","tr":"Sanat ve Tasarım"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.swayam.gov.in/explorer","pathsSourceUrl":"https://www.swayam.gov.in/explorer"}
+    },
+    {
+      "id":"plat-90",
+      "fields":[
+        {"id":"programming","name":{"ar":"البرمجة","en":"Programming","tr":"Programlama"}},
+        {"id":"computer-science","name":{"ar":"علوم الحاسوب","en":"Computer Science","tr":"Bilgisayar Bilimleri"}},
+        {"id":"ai","name":{"ar":"الذكاء الاصطناعي","en":"Artificial Intelligence","tr":"Yapay Zekâ"}},
+        {"id":"data","name":{"ar":"البيانات","en":"Data","tr":"Veri"}},
+        {"id":"cybersecurity","name":{"ar":"الأمن السيبراني","en":"Cybersecurity","tr":"Siber Güvenlik"}},
+        {"id":"digital-education","name":{"ar":"التعليم الرقمي","en":"Digital Education","tr":"Dijital Eğitim"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.mooc.fi/en/","pathsSourceUrl":"https://www.mooc.fi/en/"}
+    },
+    {
+      "id":"plat-91",
+      "fields":[
+        {"id":"education-teaching","name":{"ar":"التعليم والتدريس","en":"Education & Teaching","tr":"Eğitim ve Öğretim"}},
+        {"id":"health-nursing","name":{"ar":"الصحة والتمريض","en":"Health & Nursing","tr":"Sağlık ve Hemşirelik"}},
+        {"id":"business-management","name":{"ar":"الأعمال والإدارة","en":"Business & Management","tr":"İşletme ve Yönetim"}},
+        {"id":"technology-industry","name":{"ar":"التقنية والصناعة","en":"Technology & Industry","tr":"Teknoloji ve Endüstri"}},
+        {"id":"professional-development","name":{"ar":"التطوير المهني","en":"Professional Development","tr":"Mesleki Gelişim"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.openlearning.com/courses","pathsSourceUrl":"https://www.openlearning.com/courses"}
+    },
+    {
+      "id":"plat-92",
+      "fields":[
+        {"id":"technology","name":{"ar":"التقنية ومهارات الحاسوب","en":"Technology & Computer Skills","tr":"Teknoloji ve Bilgisayar Becerileri"}},
+        {"id":"microsoft-office","name":{"ar":"Microsoft Office","en":"Microsoft Office","tr":"Microsoft Office"}},
+        {"id":"work-career","name":{"ar":"العمل والمسار المهني","en":"Work & Career","tr":"İş ve Kariyer"}},
+        {"id":"math","name":{"ar":"الرياضيات","en":"Math","tr":"Matematik"}},
+        {"id":"language-reading","name":{"ar":"اللغة والقراءة","en":"Language & Reading","tr":"Dil ve Okuma"}},
+        {"id":"everyday-life","name":{"ar":"المهارات اليومية","en":"Everyday Life Skills","tr":"Günlük Yaşam Becerileri"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://edu.gcfglobal.org/en/","pathsSourceUrl":"https://edu.gcfglobal.org/en/"}
+    },
+    {
+      "id":"plat-93",
+      "fields":[
+        {"id":"educator","name":{"ar":"التدريس وتصميم التعلم في Moodle","en":"Moodle Education & Learning Design","tr":"Moodle Eğitimi ve Öğrenme Tasarımı"}},
+        {"id":"administrator","name":{"ar":"إدارة Moodle","en":"Moodle Administration","tr":"Moodle Yönetimi"}},
+        {"id":"developer","name":{"ar":"تطوير Moodle","en":"Moodle Development","tr":"Moodle Geliştirme"}},
+        {"id":"general","name":{"ar":"مهارات Moodle العامة","en":"General Moodle Skills","tr":"Genel Moodle Becerileri"}}
+      ],
+      "officialPaths":[
+        {"id":"educator-pathway","officialName":"Educator pathway","name":{"ar":"مسار المعلّم","en":"Educator Pathway","tr":"Eğitmen Yolu"},"type":"role-path","officialUrl":"https://moodle.academy/course/index.php?categoryid=2","fieldIds":["educator"],"featured":false},
+        {"id":"administrator-pathway","officialName":"Administrator pathway","name":{"ar":"مسار المسؤول","en":"Administrator Pathway","tr":"Yönetici Yolu"},"type":"role-path","officialUrl":"https://moodle.academy/course/index.php?categoryid=3","fieldIds":["administrator"],"featured":false},
+        {"id":"developer-pathway","officialName":"Developer pathway","name":{"ar":"مسار المطور","en":"Developer Pathway","tr":"Geliştirici Yolu"},"type":"role-path","officialUrl":"https://moodle.academy/course/index.php?categoryid=4","fieldIds":["developer"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://moodle.academy/course/index.php?categoryid=1","pathsSourceUrl":"https://moodle.academy/course/index.php?categoryid=1"}
+    },
+    {
+      "id":"plat-94",
+      "fields":[
+        {"id":"agriculture-food-systems","name":{"ar":"الزراعة والنظم الغذائية","en":"Agriculture & Food Systems","tr":"Tarım ve Gıda Sistemleri"}},
+        {"id":"food-nutrition","name":{"ar":"الأمن الغذائي والتغذية والصحة","en":"Food Security, Nutrition & Health","tr":"Gıda Güvenliği, Beslenme ve Sağlık"}},
+        {"id":"climate-environment","name":{"ar":"تغير المناخ والبيئة","en":"Climate Change & Environment","tr":"İklim Değişikliği ve Çevre"}},
+        {"id":"natural-resources","name":{"ar":"إدارة الموارد الطبيعية","en":"Natural Resource Management","tr":"Doğal Kaynak Yönetimi"}},
+        {"id":"fisheries-aquaculture","name":{"ar":"مصايد الأسماك وتربية الأحياء المائية","en":"Fisheries & Aquaculture","tr":"Balıkçılık ve Su Ürünleri"}},
+        {"id":"forestry-restoration","name":{"ar":"الغابات واستعادة المناظر الطبيعية","en":"Forests & Landscape Restoration","tr":"Ormanlar ve Peyzaj Restorasyonu"}},
+        {"id":"rural-development","name":{"ar":"التنمية الريفية والحماية الاجتماعية","en":"Rural Development & Social Protection","tr":"Kırsal Kalkınma ve Sosyal Koruma"}},
+        {"id":"food-safety-trade","name":{"ar":"سلامة الغذاء والتجارة والأسواق","en":"Food Safety, Trade & Markets","tr":"Gıda Güvenliği, Ticaret ve Piyasalar"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://elearning.fao.org/local/search/thematic.php","pathsSourceUrl":"https://elearning.fao.org/"}
+    },
+    {
+      "id":"plat-95",
+      "fields":[
+        {"id":"circular-economy","name":{"ar":"الاقتصاد الدائري","en":"Circular Economy","tr":"Döngüsel Ekonomi"}},
+        {"id":"climate-change","name":{"ar":"تغير المناخ","en":"Climate Change","tr":"İklim Değişikliği"}},
+        {"id":"green-economy","name":{"ar":"الاقتصاد الأخضر","en":"Green Economy","tr":"Yeşil Ekonomi"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://unccelearn.org/courses/","pathsSourceUrl":"https://unccelearn.org/courses/"}
+    },
+    {
+      "id":"plat-96",
+      "fields":[
+        {"id":"decent-work-labour","name":{"ar":"العمل اللائق ومعايير العمل","en":"Decent Work & Labour","tr":"İnsana Yakışır İş ve Çalışma"}},
+        {"id":"leadership-management","name":{"ar":"القيادة والإدارة","en":"Leadership & Management","tr":"Liderlik ve Yönetim"}},
+        {"id":"project-management","name":{"ar":"إدارة المشاريع","en":"Project Management","tr":"Proje Yönetimi"}},
+        {"id":"development-policy","name":{"ar":"التنمية والسياسات","en":"Development & Policy","tr":"Kalkınma ve Politika"}},
+        {"id":"social-protection","name":{"ar":"الحماية والسياسات الاجتماعية","en":"Social Protection & Policy","tr":"Sosyal Koruma ve Politika"}},
+        {"id":"skills-tvet","name":{"ar":"المهارات والتعليم والتدريب المهني","en":"Skills & TVET","tr":"Beceriler ve Mesleki Eğitim"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://ecampus.itcilo.org/","pathsSourceUrl":"https://ecampus.itcilo.org/"}
+    },
+    {
+      "id":"plat-97",
+      "fields":[
+        {"id":"general-macroeconomics","name":{"ar":"الاقتصاد الكلي العام","en":"General Macroeconomics","tr":"Genel Makroekonomi"}},
+        {"id":"fiscal-issues","name":{"ar":"القضايا المالية والضرائب","en":"Fiscal Issues","tr":"Mali Konular"}},
+        {"id":"monetary-external","name":{"ar":"السياسات النقدية والقطاع الخارجي","en":"Monetary & External Sector Policies","tr":"Para ve Dış Sektör Politikaları"}},
+        {"id":"financial-sector","name":{"ar":"قضايا القطاع المالي","en":"Financial Sector Issues","tr":"Finans Sektörü Konuları"}},
+        {"id":"macroeconomic-statistics","name":{"ar":"إحصاءات الاقتصاد الكلي","en":"Macroeconomic Statistics","tr":"Makroekonomik İstatistikler"}},
+        {"id":"legal-institutional","name":{"ar":"الأطر القانونية والمؤسسية","en":"Legal & Institutional Frameworks","tr":"Hukuki ve Kurumsal Çerçeveler"}},
+        {"id":"structural-policies","name":{"ar":"السياسات الهيكلية","en":"Structural Policies","tr":"Yapısal Politikalar"}}
+      ],
+      "officialPaths":[
+        {"id":"monetary-external-learning-path","officialName":"Monetary and External Sector Policies","name":{"ar":"مسار السياسات النقدية والقطاع الخارجي","en":"Monetary and External Sector Policies","tr":"Para ve Dış Sektör Politikaları Öğrenme Yolu"},"type":"learning-path","officialUrl":"https://www.imf.org/en/capacity-development/training/icdtc/topics/merca","fieldIds":["monetary-external"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.imf.org/en/capacity-development/training/icdtc/curriculum","pathsSourceUrl":"https://www.imf.org/en/capacity-development/training/icdtc/curriculum"}
+    },
+    {
+      "id":"plat-98",
+      "fields":[
+        {"id":"development","name":{"ar":"التنمية","en":"Development","tr":"Kalkınma"}},
+        {"id":"economics-finance","name":{"ar":"الاقتصاد والتمويل","en":"Economics & Finance","tr":"Ekonomi ve Finans"}},
+        {"id":"governance-public-sector","name":{"ar":"الحوكمة والقطاع العام","en":"Governance & Public Sector","tr":"Yönetişim ve Kamu Sektörü"}},
+        {"id":"environment-climate","name":{"ar":"البيئة والمناخ","en":"Environment & Climate","tr":"Çevre ve İklim"}},
+        {"id":"project-operations","name":{"ar":"المشاريع والعمليات","en":"Projects & Operations","tr":"Projeler ve Operasyonlar"}},
+        {"id":"social-development","name":{"ar":"التنمية الاجتماعية","en":"Social Development","tr":"Sosyal Kalkınma"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://www.worldbank.org/en/olc","pathsSourceUrl":"https://www.worldbank.org/en/olc"}
+    },
+    {
+      "id":"plat-99",
+      "fields":[
+        {"id":"sustainable-development","name":{"ar":"التنمية المستدامة وأهدافها","en":"Sustainable Development & SDGs","tr":"Sürdürülebilir Kalkınma ve SKA'lar"}},
+        {"id":"climate-environment","name":{"ar":"المناخ والبيئة","en":"Climate & Environment","tr":"İklim ve Çevre"}},
+        {"id":"water","name":{"ar":"إدارة المياه","en":"Water Management","tr":"Su Yönetimi"}},
+        {"id":"cities-urban","name":{"ar":"المدن والتنمية الحضرية","en":"Cities & Urban Development","tr":"Kentler ve Kentsel Kalkınma"}},
+        {"id":"policy-governance","name":{"ar":"السياسات والحوكمة","en":"Policy & Governance","tr":"Politika ve Yönetişim"}},
+        {"id":"resources-mining","name":{"ar":"الموارد والتعدين المستدام","en":"Resources & Sustainable Mining","tr":"Kaynaklar ve Sürdürülebilir Madencilik"}}
+      ],
+      "officialPaths":[
+        {"id":"professional-development","officialName":"Professional Development","name":{"ar":"التطوير المهني في التنمية المستدامة","en":"Professional Development in Sustainable Development","tr":"Sürdürülebilir Kalkınmada Mesleki Gelişim"},"type":"professional-program","officialUrl":"https://sdgacademy.org/professional-development/","fieldIds":["sustainable-development","water","cities-urban","resources-mining"],"featured":false}
+      ],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://sdgacademy.org/courses/","pathsSourceUrl":"https://sdgacademy.org/professional-development/"}
+    },
+    {
+      "id":"plat-100",
+      "fields":[
+        {"id":"listening","name":{"ar":"الاستماع","en":"Listening","tr":"Dinleme"}},
+        {"id":"reading","name":{"ar":"القراءة","en":"Reading","tr":"Okuma"}},
+        {"id":"writing","name":{"ar":"الكتابة","en":"Writing","tr":"Yazma"}},
+        {"id":"speaking","name":{"ar":"التحدث","en":"Speaking","tr":"Konuşma"}},
+        {"id":"grammar","name":{"ar":"القواعد","en":"Grammar","tr":"Dil Bilgisi"}},
+        {"id":"vocabulary","name":{"ar":"المفردات","en":"Vocabulary","tr":"Kelime Bilgisi"}},
+        {"id":"business-english","name":{"ar":"الإنجليزية للأعمال","en":"Business English","tr":"İş İngilizcesi"}},
+        {"id":"general-english","name":{"ar":"الإنجليزية العامة","en":"General English","tr":"Genel İngilizce"}}
+      ],
+      "officialPaths":[],
+      "pathResearch":{"lastVerified":"2026-09-04","fieldsSourceUrl":"https://learnenglish.britishcouncil.org/","pathsSourceUrl":"https://learnenglish.britishcouncil.org/"}
+    }
   ]
 }
