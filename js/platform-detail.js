@@ -54,7 +54,7 @@
     const chips=fields.map(field=>{
       const name=field&&field.name||'';
       const url=safeUrlFn(field&&field.officialUrl||'');
-      return url?`<a class="profile-field-chip" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`:`<span class="profile-field-chip">${esc(name)}</span>`;
+      return url?`<a class="profile-field-chip profile-field-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer"><span class="profile-field-name">${esc(name)}</span><span class="profile-field-action" aria-hidden="true">↗</span></a>`:`<span class="profile-field-chip profile-field-static"><span class="profile-field-name">${esc(name)}</span></span>`;
     }).join('');
     return`<section class="profile-learning profile-fields-section"><h2>${esc(title||'')}</h2><div class="profile-field-chips">${chips}</div></section>`;
   }
