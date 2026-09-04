@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -20,6 +22,8 @@ jobs:
           for f in inline-worker/src/*.mjs; do node --check "$f"; done
       - name: Validate full CMS content
         run: node scripts/validate-content.cjs
+      - name: Require complete platform research
+        run: node scripts/platform-paths-audit.cjs --require-complete
       - name: Verify Decap configuration matches data.json
         run: node scripts/generate-decap-config.cjs --check
       - name: Prevent legacy Supabase runtime dependencies
@@ -28,5 +32,15 @@ jobs:
             echo 'Legacy Supabase runtime reference detected'
             exit 1
           fi
-      - name: Run git diff --check
-        run: git diff --check
+      - name: Prove inline editor and Worker authorization did not drift
+        shell: bash
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          changed="$(git diff --name-only origin/main...HEAD -- inline-worker js/edit-descriptors.js js/inline-editor.js js/inline-editor-api.js js/inline-editor-config.js)"
+          if [ -n "$changed" ]; then
+            echo 'Protected inline editor / Worker files changed unexpectedly:'
+            echo "$changed"
+            exit 1
+          fi
+      - name: Run branch diff hygiene checks
+        run: git diff --check origin/main...HEAD
